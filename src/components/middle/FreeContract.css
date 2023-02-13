@@ -1,0 +1,127 @@
+.FreeContract {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.ContractBody {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.ContractBody .items-preview {
+    width: 96%;
+    height: 10rem;
+    float: left;
+    margin: .75rem 2%;
+    padding: .75rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: .75rem;
+    background-color: var(--color-background);
+}
+
+.ContractBody .items-preview .Item {
+    margin: 0;
+}
+
+.ContractBody .contract-meta {
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 0;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.contract-arc {
+    width: 100%;
+    float: left;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contract-arc .spinner {
+    width: 40%;
+    border: 2px solid var(--color-background);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.contract-arc .spinner .item-video-background {
+    opacity: 1;
+    animation: spinner-idle 15s infinite ease;
+}
+.contract-arc .spinner .item-video-background .color-bg {
+    transition: all .5s;
+}
+
+.contract-arc .spinner-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    aspect-ratio: 1/1;
+    margin: 15%;
+    border: 2px solid var(--color-background);
+    border-radius: 50%;
+    background-color: var(--color-background-secondary);
+    overflow: hidden;
+}
+
+.contract-arc .spinner-inside .final-item {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: final-item-spawn .4s cubic-bezier(0.33, 1, 0.68, 1.5);
+}
+
+.contract-arc .spinner-inside .final-item img {
+    width: 80%;
+}
+.contract-arc .spinner-inside .final-item span {
+    color: gold;
+    font-size: 1.25rem;
+}
+
+.ContractBody .controls {
+    width: 100%;
+    float: left;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.ContractBody .controls .Button {
+    font-size: 1.5rem;
+}
+
+@keyframes final-item-spawn {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    } 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-idle {
+    0% {
+        transform: scale(1);
+    } 50% {
+        transform: scale(2);
+    }
+}

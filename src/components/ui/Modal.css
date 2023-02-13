@@ -1,0 +1,114 @@
+.Modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 25;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .25s;
+}
+
+.Modal.removed {
+    opacity: 0;
+}
+
+.Modal.removed .align {
+    animation: modalFadeOut .25s;
+}
+
+.Modal .align {
+    max-width: 95% !important;
+    width: 25rem;
+    padding: 0 1.5rem 1rem;
+    background-color: var(--color-background-secondary);
+    border-radius: 10px;
+    min-height: 5rem;
+    box-shadow: 0 .25rem .5rem .125rem rgba(0, 0, 0, 0.45);
+    animation: modalFadeIn .25s;
+}
+
+.Modal .align .title {
+    width: 100%;
+    padding: 1rem 0;
+    float: left;
+    font-weight: 550;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.Modal .align .subtitle {
+    width: 100%;
+    float: left;
+    font-size: 1rem;
+}
+
+.Modal .align .actions {
+    width: 100%;
+    float: left;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.Modal .align .actions .Button {
+    max-width: 1005%;
+    padding: .5rem 1rem;
+    line-height: 1.2;
+    font-size: 1rem;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+
+.Modal .align .actions .Button:not(:first-child) {
+    margin-top: .25rem;
+}
+
+@keyframes modalFadeOut {
+    0% {
+        margin-top: 0rem;
+        opacity: 1;
+    } 100% {
+        margin-top: 2rem;
+        opacity: 0;
+    }
+}
+@keyframes modalFadeIn {
+    0% {
+        margin-top: -2rem;
+        opacity: 0;
+    } 100% {
+        margin-top: 0rem;
+        opacity: 1;
+    }
+}
+
+/* --- --- */
+.Modal.item-info-modal .subtitle {
+    display: flex;
+    justify-content: center;
+}
+
+.Modal.item-info-modal .Item {
+    width: 10rem;
+    height: 10rem;
+    margin: 0;
+}
+
+.Modal.item-info-modal .Item .info .price,
+.Modal.item-info-modal .Item .info .quality {
+    font-size: 1rem !important;
+    padding: 5px 6px;
+}
+.Modal.item-info-modal .Item .name .weapon-name {
+    font-size: .9rem !important;
+}
+.Modal.item-info-modal .Item .name {
+    font-size: 1rem !important;
+    line-height: .95rem !important;
+}

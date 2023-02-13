@@ -1,0 +1,185 @@
+.ItemPage {
+    --row-count: 4;
+    --columns-count: 4;
+    --items-margin: 0.25rem; 
+
+    --item-width: calc(100% / var(--columns-count) - 2 * var(--items-margin));
+    --item-height: calc(100% / var(--row-count) - 2 * var(--items-margin));
+
+    width: 98%;
+    height: 100%;
+    float: left;
+    margin: 0 1%;
+    border-radius: .75rem .75rem 0 0;
+    border: 2px solid var(--color-background);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.ItemPage .filters {
+    width: 100%;
+    float: left;
+    background-color: var(--color-background);
+    height: 3rem;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+.ItemPage .filters > .items-rendered {
+    font-size: 1rem;
+    display: block;
+    width: 3rem;
+}
+
+.ItemPage .filters .selections input {
+    padding: .4rem;
+    height: auto;
+    width: calc(100% / 5);
+}
+
+.ItemPage .filters .selections {
+    flex: 2;
+    float: left;
+    display: flex;
+    justify-content: space-evenly;
+}
+.ItemPage .filters .selections .Dropdown {
+    width: 8.5rem;
+    max-width: calc(100% / 3.4);
+}
+
+.ItemPage .current-page {
+    width: 100%;
+    float: left;
+    flex: 2;
+    padding: .25rem;
+    position: relative;
+    overflow: hidden !important;
+    background-color: var(--color-background);
+}
+.ItemPage .current-page .Item {
+    width: var(--item-width);
+    height: var(--item-height);
+    margin: var(--items-margin);
+
+    background-color: var(--color-background-secondary);
+    float: left;
+}
+
+.ItemPage .control {
+    width: 100%;
+    float: left;
+    background-color: var(--color-background);
+    height: 3.5rem;
+}
+
+.ItemPage .control .arrow-slide {
+    width: 35%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .1s;
+}
+.ItemPage .control .arrow-slide:hover {
+    background-color: var(--color-hover);
+}
+
+.ItemPage .control .arrow-slide i {
+    font-size: 3.1rem;
+}
+
+.ItemPage .control .page-numeral {
+    width: 30%;
+    float: left;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ItemPage .control .page-numeral input {
+    text-align: center;
+    padding: .4rem;
+    height: auto;
+    max-width: 3rem;
+}
+
+.ItemPage .control .page-numeral > span {
+    padding-left: .5rem;
+    font-size: 1.10rem;
+    font-weight: 550;
+    color: var(--color-secondary);
+}
+
+.ItemPage .selection-helper {
+    position: absolute;
+    bottom: -3rem;
+    opacity: 0;
+    pointer-events: none;
+    height: 3rem;
+    right: 0;
+    transition: all .2s cubic-bezier(0.19, 0.02, 0, 0.98);
+}
+
+.ItemPage .selection-helper.open {
+    opacity: 1;
+    pointer-events: all;
+    bottom: .5rem;
+}
+
+.ItemPage .selection-helper .counter {
+    background-color: #57575f;
+    height: 100%;
+    padding: 0 1rem 0 .5rem;
+    display: flex;
+    float: left;
+    align-items: center;
+    border: 1px solid #fff;
+    border-right: none;
+    border-radius: .5rem 0 0 .5rem;
+    font-size: 1.15rem;
+}
+.ItemPage .selection-helper .counter i {
+    margin-right: .5rem;
+    font-size: 1.625rem;
+    cursor: pointer;
+}
+.ItemPage .selection-helper .apply-button {
+    background-color: var(--color-accent);
+    height: 100%;
+    width: 5rem;
+    padding: 0 .75rem 0 1rem;
+    display: flex;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    transition: all .25s;
+    overflow: hidden;
+    border-right: none;
+    float: left;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.ItemPage .selection-helper .apply-button.disabled {
+    pointer-events: none;
+    width: 0;
+    padding: 0;
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .ItemPage .filters {
+        padding: .5rem .25rem;
+    }
+    .ItemPage .filters .selections {
+        justify-content: left;
+    }
+    .ItemPage .filters > span {
+        display: none;
+    }
+}

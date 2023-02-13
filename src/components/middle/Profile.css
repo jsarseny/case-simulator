@@ -1,0 +1,133 @@
+.Profile {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding-top: .5rem;
+}
+
+.profile-widget {
+    width: 96%;
+    height: 5.8rem;
+    background-color: var(--color-background);
+    border-radius: .75rem;
+}
+
+.user-info {
+    width: 100%;
+    padding: 1rem 0 1rem 1.5rem;
+    height: 100%;
+}
+
+.user-info .user-image {
+    width: 3.5rem;
+    height: 3.5rem;
+    float: left;
+    text-align: center;
+}
+.user-info .user-image i {
+    font-size: 3rem;
+}
+.user-info .user-meta {
+    width: calc(50% - 3.5rem);
+    height: 100%;
+    padding-left: 1rem;
+    float: left;
+}
+.user-info .user-meta span {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 50%;
+}
+
+.user-info .user-meta span.name {
+    display: flex;
+    align-items: flex-start;
+}
+.user-info .user-meta span.name input {
+    width: 65%;
+    margin-bottom: .25rem;
+}
+.user-info .user-meta span.balance {
+    color: gold;
+    display: flex;
+    align-items: center;
+}
+.user-info .extra-info {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.user-info .extra-info span {
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.profile-content {
+    width: 96%;
+    height: calc(100% - 5.8rem);
+    padding-top: .35rem;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-inventory-tabs {
+    width: 100%;
+    flex: 2;
+    overflow: hidden;
+}
+
+.profile-inventory-tabs .ItemPage {
+    width: 100%;
+    margin: 0;
+}
+
+.profile-showcase {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.showcase-row {
+    width: 100%;
+    padding: .35rem .25rem;
+    float: left;
+}
+
+.showcase-row .showcase-row-title {
+    width: 100%;
+    float: left;
+    padding: .45rem 0;
+    font-size: 1.125rem;
+    color: var(--color-secondary);
+}
+.showcase-row-items {
+    width: 100%;
+    float: left;
+    margin-top: .45rem;
+}
+.showcase-description {
+    width: 100%;
+    float: left;
+    padding: .15rem 2.5rem 1rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .profile-widget, .profile-inventory,
+    .profile-content, .Profile .ItemPage {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .profile-content, .Profile .ItemPage .current-page {
+        padding: 0;
+    }
+}

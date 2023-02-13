@@ -1,0 +1,172 @@
+.Roulette {
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding: .75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Roulette .roulette-roll {
+    width: 100%;
+    float: left;
+    height: 10rem;
+    background-color: var(--color-background-secondary);
+    border-radius: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Roulette .current-roll {
+    height: 5rem;
+    border-radius: 1rem;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    padding: .35rem 0;
+    white-space: nowrap;
+    background-color: var(--color-background);
+}
+
+.Roulette .current-roll > .roll-animate-area {
+    width: 100%;
+    height: 100%;
+    float: left;
+    animation: opacity-fade 1s;
+}
+
+.Roulette .current-roll .roll-item {
+    float: none;
+    height: 100%;
+    aspect-ratio: 1/1 !important;
+    margin-left: 8px;
+    border-radius: .5rem;
+    border: none;
+    display: inline-block;
+    transition: margin 5.5s cubic-bezier(0.19, 0.02, 0, 0.98);
+    position: relative;
+    overflow: hidden;
+}
+
+.Roulette .caret {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1.5rem);
+    color: #fff;
+    height: 100%;
+    font-size: 3rem;
+}
+
+.Roulette .caret.top {
+    top: 1rem;
+}
+
+.Roulette .caret.bottom {
+    transform: rotate(180deg);
+    top: -1rem;
+}
+
+.Roulette .current-roll .roll-item.color-bg {
+    background-color: rgba(var(--color-scheme), 1);
+}
+
+.Roulette .bet {
+    width: 100%;
+    flex: 2;
+    float: left;
+    padding-top: 1.25rem;
+}
+
+.available-bids {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.available-bids .bet-btn {
+    width: calc(100% / 3.15);
+    height: 2.8rem;
+    margin-bottom: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: rgba(var(--color-scheme), 1);
+    background-color: rgba(var(--color-scheme), .2);
+    transition: all 250ms;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: .75rem;
+}
+
+.available-bids .bet-btn.blue,
+.available-bids .bet-btn.green {
+    width: calc(97.62% / 2);
+}
+
+.available-bids .bet-btn:not(.active):not(.disabled):hover {
+    background-color: rgba(var(--color-scheme), .7);
+    box-shadow: 0 0 17px 0 rgba(var(--color-scheme), .5);
+    color: #fff;
+}
+
+.available-bids .bet-btn.active {
+    background-color: rgba(var(--color-scheme), 1);
+    box-shadow: 0 0 17px 0 rgba(var(--color-scheme), .85);
+    color: #fff;
+}
+
+.available-bids .bet-btn.disabled {
+    opacity: .35;
+    pointer-events: none;
+}
+
+.Roulette .color-bg {
+    --color-scheme: 255, 255, 255;
+}
+
+.Roulette .color-bg.green { --color-scheme: 12, 217, 157; }
+.Roulette .color-bg.blue { --color-scheme: 0, 132, 255; }
+.Roulette .color-bg.gold { --color-scheme: 243, 188, 47; }
+.Roulette .color-bg.red { --color-scheme: 212, 61, 55; }
+.Roulette .color-bg.orange { --color-scheme: 233, 116, 51; }
+
+.Roulette .controls {
+    width: 100%;
+    float: left;
+    margin-top: 2rem;
+}
+
+.Roulette .controls span.control-line {
+    width: 100%;
+    float: left;
+    margin: .5rem 0;
+    font-size: 1.25rem;
+}
+
+.Roulette .controls .popup-notify {
+    margin-left: 1rem;
+}
+
+.Roulette .controls input {
+    max-width: 8rem;
+    margin-left: .5rem;
+    font-size: 1rem;
+}
+
+.Roulette .controls .roll-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem !important;
+}
+
+.Roulette .controls .roll-button .Button {
+    font-size: 1.35rem;
+}

@@ -1,0 +1,92 @@
+.Menu {
+    width: var(--actionbar-width);
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    transition: all 250ms cubic-bezier(0.33, 1, 0.68, 1);
+    overflow: hidden;
+    box-shadow: 2px 0 5px 0 var(--color-shadow);
+}
+
+.Menu.open {
+    width: 100%;
+    background-color: rgba(0,0,0, .5);
+}
+
+.Menu .menu-bar {
+    width: calc(3 * var(--actionbar-width));
+    height: 100%;
+    background-color: var(--color-active);
+    transition: all .25s;
+    display: flex;
+    flex-direction: column;
+}
+
+.Menu .menu-tabs {
+    width: 100%;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: calc(2 * var(--actionbar-width));
+    justify-content: center;
+}
+
+.Menu .menu-snippet,
+.Tab {
+    width: 100%;
+    height: var(--actionbar-width);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tab {
+    transition: all .25s;
+    float: left;
+    cursor: pointer;
+}
+
+.Menu .menu-snippet .uil {
+    font-size: 2.25rem;
+}
+
+.Tab .uil {
+    width: var(--actionbar-width);
+    height: var(--actionbar-width);
+    display: inline-flex;
+    float: left;
+    font-size: 2.25rem;
+    padding-bottom: .25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tab span {
+    display: inline-flex;
+    float: left;
+    width: calc(2 * var(--actionbar-width));
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: .65rem;
+    font-size: 1.35rem;
+}
+
+.Tab.active {
+    color: var(--color-accent);
+    background-color: rgba(var(--rgb-accent-color), .10);
+    cursor: default;
+    pointer-events: none;
+} 
+
+.Tab:not(.active):hover {
+    background-color: var(--color-hover);
+}
+
+.Tab:active {
+    background-color: var(--color-active);
+}

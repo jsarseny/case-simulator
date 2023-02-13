@@ -1,0 +1,78 @@
+.Contracts {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.rarity-select {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rarity-select > span {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+}
+.rarity-select > span.buttons {
+    margin-top: 1.5rem;
+}
+.select-items {
+    width: 100%;
+    float: left;
+}
+
+.select-items > .title {
+    width: 100%;
+    float: left;
+    padding: .85rem 1.5rem;
+    font-size: 1.25rem;
+}
+
+.select-items .items-list {
+    --columns-count: 5;
+
+    width: 100%;
+    height: 18rem;
+    background-color: var(--color-background);
+}
+
+.trade-up-buttons {
+    width: 100%;
+    float: left;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.trade-up-buttons .Button {
+    padding: 0.5rem 3.5rem;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 800px) {
+    .rarity-select {
+        padding: 1rem 5px;
+    }
+
+    .rarity-select .Selection span {
+        padding: 8px 12px;
+    }
+
+    .select-items .items-list {
+        height: 11rem;
+    }
+
+    .trade-up-buttons .Button {
+        margin-right: 1rem;
+        padding: 0.3rem 2rem;
+        font-size: 1.5rem;
+    }
+}

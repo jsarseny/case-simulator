@@ -1,0 +1,28 @@
+.Selection {
+    float: left;
+    overflow: hidden;
+    border: 1px solid var(--color-hover);
+    background-color: var(--color-background);
+}
+
+.Selection > span {
+    padding: .5rem 1rem;
+    font-size: 1.15rem;
+    display: block;
+    float: left;
+    cursor: pointer;
+    border-right: 1px solid var(--color-hover);
+    transition: all .15s;
+}
+.Selection > span:last-child {
+    border-color: transparent;
+}
+.Selection > span.active {
+    cursor: default;
+    background-color: rgba(var(--rgb-accent-color), .8);
+}
+
+.Selection.disabled {
+    pointer-events: none;
+    opacity: 0.65;
+}

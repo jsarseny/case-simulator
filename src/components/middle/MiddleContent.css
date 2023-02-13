@@ -1,0 +1,7 @@
+.MiddleContent {
+    width: calc(100% - var(--actionbar-width));
+    position: relative;
+    height: 100%;
+    float: left;
+    margin-left: var(--actionbar-width);
+}

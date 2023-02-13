@@ -1,0 +1,66 @@
+.Button {
+    --color-scheme-rgb: var(--rgb-accent-color);
+    --color-scheme: rgba(var(--color-scheme-rgb), 1);
+
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    position: relative;
+    color: var(--color-scheme);
+    border: 2px solid var(--color-scheme);
+    padding: 0.35rem 2.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all .15s;
+    font-weight: 500;
+    font-size: 1.1rem;
+    float: left;
+    max-width: 100%;
+}
+
+.Button.negative {
+    --color-scheme-rgb: 229, 57, 53;
+}
+
+.Button:not(.disabled):active {
+    transform: scale(.99); 
+}
+
+.Button:not(.disabled):hover, 
+.Button:not(.disabled):active {
+    background-color: var(--color-scheme);
+    color: #fff;
+}
+
+.Button.secondary {
+    --ripple-color: rgba(var(--color-scheme-rgb), .1);
+    color: var(--color-scheme);
+    border: none;
+    background: none;
+}
+
+.Button.secondary:not(.disabled):hover, 
+.Button.secondary:not(.disabled):active {
+    color: var(--color-scheme) !important;
+    background: rgba(var(--color-scheme-rgb), .1) !important;
+}
+
+.Button.disabled {
+    cursor: default;
+    opacity: .65;
+}
+
+@media screen and (max-width: 800px) {
+    .Button {
+        font-size: 1rem;
+        padding: 0.35rem 1rem;
+        background-color: var(--color-scheme);
+        color: #fff;
+    }
+
+    .Button:not(.disabled):active {
+        transform: scale(.95); 
+    }
+}

@@ -1,0 +1,105 @@
+.Shop {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.Shop .collection-pick {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 2%;
+}
+
+.Shop .collections-list {
+    width: 100%;
+    flex: 2;
+    float: left;
+    overflow: hidden;
+}
+
+.Shop .collections-list .items-list {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.Shop .available-items-list {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Shop .available-items-list .controls {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button.item-quality-buy {
+    width: 100%;
+    margin-bottom: .5rem;
+    justify-content: space-between;
+}
+
+.Modal.buy-item-modal .Button.stattrack {
+    --color-scheme-rgb: var(--color-stattrack);
+}
+
+.Modal.buy-item-modal .Button.disabled {
+    opacity: 0.2;
+}
+
+.Modal.buy-item-modal .Item {
+    width: 10rem;
+    height: unset;
+    aspect-ratio: 2/1.5;
+}
+
+.Modal.buy-item-modal .subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal.buy-item-modal .subtitle .offer {
+    width: 100%;
+    float: left;
+    margin-top: .75rem;
+    padding: .5rem 0;
+    border-top: 1px dashed #fff;
+    border-bottom: 1px dashed #fff;
+}
+
+.Modal.buy-item-modal .subtitle .meta-info, 
+.Modal.buy-item-modal .subtitle .inputs {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.Modal.buy-item-modal .subtitle .inputs {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: .25rem;
+}
+
+.Modal.buy-item-modal .subtitle .inputs input {
+    max-width: 40%;
+    margin-left: .25rem;
+}
+
+.Modal.buy-item-modal .subtitle .meta-info span {
+    width: 100%;
+    float: left;
+    padding: .25rem;
+}

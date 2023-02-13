@@ -1,0 +1,179 @@
+.Upgrader {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.Upgrader .items-preview {
+    margin-top: 4.5rem;
+    width: 100%;
+    display: flex;
+    float: left;
+    align-items: center;
+}
+
+.Upgrader .item-selection,
+.FreeContract .item-selection {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+.Upgrader .item-selection .ItemPage,
+.FreeContract .item-selection .ItemPage {
+    flex: 2;
+}
+
+.items-preview .upgrader-item {
+    width: calc(100% / 3.5);
+    aspect-ratio: 1/1;
+    float: left;
+    padding: 1rem;
+}
+
+.items-preview .upgrader-item .Item {
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin: 0;
+}
+
+.items-preview .upgrader-item .VoidItem {
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin: 0;
+    border: 2px dashed var(--color-secondary);
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 550;
+    color: var(--color-secondary);
+}
+
+.multiplier-selection {
+    width: 100%;
+    float: left;
+    padding: 0 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.multiplier-selection > span {
+    width: 100%;
+    display: block;
+    float: left;
+    font-size: 1.25rem;
+    padding-bottom: .5rem;
+}
+.multiplier-selection .selection-container {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.interactive-upgrader {
+    width: calc(100% / 2.34);
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.interactive-upgrader .Button.reroll-item {
+    padding: 0.35rem;
+    margin-left: .65rem;
+}
+.interactive-upgrader .Button.reroll-item i {
+    font-size: 1.76rem;
+}
+.interactive-upgrader .Button {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.Spinner {
+    --color-scheme-rgb: var(--color-milspec);
+    --color-scheme: rgba(var(--color-scheme-rgb), 1);
+
+    width: 80%;
+    aspect-ratio: 1/1;
+    float: left;
+    border-radius: 50%;
+    border: 2px solid var(--color-background);
+    padding: 15px;
+    position: relative;
+    transition: all .25s;
+}
+
+.Spinner > span.spinner-content {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+    border-radius: 50%;
+    background-color: var(--color-background);
+    font-size: 3.15rem;
+    justify-content: center;
+    border: 2px solid var(--color-background);
+    align-items: center;
+    animation: spinner-content-spawn .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.Spinner > span.spinner-content img {
+    width: 80%;
+    animation: spinner-content-spawn .4s cubic-bezier(0.33, 1, 0.68, 1.5);
+}
+.Spinner > span.spinner-content .loss {
+    animation: spinner-content-spawn .4s cubic-bezier(0.33, 1, 0.68, 1.5);
+}
+
+.Spinner i.spinner-indicator {
+    position: absolute;
+    top: 5px;
+    left: calc(50% - 1rem);
+    z-index: 1;
+    color: #fff;
+    font-size: 2rem;
+    transform-origin: 0px 5rem;
+    transition: transform 6.5s cubic-bezier(0.19, 0.02, 0, 0.98);
+}
+
+.Spinner > span.spinner-content span.spinner-chance-preview::after {
+    content: "%";
+    font-size: 1.5rem;
+}
+
+@keyframes spinner-content-spawn {
+    0% {
+        transform: scale(0.6);
+    } 50% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .items-preview .upgrader-item, 
+    .items-preview .arrows,
+    .Upgrader .item-selection .ItemPage .current-page  {
+        padding: 0;
+    }
+
+    .interactive-upgrader {
+        margin-top: 0;
+    }
+
+    .Spinner {
+        width: 55%;
+    }
+
+    .Upgrader .item-selection .ItemPage {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+}
