@@ -18302,16 +18302,310 @@ const Weapons = [
         "rarity": "mil-spec",
         "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_scar20_gs_scar_fragments_black_light_large.d6bde287b06ba2380ba07621a0b06c36b13c4025.png",
         "prices": {
-            "FN": null
+            "FN": 2.04,
+            "MW": 1.1,
+            "FT": 0.79,
+            "WW": 0.55,
+            "BS": 0.54,
+            "FNST": 0.86,
+            "MWST": 2.33,
+            "FTST": 1.08,
+            "BSST": 0.86
         }
     }, {
         "id": 1119,
         "collectionId": 73,
         "type": "weapon",
+        "weaponName": "P250",
+        "skinName": "Re.built",
+        "rarity": "mil-spec",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_p250_cu_p250_rebuilt_light_large.69d4fcb9a8151d09818d1c26cf4c7b03d046b5a1.png",
+        "prices": {
+            "FN": 2.11,
+            "MW": 1.1,
+            "FT": 0.8,
+            "WW": 0.54,
+            "BS": 0.56,
+            "MWST": 2.34,
+            "FTST": 1.06,
+            "WWST": 0.96,
+            "BSST": 0.81
+        }
+    }, {
+        "id": 1120,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "MP9",
+        "skinName": "Featherweight",
+        "rarity": "mil-spec",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_mp9_cu_mp9_superlight_light_large.81ad837f4c889f250fa03b227ef74555614de55d.png",
+        "prices": {
+            "FN": 2.39,
+            "MW": 1.08,
+            "FT": 0.78,
+            "WW": 0.58,
+            "BS": 0.55,
+            "MWST": 2.32,
+            "FTST": 1.22,
+            "WWST": 0.92,
+            "BSST": 0.82
+        }
+    }, {
+        "id": 1121,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "MAG-7",
+        "skinName": "Insomnia",
+        "rarity": "mil-spec",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_mag7_cu_mag7_insomnia_light_large.0d971fb17ca0bb1df7baed6a1caa902c56c1ea5b.png",
+        "prices": {
+            "FN": 2.42,
+            "MW": 1.11,
+            "FT": 0.8,
+            "WW": 0.59,
+            "BS": 0.53,
+            "FNST": 7.01,
+            "MWST": 2.34,
+            "FTST": 1.1,
+            "WWST": 0.85,
+            "BSST": 0.81
+        }
+    }, {
+        "id": 1122,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "SG 553",
+        "skinName": "Cyberforce",
+        "rarity": "mil-spec",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_sg556_cu_sg553_cyberforce_light_large.63aa4e611195d801eb706ac65d38df68f98e2b76.png",
+        "prices": {
+            "MW": 1.09,
+            "FT": 0.79,
+            "WW": 0.57,
+            "BS": 0.52,
+            "MWST": 2.46,
+            "FTST": 1.01,
+            "WWST": 0.93,
+            "BSST": 0.78
+        }
+    }, {
+        "id": 1123,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "MP5-SD",
+        "skinName": "Liquidation",
+        "rarity": "mil-spec",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_mp5sd_cu_mp5sd_quick_liquidation_light_large.2b446c710928debe38469e33b3b9030bd218c0e3.png",
+        "prices": {
+            "FN": 2.58,
+            "MW": 1.09,
+            "FT": 0.81,
+            "WW": 0.59,
+            "BS": 0.54,
+            "FNST": 9.73,
+            "MWST": 2.17,
+            "FTST": 1.13,
+            "WWST": 0.89,
+            "BSST": 0.83
+        }
+    }, {
+        "id": 1124,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "Tec-9",
+        "skinName": "Rebel",
+        "rarity": "mil-spec",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_tec9_cu_tec9_freedom_light_large.bb79585222a88d4dd3b154915c5527cac7e507d1.png",
+        "prices": {
+            "FN": 2.25,
+            "MW": 1.07,
+            "FT": 0.8,
+            "WW": 0.58,
+            "BS": 0.55,
+            "MWST": 2.36,
+            "FTST": 1.12,
+            "WWST": 0.84,
+            "BSST": 0.83
+        }
+    }, {
+        "id": 1125,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "MAC-10",
+        "skinName": "Sakkaku",
+        "rarity": "restricted",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_mac10_cu_mac10_sakkaku_light_large.b590689d0ca099e8a759dd0a86da0710a58bca42.png",
+        "prices": {
+            "FT": 6.98,
+            "WW": 4.66,
+            "BS": 4.09,
+            "FTST": 12.05,
+            "WWST": 6.51,
+            "BSST": 5.4
+        }
+    }, {
+        "id": 1126,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "P90",
+        "skinName": "Neoqueen",
+        "rarity": "restricted",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_p90_gs_p90_neoqueen_light_large.fa2a81f8c7906b2683b5eb4b562edd2529ad2cf0.png",
+        "prices": {
+            "FN": 11.45,
+            "MW": 9.23,
+            "FT": 6.19,
+            "BS": 6.89,
+            "FNST": 14.75,
+            "MWST": 18.27,
+            "FTST": 9.19,
+            "FTST": 14.75
+        }
+    }, {
+        "id": 1127,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "Glock-18",
+        "skinName": "Umbral Rabbit",
+        "rarity": "restricted",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_glock_cu_glock_moon_rabbit_light_large.9063b9745250446c657632eb13a6325f51d101f2.png",
+        "prices": {
+            "FN": 12.23,
+            "MW": 9.38,
+            "FT": 6.13,
+            "WW": 5.04,
+            "BS": 4.12,
+            "MWST": 19.17,
+            "FTST": 8.57
+        }
+    }, {
+        "id": 1128,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "R8 Revolver",
+        "skinName": "Banana Cannon",
+        "rarity": "restricted",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_revolver_gs_r8_banana_light_large.50f0b729a36a405d48b41d58463234dbbd15b9cf.png",
+        "prices": {
+            "FN": 13.1,
+            "MW": 9.06,
+            "FT": 6.09,
+            "WW": 4.64,
+            "BS": 4.2,
+            "FNST": 8.66,
+            "MWST": 5.91,
+            "FTST": 5.2
+        }
+    }, {
+        "id": 1129,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "M4A1-S",
+        "skinName": "Emphorosaur-S",
+        "rarity": "restricted",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_feeding_frenzy_light_large.e1cb803e0e10ae4457e42d34ec8515b1500f4762.png",
+        "prices": {
+            "FN": 25.56,
+            "MW": 12.2,
+            "FT": 7.57,
+            "WW": 8.52,
+            "BS": 5.97,
+            "FNST": 11.44,
+            "MWST": 29.12,
+            "FTST": 13.87,
+            "BSST": 11.44,
+        }
+    }, {
+        "id": 1130,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "P2000",
+        "skinName": "Wicked Sick",
+        "rarity": "classified",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_hkp2000_cu_p2000_decline_light_large.7f57145674a5e41b3b8e7fe70be4ffbb57ec6f84.png",
+        "prices": {
+            "FN": 54.82,
+            "MW": 35.11,
+            "FT": 20.82,
+            "WW": 13.98,
+            "BS": 10.52,
+            "FNST": 20.32,
+            "MWST": 68.92,
+            "WWST": 20.32,
+        }
+    }, {
+        "id": 1131,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "UMP-45",
+        "skinName": "Wild Child",
+        "rarity": "classified",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ump45_cu_ump_clutch_kick_light_large.b57e43c07b433517b1c3bdaa1e52ce44878af481.png",
+        "prices": {
+            "MW": 34.29,
+            "FT": 20.59,
+            "WW": 12.84,
+            "MWST": 68.16
+        }
+    }, {
+        "id": 1132,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "AWP",
+        "skinName": "Duality",
+        "rarity": "classified",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_awp_gs_awp_limbo_snake_light_large.60984ce1e5c1a4ac10e83444a9b7e7f78dd98b1e.png",
+        "prices": {
+            "FN": 239.38,
+            "MW": 127.89,
+            "FT": 81.24,
+            "WW": 71.05,
+            "BS": 40.27,
+            "MWST": 233.21,
+            "FTST": 120.23
+        }
+    }, {
+        "id": 1133,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "AK-47",
+        "skinName": "Head Shot",
+        "rarity": "covert",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_cu_ak_head_shot_holo_light_large.85be84ba7c07917493b8e8a66c9d95c928ebe8b6.png",
+        "prices": {
+            "FN": 392.28,
+            "MW": 194.09,
+            "FT": 130.05,
+            "WW": 63.77,
+            "BS": 48.85,
+            "MWST": 389.25,
+            "FTST": 233.85,
+            "WWST": 138.12
+        }
+    }, {
+        "id": 1134,
+        "collectionId": 73,
+        "type": "weapon",
+        "weaponName": "M4A4",
+        "skinName": "Temukau",
+        "rarity": "covert",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_cu_m4a4_temukau_light_large.a41eb80c70cbbee5d84e53b5cd1eaa10954c938d.png",
+        "prices": {
+            "FN": 642.91,
+            "MW": 337.72,
+            "FT": 153.84,
+            "WW": 126.08,
+            "BS": 70.31,
+            "MWST": 553.57
+        }
+    }, {
+        "id": 1335,
+        "collectionId": 73,
+        "type": "weapon",
         "weaponName": "Rare",
-        "skinName": "★ Gloves ★",
+        "skinName": "Special Item",
         "rarity": "gold",
-        "image": "./assets/rare-item.png"
+        "image": "./assets/rare-item.png",
     },
 ];
 

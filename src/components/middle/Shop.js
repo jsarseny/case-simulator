@@ -6,7 +6,7 @@ import buildClassName from "../../utils/buildClassName.js";
 
 import { buyItem } from "./helpers/transactions.js";
 import { sortItems } from "./Cases.js";
-import { WeaponQuality } from "../../utils/chance.js";
+import { WeaponQualityExtended } from "../../utils/chance.js";
 import { getCollectionItems } from "../../models/weapons.js";
 
 import Modal from "../ui/Modal.js";
@@ -92,7 +92,7 @@ const Shop = () => {
             let price = convertPrice(item.prices[quality]) * state.count;
 
             let children = <>
-                {WeaponQuality[quality]}
+                {WeaponQualityExtended[quality]}
                 <font color="gold">{price.toLocaleString()}$</font>
             </>
 

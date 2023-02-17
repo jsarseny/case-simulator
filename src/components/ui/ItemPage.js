@@ -14,6 +14,8 @@ import Dropdown from "./Dropdown";
 
 import "./ItemPage.css";
 
+export const upperFirst = string => string[0].toUpperCase() + string.slice(1);
+
 const ITEMS_IN_PAGE = 4 * 4;
 
 const ItemPage = ({
@@ -111,6 +113,7 @@ const ItemPage = ({
     const handleFilterChange = (value, name) => {
         if (/^All/ig.test(value)) value = null;
         if (value && "quality" === name) value = value.split(/-| /ig).map(item => item[0]).join("");
+        if (value && "rarity" == name) value = value.toLowerCase();
 
         setState(prev => ({
             ...prev,
@@ -130,7 +133,7 @@ const ItemPage = ({
                 ...prev.filters,
                 query: value
             }
-        }))
+        }));
     }
 
     const calculatePages = () => {
@@ -224,7 +227,7 @@ const ItemPage = ({
                     />
                     <Dropdown 
                         onChange={v => handleFilterChange(v, "rarity")}
-                        options={[ "All Rarities", ...Object.keys(RARITY_PRIORITY) ]}
+                        options={[ "All Rarities", ...Object.keys(RARITY_PRIORITY).map(upperFirst) ]}
                     />
                 </div>
                 <div className="items-rendered">

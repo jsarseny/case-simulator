@@ -30,7 +30,7 @@ const ROLL_TIME = 5500;
 const FINAL_TIME = 650;
 
 const ROLL_TRANSITION = `margin ${ROLL_TIME}ms cubic-bezier(0.19, 0.02, 0, 0.98)`;
-const FINAL_TRANSITION = `margin ${FINAL_TIME}ms cubic-bezier(0.19, 0.02, 0, 0.98)`;
+const FINAL_TRANSITION = `margin ${FINAL_TIME}ms cubic-bezier(0.33, 1, 0.68, 1)`;
 const GHOST_ANIMATION_TRANSITION = "all .55s cubic-bezier(0.33, 1, 0.68, 1)";
 
 export const animateGhost = (elements, delay = 40) => {
@@ -102,7 +102,7 @@ const Cases = () => {
     const getBestDrop = useCallback(() => {
         const { bestDrop } = GlobalState;
 
-        if (!bestDrop) return null;
+        if (!bestDrop || !bestDrop.quality) return null;
 
         const item = getExtendedItem(bestDrop);
         const from = getCollectionById(bestDrop.from);
@@ -292,7 +292,7 @@ const Cases = () => {
         const bestDrop = getBestDrop();
         
         if (!state.currentItem) return <>
-            {bestDrop.quality && (
+            {bestDrop && (
                 <div className="best-drop">
                     <div className="item-container">
                         <Item 

@@ -56,7 +56,10 @@ export const WeaponQuality = {
     "FT": "Field-Tested",
     "WW": "Well-Worn",
     "BS": "Battle-Scarred",
+}
 
+export const WeaponQualityExtended = {
+    ...WeaponQuality,
     "FNST": "Factory New ST™",
     "MWST": "Minimal Wear ST™",
     "FTST": "Field-Tested ST™",

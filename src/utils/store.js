@@ -1,8 +1,9 @@
-const STORE_VERSION = "1.0.35";
+const STORE_VERSION = "1.0.40";
 
 export const INITIAL_STATE = {
     version: STORE_VERSION,
     activeTab: 0,
+    readNotes: false,
     bestDrop: {
         id: null, 
         quality: null, 
@@ -26,6 +27,8 @@ export const INITIAL_STATE = {
     }
 }
 
+const FORCE_RESET_FIELDS = [ "version", "readNotes" ];
+
 const deepUpdate = (target, template) => {
     var result = {};
 
@@ -33,7 +36,7 @@ const deepUpdate = (target, template) => {
         let resultKey, resultValue;
         let currentTargetValue = target[key];
 
-        if (currentTargetValue == undefined) {
+        if (currentTargetValue == undefined || FORCE_RESET_FIELDS.includes(key)) {
             resultKey = key;
             resultValue = value;
         } else if (
@@ -60,7 +63,6 @@ const getMainContext = () => {
 
     if (storeContext.version !== STORE_VERSION) {
         storeContext = deepUpdate(storeContext, INITIAL_STATE);
-        storeContext.version = STORE_VERSION;
     }
 
     return storeContext;

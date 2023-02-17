@@ -193,6 +193,18 @@ html, body {
     cursor: default;
 }
 
+.Modal.version-release-notes-modal .subtitle ul {
+    padding-inline-start: 2rem;
+}
+.Modal.version-release-notes-modal .subtitle li {
+    padding: .35rem 0;
+    font-size: 1.15rem;
+}
+.Modal.version-release-notes-modal .subtitle {
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed rgba(255,255,255,.5);
+}
+
 input[type="text"],
 input[type="number"] {
     width: 100%;
