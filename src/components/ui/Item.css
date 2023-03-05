@@ -11,7 +11,8 @@
     background-color: #4b525f;
 }
 
-.Item span.selected-mark {
+.Item span.selected-mark,
+.Item span.recent-mark {
     display: flex;
     position: absolute;
     width: 3rem;
@@ -22,6 +23,23 @@
     justify-content: center;
     color: lightgreen;
     animation: opacity-fade .15s;
+}
+
+.Item span.recent-mark {
+    width: unset;
+    height: unset;
+    top: .5rem;
+    right: .5rem;
+    transition: all .15s;
+    color: #fff;
+    padding: .25rem .35rem;
+    background-color: rgba(255, 0, 0, .75);
+    font-size: 0.875rem;
+}
+
+.Item.selected span.recent-mark {
+    opacity: 0;
+    transform: scale(0);
 }
 
 .Item span.selected-mark i {
@@ -62,6 +80,11 @@
     border-bottom-right-radius: .5rem;
 }
 
+.Item .info .price .price-chunk,
+.ShowcaseItem .meta .price .price-chunk {
+    color: #fff !important;
+}
+
 .Item .info .quality {
     border-radius: 0;
     padding-right: 4px;
@@ -87,7 +110,7 @@
 .Item.weapon img {
     max-width: 90% !important;
     width: auto;
-    filter: brightness(1.10);
+    filter: brightness(1.10) drop-shadow(0 0 5px var(--color-shadow));
     margin: 0 0 0 .5rem;
 }
 
@@ -120,38 +143,37 @@
     padding: 2px 0 .35rem .85rem;
     background: transparent;
 }
+
+.Item.weapon font.QualityShade, .ShowcaseItem font.QualityShade,
+.Item.weapon font.PatternShade {
+    color: rgba(var(--background-shade), 1);
+}
+
 .Item.weapon .meta {
     padding-left: .5rem;
 }
 
-.Item.gold,
-.RarityShade.gold {
-    --background-shade: var(--color-gold);
-}
-.Item.covert,
-.RarityShade.covert {
-    --background-shade: var(--color-covert);
-}
-.Item.classified,
-.RarityShade.classified {
-    --background-shade: var(--color-classified);
-}
-.Item.restricted,
-.RarityShade.restricted {
-    --background-shade: var(--color-restricted);
-}
-.Item.mil-spec,
-.RarityShade.mil-spec {
-    --background-shade: var(--color-milspec);
-}
-.Item.industrial,
-.RarityShade.industrial {
-    --background-shade: var(--color-industrial);
-}
-.Item.base,
-.RarityShade.base {
-    --background-shade: var(--color-base);
-}
+.PatternShade.ruby { --background-shade: var(--color-ruby); }
+.PatternShade.emerald { --background-shade: var(--color-emerald); }
+.PatternShade.sapphire { --background-shade: var(--color-sapphire); }
+.PatternShade.black-pearl { --background-shade: var(--color-black-pearl); }
+
+.QualityShade.stattrack { --background-shade: var(--color-stattrack) }
+.QualityShade.souvenir { --background-shade: var(--color-souvenir) }
+.QualityShade.FN { --background-shade: var(--color-fn) }
+.QualityShade.MW { --background-shade: var(--color-mw) }
+.QualityShade.FT { --background-shade: var(--color-ft) }
+.QualityShade.WW { --background-shade: var(--color-ww) }
+.QualityShade.BS { --background-shade: var(--color-bs) }
+
+.Item.gold, .RarityShade.gold { --background-shade: var(--color-gold); }
+.Item.covert, .RarityShade.covert { --background-shade: var(--color-covert); }
+.Item.classified, .RarityShade.classified { --background-shade: var(--color-classified); }
+.Item.restricted, .RarityShade.restricted { --background-shade: var(--color-restricted); }
+.Item.mil-spec, .RarityShade.mil-spec { --background-shade: var(--color-milspec); }
+.Item.industrial, .RarityShade.industrial { --background-shade: var(--color-industrial); }
+.Item.base, .RarityShade.base { --background-shade: var(--color-base); }
+.Item.service, .RarityShade.service { --background-shade: 0,0,0; }
 
 .items-list {
     --columns-count: 4;

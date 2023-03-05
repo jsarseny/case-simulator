@@ -10,29 +10,36 @@ export const chance = percent => Math.random() < (percent / 100);
 export const randomFloat = (min, max) => Math.random() * (max - min) + min;
 export const randomInt = (min, max) => Math.floor(randomFloat(min, max));
 export const randomElement = array => array[randomInt(0, array.length)];
+export const randomElementExtended = (array, exclude) => {
+    exclude = Array.isArray(exclude) ? exclude : [ exclude ];
+    array = array.filter((item, i) => !exclude.includes(i));
+
+    return randomElement(array);
+}
 
 export const WeaponTypes = {
-    Pistols: [
-        "usp-s", "glock-18", "desert eagle", "p250",
-        "five-seven", "cz75-auto", "p2000", "tec-9",
-        "r8 revolver", "dual berettas"
+    Machineguns: [ "negev", "m249" ],
+    Shotguns: [ "sawed-off", "mag-7", "nova", "xm1014" ],
+    'Sniper Rifles': [
+        "awp", "ssg 08", "scar-20", "g2sg1" 
     ],
     Rifles: [
         "ak-47", "m4a4", "m4a1-s", "aug", "sg 553", 
         "galil ar", "famas"
     ],
-    'Sniper Rifles': [
-        "awp", "ssg 08", "scar-20", "g2sg1"
-    ],
     SMGs: [
         "p90", "ump-45", "mac-10", "mp7",
         "mp9", "mp5-sd", "pp-bizon"
     ],
-    Shotguns: [
-        "sawed-off", "mag-7", "nova", "xm1014"
+    Pistols: [
+        "usp-s", "glock-18", "desert eagle", "p250",
+        "five-seven", "cz75-auto", "p2000", "tec-9",
+        "r8 revolver", "dual berettas"
     ],
-    Machineguns: [
-        "negev", "m249"
+    Gloves: [
+        "Broken Fang Gloves", "Bloodhound Gloves", "Sport Gloves", 
+        "Driver Gloves", "Hand Wraps", "Moto Gloves", 
+        "Specialist Gloves", "Hydra Gloves"
     ],
     Knifes: [
         "karambit", "m9 bayonet", "butterfly knife",
@@ -43,19 +50,26 @@ export const WeaponTypes = {
         "falchion knife", "gut knife", "navaja knife",
         "shadow daggers"
     ],
-    Gloves: [
-        "Broken Fang Gloves", "Bloodhound Gloves", "Sport Gloves", 
-        "Driver Gloves", "Hand Wraps", "Moto Gloves", 
-        "Specialist Gloves", "Hydra Gloves"
-    ]
 }
 
+export const ItemOriginById = {
+    "-1": "Unknown",
+
+    0: "Found in Crate",
+    1: "Crafted",
+    2: "Purchased",
+    3: "Upgraded",
+    4: "Traded Up"
+}
+
+export const getItemOrigin = item => ItemOriginById[item.origin] || ItemOriginById[-1];
+
 export const WeaponQuality = {
-    "FN": "Factory New",
-    "MW": "Minimal Wear",
-    "FT": "Field-Tested",
-    "WW": "Well-Worn",
-    "BS": "Battle-Scarred",
+    FN: "Factory New",
+    MW: "Minimal Wear",
+    FT: "Field-Tested",
+    WW: "Well-Worn",
+    BS: "Battle-Scarred",
 }
 
 export const WeaponQualityExtended = {

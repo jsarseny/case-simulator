@@ -6,13 +6,18 @@ import React, {
 
 import Context from "../../utils/context";
 import renderInventory, { filterInventory } from "./helpers/renderInventory";
-import { deleteItem, insertItem } from "./helpers/transactions";
 
 import { 
     getRarity, 
     mathContract, 
     getLimitContainerRarities,  
 } from "../../utils/chance";
+
+import {
+    deleteItem, 
+    insertItem, 
+    statistics 
+} from "./helpers/transactions";
 
 import Modal from "../ui/Modal";
 import Button from "../ui/Button";
@@ -55,10 +60,12 @@ const Contracts = () => {
         
         deleteItem(setGlobalState, selectedItems);
 
+        statistics.edit(setGlobalState, "TotalCraftsMade", 1);
+
         insertItem(setGlobalState, {
             id: resultItem.id,
             quality: resultItem.quality
-        });
+        }, 1);
 
         setSelectedItems([]);
         setObtainedItem(resultItem);
@@ -161,6 +168,7 @@ const Contracts = () => {
                 <Modal
                     title="New Item Obtained"
                     className="item-info-modal"
+                    canInstantClose={false}
                     onCancel={() => setObtainedItem(null)}
                     actions={[{
                         children: "confirm"

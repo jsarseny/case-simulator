@@ -29,8 +29,13 @@
     flex: 2;
     display: flex;
     flex-direction: column;
-    padding-bottom: calc(2 * var(--actionbar-width));
     justify-content: center;
+}
+
+.Menu .secondary-tabs {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 0;
+    flex: 0;
 }
 
 .Menu .menu-snippet,
@@ -89,4 +94,13 @@
 
 .Tab:active {
     background-color: var(--color-active);
+}
+
+.settings-modal .subtitle {
+    display: flex;
+    justify-content: center;
+}
+
+.settings-modal .subtitle .Dropdown {
+    margin: 0 .75rem;
 }

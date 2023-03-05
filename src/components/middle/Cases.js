@@ -5,10 +5,14 @@ import React, {
     useCallback, 
 } from "react"; 
 
+import useLang from "../../hooks/useLang";
 import Context from "../../utils/context";
+import Currency from "../../utils/currency";
 import buildClassName from "../../utils/buildClassName";
 import renderInventory from "./helpers/renderInventory";
 import Collections, { getCollectionById } from "../../models/collections";
+
+import { upperFirst } from "../ui/ItemPage";
 
 import { 
     randomFloat,
@@ -18,8 +22,16 @@ import {
     RARITY_PRIORITY
 } from "../../utils/chance";
 
-import { insertItem, sellItem } from "./helpers/transactions";
-import { getCollectionItems, getItemImageUrl } from "../../models/weapons";
+import { 
+    sellItem, 
+    insertItem, 
+    statistics, 
+} from "./helpers/transactions";
+
+import { 
+    getItemImageUrl, 
+    getCollectionItems
+} from "../../models/weapons";
 
 import Button from "../ui/Button";
 import Item, { ItemList } from "../ui/Item";
@@ -31,9 +43,9 @@ const FINAL_TIME = 650;
 
 const ROLL_TRANSITION = `margin ${ROLL_TIME}ms cubic-bezier(0.19, 0.02, 0, 0.98)`;
 const FINAL_TRANSITION = `margin ${FINAL_TIME}ms cubic-bezier(0.33, 1, 0.68, 1)`;
-const GHOST_ANIMATION_TRANSITION = "all .55s cubic-bezier(0.33, 1, 0.68, 1)";
+const GHOST_ANIMATION_TRANSITION = "all .45s cubic-bezier(0.33, 1, 0.68, 1)";
 
-export const animateGhost = (elements, delay = 40) => {
+export const animateGhost = (elements, delay = 20) => {
     const items = Array.from(elements);
 
     if (!items.length) return;
@@ -73,7 +85,7 @@ const CaseItem = ({ item }) => {
     return (
         <div className={buildClassName("CaseItem RarityShade", item.rarity)}>
             <div className="image">
-                <img src={getItemImageUrl(item)} />
+                <img src={getItemImageUrl(item)} alt="" />
             </div>
             <span className="rarity-color" />
         </div>
@@ -81,8 +93,10 @@ const CaseItem = ({ item }) => {
 }
 
 const Cases = () => {
-    const { GlobalState, setGlobalState } = useContext(Context);
+    const { GlobalState, setGlobalState, DeepLink } = useContext(Context);
     const [ collectionFilter, setCollectionFilter ] = useState("case");
+
+    const lang = useLang(GlobalState);
 
     const [ state, setState ] = useState({
         currentItem: null,
@@ -108,7 +122,7 @@ const Cases = () => {
         const from = getCollectionById(bestDrop.from);
 
         return { item, from }
-    }, [GlobalState.bestDrop]);
+    }, [GlobalState]);
 
     const compareWithBest = useCallback((item, collectionId) => {
         const { bestDrop } = GlobalState;
@@ -123,7 +137,7 @@ const Cases = () => {
                 from: collectionId
             }
         }));
-    }, [GlobalState.bestDrop]);
+    }, [GlobalState, setGlobalState]);
 
     const handleCaseChoose = item => {
         setState(prev => ({
@@ -134,6 +148,9 @@ const Cases = () => {
     }
 
     const handleItemDrop = item => {
+        if (item.rarity === "gold") statistics.edit(setGlobalState, "TotalGoldDropped", 1); 
+        if (item.rarity === "covert") statistics.edit(setGlobalState, "TotalCovertDropped", 1); 
+
         setState(prev => {
             if (item.rarity === "gold") {
                 item = selectRareItem(prev.currentItem.id);
@@ -156,7 +173,10 @@ const Cases = () => {
     const handleCaseOpen = () => {
         if (!state.currentItem) return;
 
-        const isContainer = state.currentItem.type === "case"
+        const isContainer = state.currentItem.type === "case";
+
+        if (state.currentItem.price) statistics.edit(setGlobalState, "TotalCratesPrice", state.currentItem.price);
+        statistics.edit(setGlobalState, isContainer ? "TotalCratesOpened" : "TotalSouvenirsOpened", 1);
 
         var items = [], dropped = randomFloat(90, 140);
         var worker = isContainer ? mathContainer : mathCollection;
@@ -174,7 +194,7 @@ const Cases = () => {
     }
 
     const handleConfirmItem = item => {
-        insertItem(setGlobalState, item);
+        insertItem(setGlobalState, item, 0);
         handleCaseChoose(state.currentItem);
     }
 
@@ -184,11 +204,20 @@ const Cases = () => {
     }
 
     useEffect(() => {
-        if (!state.currentItem) {
-            return animateGhost(document.querySelectorAll(".Cases .current-list .Item"));
-        }
+        DeepLink.addEventListener("cs:/cases/focus", context => {
+            if (!context || !context.cid) return;
 
-        return animateGhost(document.querySelectorAll(".Cases .current-list .Item"));
+            let collection = getCollectionById(context.cid);
+
+            if (!collection) return;
+
+            handleCaseChoose(collection);
+            DeepLink.emitEvent("cs:/global/focusTab?id=0");
+        });
+    }, [DeepLink]);
+
+    useEffect(() => {
+        animateGhost(document.querySelectorAll(".Cases .current-list .Item"));
     }, [state.currentItem]);
 
     useEffect(() => {
@@ -222,7 +251,7 @@ const Cases = () => {
                 );
             }, FINAL_TIME + 150);
         }, ROLL_TIME + 150);
-    }, [state.currentOpen.open]);
+    }, [state.currentOpen]);
 
     const renderPreview = () => {
         if (!state.currentItem) return <span className="choose-case">Choose the case you want to open</span>
@@ -242,7 +271,7 @@ const Cases = () => {
                         <span className="action-line">{skinName} ({droppedItem.quality})</span>
                         <span className="action-line">
                             <Button onClick={() => handleConfirmItem(droppedItem)}>OK</Button>
-                            <Button onClick={() => handleItemSell(droppedItem)} negative>Sell</Button>
+                            <Button onClick={() => handleItemSell(droppedItem)} negative>{lang.common.sell}</Button>
                         </span>
                     </div>
                 </div>
@@ -273,14 +302,14 @@ const Cases = () => {
                     onClick={() => handleCaseChoose(null)}
                 >
                     <img src={item.image} alt={item.fullName} />
-                    {item.price && <span className="price">${item.price}</span>}
+                    {item.price && <span className="price">{Currency.renderPrice(GlobalState, item.price)}</span>}
                 </div>
                 
                 <div className="actions">
                     <span className="action-line">{item.fullName}</span>
                     <span className="action-line">
                         <Button onClick={handleCaseOpen}>
-                            Open {item.type}
+                            {lang.cases["open" + upperFirst(item.type)]}
                         </Button>
                     </span>
                 </div>
@@ -302,8 +331,8 @@ const Cases = () => {
                         />
                     </div>
                     <div className="item-info">
-                        <span>Your Best Drop</span>
-                        <span>From: <a onClick={() => handleCaseChoose(bestDrop.from)}>«{bestDrop.from.fullName}»</a></span>
+                        <span>{lang.cases.bestDrop}</span>
+                        <span>{lang.common.from}: <a onClick={() => handleCaseChoose(bestDrop.from)}>«{bestDrop.from.fullName}»</a></span>
                     </div>
                 </div>
             )}
@@ -311,12 +340,12 @@ const Cases = () => {
             <div className="current-list collections-list">
                 <div className="tab-list">
                     <span 
-                        children="cases"
+                        children={lang.cases.cases}
                         onMouseDown={() => setCollectionFilter("case")}
                         className={buildClassName(collectionFilter == "case" && "active")}
                     />
                     <span 
-                        children="special"
+                        children={lang.cases.special}
                         onMouseDown={() => setCollectionFilter("collection")}
                         className={buildClassName(collectionFilter == "collection" && "active")}
                     />

@@ -1,17 +1,21 @@
 import ReactDOM from "react-dom";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
+import useClickAway from "../../hooks/useClickAway";
 import buildClassName from "../../utils/buildClassName";
+import keyboardListeners from "../../utils/keyboardListeners";
+
+import { debounce } from "../../utils/schedulers";
 
 import Button from "./Button";
 
 import "./Modal.css";
-import useClickAway from "../../hooks/useClickAway";
 
 const Modal = ({
     title,
     children,
     actions = [{ children: "Confirm", isClosing: true }],
+    canInstantClose = true,
     isOpen = true,
     className,
     onCancel
@@ -35,7 +39,19 @@ const Modal = ({
         if (currentButton.onClick) currentButton.onClick(e);
     }
 
-    //useClickAway(alignRef, () => isOpen && handleClose());
+    useClickAway(alignRef, () => {
+        if (!canInstantClose) return;
+
+        handleClose();
+    });
+    
+    useEffect(() => {
+        if (!isOpen || !canInstantClose) return;
+
+        keyboardListeners({
+            onEsc: handleClose
+        });
+    }, [ isOpen, canInstantClose ]);
 
     if (!isOpen) return null;
 

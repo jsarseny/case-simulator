@@ -20,6 +20,11 @@
     max-width: 100%;
 }
 
+.Button.primary:not(.disabled) {
+    background-color: var(--color-scheme);
+    color: #fff;
+}
+
 .Button.negative {
     --color-scheme-rgb: 229, 57, 53;
 }

@@ -122,7 +122,7 @@ const Collections = [
         id: 18,
         type: "collection",
         shortName: "Control",
-        fullName: "The Control Shop",
+        fullName: "The Control",
         image: "./assets/collections/18.png"
     }, {
         id: 19,
@@ -493,6 +493,7 @@ const Collections = [
     }, {
         id: 73,
         type: "case",
+        price: 10.98,
         shortName: "Revolution",
         fullName: "Revolution Case",
         image: "./assets/collections/73.png"

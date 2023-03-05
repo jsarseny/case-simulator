@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import useLang from "../../hooks/useLang";
+import Context from "../../utils/context";
+import Currency from "../../utils/currency";
 import buildClassName from "../../utils/buildClassName";
+
 import { WeaponQuality } from "../../utils/chance";
 import { getItemImageUrl } from "../../models/weapons";
 
@@ -7,7 +12,47 @@ import Ripple from "./Ripple";
 
 import "./Item.css";
 
+const isRecentlyReceived = uid => {
+    const map = window.recentlyReceivedItems;
+
+    if (!map) return false;
+
+    var date = map.get(uid);
+
+    if (!date) return false;
+    if ((+new Date() - date) > 6e4) {
+        map.delete(uid);
+        return false;
+    }
+
+    return true;
+}
+
+// function frozen until better times
+export const highlightRarePattern = skinName => { 
+    return skinName;
+
+    let patternsRegex = /emerald|sapphire|ruby|black pearl/ig
+
+    if (
+        !/(gamma )?doppler/ig.test(skinName)
+        || !patternsRegex.test(skinName)
+    ) return skinName;
+
+    let pureSkin = skinName.replace(patternsRegex, "").trim();
+    let diseredPattern = skinName.replace(patternsRegex, "$$$&").split("$")[1];
+
+    return <>
+        {pureSkin + " "}
+        <font className={`PatternShade ${diseredPattern.toLowerCase().replace(/ /ig, "-")}`}>
+            {diseredPattern}
+        </font>
+    </>
+}
+
 export const ShowcaseItem = ({ item, alt }) => {
+    const { GlobalState } = useContext(Context);
+
     const backgroundVideo = (
         <div className="item-video-background">
             <div className="color-bg" />
@@ -25,6 +70,7 @@ export const ShowcaseItem = ({ item, alt }) => {
     );
 
     const isStatTrack = item.type === "weapon" && /ST$/ig.test(item.quality);
+    const isSouvenir = item.type === "weapon" && /SV$/ig.test(item.quality);
     
     const fullClassName = buildClassName(
         "ShowcaseItem",
@@ -39,9 +85,14 @@ export const ShowcaseItem = ({ item, alt }) => {
             <div className="info">
                 <span className="quality">{WeaponQuality[item.quality.slice(0, 2)]}</span>
                 <div className="meta">
-                    <span className="price">${Number(item.price.toFixed(2)).toLocaleString()}</span>
+                    <span className="price">{Currency.renderPrice(GlobalState, item.price)}</span>
                     <span className="name">
-                        <span className="weapon-name">{isStatTrack ? "StatTrack™" : ""} {item.weaponName}</span><br/>
+                        <span className="weapon-name">
+                            {isStatTrack && <font className="QualityShade stattrack">StatTrack™ </font>} 
+                            {isSouvenir && <font className="QualityShade souvenir">Souvenir </font>} 
+                            {item.weaponName}
+                        </span>
+                        <br/>
                         {item.skinName}
                     </span>
                 </div>
@@ -95,48 +146,88 @@ export const ItemList = ({
 
 const Item = ({ 
     item,
+    className,
     selected = false,
+    shouldRecent = true,
     shouldPrice = true,
     shouldQuality = true,
     ripple = true,
-    onClick
+    onClick,
+    onContextMenu
 }) => {
+    const { GlobalState } = useContext(Context);
+
+    const lang = useLang(GlobalState);
+
     const handleClick = () => {
         if (onClick) onClick(item);
     }
 
+    const handleContextMenu = e => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (onContextMenu) onContextMenu(item);
+    }
+
     const shouldRenderPrice = shouldPrice && Boolean(item.price);
     const shouldRenderQuality = shouldQuality && Boolean(item.quality);
+    const shouldRenderRecent = shouldRecent && Boolean(item.uid) && isRecentlyReceived(item.uid);
+    const pureQuality = shouldRenderQuality && item.quality.slice(0, 2);
 
     const isStatTrack = shouldRenderQuality && item.type === "weapon" && /ST$/ig.test(item.quality);
+    const isSouvenir = shouldRenderQuality && item.type === "weapon" && /SV$/ig.test(item.quality);
 
-    const name = item.type === "weapon" ?
-    <>
-        <span className="weapon-name">{isStatTrack ? "StatTrack™" : ""} {item.weaponName}</span><br/>
-        {item.skinName}
+    const fullWeaponName = buildClassName(
+        isStatTrack && "StatTrack™",
+        isSouvenir && "Souvenir",
+        item.weaponName, "|", item.skinName,
+        shouldRenderQuality && `(${WeaponQuality[pureQuality]})`
+    );
+
+    const name = item.type === "weapon" ? <>
+        <span className="weapon-name">
+            {isStatTrack && <font className="QualityShade stattrack">StatTrack™ </font>} 
+            {isSouvenir && <font className="QualityShade souvenir">{lang.property.souvenir} </font>} 
+            {item.weaponName}
+        </span>
+        <br/>
+        {highlightRarePattern(item.skinName)}
     </> : item.shortName;
 
-    const className = buildClassName(
+    const fullClassName = buildClassName(
         "Item", 
+        className,
+        item.type,
+        ripple && "ripple",
         selected && "selected",
         shouldPrice && "with-price",
-        ripple && "ripple",
-        item.type,
-        item.rarity && item.rarity
+        item.rarity && item.rarity,
+        shouldRenderRecent && "recently-received",
     );
 
     return (
-        <div className={className} onClick={handleClick}>
-            {selected && <span className="selected-mark">
-                <i className="uil uil-check-circle"></i>
-            </span>}
+        <div 
+            className={fullClassName} 
+            onClick={handleClick} 
+            onContextMenu={handleContextMenu}
+            title={item.type === "weapon" ? fullWeaponName : undefined}
+        >
+            {shouldRenderRecent && <span className="recent-mark">NEW</span>}
+            {selected && <span className="selected-mark"><i className="uil uil-check-circle" /></span>}
 
             <img src={getItemImageUrl(item)} alt={item.fullName} />
 
             <div className="info">
                 <div className="meta">
-                    {shouldRenderQuality && <div className="quality">{item.quality.slice(0, 2)}</div>}
-                    {shouldRenderPrice && <div className="price">${Number(item.price.toFixed(2)).toLocaleString()}</div>}
+                    {shouldRenderQuality && (
+                        <div className="quality">
+                            <font className={`QualityShade ${pureQuality}`}>
+                                {pureQuality}
+                            </font>
+                        </div>
+                    )}
+                    {shouldRenderPrice && <div className="price">{Currency.renderPrice(GlobalState, item.price)}</div>}
                 </div>
                 
                 <div className="name">{name}</div>

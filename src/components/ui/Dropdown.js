@@ -6,12 +6,13 @@ import "./Dropdown.css";
 
 const Dropdown = ({
     options = [],
+    active,
     className,
     onChange
 }) => {
     const dropdownRef = useRef(null);
     const [ isOpen, setIsOpen ] = useState(false);
-    const [ activeId, setActiveId ] = useState(0);
+    const [ activeId, setActiveId ] = useState(active || 0);
 
     const switchOpen = () => {
         setIsOpen(prev => !prev);
@@ -20,7 +21,8 @@ const Dropdown = ({
     const handleClick = id => {
         setActiveId(id);
         switchOpen();
-        onChange(options[id]);
+        
+        if (onChange) onChange(options[id]);
     }
 
     useClickAway(dropdownRef, () => {

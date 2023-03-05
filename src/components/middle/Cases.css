@@ -163,6 +163,10 @@
     font-size: .90rem;
 }
 
+.current-case-info .image span.price .price-chunk {
+    color: #fff !important;
+}
+
 .current-case-info .actions,
 .dropped-item .item-info {
     flex: 2;

@@ -55,25 +55,36 @@
     color: var(--color-secondary);
 }
 
-.multiplier-selection {
+.upgrade-settings {
     width: 100%;
     float: left;
     padding: 0 1.5rem;
     margin-top: 2rem;
-    font-size: 1.5rem;
 }
-.multiplier-selection > span {
+
+.upgrade-settings .setting {
+    width: 50%;
+    float: left;
+}
+
+.upgrade-settings .setting > span {
     width: 100%;
     display: block;
     float: left;
     font-size: 1.25rem;
     padding-bottom: .5rem;
 }
-.multiplier-selection .selection-container {
+
+.upgrade-settings .setting .selection-container {
     width: 100%;
     float: left;
     display: flex;
     justify-content: space-between;
+}
+
+.upgrade-settings .setting .selection-container .Dropdown {
+    min-width: 35%;
+    height: 100%;
 }
 
 .interactive-upgrader {
@@ -146,6 +157,17 @@
 .Spinner > span.spinner-content span.spinner-chance-preview::after {
     content: "%";
     font-size: 1.5rem;
+}
+
+.Upgrader .no-items-available {
+    width: 100%;
+    text-align: center;
+    animation: opacity-fade .25s;
+    color: #e53935;
+    font-weight: 550;
+    margin-top: 2rem;
+    font-size: 1.15rem;
+    float: left;
 }
 
 @keyframes spinner-content-spawn {

@@ -30,7 +30,7 @@ const Button = ({
     );
 
     return (
-        <div className={fullClassName} onMouseDown={handleClick}>
+        <div className={fullClassName} onClick={handleClick}>
             {children}
             {ripple && !disabled && <Ripple />}
         </div>

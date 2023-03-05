@@ -1,5 +1,12 @@
 import RareItems from "./rare";
 
+export const StorageVirtualModel = {
+    id: "service:storage",
+    type: "weapon",
+    rarity: "service",
+    image: "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXX7gNTPcUxqAhWSVjvS-W_0MqdAFwiJAdS7-v9eFVm16WZdWkXtYWwxdjTw_PwauLQxTkJ6cd3jrvArcLlhlOwU2JlOg",
+}
+
 const Weapons = [
     // Assault
     {
@@ -2095,7 +2102,7 @@ const Weapons = [
         "collectionId": 13,
         "type": "weapon",
         "weaponName": "Glock-18",
-        "skinName": "Gamma Doppler",
+        "skinName": "Gamma Doppler Emerald",
         "rarity": "covert",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0v73dDBH_t26kL-GluX2P77YjG5V18J9herKyoD8j1yg5UU9YmulII6cJABoMlvU-FLoxe7m0ZHq7Z3NyiZm7HRxt3iPlkDmgxpSLrs4ffL9gek",
         "prices": {
@@ -2105,7 +2112,67 @@ const Weapons = [
             "WW": 100,
             "BS": 103.46
         }
-    },
+    }, {
+        "id": 1336,
+        "collectionId": 13,
+        "type": "weapon",
+        "weaponName": "Glock-18",
+        "skinName": "Gamma Doppler Ph. 1",
+        "rarity": "covert",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0v73djxP4d2JkI-bh_vxIYTBnmpC7ZROjeXO9ofKhF2zowdyMWr6IYeQIwU8NFiGqAXtkr28jcO1vMvAnXRmuXQm5nuJnhKx1U5FOvsv26KW7OPGDg",
+        "prices": {
+            "FN": 21.21,
+            "MW": 16.28,
+            "FT": 12.85,
+            "WW": 12.74,
+            "BS": 13.22
+        }
+    }, {
+        "id": 1337,
+        "collectionId": 13,
+        "type": "weapon",
+        "weaponName": "Glock-18",
+        "skinName": "Gamma Doppler Ph. 3",
+        "rarity": "covert",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0v73djxP4d2JkI-bh_vxIYTBnmpC7ZZOjeXO9ofKhF2zowdyMGGlLdeRIwA7YwuF_lbqxbq6057pu5_An3Jh7iQltHncnha01RkZZ_sv26Jen3bHMA",
+        "prices": {
+            "FN": 21.45,
+            "MW": 16.16,
+            "FT": 12.83,
+            "WW": 12.7,
+            "BS": 13.08
+        }
+    }, {
+        "id": 1338,
+        "collectionId": 13,
+        "type": "weapon",
+        "weaponName": "Glock-18",
+        "skinName": "Gamma Doppler Ph. 2",
+        "rarity": "covert",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0v73djxP4d2JkI-bh_vxIYTBnmpC7ZdOjeXO9ofKhF2zowdyZzjxcYLAcg85ZVvW81fqk-u615G4vpvBy3Vhv3VzsyvUyUfh1BEfOPsv26IorI3Qlg",
+        "prices": {
+            "FN": 26,
+            "MW": 19.08,
+            "FT": 14.61,
+            "WW": 14.36,
+            "BS": 13.38
+        }
+    }, {
+        "id": 1339,
+        "collectionId": 13,
+        "type": "weapon",
+        "weaponName": "Glock-18",
+        "skinName": "Gamma Doppler Ph. 4",
+        "rarity": "covert",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0v73djxP4d2JkI-bh_vxIYTBnmpC7ZFOjeXO9ofKhF2zowdyNj36d4TBJwRoNw3Y8lS8wO3phZa-v5XMmiQw73Uj4XaJyxe3gx1La_sv26Lb-wHJ3Q",
+        "prices": {
+            "FN": 30,
+            "MW": 21.83,
+            "FT": 16.08,
+            "WW": 15.34,
+            "BS": 14.52
+        }
+    }, 
 
     // Vertigo 2021
     {
@@ -4650,8 +4717,8 @@ const Weapons = [
             "FN": 224.79,
             "MW": 222,
             "FT": 168.59,
-            "WW": 15.76,
-            "BS": 17.75
+            "WW": 225.47,
+            "BS": 198.94
         }
     }, {
         "id": 343,
@@ -6564,7 +6631,7 @@ const Weapons = [
             "MW": 0.89,
             "FT": 0.83,
             "WW": 0.76,
-            "MEST": 1.45,
+            "MWST": 1.45,
             "FTST": 1.29,
             "WWST": 1.17
         }
@@ -18459,7 +18526,7 @@ const Weapons = [
             "FNST": 14.75,
             "MWST": 18.27,
             "FTST": 9.19,
-            "FTST": 14.75
+            "BSST": 14.75
         }
     }, {
         "id": 1127,
@@ -18603,10 +18670,82 @@ const Weapons = [
         "collectionId": 73,
         "type": "weapon",
         "weaponName": "Rare",
-        "skinName": "Special Item",
+        "skinName": "★ Gloves ★",
         "rarity": "gold",
         "image": "./assets/rare-item.png",
     },
+
+    {
+        "id": 1340,
+        "type": "weapon",
+        "weaponName": "AWP",
+        "skinName": "Dragon Lore",
+        "rarity": "covert",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17P7NdTRH-t26q4SZlvD7PYTQgXtu5Mx2gv2P9o6migzl_Us5ZmCmLYDDJgU9NA6B81S5yezvg8e-7cycnXJgvHZx5WGdwUJqz1Tl4g",
+        "prices": {
+            "FNSV": 68073.1,
+            "MWSV": 47651.3,
+            "FTSV": 28288.2,
+            "WWSV": 22691.1,
+            "BSSV": 17396.5
+        }
+    }, {
+        "id": 1341,
+        "type": "weapon",
+        "weaponName": "AWP",
+        "skinName": "Desert Hydra",
+        "rarity": "covert",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FABz7PLfYQJK9diklb-HnvD8J4Tdl3lW7Ytw3LDD8NWnjFDhrUo5Nj_3cI6dIA9tZ1zQrFLqk7jugMK075WfznowpGB8suOz62BA",
+        "prices": {
+            "FNSV": 4327,
+            "MWSV": 2598.33,
+            "FTSV": 1917.09,
+            "WWSV": 1745,
+            "BSSV": 1663.43
+        }
+    }, {
+        "id": 1342,
+        "type": "weapon",
+        "weaponName": "AK-47",
+        "skinName": "Gold Arabesque",
+        "rarity": "covert",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09u5mIS0luX1Mb7Ch35U18l4jeHVyoD0mlOx5UM4YjvzdoTHJFVvNw3YrlO_xebsgpa7u57Pzidk7nQm53zUmx21g01SLrs4iSV9vgU",
+        "prices": {
+            "FNSV": 5000,
+            "MWSV": 2260.96,
+            "FTSV": 2078.09,
+            "WWSV": 1687.25,
+            "BSSV": 1327
+        }
+    }, {
+        "id": 1343,
+        "type": "weapon",
+        "weaponName": "M4A1-S",
+        "skinName": "Welcome to the Jungle",
+        "rarity": "covert",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alDKjfl2BU18l4jeHVyoD0mlOx5RU_NzylJ4GdewU2YlHYq1S-x7rs0Je7v8jOz3RguCIn4nbVmRLihhxSLrs4aeNPV4w",
+        "prices": {
+            "FNSV": 4559.86,
+            "MWSV": 1699,
+            "FTSV": 919,
+            "WWSV": 591.76,
+            "BSSV": 477.70
+        }
+    }, {
+        "id": 1344,
+        "type": "weapon",
+        "weaponName": "M4A1-S",
+        "skinName": "Imminent Danger",
+        "rarity": "covert",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uOxh7-Gw_alDK3UhH9Y78pOhuDG_ZjKhFWmrBZyMmj3IIGQclc4aFjTqVLslbrmjZa06ZrNySZhvSQk4XeMyhex0h9NO_sv26LxJDiH_w",
+        "prices": {
+            "FNSV": 3213.61,
+            "MWSV": 1298.70,
+            "FTSV": 665.51,
+            "WWSV": 649.67,
+            "BSSV": 605.08
+        }
+    }
 ];
 
 export default Weapons;
@@ -18690,7 +18829,7 @@ const scanPage = (id, collectionId) => {
     })
 
     rarity = rarity.replace(/grade| /ig, "");
-    if (rarity == "consumer") rarity = "base";
+    if (rarity === "consumer") rarity = "base";
     
     return {
         id,

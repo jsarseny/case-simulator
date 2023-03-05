@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
 
+import useLang from "../../hooks/useLang.js";
 import Context from "../../utils/context.js";
+import Currency from "../../utils/currency.js";
 import Collections from "../../models/collections.js";
 import buildClassName from "../../utils/buildClassName.js";
 
@@ -21,6 +23,8 @@ const convertPrice = price => Number.parseFloat((price * BUY_MARKUP).toFixed(2))
 
 const Shop = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
+
+    const lang = useLang(GlobalState);
 
     const [ state, setState ] = useState({
         count: 1,
@@ -93,7 +97,7 @@ const Shop = () => {
 
             let children = <>
                 {WeaponQualityExtended[quality]}
-                <font color="gold">{price.toLocaleString()}$</font>
+                {Currency.renderPrice(GlobalState, price)}
             </>
 
             let className = buildClassName(
@@ -112,12 +116,12 @@ const Shop = () => {
 
         return (
             <Modal
-                title={`Buy ${state.selected.weaponName} | ${state.selected.skinName}`}
+                title={`${lang.common.buy} ${state.selected.weaponName} | ${state.selected.skinName}`}
                 className="item-info-modal buy-item-modal"
                 onCancel={() => setState(prev => ({ ...prev, selected: null }))}
                 actions={[
                     ...buttons, {
-                        children: "cancel",
+                        children: lang.common.cancel,
                         negative: true
                     }
                 ]}
@@ -130,8 +134,8 @@ const Shop = () => {
 
                 <div className="offer">
                     <div className="meta-info">
-                        <span>Balance: <font color="gold">{GlobalState.profile.balance.toLocaleString()}$</font></span>
-                        <span>Murkup: <font color="red">+13%</font></span>
+                        <span>{lang.common.balance}: {Currency.renderPrice(GlobalState, GlobalState.profile.balance)}</span>
+                        <span>{lang.common.murkup}: <font color="red">+13%</font></span>
                     </div>
                     <div className="inputs">
                         x
@@ -151,7 +155,7 @@ const Shop = () => {
         if (!state.collection) {
             return (
                 <div className="collection-pick">
-                    <div className="tab-title mini"><span>select collection:</span></div>
+                    <div className="tab-title mini"><span>{lang.shop.hint}:</span></div>
 
                     <div className="current-list collections-list">
                         <ItemList
@@ -173,7 +177,7 @@ const Shop = () => {
 
         return (
             <div className="available-items-list">
-                <div className="tab-title mini"><span>select the item you want to buy:</span></div>
+                <div className="tab-title mini"><span>{lang.shop.hint2}:</span></div>
                 <div className="current-list custom-scroll">
                     <ItemList 
                         items={items}

@@ -1,4 +1,8 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { 
+    useState, 
+    useLayoutEffect
+} from "react";
+
 import Context from "../utils/context";
 import StoredMainContext from "../utils/store";
 
@@ -16,20 +20,61 @@ const ReleaseNotesModal = ({ globalState, globalDispatch }) => {
 
     return <Modal 
         title={`v${globalState.version} Release Notes`}
+        canInstantClose={false}
         className="version-release-notes-modal"
         onCancel={handleClose}
         actions={[{ children: "Great!" }]}
     >
         <ul>
-            <li>Newest <b>Revolution Case</b> is already avaliable in <b>Cases</b>!</li>
-            <li><b>Luck Roulette</b> - new casino money up mode</li>
-            <li>In the <b>Shop</b> section you can now select the number of items to buy!</li>
-            <li>Added this list btw =)</li>
+            <li>Finally - <b>Settings</b></li>
+            <li>Now You can change Currency and Language</li>
+            <li>Additional tools on contracts sing</li>
+            <li>Storages optimization, speed and size</li>
             <li>Various layout improvements</li>
         </ul>
 
         <b>GL HF!</b>
     </Modal>
+}
+
+const DeepLink = {
+    __internal: new Map(),
+
+    addEventListener(url, cb) {
+        url = url.toLowerCase();
+
+        if (!(cb instanceof Function)) return url;
+
+        if (!this.__internal.has(url)) this.__internal.set(url, [cb]);
+        else {
+            let current = this.__internal.get(url);
+            current.push(cb);
+
+            this.__internal.set(url, current);
+        }
+
+        return url;
+    },
+
+    emitEvent(url) {
+        var UrlParams = url.split("?")[1];
+        
+        UrlParams = UrlParams && UrlParams.split('&').reduce((p, e) => {
+            p[decodeURIComponent(e.split("=")[0])] = decodeURIComponent(e.split("=")[1]);
+            return p;
+        }, {})
+
+        url = url.split("?")[0].toLowerCase();
+
+        const eventHandlers = this.__internal.get(url);
+
+        if (!eventHandlers) return console.log(`[DeepLink]: No handler provided for ${url}`);
+
+        eventHandlers.forEach(cb => {
+            if (UrlParams) cb(UrlParams);
+            else cb();
+        });
+    }
 }
 
 const Main = () => {
@@ -66,7 +111,12 @@ const Main = () => {
 
     return (
         <Context.Provider
-            value={{ GlobalState, setGlobalState, createModal }}
+            value={{ 
+                GlobalState, 
+                setGlobalState, 
+                createModal,
+                DeepLink
+            }}
         >
             <div className="Main">
                 <div className="Header">

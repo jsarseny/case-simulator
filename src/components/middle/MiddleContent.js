@@ -5,6 +5,7 @@ import Cases from "./Cases";
 import Casino from "./Casino";
 import Profile from "./Profile";
 import MiddleTab from "../ui/MiddleTab";
+import Statistics from "./Statistics";
 
 import "./MiddleContent.css";
 
@@ -14,7 +15,8 @@ const MiddleContent = () => {
     const Tabs = [
         <Cases />,
         <Profile />,
-        <Casino />
+        <Casino />,
+        <Statistics />,
     ]
 
     return (

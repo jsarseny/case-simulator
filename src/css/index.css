@@ -31,11 +31,17 @@
     --color-base: 221, 221, 221;
 
     --color-stattrack: 229, 134, 78;
-    --color-fn: 61, 129, 143;
+    --color-souvenir: 248, 215, 73;
+    --color-fn: 0, 211, 255;
     --color-mw: 132, 178, 53;
     --color-ft: 223, 192, 74;
     --color-ww: 240, 134, 64;
     --color-bs: 235, 87, 87;
+
+    --color-sapphire: 49, 213, 255;
+    --color-ruby: 255, 51, 92;
+    --color-emerald: 19, 255, 176;
+    --color-black-pearl: 0, 11, 69;
 } 
 
 html, body {
@@ -227,9 +233,13 @@ input[type="number"]:focus {
     border-color: var(--color-accent);
 }
 
-a {
+a, .link {
     cursor: pointer;
     color: var(--color-accent);
+}
+
+.price-chunk {
+    color: gold;
 }
 
 @keyframes opacity-fade {

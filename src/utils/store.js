@@ -1,4 +1,4 @@
-const STORE_VERSION = "1.0.40";
+const STORE_VERSION = "1.0.90";
 
 export const INITIAL_STATE = {
     version: STORE_VERSION,
@@ -12,6 +12,7 @@ export const INITIAL_STATE = {
     profile: {
         username: "Player",
         balance: 0,
+        storages: [],
         inventory: [],
         showcase: {
             knife: null,
@@ -24,6 +25,25 @@ export const INITIAL_STATE = {
             usps: null,
             glock18: null
         }
+    },
+    statistics: {
+        TotalMoneySpent: 0,
+        TotalItemsObtained: 0,
+        TotalMoneyObtained: 0,
+        TotalCraftsMade: 0,
+        TotalContractsMade: 0,
+        TotalUpgradesMade: 0,
+        TotalItemsPurchased: 0,
+
+        TotalCratesOpened: 0,
+        TotalSouvenirsOpened: 0,
+        TotalCratesPrice: 0,
+        TotalGoldDropped: 0,
+        TotalCovertDropped: 0,
+    },
+    settings: {
+        lang: "EN",
+        currency: "USD"
     }
 }
 

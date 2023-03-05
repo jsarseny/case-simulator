@@ -1,15 +1,38 @@
-const generateUid = () => {
-    return (+new Date() + Math.random()).toFixed(11);
+const recentlyReceivedItems = new Map();
+window.recentlyReceivedItems = recentlyReceivedItems;
+
+export const generateUid = () => {
+    return (+new Date() + Math.random()).toFixed(3);
 }
 
-export const insertItem = (stateDispatch, item, iterationIndex = -1) => {
+export const statistics = {
+    edit(stateDispatch, field, delta) {
+        stateDispatch(prev => {
+            return {
+                ...prev,
+                statistics: {
+                    ...prev.statistics,
+                    [field]: Number((prev.statistics[field] + delta).toFixed(2))
+                }
+            }
+        });
+    }
+}
+
+export const insertItem = (stateDispatch, item, originId = 0, iterationIndex = -1) => {
     let uidSuffix = iterationIndex > -1 ? `.${iterationIndex}` : "";
 
     const minimalItem = {
         id: item.id,
-        uid: generateUid() + uidSuffix,
-        quality: item.quality
+        origin: originId,
+        quality: item.quality,
+        uid: generateUid() + uidSuffix
     }
+
+    window.recentlyReceivedItems.set(minimalItem.uid, +new Date());
+
+    statistics.edit(stateDispatch, "TotalItemsObtained", 1);
+    if (item.price) statistics.edit(stateDispatch, "TotalMoneyObtained", item.price);
 
     stateDispatch(prev => ({
         ...prev,
@@ -22,6 +45,10 @@ export const insertItem = (stateDispatch, item, iterationIndex = -1) => {
 
 export const deleteItem = (stateDispatch, itemUids) => {
     itemUids = Array.isArray(itemUids) ? itemUids : [itemUids];
+
+    itemUids.forEach(uid => {
+        recentlyReceivedItems.delete(uid);
+    });
 
     stateDispatch(prev => {
         var inventory = prev.profile.inventory.filter(item => {
@@ -39,6 +66,16 @@ export const deleteItem = (stateDispatch, itemUids) => {
 }
 
 export const withdrawBalance = (stateDispatch, amount) => {
+    // protection of "null" balance
+    if (Number.isNaN(amount) || "number" !== typeof amount) {
+        return;
+    }
+
+    if (amount > 0) {
+        console.log(amount);
+        statistics.edit(stateDispatch, "TotalMoneySpent", Math.abs(amount));
+    }
+
     stateDispatch(prev => ({
         ...prev,
         profile: {
@@ -52,6 +89,8 @@ export const sellItem = (stateDispatch, item, shouldDelete = true) => {
     if (shouldDelete && item.uid) {
         deleteItem(stateDispatch, item.uid)
     }
+
+    if ("number" !== typeof item.price) return;
 
     withdrawBalance(stateDispatch, -item.price);
 }
@@ -70,7 +109,12 @@ export const buyItem = (stateDispatch, item, count, murkup) => {
 
     if (isBlocked) return;
 
-    for (var i = 0; i < count; i++) {
-        insertItem(stateDispatch, item, i);
+    statistics.edit(stateDispatch, "TotalMoneySpent", Math.abs(price));
+    statistics.edit(stateDispatch, "TotalItemsPurchased", count);
+
+    if (count < 2) {
+        return insertItem(stateDispatch, item, 2);
     }
+
+    for (var i = 0; i < count; i++) insertItem(stateDispatch, item, 2, i);
 }

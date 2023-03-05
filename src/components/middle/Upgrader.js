@@ -5,15 +5,25 @@ import React, {
     useContext
 } from "react";
 
+import useLang from "../../hooks/useLang";
 import Context from "../../utils/context";
-import renderInventory from "./helpers/renderInventory";
+import renderInventory, { filterInventory } from "./helpers/renderInventory";
+
 import { getItemImageUrl } from "../../models/weapons";
-import { deleteItem, insertItem } from "./helpers/transactions";
-import { getPriceRangeItems, randomElement, randomFloat, randomInt } from "../../utils/chance";
+import { deleteItem, insertItem, statistics } from "./helpers/transactions";
+
+import { 
+    randomInt, 
+    randomFloat, 
+    WeaponTypes, 
+    randomElement, 
+    getPriceRangeItems, 
+} from "../../utils/chance";
 
 import Item from "../ui/Item";
 import Button from "../ui/Button";
 import ItemPage from "../ui/ItemPage";
+import Dropdown from "../ui/Dropdown";
 import Selection from "../ui/Selection";
 
 import "./Upgrader.css";
@@ -22,6 +32,8 @@ const SPIN_TIME = 7000;
 
 const Upgrader = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
+
+    const lang = useLang(GlobalState);
 
     const spinnerContent = useRef(null);
     const spinnerContainer = useRef(null);
@@ -37,18 +49,32 @@ const Upgrader = () => {
         availableItems: [],
     });
 
+    const [ typePriority, setTypePriority ] = useState(null);
     const [ currentMultiplier, setCurrentMultiplier ] = useState(0);
 
     const multiplier = [ 1.5, 2, 5, 10, 20 ];
+
+    const handleChangePriority = value => {
+        if (/^<All/ig.test(value)) value = null;
+
+        setTypePriority(value);
+    }
 
     const calculateRange = item => {
         const availableItems = getPriceRangeItems(
             item, multiplier[currentMultiplier]
         );
 
-        const relevantItem = randomElement(availableItems);
+        const filtered = filterInventory(
+            availableItems,
+            undefined, 
+            undefined, 
+            typePriority || undefined,
+        );
 
-        return { availableItems, relevantItem }
+        const relevantItem = randomElement(filtered);
+
+        return { availableItems: filtered, relevantItem }
     }
 
     const switchItemSelect = () => {
@@ -71,12 +97,24 @@ const Upgrader = () => {
 
     const handleRerollItem = () => {
         if (!state.selectedItem || !state.availableItems.length) return;
+        const { availableItems, relevantItem } = state;
 
-        const item = randomElement(state.availableItems);
+        const selectItem = () => {
+            let item = randomElement(state.availableItems);
+
+            if (
+                relevantItem 
+                && availableItems.length > 1
+                && item.id == relevantItem.id 
+                && item.quality == relevantItem.quality
+            ) return selectItem();
+
+            return item;
+        }
 
         setState(prev => ({
             ...prev,
-            relevantItem: item
+            relevantItem: selectItem()
         }));
     }
 
@@ -90,6 +128,8 @@ const Upgrader = () => {
         setState(prev => ({ ...prev, isSpinning: true }));
 
         deleteItem(setGlobalState, state.selectedItem.uid);
+        
+        statistics.edit(setGlobalState, "TotalUpgradesMade", 1);
 
         const container = spinnerContainer.current;
         const indicator = spinnerIndicator.current;
@@ -100,7 +140,7 @@ const Upgrader = () => {
         const containerRect = container.getBoundingClientRect();
         const indicatorRect = indicator.getBoundingClientRect();
 
-        var laps = randomInt(5, 7);
+        var laps = randomInt(4, 6);
         var float = randomFloat(0, 100);
 
         if (float > 100) float = 0;
@@ -114,17 +154,11 @@ const Upgrader = () => {
 
         window.setTimeout(() => {
             const isWinning = float <= state.chance;
-            
-            console.log(`[Log] Upgrade State:`, {
-                float,
-                chance: state.chance,
-                win: isWinning
-            });
 
-            content.innerHTML = isWinning ? `<img src=${getItemImageUrl(state.relevantItem)} />` : '<span class="loss">Loss</span>';
+            content.innerHTML = isWinning ? `<img src=${getItemImageUrl(state.relevantItem)} />` : `<span class="loss">Loss</span>`;
 
             if (isWinning) {
-                insertItem(setGlobalState, state.relevantItem);
+                insertItem(setGlobalState, state.relevantItem, 3);
             }
 
             setState(prev => ({
@@ -146,7 +180,7 @@ const Upgrader = () => {
             ...prev,
             ...range
         }));
-    }, [currentMultiplier]);
+    }, [currentMultiplier, typePriority]);
 
     useEffect(() => {
         var chance = 0;
@@ -202,7 +236,7 @@ const Upgrader = () => {
 
             return (
                 <div className="item-selection">
-                    <div className="tab-title mini"><span>Select a Item:</span></div>
+                    <div className="tab-title mini"><span>{lang.upgrader.hint}:</span></div>
                     <ItemPage 
                         ripple={false}
                         items={inventory}
@@ -212,16 +246,31 @@ const Upgrader = () => {
             );
         }
 
+        var selectedType = Object.keys(WeaponTypes).indexOf(typePriority) + 1;
+        if (selectedType < 1) selectedType = 0;
+
         return <>
-            <div className="multiplier-selection">
-                <span>Multiplier:</span>
-                <div className="selection-container">
-                    <Selection 
-                        activeId={currentMultiplier}
-                        disabled={state.isSpinning}
-                        onClick={id => setCurrentMultiplier(id)}
-                        tabs={multiplier.map(num => "x" + num)}
-                    />
+            <div className="upgrade-settings">
+                <div className="setting">
+                    <span>{lang.upgrader.multiplier}:</span>
+                    <div className="selection-container">
+                        <Selection 
+                            activeId={currentMultiplier}
+                            disabled={state.isSpinning}
+                            onClick={id => setCurrentMultiplier(id)}
+                            tabs={multiplier.map(num => "x" + num)}
+                        />
+                    </div>
+                </div>
+                <div className="setting">
+                    <span>{lang.upgrader.priority}:</span>
+                    <div className="selection-container">
+                        <Dropdown 
+                            active={selectedType}
+                            onChange={handleChangePriority}
+                            options={[ "<All Types>", ...Object.keys(WeaponTypes) ]}
+                        />
+                    </div>
                 </div>
             </div>
 
@@ -243,15 +292,15 @@ const Upgrader = () => {
 
                     <div className="spinner-control-buttons">
                         <Button 
-                            children="Upgrade"
-                            disabled={!state.selectedItem || state.isSpinning}
+                            children={lang.upgrader.upgrade}
+                            disabled={!state.selectedItem || state.isSpinning || !state.relevantItem}
                             onClick={handleUpgrade}
                         />
 
                         <Button 
                             title="Reroll Item" 
                             className="reroll-item" 
-                            disabled={state.isSpinning}
+                            disabled={state.isSpinning || state.availableItems.length < 2}
                             onClick={handleRerollItem}
                         >
                             <i className="uil uil-redo" />
@@ -263,6 +312,10 @@ const Upgrader = () => {
                     {currentItem(state.relevantItem, false)}
                 </div>
             </div>
+
+            {state.selectedItem && !state.relevantItem && !state.availableItems.length && (
+                <div className="no-items-available">{lang.upgrader.error}</div>
+            )}
         </>
     }
 

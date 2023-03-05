@@ -5,6 +5,7 @@ import React, {
 } from "react";
 
 import Context from "../../utils/context.js";
+import Currency from "../../utils/currency.js";
 import buildClassName from "../../utils/buildClassName.js";
 
 import { withdrawBalance } from "./helpers/transactions.js";
@@ -105,6 +106,8 @@ const getInitialExtended = () => ({
 
 const Roulette = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
+    
+    const currencyModel = Currency.models[GlobalState.settings.currency];
 
     const [ state, setState ] = useState(getInitialExtended());
 
@@ -140,28 +143,31 @@ const Roulette = () => {
     }
 
     const handleVictory = color => {
-        let win = state.betAmount * AVAILABLE_BETS[color];
+        let betAmountUsd = parseFloat(state.betAmount / currencyModel.multiplier);
+        let win = betAmountUsd * AVAILABLE_BETS[color];
         
-        callPopupNotify(`+ ${win.toLocaleString()}$`, "rgb(12, 217, 157)");
+        callPopupNotify(`+ ${Currency.renderPrice(GlobalState, win, true)}`, "rgb(12, 217, 157)");
 
         withdrawBalance(setGlobalState, -1 * win);
         revokeState();
     }
 
     const handleLoss = () => {
-        callPopupNotify(`- ${parseFloat(state.betAmount).toLocaleString()}$`, "red");
+        let betAmountUsd = parseFloat(state.betAmount / currencyModel.multiplier);
+
+        callPopupNotify(`- ${Currency.renderPrice(GlobalState, betAmountUsd, true)}`, "red");
         revokeState();
     }
 
     const handleRoll = () => {
-        let betAmount = parseFloat(state.betAmount);
+        let betAmountUsd = parseFloat(state.betAmount / currencyModel.multiplier);
 
-        if (!state.bet || !betAmount) return;
-        if (typeof betAmount !== "number" || Number.isNaN(betAmount)) return;
+        if (!state.bet || !betAmountUsd) return;
+        if (typeof betAmountUsd !== "number" || Number.isNaN(betAmountUsd)) return;
 
         var dropped = randomFloat(145, 190);
 
-        withdrawBalance(setGlobalState, betAmount);
+        withdrawBalance(setGlobalState, betAmountUsd);
 
         setState(prev => ({
             ...prev,
@@ -272,10 +278,10 @@ const Roulette = () => {
                             onChange={handleChangeAmount}
                             min={0}
                             max={GlobalState.profile.balance}
-                        /> $
+                        /> {currencyModel.symbol}
                     </span>
                     <span className="control-line balance">
-                        <span>Balance: <font color="gold">{GlobalState.profile.balance.toLocaleString()}$</font></span>
+                        <span>Balance: {Currency.renderPrice(GlobalState, GlobalState.profile.balance)}</span>
                         <span className="popup-notify"></span>
                     </span>
                     <span className="control-line roll-button">

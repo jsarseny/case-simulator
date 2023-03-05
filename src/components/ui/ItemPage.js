@@ -1,5 +1,14 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { 
+    useState,
+    useEffect,
+    useContext 
+} from "react";
+
+import useLang from "../../hooks/useLang";
+import useFlag from "../../hooks/useFlag";
+import Context from "../../utils/context";
 import buildClassName from "../../utils/buildClassName";
+import { StorageVirtualModel } from "../../models/weapons";
 import { filterInventory, searchInventory } from "../middle/helpers/renderInventory";
 
 import { 
@@ -10,6 +19,7 @@ import {
 
 import Item from "./Item";
 import Ripple from "./Ripple";
+import Button from "./Button";
 import Dropdown from "./Dropdown";
 
 import "./ItemPage.css";
@@ -23,16 +33,29 @@ const ItemPage = ({
     className,
     ripple = false,
     onClick,
+    shouldStorages = true,
+    defaultTitle = "All Inventory",
     selectConfig = {
         enable: false,
         min: 0,
-        max: 1,
-        onSubmit: selected => void 0
+        max: 100,
+        onSubmit: selected => void 0,
+        listener: "click",
+        actions: [{
+            children: "Go",
+            onClick: selected => void 0
+        }],
     },
 }) => {
+    const { GlobalState, setGlobalState } = useContext(Context);
+
+    const lang = useLang(GlobalState);
+
+    const [ currentStorage, setCurrentStorage ] = useState(null);
+    const [ isFiltersOpen, openFilters, closeFilters ] = useFlag(false);
+
     const [ state, setState ] = useState({
         pages: [],
-        selected: [],
         currentPage: 0,
         filters: {
             query: "",
@@ -46,27 +69,31 @@ const ItemPage = ({
 
     const resetSelected = () => setSelectedIds([]);
     const handleSelectItem = item => {
+        var max = selectConfig.max || Infinity;
         var selected = selectedIds;
             
         if (selected.includes(item.uid)) {
             var index = selected.indexOf(item.uid);
             selected.splice(index, 1);
-        } else if (selectedIds.length < selectConfig.max) {
+        } else if (selectedIds.length < max) {
             selected.push(item.uid);
         }
 
         setSelectedIds([...selected]);
     };
 
-    const handleSubmitSelection = () => {
+    const handleSubmitSelection = callback => {
+        var max = selectConfig.max || Infinity;
+
         if (
             selectedIds.length < selectConfig.min 
-            || selectedIds.length > selectConfig.max 
+            || selectedIds.length > max
         ) return;
 
         let finalItems = items.filter(item => selectedIds.includes(item.uid));
 
-        selectConfig.onSubmit(finalItems);
+        callback(finalItems);
+        setSelectedIds([]);
     }
 
     const handlePageSlide = number => {
@@ -135,10 +162,33 @@ const ItemPage = ({
             }
         }));
     }
+    
+    const handleStorageSelect = item => {
+        setCurrentStorage(item);
+        setState(prev => ({
+            ...prev,
+            currentPage: 0
+        }))
+    }
 
     const calculatePages = () => {
+        var virtual = items; 
+
+        if (!currentStorage && shouldStorages) {
+            virtual = GlobalState.profile.storages.map(storage => ({
+                ...StorageVirtualModel,
+                ...storage
+            })).concat(items);
+        }
+
+        virtual = virtual.filter(item => {
+            if (currentStorage) return item.storageId === currentStorage.uid;
+
+            return !item.storageId;
+        });
+
         const filtered = filterInventory(
-            searchInventory(items, state.filters.query),
+            searchInventory(virtual, state.filters.query),
             state.filters.quality || undefined, 
             state.filters.rarity || undefined, 
             state.filters.weaponType || undefined,
@@ -177,106 +227,166 @@ const ItemPage = ({
             currentPage = pages.length - 1;
         }
 
+        if (currentPage < 0) currentPage = 0;
+
         setState(prev => ({
             ...prev,
             pages,
             currentPage: currentPage !== null ? currentPage : prev.currentPage
         }));
-    }, [items]);
+    }, [GlobalState.profile.storages, currentStorage, items]);
 
     const renderSelectionHelper = () => {
         let className = buildClassName("selection-helper", selectedIds.length > 0 && "open");
-        let buttonClassName = buildClassName("apply-button", selectedIds.length < selectConfig.min && "disabled");
 
         return (
-            <div className={className}>
-                <div className="counter">
-                    <i className="uil uil-times" title="Reset" onClick={resetSelected} />
-                    {selectedIds.length}/{selectConfig.max}
-                </div>
-                <div className={buttonClassName} onClick={handleSubmitSelection}>
-                    Go
-                    <i className="uil uil-angle-right"></i>
+            <div className="control-toolbar">
+                <div className={className}>
+                    <div className="counter">
+                        <i className="uil uil-times" title="Reset" onClick={resetSelected} />
+                        {selectedIds.length}{selectConfig.max && `/${selectConfig.max}`}
+                        {" " + lang.common.selected}
+                    </div>
+                    <div className="actions">
+                        {selectConfig.actions.map((button, i) => {
+                            var buttonClassName = buildClassName(
+                                "Button primary",
+                                button.negative && "negative",
+                                selectedIds.length < selectConfig.min && "disabled"
+                            );
+
+                            return (
+                                <div 
+                                    key={i}
+                                    className={buttonClassName}
+                                    children={button.children}
+                                    onClick={() => handleSubmitSelection(button.onClick)}
+                                />
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         );
     }
 
-    const fullClassName = buildClassName("ItemPage", className && className);
+    const fullClassName = buildClassName(
+        "ItemPage", 
+        className && className,
+        isFiltersOpen && "filters-open",
+        selectConfig.enable && "selection-enabled"
+    );
 
-    const clickHandler = selectConfig.enable ? handleSelectItem : onClick;
+    const isSelectionMode = Boolean(selectedIds.length);
+    const clickHandler = isSelectionMode || (selectConfig.enable && selectConfig.listener != "contextmenu") ? handleSelectItem : onClick;
+    const onContextMenu = selectConfig.enable && selectConfig.listener == "contextmenu" ? handleSelectItem : undefined;
 
     return (
         <div className={fullClassName}>
-            <div className="filters">
-                <div className="selections">
-                    <input 
-                        type="text"
-                        placeholder="Search"
-                        onChange={handleSearch}
-                        value={state.filters.query}
-                    />
-
-                    <Dropdown 
-                        onChange={v => handleFilterChange(v, "weaponType")}
-                        options={[ "All Types", ...Object.keys(WeaponTypes) ]}
-                    />
-                    <Dropdown 
-                        onChange={v => handleFilterChange(v, "quality")}
-                        options={[ "All Qualities", ...Object.values(WeaponQuality) ]}
-                    />
-                    <Dropdown 
-                        onChange={v => handleFilterChange(v, "rarity")}
-                        options={[ "All Rarities", ...Object.keys(RARITY_PRIORITY).map(upperFirst) ]}
-                    />
+            <div className="interactive-header">
+                <div 
+                    title="Back to Inventory"
+                    className={buildClassName("header-tool", !currentStorage && "disabled")} 
+                    onClick={() => handleStorageSelect(null)} 
+                >
+                    <i className="uil uil-arrow-left" />
                 </div>
-                <div className="items-rendered">
-                    {getCurrentLength().toLocaleString()}
+
+                <div className="header-inventory-path">
+                    {currentStorage ? currentStorage.skinName : defaultTitle}
+                </div>
+
+                <div className="filters">
+                    <div className="search-input">
+                        <div className="overlay-filters">
+                            <Dropdown 
+                                onChange={v => handleFilterChange(v, "weaponType")}
+                                options={[ "All Types", ...Object.keys(WeaponTypes) ]}
+                            />
+                            <Dropdown 
+                                onChange={v => handleFilterChange(v, "quality")}
+                                options={[ "All Qualities", ...Object.values(WeaponQuality) ]}
+                            />
+                            <Dropdown 
+                                onChange={v => handleFilterChange(v, "rarity")}
+                                options={[ "All Rarities", ...Object.keys(RARITY_PRIORITY).map(upperFirst) ]}
+                            />
+                        </div>
+
+                        <input 
+                            type="text"
+                            placeholder={lang.common.search}
+                            onChange={handleSearch}
+                            value={state.filters.query}
+                        />
+                    </div>
+
+                    <div 
+                        title={lang.ItemPage.openFilters}
+                        onClick={isFiltersOpen ? closeFilters : openFilters}
+                        className="header-tool filters-link" 
+                    >
+                        {isFiltersOpen ? <i className="uil uil-times" /> : <i className="uil uil-filter" />}
+                    </div>
                 </div>
             </div>
             
             <div className="current-page custom-scroll" onWheel={handleWheel}>
-                {state.pages.length && state.pages[state.currentPage] ? state.pages[state.currentPage].map((item, i) => (
-                    <Item 
-                        item={item}
-                        key={i}
-                        onClick={clickHandler}
-                        ripple={ripple}
-                        selected={selectedIds.includes(item.uid)}
-                        shouldPrice
-                        shouldQuality
-                    />
-                )) : undefined}
-                
-                {selectConfig.enable && renderSelectionHelper()}
+                {state.pages.length && state.pages[state.currentPage] ? state.pages[state.currentPage].map((item, i) => {
+                    if (item.id == "service:storage") {
+                        return <Item 
+                            key={i}
+                            item={item}
+                            ripple={false}
+                            onClick={handleStorageSelect}
+                        />
+                    }
+
+                    return (
+                        <Item 
+                            item={item}
+                            key={i}
+                            onClick={clickHandler}
+                            onContextMenu={onContextMenu}
+                            ripple={ripple}
+                            selected={selectedIds.includes(item.uid)}
+                            shouldPrice
+                            shouldQuality
+                        />
+                    );
+                }) : <div className="empty-page">There is nothing here yet!</div>}
             </div>
 
             <div className="control">
-                <div 
-                    title="Previus Page"
-                    className="arrow-slide ripple" 
-                    onClick={() => handlePageSlide(state.currentPage - 1)}
-                >
-                    <i className="uil uil-angle-left" />
-                    <Ripple />
+                <div className="control-slider">
+                    <div 
+                        title={lang.ItemPage.previousPage}
+                        className="arrow-slide ripple" 
+                        onClick={() => handlePageSlide(state.currentPage - 1)}
+                    >
+                        <i className="uil uil-angle-left" />
+                        <Ripple />
+                    </div>
+                    <div className="page-numeral">
+                        <input 
+                            type="text" 
+                            placeholder="N" 
+                            onChange={handleInputChange}
+                            value={state.currentPage + 1} 
+                        />
+                        <span>/ {state.pages.length}</span>
+                    </div>
+                    <div 
+                        title={lang.ItemPage.nextPage}
+                        className="arrow-slide ripple" 
+                        onClick={() => handlePageSlide(state.currentPage + 1)}
+                    >
+                        <i className="uil uil-angle-right" />
+                        <Ripple />
+                    </div>
                 </div>
-                <div className="page-numeral">
-                    <input 
-                        type="text" 
-                        placeholder="N" 
-                        onChange={handleInputChange}
-                        value={state.currentPage + 1} 
-                    />
-                    <span>/ {state.pages.length}</span>
-                </div>
-                <div 
-                    title="Next Page"
-                    className="arrow-slide ripple" 
-                    onClick={() => handlePageSlide(state.currentPage + 1)}
-                >
-                    <i className="uil uil-angle-right" />
-                    <Ripple />
-                </div>
+
+                {selectConfig.enable && renderSelectionHelper()}
             </div>
         </div>
     );

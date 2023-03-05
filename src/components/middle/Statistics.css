@@ -1,0 +1,63 @@
+.Statistics {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.Statistics .statistics-title {
+    width: 100%;
+    float: left;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: 550;
+}
+
+.Statistics .statistics-body {
+    width: 100%;
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.Statistics .statistics-table {
+    width: calc(50% - .2rem);
+    float: left;
+    border: 1px solid rgba(255, 255, 255, .7);
+    border-radius: .75rem;
+    padding: .5rem 1rem 1rem 1rem;
+}
+
+.Statistics .statistics-table .row {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 1.25rem;
+    align-items: center;
+    padding: .75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+}
+.Statistics .statistics-table .row:first-child {
+    padding-top: .25rem;
+}
+
+.Statistics .statistics-table .row:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.Statistics .statistics-table .column {
+    width: 40%;
+    display: inline-flex;
+    font-size: 1.125rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.Statistics .statistics-table .column:first-child {
+    justify-content: left;
+    width: 60%;
+}
