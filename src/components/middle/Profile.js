@@ -21,7 +21,9 @@ import {
 } from "./helpers/transactions";
 
 import { 
+    isItemOnShowcase,
     selectToShowcase, 
+    removeFromShowcase,
     deleteFromShowcase, 
     canSelectToShowCase
 } from "./helpers/showcase";
@@ -348,6 +350,15 @@ const Profile = () => {
             DeepLink.emitEvent(`cs:/cases/focus?cid=${cid}`);
         }
 
+        const handleFocusInShop = (cid, itemId) => {
+            setSelectedItem(null);
+            DeepLink.emitEvent(`cs:/casino/focusTab?tabId=shop`);
+
+            setTimeout(() => {
+                DeepLink.emitEvent(`cs:/casino/shop/focus?cid=${cid}&itemId=${itemId}`);
+            }, 1);
+        }
+
         const Quality = <span className={`QualityShade ${pureQuality}`}>
             {isStatTrack && <font className="QualityShade stattrack">StatTrack™ </font>}
             {isSouvenir && <font className="QualityShade souvenir">{lang.property.souvenir} </font>}
@@ -369,21 +380,34 @@ const Profile = () => {
             </span>
         ) : <span>{lang.property.exclusive}</span>;
 
+        const isItemAlreadyOnShowcase = isItemOnShowcase(GlobalState, selectedItem);
+
+        const Actions = [{
+            children: lang.common.sell,
+            negative: true,
+            onClick: () => sellItem(setGlobalState, selectedItem)
+        }, {
+            children: lang.profile.selectForShowcase,
+            disabled: !canSelectToShowCase(selectedItem) || isItemAlreadyOnShowcase,
+            onClick: () => selectToShowcase(setGlobalState, selectedItem)
+        }, {
+            children: lang.profile.removeFromShowcase,
+            disabled: !isItemAlreadyOnShowcase,
+            negative: true,
+            onClick: () => removeFromShowcase(setGlobalState, selectedItem)
+        }, {
+            children: lang.profile.findInShop,
+            disabled: Array.isArray(selectedItem.collectionId) || isSouvenir,
+            onClick: () => handleFocusInShop(selectedItem.collectionId, selectedItem.id)
+        }, {
+            children: lang.common.cancel
+        }]
+
         return <Modal
             title={`${selectedItem.weaponName} | ${selectedItem.skinName}`}
             className="item-info-modal"
             onCancel={() => setSelectedItem(null)}
-            actions={[{
-                children: lang.common.sell,
-                negative: true,
-                onClick: () => sellItem(setGlobalState, selectedItem)
-            }, {
-                children: lang.profile.selectForShowcase,
-                disabled: !canSelectToShowCase(selectedItem),
-                onClick: () => selectToShowcase(setGlobalState, selectedItem)
-            }, {
-                children: lang.common.cancel
-            }]}
+            actions={Actions.filter(action => !Boolean(action.disabled))}
         >
             <Item 
                 ripple={false}
@@ -414,7 +438,10 @@ const Profile = () => {
                         {Currency.renderPrice(GlobalState, selectedItem.price)}
                         <font 
                             style={{ fontSize: "0.8em", marginLeft: ".5rem" }} 
-                            title={`${percentOfInventory}% of Your inventory price\nYour inventory could contain ${Math.floor(price / selectedItem.price).toLocaleString()} of these`}
+                            title={
+                                lang.property.percentOfInventory.replace("{d}", `${percentOfInventory}%`)
+                                + "\n" + lang.property.couldContain.replace("{d}", Math.floor(price / selectedItem.price).toLocaleString())
+                            }
                         >({percentOfInventory}%)</font> 
                     </span>
                 </div>

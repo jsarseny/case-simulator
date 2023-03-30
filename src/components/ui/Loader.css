@@ -1,0 +1,23 @@
+.Loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Loader.filled {
+    background-color: var(--background-color);
+}
+
+.Loader svg {
+    width: 5rem;
+    height: 5rem;
+    fill: var(--color-accent);
+}
+
+.Loader span {
+    font-weight: 500;
+}

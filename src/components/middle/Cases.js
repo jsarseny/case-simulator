@@ -81,9 +81,9 @@ export const sortItems = items => {
     });
 }
 
-const CaseItem = ({ item }) => {
+const CaseItem = ({ className, item }) => {
     return (
-        <div className={buildClassName("CaseItem RarityShade", item.rarity)}>
+        <div className={buildClassName("CaseItem RarityShade", item.rarity, className && className)}>
             <div className="image">
                 <img src={getItemImageUrl(item)} alt="" />
             </div>
@@ -226,12 +226,15 @@ const Cases = () => {
         if (!currentOpen.open) return;
         
         var rollItems = document.querySelectorAll(".current-case-roll .CaseItem")
-        var element = rollItems[0];
         var caret = document.querySelector(".current-case-roll span.caret");
+        var container = document.querySelector(".current-case-roll .roll");
+
+        var element = rollItems[0];
 
         var elementBox = element.getBoundingClientRect();
         var caretBox = caret.getBoundingClientRect();
-        var deltaX = caretBox.x - elementBox.x;
+        var containerBox = container.getBoundingClientRect();
+        var deltaX = containerBox.width + (caretBox.x - elementBox.x);
 
         var margin = -((elementBox.width * currentOpen.dropped) + ((Math.floor(currentOpen.dropped) - 1) * 4) - deltaX);
         element.style.marginLeft = `${margin}px`;
@@ -285,6 +288,7 @@ const Cases = () => {
                         <span className="caret" />
                         {state.currentOpen.items.map((item, i) => (
                             <CaseItem 
+                                className={!i && "first-item"}
                                 item={item}
                                 key={i}
                             />

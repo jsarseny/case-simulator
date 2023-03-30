@@ -4,29 +4,29 @@ import React, {
     useContext
 } from "react";
 
-import Context from "../../utils/context";
-import renderInventory, { filterInventory } from "./helpers/renderInventory";
+import Context from "../../../utils/context";
+import renderInventory, { filterInventory } from "../helpers/renderInventory";
 
 import { 
     getRarity, 
     mathContract, 
     getLimitContainerRarities,  
-} from "../../utils/chance";
+} from "../../../utils/chance";
 
 import {
     deleteItem, 
     insertItem, 
     statistics 
-} from "./helpers/transactions";
+} from "../helpers/transactions";
 
-import Modal from "../ui/Modal";
-import Button from "../ui/Button";
-import Selection from "../ui/Selection";
-import Item, { ItemList } from "../ui/Item";
+import Modal from "../../ui/Modal";
+import Button from "../../ui/Button";
+import Selection from "../../ui/Selection";
+import Item, { ItemList } from "../../ui/Item";
 
-import "./Contracts.css";
+import "./Craft.css";
 
-const Contracts = () => {
+const Craft = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
 
     const [ stage, setStage ] = useState(0);
@@ -185,4 +185,4 @@ const Contracts = () => {
     );
 }
 
-export default Contracts;
+export default Craft;

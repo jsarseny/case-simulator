@@ -1,30 +1,39 @@
-import React, { useContext, useState } from "react";
+import React, { useEffect, useContext, useState } from "react";
 
 import Context from "../../utils/context";
 import useLang from "../../hooks/useLang";
 
-import Shop from "./Shop";
+import Shop from "./casino/Shop";
+import Craft from "./casino/Craft";
 import Ripple from "../ui/Ripple";
-import Upgrader from "./Upgrader";
-import Roulette from "./Roulette";
-import Contracts from "./Contracts";
-import FreeContract from "./FreeContract";
+import Upgrader from "./casino/Upgrader";
+import Roulette from "./casino/Roulette";
+import Contracts from "./casino/Contracts";
 
 import "./Casino.css";
 
 const Casino = () => {
-    const { GlobalState } = useContext(Context);
+    const { GlobalState, DeepLink } = useContext(Context);
     const lang = useLang(GlobalState);
 
     const [ activePage, setActivePage ] = useState(null);
 
     const Pages = {
         roulette: <Roulette />,
-        craft: <Contracts />,
-        contract: <FreeContract />,
+        contract: <Contracts />,
+        craft: <Craft />,
         upgrader: <Upgrader />,
         shop: <Shop />
     }
+
+    useEffect(() => {
+        DeepLink.addEventListener("cs:/casino/focusTab", context => {
+            if (!context || !context.tabId || !Pages[context.tabId]) return;
+
+            setActivePage(context.tabId);
+            DeepLink.emitEvent("cs:/global/focusTab?id=2");
+        });
+    }, [DeepLink]);
 
     const renderContent = () => {
         if (!activePage) return <>
@@ -95,7 +104,7 @@ const Casino = () => {
         return (
             <div className="casino-page">
                 <div className="casino-page-header">
-                    <div className="back-button" onMouseDown={() => setActivePage(null)}>
+                    <div className="back-button" onMouseDown={() => setActivePage(null)} title="Back To Casino">
                         <i className="uil uil-arrow-left" />
                     </div>
                     <span className="title">{lang.casino[activePage]}</span>

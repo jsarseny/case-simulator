@@ -26,10 +26,9 @@ const ReleaseNotesModal = ({ globalState, globalDispatch }) => {
         actions={[{ children: "Great!" }]}
     >
         <ul>
-            <li>Finally - <b>Settings</b></li>
-            <li>Now You can change Currency and Language</li>
-            <li>Additional tools on contracts sing</li>
-            <li>Storages optimization, speed and size</li>
+            <li>New Items actions: "FIND IN SHOP" and "REMOVE FROM SHOWCASE" in Profile!</li>
+            <li>Item Images now have smooth appearance and loading! Synchronization of animations.</li>
+            <li>Lots of Bug Fixes in Casino modes (and some new ones ^_^)</li>
             <li>Various layout improvements</li>
         </ul>
 

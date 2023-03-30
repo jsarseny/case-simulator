@@ -21,6 +21,8 @@ export default {
         origin: "Origin",
         collection: "Collection",
         exclusive: "Exclusive",
+        percentOfInventory: "{d} of your inventory price",
+        couldContain: "Your inventory could contain {d} of these",
 
         RarityGold: "Gold",
         RarityCovert: "Covert",
@@ -69,7 +71,9 @@ export default {
         pistols: "Pistols",
         totalItems: "Total Items",
         totalStorages: "Total Storages",
-        selectForShowcase: "Select for Showcase"
+        selectForShowcase: "Select for Showcase",
+        findInShop: "Find in Shop",
+        removeFromShowcase: "Remove From Showcase"
     },
 
     casino: {
@@ -101,6 +105,12 @@ export default {
         hint2: "Select the item you want to buy"
     },
 
+    roulette: {
+        bet: "Bet",
+        roll: "Roll!",
+        error: "Minimal bet: {d}!"
+    },
+
     ItemPage: {
         previousPage: "Previous Page",
         nextPage: "Next Page",
@@ -116,7 +126,7 @@ export default {
 
         storageBuy: {
             title: "Buy Storage",
-            line1: "Are you sure you want buy Storage for {d}?",
+            line1: "Buy Storage for {d}?",
             line2: "Enter Storage Name",
             line3: "Warning: Name can't be changed in the future",
             error: "This name is already taken!",

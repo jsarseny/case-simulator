@@ -107,11 +107,20 @@
     font-size: .75rem;
 }
 
-.Item.weapon img {
-    max-width: 90% !important;
-    width: auto;
-    filter: brightness(1.10) drop-shadow(0 0 5px var(--color-shadow));
+.Item.weapon .ItemImage {
+    width: 100%;
     margin: 0 0 0 .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Item.weapon .ItemImage img {
+    filter: brightness(1.10) drop-shadow(0 0 5px var(--color-shadow));
+    max-width: 90%;
+    width: auto;
+    margin: 0;
+    float: left;
 }
 
 .Item.weapon {

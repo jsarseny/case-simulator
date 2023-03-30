@@ -21,6 +21,8 @@ export default {
         origin: "Источник",
         collection: "Коллекция",
         exclusive: "Эксклюзивный",
+        percentOfInventory: "{d} от цены вашего инвентаря",
+        couldContain: "Ваш инвентарь может содержать {d} таких",
 
         RarityGold: "Золотое",
         RarityCovert: "Тайное",
@@ -69,7 +71,9 @@ export default {
         pistols: "Пистолеты",
         totalItems: "Предметов",
         totalStorages: "Хранилищ",
-        selectForShowcase: "Выставить на Витрину"
+        selectForShowcase: "Выставить на Витрину",
+        findInShop: "Найти в Магазине",
+        removeFromShowcase: "Убрать с Витрины"
     },
 
     casino: {
@@ -101,6 +105,12 @@ export default {
         hint2: "Выберите Предмет"
     },
 
+    roulette: {
+        bet: "Ставка",
+        roll: "Крутить!",
+        error: "Минимальная ставка: {d}!"
+    },
+
     ItemPage: {
         previousPage: "Предыдущая страница",
         nextPage: "Следующая страница",
@@ -113,9 +123,10 @@ export default {
             line1: "Вы уверены, что хотите продать {d} предмета?",
             line2: "После продажи вы получите {d}"
         }, 
+        
         storageBuy: {
             title: "Купить хранилище",
-            line1: "Вы уверены, что хотите купить хранилище за {d}?",
+            line1: "Купить хранилище за {d}?",
             line2: "Введите имя хранилища",
             line3: "Внимание: Имя не может быть изменено в будущем",
             error: "Имя уже занято!",

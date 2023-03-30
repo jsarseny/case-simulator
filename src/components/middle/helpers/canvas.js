@@ -71,26 +71,39 @@ const canvasAnimations = {
         setTimeout(() => shouldRender = false, duration);
     },
 
-    centralParticles(canvas, color = "#fff", count = 200) {
+    centralParticles(canvas, color = "#fff", count = 200, centralElement, customConfig) {
         const { ctx, width, height } = initial(canvas);
 
-        const Scene = [];
-        const gravitation = 0.0008;
+        customConfig = customConfig || {};
 
-        const cx = width / 2;
-        const cy = height / 2;
+        var Scene = [];
+        const gravitation = customConfig.gravitation || 0.0008;
 
-        for (let i = 0; i < count; i++) {
-            let size = randomInt(5, 15);
+        var cx = width / 2;
+        var cy = height / 2;
 
-            Scene.push({
-                x: cx,
-                y: cy,
-                s: size,
-                a: randomFloat(0.5, 1),
-                vx: randomFloat(-2, 2),
-                vy: randomFloat(-3, 3)
-            });
+        if (centralElement) {
+            let canvasBox = canvas.getBoundingClientRect();
+            let elementBox = centralElement.getBoundingClientRect();
+
+            cx = (elementBox.x + elementBox.width / 2) - canvasBox.x;
+            cy = (elementBox.y + elementBox.height / 2) - canvasBox.y;
+        }
+
+        if (customConfig.elements) Scene = customConfig.elements;
+        else {
+            for (let i = 0; i < count; i++) {
+                let size = randomInt(5, 15);
+    
+                Scene.push({
+                    x: cx,
+                    y: cy,
+                    s: size,
+                    a: randomFloat(0.15, 0.65),
+                    vx: randomFloat(-2, 2),
+                    vy: randomFloat(-3, 3)
+                });
+            }    
         }
 
         var lastTime = new Date().getTime();
@@ -115,7 +128,11 @@ const canvasAnimations = {
 
                 ctx.globalAlpha = obj.a;
 
-                ctx.fillRect(obj.x, obj.y, obj.s, obj.s);
+                if (obj.img) {
+                    ctx.drawImage(obj.img, obj.x, obj.y, obj.s, obj.s);
+                } else { 
+                    ctx.fillRect(obj.x, obj.y, obj.s, obj.s);
+                }
 
                 if (real.y > height) {
                     Scene.splice(i, 1);

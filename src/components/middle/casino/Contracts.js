@@ -5,20 +5,20 @@ import React, {
     useContext,
 } from "react";
 
-import useLang from "../../hooks/useLang.js";
-import Context from "../../utils/context.js";
-import Currency from "../../utils/currency.js";
-import buildClassName from "../../utils/buildClassName.js";
-import renderInventory from "./helpers/renderInventory.js";
-import canvasAnimations from "./helpers/canvas.js";
+import useLang from "../../../hooks/useLang.js";
+import Context from "../../../utils/context.js";
+import Currency from "../../../utils/currency.js";
+import buildClassName from "../../../utils/buildClassName.js";
+import renderInventory from "../helpers/renderInventory.js";
+import canvasAnimations from "../helpers/canvas.js";
 
-import { getItemImageUrl } from "../../models/weapons.js";
+import { getItemImageUrl } from "../../../models/weapons.js";
 
 import { 
     deleteItem, 
     insertItem, 
     statistics 
-} from "./helpers/transactions";
+} from "../helpers/transactions";
 
 import { 
     shuffle,
@@ -26,13 +26,13 @@ import {
     randomElement, 
     orderLowerPrice, 
     getPriceRangeItems,
-} from "../../utils/chance.js";
+} from "../../../utils/chance.js";
 
-import Item from "../ui/Item.js";
-import Button from "../ui/Button.js";
-import ItemPage from "../ui/ItemPage.js";
+import Item from "../../ui/Item.js";
+import Button from "../../ui/Button.js";
+import ItemPage from "../../ui/ItemPage.js";
 
-import "./FreeContract.css";
+import "./Contracts.css";
 
 const hsvToRgb = (H, S, V) => {
     S /= 100;
@@ -86,7 +86,7 @@ const contractRetractionAnimation = (elements, spinner) => {
     });
 }
 
-const FreeContract = () => {
+const Contracts = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
 
     const lang = useLang(GlobalState);
@@ -234,21 +234,25 @@ const FreeContract = () => {
 
         deleteItem(setGlobalState, removeUids);
 
-        setTimeout(() => {
-            const finalItem = randomElement(
-                shuffle(state.possibleItems)
-            );
+        const finalItem = randomElement(
+            shuffle(state.possibleItems)
+        );
 
+        setState(prev => ({
+            ...prev,
+            finalItem
+        }));
+
+        setTimeout(() => {
             insertItem(setGlobalState, finalItem, 4);
 
             var resultRarity = finalItem.rarity.toLowerCase().replace(/ |-/ig, "");
             var resultColor = getComputedStyle(document.querySelector("body")).getPropertyValue(`--color-${resultRarity}`).trim();
 
-            canvasAnimations.centralParticles(canvas, `rgb(${resultColor})`);
+            canvasAnimations.centralParticles(canvas, `rgb(${resultColor})`, undefined, document.getElementById("spinner-animation-target"));
 
             setState(prev => ({
                 ...prev,
-                finalItem,
                 isSpinning: false,
                 possibleItems: [],
             }));
@@ -256,7 +260,7 @@ const FreeContract = () => {
     }
 
     useEffect(() => {
-        if (state.isSpinning || state.finalItem) return;
+        if (state.isSpinning || state.finalItem || state.isItemSelection) return;
 
         const initializeSlider = () => {
             const HSV = document.getElementById("hsv-picker");
@@ -271,9 +275,9 @@ const FreeContract = () => {
             HSV.height = height;
 
 	        var gradient = ctx.createLinearGradient(width / 2, height, width / 2, 0);
-	        var hue = [[255,0,0],[255,255,0],[0,255,0],[0,255,255],[0,0,255],[255,0,255],[255,0,0]];
+	        var hue = [[255,0,0], [255,255,0], [0,255,0], [0,255,255], [0,0,255], [255,0,255], [255,0,0]];
             
-		    for (var i=0; i <= 6;i++){
+		    for (var i = 0; i <= 6; i++) {
 	  	    	var color = `rgb(${hue[i][0]}, ${hue[i][1]}, ${hue[i][2]})`;
 	            gradient.addColorStop(i * 1 / 6, color);
 		    };
@@ -301,7 +305,7 @@ const FreeContract = () => {
 
         initializeCanvas();
         initializeSlider();
-    });
+    }, [state.isItemSelection]);
 
     const renderMain = () => {
         if (state.isItemSelection) {
@@ -326,11 +330,12 @@ const FreeContract = () => {
         }
 
         let isActive = state.possibleItems.length && state.selected.length;
-        let isOpenReward = Boolean(state.finalItem);
+        let isOpenReward = Boolean(state.finalItem) && !state.isSpinning;
 
         let contractPrice = 0;
-        let minimalPrice = isActive ? state.possibleItems[0].price : 0;
-        let maximumPrice = isActive ? state.possibleItems[state.possibleItems.length - 1].price : 0;
+        let sortedPossible = orderLowerPrice(state.possibleItems);
+        let minimalPrice = isActive ? sortedPossible[0].price : 0;
+        let maximumPrice = isActive ? sortedPossible[state.possibleItems.length - 1].price : 0;
 
         let videoBgClassname = buildClassName(
             "spinner",
@@ -412,7 +417,7 @@ const FreeContract = () => {
 
                         <div className="spinner-inside" id="spinner-animation-target">
                             {Boolean(state.finalItem) && (
-                                <div className="final-item">
+                                <div className={buildClassName("final-item", !state.isSpinning && "open")}>
                                     <img src={getItemImageUrl(state.finalItem)} draggable={false} alt="Prize" />
                                     <span>{Currency.renderPrice(GlobalState, state.finalItem.price)}</span>
                                 </div>
@@ -443,4 +448,4 @@ const FreeContract = () => {
     );
 }
 
-export default FreeContract;
+export default Contracts;

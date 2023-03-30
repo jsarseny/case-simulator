@@ -87,14 +87,20 @@
     align-items: center;
     background-color: transparent;
 }
-.current-list.collections-list .Item img {
-    margin: 0;
+.current-list.collections-list .Item .ItemImage {
+    margin-top: -.9rem;
     width: auto;
-    max-height: 70%;
+    height: 70%;
 }
+
+.current-list.collections-list .Item .ItemImage img {
+    max-height: 100%;
+}
+
 .current-list.collections-list .Item .info {
     box-shadow: 0 -1px 30px 1px var(--color-shadow);
 }
+
 .current-list.collections-list .Item .name {
     background-color: transparent;
     backdrop-filter: blur(8px);
@@ -141,7 +147,7 @@
     cursor: pointer;
     width: 8rem;
     aspect-ratio: 1/1;
-    border: 1px solid var(--color-hover);
+    border: 1px dashed var(--color-hover);
     display: flex;
     align-items: center;
     border-radius: 50%;
@@ -223,6 +229,7 @@ span.action-line .Selection > span {
     width: 2px;
     box-shadow: 0 0 100px 20px rgba(var(--rgb-accent-color), .35);
     height: 100%;
+    animation: opacity-fade .5s;
 }
 
 .CaseItem {
@@ -260,8 +267,8 @@ span.action-line .Selection > span {
     box-shadow: 0 -5px 2rem 1.5rem rgba(var(--background-shade), .45);
 }
 
-.current-case-roll .CaseItem:first-child {
-    margin: 0;
+.current-case-roll .roll .CaseItem.first-item {
+    margin-left: 100%;
 }
 
 @keyframes ghost-spawn {

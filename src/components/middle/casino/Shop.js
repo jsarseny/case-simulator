@@ -1,28 +1,29 @@
-import React, { useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
-import useLang from "../../hooks/useLang.js";
-import Context from "../../utils/context.js";
-import Currency from "../../utils/currency.js";
-import Collections from "../../models/collections.js";
-import buildClassName from "../../utils/buildClassName.js";
+import useLang from "../../../hooks/useLang.js";
+import Context from "../../../utils/context.js";
+import Currency from "../../../utils/currency.js";
+import buildClassName from "../../../utils/buildClassName.js";
+import Collections, { getCollectionById } from "../../../models/collections.js";
 
-import { buyItem } from "./helpers/transactions.js";
-import { sortItems } from "./Cases.js";
-import { WeaponQualityExtended } from "../../utils/chance.js";
-import { getCollectionItems } from "../../models/weapons.js";
+import { buyItem } from "../helpers/transactions.js";
+import { sortItems } from "../Cases.js";
+import { WeaponQualityExtended } from "../../../utils/chance.js";
+import { getCollectionItems } from "../../../models/weapons.js";
 
-import Modal from "../ui/Modal.js";
-import Button from "../ui/Button.js";
-import Item, { ItemList } from "../ui/Item.js";
+import Modal from "../../ui/Modal.js";
+import Button from "../../ui/Button.js";
+import Item, { ItemList } from "../../ui/Item.js";
 
 import "./Shop.css";
+import { getItemModelById } from "../helpers/renderInventory.js";
 
 const BUY_MARKUP = 1.13;
 
 const convertPrice = price => Number.parseFloat((price * BUY_MARKUP).toFixed(2))
 
 const Shop = () => {
-    const { GlobalState, setGlobalState } = useContext(Context);
+    const { GlobalState, setGlobalState, DeepLink } = useContext(Context);
 
     const lang = useLang(GlobalState);
 
@@ -86,6 +87,26 @@ const Shop = () => {
 
         buyItem(setGlobalState, finalItem, state.count, BUY_MARKUP);
     }
+
+    useEffect(() => {
+        DeepLink.addEventListener("cs:/casino/shop/focus", context => {
+            if (!context || !context.cid) return;
+
+            let collection = getCollectionById(context.cid);
+
+            if (!collection) return;
+
+            handleCollectionSelect(collection);
+
+            if (context.itemId) {
+                let desiredItem = getItemModelById(parseInt(context.itemId));
+
+                if (!desiredItem) return;
+
+                handleItemSelect(desiredItem);
+            }
+        });
+    }, [DeepLink]);
 
     const renderBuyModal = () => {
         if (!state.selected) return;

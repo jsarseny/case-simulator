@@ -27,16 +27,6 @@ const Currency = {
             symbol: "¥",
             format: "{value}{symbol}"
         },
-        KZT: {
-            multiplier: 431.21,
-            symbol: "₸",
-            format: "{value} {symbol}"
-        },
-        IRR: {
-            multiplier: 42250,
-            symbol: "IR",
-            format: "{value} {symbol}"
-        }
     },
 
 

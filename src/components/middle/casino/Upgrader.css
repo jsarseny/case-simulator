@@ -159,7 +159,7 @@
     font-size: 1.5rem;
 }
 
-.Upgrader .no-items-available {
+.no-items-available {
     width: 100%;
     text-align: center;
     animation: opacity-fade .25s;

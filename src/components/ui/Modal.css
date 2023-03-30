@@ -43,6 +43,12 @@
     align-items: center;
 }
 
+.Modal .align .title span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .Modal .align .subtitle {
     width: 100%;
     float: left;

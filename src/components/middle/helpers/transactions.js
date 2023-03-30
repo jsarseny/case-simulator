@@ -72,7 +72,6 @@ export const withdrawBalance = (stateDispatch, amount) => {
     }
 
     if (amount > 0) {
-        console.log(amount);
         statistics.edit(stateDispatch, "TotalMoneySpent", Math.abs(amount));
     }
 

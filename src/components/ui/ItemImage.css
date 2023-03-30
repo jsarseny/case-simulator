@@ -1,0 +1,12 @@
+.ItemImage {
+    width: 100%;
+    float: left;
+}
+
+.ItemImage img {
+    animation: opacity-fade 160ms;
+}
+
+.ItemImage .Loader svg {
+    fill: rgba(255, 255, 255, .5);
+}

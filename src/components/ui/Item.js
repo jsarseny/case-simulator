@@ -11,6 +11,7 @@ import { getItemImageUrl } from "../../models/weapons";
 import Ripple from "./Ripple";
 
 import "./Item.css";
+import ItemImage from "./ItemImage";
 
 const isRecentlyReceived = uid => {
     const map = window.recentlyReceivedItems;
@@ -216,7 +217,7 @@ const Item = ({
             {shouldRenderRecent && <span className="recent-mark">NEW</span>}
             {selected && <span className="selected-mark"><i className="uil uil-check-circle" /></span>}
 
-            <img src={getItemImageUrl(item)} alt={item.fullName} />
+            <ItemImage item={item} />
 
             <div className="info">
                 <div className="meta">

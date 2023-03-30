@@ -5,12 +5,12 @@ import React, {
     useContext
 } from "react";
 
-import useLang from "../../hooks/useLang";
-import Context from "../../utils/context";
-import renderInventory, { filterInventory } from "./helpers/renderInventory";
+import useLang from "../../../hooks/useLang";
+import Context from "../../../utils/context";
+import renderInventory, { filterInventory } from "../helpers/renderInventory";
 
-import { getItemImageUrl } from "../../models/weapons";
-import { deleteItem, insertItem, statistics } from "./helpers/transactions";
+import { getItemImageUrl } from "../../../models/weapons";
+import { deleteItem, insertItem, statistics } from "../helpers/transactions";
 
 import { 
     randomInt, 
@@ -18,13 +18,13 @@ import {
     WeaponTypes, 
     randomElement, 
     getPriceRangeItems, 
-} from "../../utils/chance";
+} from "../../../utils/chance";
 
-import Item from "../ui/Item";
-import Button from "../ui/Button";
-import ItemPage from "../ui/ItemPage";
-import Dropdown from "../ui/Dropdown";
-import Selection from "../ui/Selection";
+import Item from "../../ui/Item";
+import Button from "../../ui/Button";
+import ItemPage from "../../ui/ItemPage";
+import Dropdown from "../../ui/Dropdown";
+import Selection from "../../ui/Selection";
 
 import "./Upgrader.css";
 

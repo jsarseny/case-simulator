@@ -4,18 +4,19 @@ import React, {
     useContext
 } from "react";
 
-import Context from "../../utils/context.js";
-import Currency from "../../utils/currency.js";
-import buildClassName from "../../utils/buildClassName.js";
+import useLang, { interactiveLangRender } from "../../../hooks/useLang.js";
+import Context from "../../../utils/context.js";
+import Currency from "../../../utils/currency.js";
+import buildClassName from "../../../utils/buildClassName.js";
 
-import { withdrawBalance } from "./helpers/transactions.js";
+import { withdrawBalance } from "../helpers/transactions.js";
 
 import { 
     chance, 
     randomFloat 
-} from "../../utils/chance.js"
+} from "../../../utils/chance.js"
 
-import Button from "../ui/Button.js";
+import Button from "../../ui/Button.js";
 
 import "./Roulette.css";
 
@@ -44,9 +45,10 @@ const Chances = {
     red: 5
 }
 
-const ROLL_TIME = 5500;
-const FINAL_TIME = 650;
-const ITEMS_MARGIN = 8;
+const ROLL_TIME = 5500;     // ms
+const FINAL_TIME = 650;     // ms
+const ITEMS_MARGIN = 8;     // px
+const MINIMUM_BET = 1;      // $
 
 const ROLL_TRANSITION = `margin ${ROLL_TIME}ms cubic-bezier(0.19, 0.02, 0, 0.98)`;
 const FINAL_TRANSITION = `margin ${FINAL_TIME}ms cubic-bezier(0.19, 0.02, 0, 0.98)`;
@@ -107,6 +109,7 @@ const getInitialExtended = () => ({
 const Roulette = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
     
+    const lang = useLang(GlobalState);
     const currencyModel = Currency.models[GlobalState.settings.currency];
 
     const [ state, setState ] = useState(getInitialExtended());
@@ -239,8 +242,11 @@ const Roulette = () => {
         }
     });
 
+    var minimumBet = MINIMUM_BET * currencyModel.multiplier;
+
     const isDisabledButton = 
-        !state.bet 
+        state.betAmount < minimumBet
+        || !state.bet 
         || !state.betAmount 
         || state.currentOpen.open
         || state.betAmount > GlobalState.profile.balance;
@@ -270,7 +276,7 @@ const Roulette = () => {
 
                 <div className="controls">
                     <span className="control-line">
-                        Bet: <input 
+                        {lang.roulette.bet}: <input 
                             type="number" 
                             placeholder="N"
                             value={state.betAmount}
@@ -281,7 +287,7 @@ const Roulette = () => {
                         /> {currencyModel.symbol}
                     </span>
                     <span className="control-line balance">
-                        <span>Balance: {Currency.renderPrice(GlobalState, GlobalState.profile.balance)}</span>
+                        <span>{lang.common.balance}: {Currency.renderPrice(GlobalState, GlobalState.profile.balance)}</span>
                         <span className="popup-notify"></span>
                     </span>
                     <span className="control-line roll-button">
@@ -290,6 +296,10 @@ const Roulette = () => {
                             disabled={isDisabledButton}
                             onClick={handleRoll}
                         />
+
+                        {state.betAmount < minimumBet && (
+                            <div className="no-items-available">{interactiveLangRender(lang.roulette.error, "{d}", Currency.renderPrice(GlobalState, MINIMUM_BET))}</div>
+                        )}
                     </span>
                 </div>
             </div>
