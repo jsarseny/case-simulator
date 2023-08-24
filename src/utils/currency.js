@@ -1,5 +1,5 @@
 import React from "react"
-
+import {randomElement} from "./chance.js";
 const Currency = {
     models: {
         USD: {
@@ -26,7 +26,7 @@ const Currency = {
             multiplier: 6.92,
             symbol: "¥",
             format: "{value}{symbol}"
-        },
+        }
     },
 
 
@@ -35,7 +35,7 @@ const Currency = {
 
         if (!model) return null;
 
-        return model.format.replace("{symbol}", model.symbol).replace("{value}", value);
+        return model.format.replace(/\{symbol\}/g, model.symbol).replace(/\{value\}/g, value);
     },
 
     renderPrice(GlobalState, USD, html = false) {
@@ -45,10 +45,13 @@ const Currency = {
         if (!model) return USD;
 
         var price = USD * model.multiplier;
+        var floor = price - Math.floor(price);
 
-        if (price > Math.floor(price)) {
-            price = Math.floor(price).toLocaleString() + (price - Math.floor(price)).toFixed(2).replace(/^0\./ig, ",");
-        } else price = price.toLocaleString();
+        if (floor > 0.99) {
+            price = Math.round(price).toLocaleString("ru-RU");
+        } else if (floor >= 0.01) {
+            price = Math.floor(price).toLocaleString("ru-RU") + floor.toFixed(2).replace(/^0\./ig, ",");
+        } else price = price.toLocaleString("ru-RU");
 
         const formatted = this.formatPrice(currency, price);
 

@@ -4,15 +4,20 @@ import React, {
     useContext
 } from "react";
 
-import useLang, { interactiveLangRender } from "../../hooks/useLang";
+import useFlag from "../../hooks/useFlag";
 import Context from "../../utils/context";
 import Currency from "../../utils/currency";
 import buildClassName from "../../utils/buildClassName";
-import renderInventory from "./helpers/renderInventory";
+import renderInventory, { getItemsPrice } from "./helpers/renderInventory";
 
+import { getItemOrigin } from "../../utils/chance";
 import { getCollectionById } from "../../models/collections";
 import { StorageVirtualModel } from "../../models/weapons";
-import { getItemOrigin, WeaponQuality } from "../../utils/chance";
+
+import useLang, { 
+    numeral,
+    interactiveLangRender
+} from "../../hooks/useLang";
 
 import { 
     sellItem, 
@@ -48,6 +53,7 @@ const Profile = () => {
 
     const [ profileTab, setProfileTab ] = useState(0);
     const [ selectedItem, setSelectedItem ] = useState(null);
+    const [ selectedItems, setSelectedItems ] = useState([]);
     const [ itemsForSell, setItemsForSell ] = useState([]);
     const [ storageBuyState, setStorageBuyState ] = useState({
         open: false,
@@ -69,17 +75,33 @@ const Profile = () => {
             return maxId + 1;
         },
 
-        replaceToStorage(storageName, item) {
+        replaceToStorageById(storageId, items) {
+            var name = false;
+
+            GlobalState.profile.storages.forEach(storage => {
+                if (name) return;
+
+                if (storage.uid === storageId) return name = storage.skinName;
+            });
+
+            return this.replaceToStorage(name, items);
+        },
+
+        replaceToStorage(storageName, items) {
+            items = Array.isArray(items) ? items : [items];
+
             const { storages } = GlobalState.profile;
+
+            const targetUids = items.map(item => item.uid);
 
             var storageId = false;
             storages.forEach(storage => {
-                if(storage.skinName === storageName) storageId = storage.uid;
+                if (storage.skinName === storageName) storageId = storage.uid;
             });
 
             setGlobalState(prev => {
                 var inventory = prev.profile.inventory.map(cur => {
-                    if (cur.uid === item.uid) {
+                    if (targetUids.includes(cur.uid)) {
                         if (storageId === false) delete cur.storageId;
                         else cur.storageId = storageId;
                     }
@@ -257,13 +279,157 @@ const Profile = () => {
                     min: 1,
                     listener: "contextmenu",
                     actions: [{
-                        children: lang.common.sell,
-                        negative: true,
-                        onClick: selected => handleOpenSellModal(selected),
+                        children: lang.common.options,
+                        onClick: selected => selected.length > 1 ? setSelectedItems(selected) : setSelectedItem(selected[0]),
                     }]
                 }}
             />
         );
+    }
+
+    const renderMultipleSelectModal = () => {
+        const { storages } = GlobalState.profile;
+        const items = selectedItems;
+
+        const handleFocusCollection = cid => {
+            setSelectedItems([]);
+            DeepLink.emitEvent(`cs:/cases/focus?cid=${cid}`);
+        }
+
+        const ItemsPrice = getItemsPrice(items);
+        const uniqueCollections = [...new Set(
+            items
+                .map(i => i.collectionId)
+                .filter(i => i !== undefined)
+                .flat()
+        )]
+
+        let percentOfInventory = (ItemsPrice / price * 100).toFixed(2);
+        if (percentOfInventory < 0.01) percentOfInventory = "<0.01";
+
+        var uniqueStorages = [...new Set(items.map(i => i.storageId))];
+        var StorageActive = 0;
+
+        const StorageOptions = ["<None>", ...storages.map(s => s.skinName)];
+
+        if (uniqueStorages.length < 2 && uniqueStorages[0] !== undefined) {
+            storages.forEach(storage => {
+                if (storage.uid === uniqueStorages[0]) StorageActive = StorageOptions.indexOf(storage.skinName);
+            });
+        }
+
+        if (uniqueStorages.length > 1) StorageOptions.unshift("<Different>");
+
+        const handleStorageSelect = storageName => {
+            if (storageName == "<Different>") {
+                items.forEach(item => {
+                    ManageStorage.replaceToStorageById(item.storageId, item);
+                });
+
+                return;
+            }
+
+            ManageStorage.replaceToStorage(storageName, items);
+        }
+
+        const availableCollections = !!uniqueCollections.length ? (
+            <span>
+                {uniqueCollections.map((col, i, arr) => {
+                    const forward = arr[i + 1];
+                    const isLimit = i > 5;
+                    const model = getCollectionById(col);
+
+                    if (i > 6) return;
+
+                    if (isLimit) return <font key={i}>
+                        <br />
+                        <span>{arr.length - i + 1} more collections...</span>
+                    </font>
+
+                    return <font key={i} className="collection-name">
+                        <span className="link" onClick={() => handleFocusCollection(model.id)} title={`Open ${model.fullName}`}>{model.fullName}</span>
+                        {forward && <>,<br /></>}
+                    </font>
+                })}
+            </span>
+        ) : <span>{lang.property.exclusive}</span>;
+
+        return <Modal
+            title={buildClassName(lang.common.options, "|", items.length, numeral(items.length, lang.Plural.items))}
+            onCancel={() => setSelectedItems([])}
+            className="item-info-modal item-multiple-options"
+            actions={[{
+                children: lang.common.sell,
+                negative: true,
+                onClick: () => setItemsForSell(items)
+            }, {
+                children: lang.common.cancel
+            }]}
+        >
+            <div className="item-detailed-info storage-selector">
+                <div className="detailed-line">
+                    <span>{lang.common.storage}:</span>
+                    <span>
+                        <Dropdown 
+                            active={StorageActive}
+                            options={StorageOptions}
+                            onChange={handleStorageSelect}
+                        />
+                    </span>
+                </div>
+            </div>
+
+            <div className="item-detailed-info">
+                <div className="detailed-line">
+                    <span>{lang.common.price}:</span>
+                    <span>
+                        {Currency.renderPrice(GlobalState, ItemsPrice)}
+                        <font 
+                            style={{ fontSize: "0.8em", marginLeft: ".5rem" }} 
+                            title={lang.property.percentOfInventory.replace("{d}", `${percentOfInventory}%`)}
+                        >({percentOfInventory}%)</font> 
+                    </span>
+                </div>
+                <div className="detailed-line">
+                    <span>{lang.property.collection}:</span>
+                    <span>
+                        {availableCollections}
+                    </span>
+                </div>
+            </div>
+        </Modal>
+    }
+
+    const renderItemsSellModal = () => {
+        var langPack = lang.modals.sellItems;
+
+        const items = itemsForSell;
+        var price = 0;
+
+        items.forEach(item => {
+            if (item.price) price += item.price;
+        });
+
+        const handleCancel = () => setItemsForSell([]);
+
+        return <Modal
+            title={langPack.title.replace("{d}", items.length).replace("{s}", numeral(items.length, lang.Plural.items))}
+            onCancel={handleCancel}
+            actions={[{
+                children: lang.common.sell,
+                negative: true,
+                onClick: handleSellItems
+            }, {
+                children: lang.common.cancel
+            }]}
+        >
+            {interactiveLangRender(
+                langPack.line1.replace("{s}", numeral(items.length, lang.Plural.items)), 
+                "{d}", items.length
+            )}
+            <br/><br/>
+            {interactiveLangRender(langPack.line2, "{d}", Currency.renderPrice(GlobalState, price))}
+        </Modal>
     }
 
     const renderStorageBuyModal = () => {
@@ -293,38 +459,13 @@ const Profile = () => {
                     maxLength={25}
                     onChange={ManageStorage.editName}
                 /><br />
-                {langPack.line3}<br />
-                {!canBuy.uniqueName && <font color="red">{langPack.error}</font>}
+                {langPack.line3}<br /><br />
+                <b className={buildClassName("warning", !canBuy.can && "error")}>
+                    {canBuy.can && langPack.validName}
+                    {!canBuy.uniqueName && langPack.nameTaken}
+                    {!canBuy.validName && langPack.invalidName}
+                </b>
             </div>
-        </Modal>
-    }
-
-    const renderItemsSellModal = () => {
-        var langPack = lang.modals.sellItems;
-
-        const items = itemsForSell;
-        var price = 0;
-
-        items.forEach(item => {
-            if (item.price) price += item.price;
-        });
-
-        const handleCancel = () => setItemsForSell([]);
-
-        return <Modal
-            title={langPack.title.replace("{d}", items.length)}
-            onCancel={handleCancel}
-            actions={[{
-                children: lang.common.sell,
-                negative: true,
-                onClick: handleSellItems
-            }, {
-                children: lang.common.cancel
-            }]}
-        >
-            {interactiveLangRender(langPack.line1, "{d}", items.length)}
-            <br/><br/>
-            {interactiveLangRender(langPack.line2, "{d}", Currency.renderPrice(GlobalState, price))}
         </Modal>
     }
 
@@ -339,7 +480,7 @@ const Profile = () => {
         const isStatTrack = quality.includes("ST");
         const isSouvenir = quality.includes("SV");
 
-        const StorageOptions = ["<None>", ...GlobalState.profile.storages.map(s => s.skinName)];
+        const StorageOptions = ["<None>", ...storages.map(s => s.skinName)];
         var StorageActive = 0;
         storages.forEach(storage => {
             if (storage.uid === storageId) StorageActive = StorageOptions.indexOf(storage.skinName);
@@ -356,7 +497,7 @@ const Profile = () => {
 
             setTimeout(() => {
                 DeepLink.emitEvent(`cs:/casino/shop/focus?cid=${cid}&itemId=${itemId}`);
-            }, 1);
+            }, 300);
         }
 
         const Quality = <span className={`QualityShade ${pureQuality}`}>
@@ -373,8 +514,7 @@ const Profile = () => {
 
                     return <font key={i} className="collection-name">
                         <span className="link" onClick={() => handleFocusCollection(model.id)} title={`Open ${model.fullName}`}>{model.fullName}</span>
-                        {forward && ","}
-                        <br />
+                        {forward && <>,<br /></>}
                     </font>
                 })}
             </span>
@@ -405,7 +545,7 @@ const Profile = () => {
 
         return <Modal
             title={`${selectedItem.weaponName} | ${selectedItem.skinName}`}
-            className="item-info-modal"
+            className={buildClassName("item-info-modal", "RarityShade", selectedItem.rarity)}
             onCancel={() => setSelectedItem(null)}
             actions={Actions.filter(action => !Boolean(action.disabled))}
         >
@@ -491,8 +631,9 @@ const Profile = () => {
             </div>
 
             {selectedItem && renderItemInfoModal()}
+            {!!itemsForSell.length && renderItemsSellModal()}
             {storageBuyState.open && renderStorageBuyModal()}
-            {Boolean(itemsForSell.length) && renderItemsSellModal()}
+            {!!selectedItems.length && renderMultipleSelectModal()}
         </div>
     );
 }

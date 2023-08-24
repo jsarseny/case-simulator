@@ -41,6 +41,12 @@ const Collections = [
         fullName: "Dust 2 2021 Collection",
         image: "./assets/collections/5.png"
     }, {
+        id: 74,
+        type: "collection",
+        shortName: "Anubis",
+        fullName: "The Anubis Collection",
+        image: "./assets/collections/74.png"
+    }, {
         id: 6,
         price: 11.83,
         type: "collection",
@@ -497,7 +503,7 @@ const Collections = [
         shortName: "Revolution",
         fullName: "Revolution Case",
         image: "./assets/collections/73.png"
-    }, 
+    }
 ];
 
 window.Collections = Collections;

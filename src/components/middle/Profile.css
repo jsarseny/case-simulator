@@ -213,14 +213,31 @@
     margin-bottom: 0;
 }
 
+.item-info-modal.RarityShade .align {
+    background-image: linear-gradient(20deg, var(--color-background-modal) 0%, rgba(var(--background-shade), .08));
+}
+
 .item-info-modal .item-detailed-info .detailed-line .price {
     font-weight: 550;
     color: gold;
 }
 
+.item-multiple-options .item-detailed-info.storage-selector {
+    border: none;
+}
+
 .storage-buy-modal .subtitle input {
     width: 50%;
-    margin: .5rem 0 1rem 0;
+    margin: .5rem 0 .5rem 0;
+}
+
+.storage-buy-modal .subtitle .warning {
+    color: rgb(61, 255, 61);
+    font-weight: 550;
+}
+
+.storage-buy-modal .subtitle .warning.error {
+    color: red;
 }
 
 @media screen and (max-width: 800px) {

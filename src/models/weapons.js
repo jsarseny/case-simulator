@@ -18745,6 +18745,294 @@ const Weapons = [
             "WWSV": 649.67,
             "BSSV": 605.08
         }
+    }, 
+
+    // Anubis
+    {
+        "id": 1345,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "AUG",
+        "skinName": "Snake Pit",
+        "rarity": "base",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_aug_hy_dune_trap_light_large.61e49e32c50c4a984fec89ec01defd789ae42376.png",
+        "prices": {
+            "FN": 0.18,
+            "MW": 0.07,
+            "FT": 0.04,
+            "WW": 0.04,
+            "BS": 0.03
+        }
+    }, {
+        "id": 1346,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "R8 Revolver",
+        "skinName": "Inlay",
+        "rarity": "base",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_revolver_gs_revolver_acanthus_bronze_light_large.3d652732f4082f2af2acce48c2343d2fd73bdcae.png",
+        "prices": {
+            "FN": 0.18,
+            "MW": 0.07,
+            "FT": 0.04,
+            "WW": 0.06,
+            "BS": 0.03
+        }
+    }, {
+        "id": 1347,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "M249",
+        "skinName": "Submerged",
+        "rarity": "base",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m249_cu_m249_scarab_light_large.6dc1dc25afc1a3a22fff064c85c8f2d3d88aeac7.png",
+        "prices": {
+            "FN": 0.2,
+            "MW": 0.07,
+            "FT": 0.04,
+            "WW": 0.04,
+            "BS": 0.03
+        }
+    }, {
+        "id": 1348,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "MP7",
+        "skinName": "Sunbaked",
+        "rarity": "base",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_mp7_gs_mp7_strone_light_large.38c65124a7edf35fa2223c37e97c5ac803c24207.png",
+        "prices": {
+            "FN": 0.31,
+            "MW": 0.07,
+            "FT": 0.04,
+            "WW": 0.03,
+            "BS": 0.06
+        }
+    }, {
+        "id": 1349,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "XM1014",
+        "skinName": "Hieroglyph",
+        "rarity": "base",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_xm1014_cu_xm1014_pharaoh_light_large.dd51bfb65f740dd4145fb548ef9be0a353f82766.png",
+        "prices": {
+            "FN": 0.21,
+            "MW": 0.07,
+            "FT": 0.04,
+            "WW": 0.03,
+            "BS": 0.03
+        }
+    }, {
+        "id": 1350,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "MAC-10",
+        "skinName": "Echoing Sands",
+        "rarity": "industrial",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_mac10_cu_mac10_scarab_light_large.3dce90df4da34a30c0437a51e90fc77d08bbe2f3.png",
+        "prices": {
+            "FN": 1.24,
+            "MW": 0.59,
+            "FT": 0.35,
+            "WW": 0.35,
+            "BS": 0.32
+        }
+    }, {
+        "id": 1351,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "SSG 08",
+        "skinName": "Azure Glyph",
+        "rarity": "industrial",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ssg08_gs_ssg08_anubis_light_large.6e654fe6456fb019d4507f750d113f67ca0a879f.png",
+        "prices": {
+            "FN": 1.24,
+            "MW": 0.61,
+            "FT": 0.36,
+            "WW": 0.33,
+            "BS": 0.32
+        }
+    }, {
+        "id": 1352,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "M4A1-S",
+        "skinName": "Mud-Spec",
+        "rarity": "industrial",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_silencer_gs_m4a1s_milspec_light_large.abf3dbeb994944b3182cc60c50d3a729f47c1979.png",
+        "prices": {
+            "FN": 1.25,
+            "MW": 0.63,
+            "FT": 0.36,
+            "WW": 0.46,
+            "BS": 0.4
+        }
+    }, {
+        "id": 1353,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "USP-S",
+        "skinName": "Desert Tactical",
+        "rarity": "industrial",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_usp_silencer_gs_usps_tactical_camo_light_large.ff54560941a8f50919ea6be8126490aff54ae810.png",
+        "prices": {
+            "FN": 1.53,
+            "MW": 0.62,
+            "FT": 0.36,
+            "WW": 0.33,
+            "BS": 0.33
+        }
+    }, {
+        "id": 1354,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "Tec-9",
+        "skinName": "Mummy's Rot",
+        "rarity": "mil-spec",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_tec9_cu_tec9_mummy_light_large.b70be5ec031a0538fe3e7b42d0a21d1cebe869e1.png",
+        "prices": {
+            "FN": 6.07,
+            "MW": 3.99,
+            "FT": 2.78,
+            "WW": 2.4,
+            "BS": 2.13
+        }
+    }, {
+        "id": 1355,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "MAG-7",
+        "skinName": "Copper Coated",
+        "rarity": "mil-spec",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_mag7_gs_mag7_goold_light_large.293c06a3f62ce9dfb177f79462fbb7b31bd5eb9f.png",
+        "prices": {
+            "FN": 6.13,
+            "MW": 3.98,
+            "FT": 2.77,
+            "WW": 2.39,
+            "BS": 2.05
+        }
+    }, {
+        "id": 1356,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "AK-47",
+        "skinName": "Steel Delta",
+        "rarity": "mil-spec",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_gs_ak47_strone_light_large.8434d6be7fa076ce41c86eb5ea00efe9383800c6.png",
+        "prices": {
+            "FN": 7.15,
+            "MW": 4.28,
+            "FT": 2.88,
+            "WW": 3.59,
+            "BS": 2.77
+        }
+    }, {
+        "id": 1357,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "AWP",
+        "skinName": "Black Nile",
+        "rarity": "mil-spec",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_awp_gs_awp_strone_light_large.f6a8a693f8bcdd89436549db6079bb5f102c9616.png",
+        "prices": {
+            "FN": 12.64,
+            "MW": 6.41,
+            "FT": 3.87,
+            "WW": 4.9,
+            "BS": 4.91
+        }
+    }, {
+        "id": 1358,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "Nova",
+        "skinName": "Sobek's Bite",
+        "rarity": "restricted",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_nova_gs_nova_sobek_light_large.53046ae2482691e0c1ba90de50698f875294a737.png",
+        "prices": {
+            "FN": 38.26,
+            "MW": 28.26,
+            "FT": 18.59,
+            "WW": 16.12,
+            "BS": 14.09
+        }
+    }, {
+        "id": 1359,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "P90",
+        "skinName": "ScaraB Rush",
+        "rarity": "restricted",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_p90_cu_p90_scarab_of_wisdom_light_large.54f85e60f71185083323768b79e699da762e09e6.png",
+        "prices": {
+            "FN": 37.58,
+            "MW": 28.42,
+            "FT": 18.74,
+            "WW": 16.26,
+            "BS": 14.49
+        }
+    }, {
+        "id": 1360,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "Glock-18",
+        "skinName": "Ramese's Reach",
+        "rarity": "restricted",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_glock_cu_glock_ramzes_light_large.86da273a88db7c8d0231e03a45cd94929efeb1ff.png",
+        "prices": {
+            "FN": 42.54,
+            "MW": 28.97,
+            "FT": 18.89,
+            "WW": 16.59,
+            "BS": 14.38
+        }
+    }, {
+        "id": 1361,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "P250",
+        "skinName": "Apep's Curse",
+        "rarity": "classified",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_p250_gs_p250_apep_light_large.39613b6ade6f204aaaed995e47d0a9fa42963b45.png",
+        "prices": {
+            "FN": 359.1,
+            "MW": 256.31,
+            "FT": 138.89,
+            "WW": 104.48,
+            "BS": 77.2
+        }
+    }, {
+        "id": 1362,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "FAMAS",
+        "skinName": "Waters of Nephthys",
+        "rarity": "classified",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_famas_cu_famas_holo_ocean_light_large.e9efee74629f50aab0110ae3fc6a07aabac679e0.png",
+        "prices": {
+            "FN": 361.48,
+            "MW": 266.18,
+            "FT": 139.71,
+            "WW": 110.69,
+            "BS": 83.72
+        }
+    }, {
+        "id": 1363,
+        "collectionId": 74,
+        "type": "weapon",
+        "weaponName": "M4A4",
+        "skinName": "Eye of Horus",
+        "rarity": "covert",
+        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_gs_m4a4_ra_light_large.7531ec73ee20dac93f068342616599e4808fb850.png",
+        "prices": {
+            "FN": 1809.34,
+            "MW": 1576.93,
+            "FT": 766.6,
+            "WW": 531.54,
+            "BS": 350.64
+        }
     }
 ];
 

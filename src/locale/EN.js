@@ -11,7 +11,8 @@ export default {
         storage: "Storage",
         use: "Use",
         ok: "OK",
-        murkup: "Murkup"
+        murkup: "Murkup",
+        options: "Options"
     },
 
     property: {
@@ -119,7 +120,7 @@ export default {
 
     modals: {
         sellItems: {
-            title: "Sell {d} Items",
+            title: "Sell {d} {s}",
             line1: "Are You sure you want to sell {d} items?",
             line2: "After the sale You will receive {d}"
         },
@@ -129,9 +130,15 @@ export default {
             line1: "Buy Storage for {d}?",
             line2: "Enter Storage Name",
             line3: "Warning: Name can't be changed in the future",
-            error: "This name is already taken!",
             placeholder: "Storage Name",
-            action: "Buy for {d}"
+            action: "Buy for {d}",
+            invalidName: "Invalid storage name!",
+            nameTaken: "This name is already taken!",
+            validName: "This name can be used"
         }
+    },
+
+    Plural: {
+        items: [ "item", "items" ]
     }
 }

@@ -20,7 +20,7 @@ const ItemImage = ({ item }) => {
  
             containerRef.current.innerHTML = null;
 
-            containerRef.current.appendChild(image);
+            containerRef.current.appendChild(this);
         }
     }, [item]);
 

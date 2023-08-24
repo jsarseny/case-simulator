@@ -40,7 +40,7 @@
 }
 
 .ItemPage .interactive-header .header-tool.disabled {
-    opacity: 0.25;
+    opacity: 0.15;
     pointer-events: none;
 }
 
@@ -63,6 +63,11 @@
     display: flex;
     align-items: center;
     font-size: 1.35rem;
+}
+
+.ItemPage .interactive-header .header-inventory-path .price-chunk {
+    font-size: 0.875rem;
+    margin-left: 1rem;
 }
 
 .ItemPage .interactive-header .filters {

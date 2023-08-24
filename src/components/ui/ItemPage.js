@@ -21,6 +21,7 @@ import Item from "./Item";
 import Ripple from "./Ripple";
 import Button from "./Button";
 import Dropdown from "./Dropdown";
+import Currency from "../../utils/currency";
 
 import "./ItemPage.css";
 
@@ -57,6 +58,7 @@ const ItemPage = ({
     const [ state, setState ] = useState({
         pages: [],
         currentPage: 0,
+        storagePrice: 0,
         filters: {
             query: "",
             quality: null,
@@ -168,11 +170,12 @@ const ItemPage = ({
         setState(prev => ({
             ...prev,
             currentPage: 0
-        }))
+        }));
     }
 
     const calculatePages = () => {
-        var virtual = items; 
+        var virtual = items;
+        var price = 0;
 
         if (!currentStorage && shouldStorages) {
             virtual = GlobalState.profile.storages.map(storage => ({
@@ -194,11 +197,16 @@ const ItemPage = ({
             state.filters.weaponType || undefined,
         );
 
-        return new Array(
-            Math.ceil(filtered.length / ITEMS_IN_PAGE)
-        ).fill(0).map((item, i) => {
-            return filtered.slice((i * ITEMS_IN_PAGE), (i * ITEMS_IN_PAGE) + ITEMS_IN_PAGE)
-        });
+        filtered.forEach(item => item.price && (price += item.price));
+
+        return {
+            price,
+            pages: new Array(
+                Math.ceil(filtered.length / ITEMS_IN_PAGE)
+            ).fill(0).map((item, i) => {
+                return filtered.slice((i * ITEMS_IN_PAGE), (i * ITEMS_IN_PAGE) + ITEMS_IN_PAGE)
+            })
+        };
     }
 
     const getCurrentLength = () => {
@@ -210,7 +218,7 @@ const ItemPage = ({
     }
 
     useEffect(() => {
-        const pages = calculatePages();
+        const { pages } = calculatePages();
 
         setState(prev => ({
             ...prev,
@@ -220,7 +228,7 @@ const ItemPage = ({
     }, [state.filters]);
 
     useEffect(() => {
-        const pages = calculatePages();
+        const { pages, price } = calculatePages();
         var currentPage = null;
 
         if (!pages[state.currentPage] || !pages[state.currentPage].length) {
@@ -232,6 +240,7 @@ const ItemPage = ({
         setState(prev => ({
             ...prev,
             pages,
+            storagePrice: price,
             currentPage: currentPage !== null ? currentPage : prev.currentPage
         }));
     }, [GlobalState.profile.storages, currentStorage, items]);

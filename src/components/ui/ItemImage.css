@@ -7,6 +7,7 @@
     animation: opacity-fade 160ms;
 }
 
+
 .ItemImage .Loader svg {
     fill: rgba(255, 255, 255, .5);
 }

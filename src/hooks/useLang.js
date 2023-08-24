@@ -36,4 +36,22 @@ export const interactiveLangRender = (template, separator, value) => {
     </>
 }
 
+export const renderNumeralPath = (number, words, template = "{number} {word}") => {
+    let word = numeral(number, words);
+
+    template.replace("{number}", number).replace("{word}", word);
+
+    return template;
+}
+
+export const numeral = (number, words) => {
+    if (!words[2]) words[2] = words[1];
+
+    var word = words[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? Math.abs(number) % 10 : 5]];
+
+    if (!word) return word;
+    if (/%d/ig.test(word)) return word.replace(/%d/ig, number.toString());
+
+    return word;
+}
 export default useLang;

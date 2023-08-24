@@ -9,9 +9,9 @@ import { WeaponQuality } from "../../utils/chance";
 import { getItemImageUrl } from "../../models/weapons";
 
 import Ripple from "./Ripple";
+import ItemImage from "./ItemImage";
 
 import "./Item.css";
-import ItemImage from "./ItemImage";
 
 const isRecentlyReceived = uid => {
     const map = window.recentlyReceivedItems;
@@ -179,12 +179,12 @@ const Item = ({
     const isStatTrack = shouldRenderQuality && item.type === "weapon" && /ST$/ig.test(item.quality);
     const isSouvenir = shouldRenderQuality && item.type === "weapon" && /SV$/ig.test(item.quality);
 
-    const fullWeaponName = buildClassName(
+    const fullWeaponName = item.rarity !== "service" ? buildClassName(
         isStatTrack && "StatTrack™",
         isSouvenir && "Souvenir",
         item.weaponName, "|", item.skinName,
         shouldRenderQuality && `(${WeaponQuality[pureQuality]})`
-    );
+    ) : buildClassName(lang.common.storage, `"${item.skinName}"`, );
 
     const name = item.type === "weapon" ? <>
         <span className="weapon-name">

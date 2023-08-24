@@ -8,17 +8,18 @@ import Collections, { getCollectionById } from "../../../models/collections.js";
 
 import { buyItem } from "../helpers/transactions.js";
 import { sortItems } from "../Cases.js";
-import { WeaponQualityExtended } from "../../../utils/chance.js";
+import { getItemModelById } from "../helpers/renderInventory.js";
 import { getCollectionItems } from "../../../models/weapons.js";
+import { WeaponQualityExtended } from "../../../utils/chance.js";
 
 import Modal from "../../ui/Modal.js";
 import Button from "../../ui/Button.js";
 import Item, { ItemList } from "../../ui/Item.js";
 
 import "./Shop.css";
-import { getItemModelById } from "../helpers/renderInventory.js";
 
 const BUY_MARKUP = 1.13;
+const BUY_LIMIT = 100;
 
 const convertPrice = price => Number.parseFloat((price * BUY_MARKUP).toFixed(2))
 
@@ -66,7 +67,7 @@ const Shop = () => {
         value = Number(value);
 
         if (value < 1) value = 1;
-        if (value > 100) value = 100;
+        if (value > BUY_LIMIT) value = BUY_LIMIT;
 
         return setState(prev => ({
             ...prev,

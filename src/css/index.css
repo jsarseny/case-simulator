@@ -15,6 +15,7 @@
     --color-hover: #363d4c;
     --color-active: #2f3541;
     --color-border: #181920;
+    --color-background-modal: rgba(37, 42, 52, 0.82);
 
     --header-height: 0rem;
     --actionbar-width: 5.5rem;

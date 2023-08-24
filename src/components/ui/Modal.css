@@ -6,7 +6,7 @@
     overflow: hidden auto;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,8 @@
     max-width: 95% !important;
     width: 25rem;
     padding: 0 1.5rem 1rem;
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-background-modal);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     min-height: 5rem;
     box-shadow: 0 .25rem .5rem .125rem rgba(0, 0, 0, 0.45);

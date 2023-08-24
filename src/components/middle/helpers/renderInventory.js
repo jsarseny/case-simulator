@@ -87,3 +87,11 @@ export const searchInventory = (inventory, query) => {
         return regex.test(item.weaponName) || regex.test(item.skinName)
     });
 }
+
+export const getItemsPrice = items => {
+    var price = 0;
+
+    items.forEach(item => price += item.price);
+
+    return price;
+}
