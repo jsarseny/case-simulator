@@ -26,6 +26,7 @@ const ReleaseNotesModal = ({ globalState, globalDispatch }) => {
         actions={[{ children: "Great!" }]}
     >
         <ul>
+            <li><b>Sounds in Cases</b>!</li>
             <li>New mechanics for selecting multiple items in the profile!</li>
             <li>Moving multiple items in and out of storage, selling and general information in the new <b>"OPTIONS"</b> modal window!</li>
             <li>Modal windows now have a stylish background blur and the item view window is decorated with a gradient</li>

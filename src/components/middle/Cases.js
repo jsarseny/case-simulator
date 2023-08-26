@@ -8,6 +8,7 @@ import React, {
 import useLang from "../../hooks/useLang";
 import Context from "../../utils/context";
 import Currency from "../../utils/currency";
+import AudioManager from "../../utils/audio.js";
 import buildClassName from "../../utils/buildClassName";
 import renderInventory from "./helpers/renderInventory";
 import Collections, { getCollectionById } from "../../models/collections";
@@ -39,7 +40,7 @@ import Item, { ItemList } from "../ui/Item";
 import "./Cases.css";
 
 const ROLL_TIME = 5500;
-const FINAL_TIME = 650;
+const FINAL_TIME = 500;
 
 const ROLL_TRANSITION = `margin ${ROLL_TIME}ms cubic-bezier(0.19, 0.02, 0, 0.98)`;
 const FINAL_TRANSITION = `margin ${FINAL_TIME}ms cubic-bezier(0.33, 1, 0.68, 1)`;
@@ -140,6 +141,11 @@ const Cases = () => {
     }, [GlobalState, setGlobalState]);
 
     const handleCaseChoose = item => {
+        if (item && item !== state.currentItem) {
+            AudioManager.playAudio(GlobalState, "./assets/mp3/case-drop.mp3", 0.05);
+        }
+       
+
         setState(prev => ({
             ...prev,
             droppedItem: null,
@@ -149,7 +155,7 @@ const Cases = () => {
 
     const handleItemDrop = item => {
         if (item.rarity === "gold") statistics.edit(setGlobalState, "TotalGoldDropped", 1); 
-        if (item.rarity === "covert") statistics.edit(setGlobalState, "TotalCovertDropped", 1); 
+        if (item.rarity === "covert") statistics.edit(setGlobalState, "TotalCovertDropped", 1);
 
         setState(prev => {
             if (item.rarity === "gold") {
@@ -183,6 +189,9 @@ const Cases = () => {
 
         for (let i = 0; i < 150; i++) items.push(worker(state.currentItem.id));
 
+        AudioManager.playAudio(GlobalState, "./assets/mp3/case-unlock.mp3", 0.1);
+        AudioManager.playAudio(GlobalState, "./assets/mp3/case-open.mp3", 0.4);
+
         setState(prev => ({
             ...prev,
             currentOpen: {
@@ -203,6 +212,43 @@ const Cases = () => {
         handleCaseChoose(state.currentItem);
     }
 
+    const initCaseAudio = (items, caret) => {
+        var caretBox = caret.getBoundingClientRect();
+        var usedIds = [];
+        var isLoop = true;
+        var frames = 0;
+
+        const loop = () => {
+            if (!isLoop) return;
+
+            frames += 1;
+            let isUsed = false;
+            items.forEach((item, i) => {
+                if (isUsed) return;
+
+                var itemBox = item.getBoundingClientRect();
+
+                if (
+                    itemBox.x <= caretBox.x 
+                    && !usedIds.includes(i)
+                ) {
+                    usedIds.push(i);
+                    isUsed = true;
+
+                    AudioManager.playAudio(GlobalState, "./assets/mp3/roll.mp3", 0.1 + 0.001 * frames);
+                }
+            });
+
+            requestAnimationFrame(loop);
+        }
+
+        loop();
+
+        const stopAudio = () => isLoop = false;
+
+        return { stopAudio }
+    }
+
     useEffect(() => {
         DeepLink.addEventListener("cs:/cases/focus", context => {
             if (!context || !context.cid) return;
@@ -221,6 +267,7 @@ const Cases = () => {
     }, [state.currentItem]);
 
     useEffect(() => {
+
         const currentOpen = state.currentOpen;
 
         if (!currentOpen.open) return;
@@ -228,6 +275,8 @@ const Cases = () => {
         var rollItems = document.querySelectorAll(".current-case-roll .CaseItem")
         var caret = document.querySelector(".current-case-roll span.caret");
         var container = document.querySelector(".current-case-roll .roll");
+
+        const { stopAudio } = initCaseAudio(rollItems, caret);
 
         var element = rollItems[0];
 
@@ -240,6 +289,7 @@ const Cases = () => {
         element.style.marginLeft = `${margin}px`;
         element.style.transition = ROLL_TRANSITION;
 
+
         window.setTimeout(() => {
             let droppedIndex = Math.floor(currentOpen.dropped);
             let droppedItem = rollItems[droppedIndex].getBoundingClientRect();
@@ -248,11 +298,15 @@ const Cases = () => {
             element.style.transition = FINAL_TRANSITION;
             element.style.marginLeft = `${finalMargin}px`;
 
+            stopAudio();
+
             window.setTimeout(() => {
-                handleItemDrop(
-                    state.currentOpen.items[Math.floor(currentOpen.dropped)]
-                );
-            }, FINAL_TIME + 150);
+                var dropped = state.currentOpen.items[Math.floor(currentOpen.dropped)];
+
+                AudioManager.playAudio(GlobalState, `./assets/mp3/grant-${dropped.rarity}.mp3`, 0.35);
+
+                handleItemDrop(dropped);
+            }, FINAL_TIME);
         }, ROLL_TIME + 150);
     }, [state.currentOpen]);
 

@@ -1,4 +1,4 @@
-const STORE_VERSION = "1.1.15";
+const STORE_VERSION = "1.1.20";
 
 export const INITIAL_STATE = {
     version: STORE_VERSION,
@@ -43,7 +43,8 @@ export const INITIAL_STATE = {
     },
     settings: {
         lang: "EN",
-        currency: "USD"
+        currency: "USD",
+        masterVolume: 1
     }
 }
 
