@@ -1,4 +1,4 @@
-const STORE_VERSION = "1.1.20";
+const STORE_VERSION = "1.1.30";
 
 export const INITIAL_STATE = {
     version: STORE_VERSION,

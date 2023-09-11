@@ -1,7 +1,18 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { 
+    useState, 
+    useEffect, 
+    useContext
+} from "react";
 
 import Context from "../../utils/context";
 import useLang from "../../hooks/useLang";
+import Weapons, { getItemImageUrl } from "../../models/weapons";
+
+import {
+    WeaponTypes, 
+    randomElement, 
+    RARITY_PRIORITY,
+} from "../../utils/chance";
 
 import Shop from "./casino/Shop";
 import Craft from "./casino/Craft";
@@ -35,6 +46,18 @@ const Casino = () => {
         });
     }, [DeepLink]);
 
+    const availableItems = Weapons.filter(item => {
+        return RARITY_PRIORITY[item.rarity] > 3 && RARITY_PRIORITY[item.rarity] < 6;
+    });
+
+    const getRandomImageByType = type => {
+        var items = availableItems.filter(item => {
+            return WeaponTypes[type].includes(item.weaponName.toLowerCase())
+        });
+
+        return getItemImageUrl(randomElement(items))
+    }
+
     const renderContent = () => {
         if (!activePage) return <>
             <div className="casino-widgets">
@@ -51,7 +74,7 @@ const Casino = () => {
                 </div>
 
                 <div className="casino-page-widget contracts ripple" onClick={() => setActivePage("contract")}>
-                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV0966m4-PhOf7Ia_ummJW4NE_3rnHpdujjgK28kE5Y2Gid9WWdQ44YVHS-VS9wr--jJG6tJrAzCBh6D5iuyjdE47G3Q" />
+                    <img src={getRandomImageByType("Rifles")} alt="" />
 
                     <div className="icon">
                         <i className="uil uil-briefcase" />
@@ -86,7 +109,7 @@ const Casino = () => {
                     <Ripple />
                 </div>
                 <div className="casino-page-widget shop ripple" onClick={() => setActivePage("shop")}>
-                    <img src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17P7NdShR7eO3g5C0m_7zO6-fxj5SvsMkib-W9N7zilLjr0NoYW_wI4OTelRvYwmC-FTrxeq915a074OJlyVOUzvCjQ" />
+                    <img src={getRandomImageByType("SniperRifles")} alt="" />
 
                     <div className="icon">
                         <i className="uil uil-store-alt" />

@@ -122,6 +122,18 @@
     }
 }
 
+.current-list.case-contains .Item.weapon.gold .ItemImage {
+    animation: glow 3500ms infinite;
+}
+
+@keyframes glow {
+    0% {
+        filter: brightness(1);
+    } 50% {
+        filter: brightness(1.15);
+    }
+}
+
 .choose-case {
     display: flex;
     font-size: 1.25rem;

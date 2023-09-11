@@ -26,11 +26,10 @@ const ReleaseNotesModal = ({ globalState, globalDispatch }) => {
         actions={[{ children: "Great!" }]}
     >
         <ul>
-            <li><b>Sounds in Cases</b>!</li>
-            <li>New mechanics for selecting multiple items in the profile!</li>
-            <li>Moving multiple items in and out of storage, selling and general information in the new <b>"OPTIONS"</b> modal window!</li>
-            <li>Modal windows now have a stylish background blur and the item view window is decorated with a gradient</li>
-            <li>A lot of various layout improvements</li>
+            <li><b>Completely new CRAFTS!</b></li>
+            <li>Craft chances are now extremely realistic</li>            
+            <li>Gloves now Extraordinary</li>            
+            <li>Really a lot of various layout improvements ;)</li>
         </ul>
 
         <b>GL HF!</b>
@@ -40,6 +39,12 @@ const ReleaseNotesModal = ({ globalState, globalDispatch }) => {
 const DeepLink = {
     __internal: new Map(),
 
+    /**
+     * 
+     * @param {string} url internal URL in cs:/%path% format
+     * @param {Function} cb callback fn
+     * @returns {string} url
+     */
     addEventListener(url, cb) {
         url = url.toLowerCase();
 
@@ -59,8 +64,9 @@ const DeepLink = {
     emitEvent(url) {
         var UrlParams = url.split("?")[1];
         
-        UrlParams = UrlParams && UrlParams.split('&').reduce((p, e) => {
+        UrlParams = UrlParams && UrlParams.split("&").reduce((p, e) => {
             p[decodeURIComponent(e.split("=")[0])] = decodeURIComponent(e.split("=")[1]);
+
             return p;
         }, {})
 
@@ -71,8 +77,9 @@ const DeepLink = {
         if (!eventHandlers) return console.log(`[DeepLink]: No handler provided for ${url}`);
 
         eventHandlers.forEach(cb => {
-            if (UrlParams) cb(UrlParams);
-            else cb();
+            if (UrlParams) return cb(UrlParams);
+            
+            return cb();
         });
     }
 }

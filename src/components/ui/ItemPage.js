@@ -8,6 +8,8 @@ import useLang from "../../hooks/useLang";
 import useFlag from "../../hooks/useFlag";
 import Context from "../../utils/context";
 import buildClassName from "../../utils/buildClassName";
+
+import { getSortedStorages } from "../middle/Profile";
 import { StorageVirtualModel } from "../../models/weapons";
 import { filterInventory, searchInventory } from "../middle/helpers/renderInventory";
 
@@ -19,9 +21,7 @@ import {
 
 import Item from "./Item";
 import Ripple from "./Ripple";
-import Button from "./Button";
 import Dropdown from "./Dropdown";
-import Currency from "../../utils/currency";
 
 import "./ItemPage.css";
 
@@ -136,12 +136,11 @@ const ItemPage = ({
         return setState(prev => ({
             ...prev,
             currentPage: value,
-        }))
+        }));
     }
 
     const handleFilterChange = (value, name) => {
-        if (/^All/ig.test(value)) value = null;
-        if (value && "quality" === name) value = value.split(/-| /ig).map(item => item[0]).join("");
+        if (/^<all>$/ig.test(value)) value = null;
         if (value && "rarity" == name) value = value.toLowerCase();
 
         setState(prev => ({
@@ -178,13 +177,13 @@ const ItemPage = ({
         var price = 0;
 
         if (!currentStorage && shouldStorages) {
-            virtual = GlobalState.profile.storages.map(storage => ({
+            virtual = getSortedStorages(GlobalState.profile.storages.map(storage => ({
                 ...StorageVirtualModel,
                 ...storage
-            })).concat(items);
+            }))).concat(items);
         }
 
-        virtual = virtual.filter(item => {
+        if (shouldStorages) virtual = virtual.filter(item => {
             if (currentStorage) return item.storageId === currentStorage.uid;
 
             return !item.storageId;
@@ -203,7 +202,7 @@ const ItemPage = ({
             price,
             pages: new Array(
                 Math.ceil(filtered.length / ITEMS_IN_PAGE)
-            ).fill(0).map((item, i) => {
+            ).fill().map((item, i) => {
                 return filtered.slice((i * ITEMS_IN_PAGE), (i * ITEMS_IN_PAGE) + ITEMS_IN_PAGE)
             })
         };
@@ -290,6 +289,24 @@ const ItemPage = ({
     const clickHandler = isSelectionMode || (selectConfig.enable && selectConfig.listener != "contextmenu") ? handleSelectItem : onClick;
     const onContextMenu = selectConfig.enable && selectConfig.listener == "contextmenu" ? handleSelectItem : undefined;
 
+    const hasPrevoiusPage = state.currentPage > 0;
+    const hasForwardPage = Boolean(state.pages[state.currentPage + 1]);
+
+    const TypeFilters = [{ label: lang.filters.allTypes, value: "<all>" }, ...Object.keys(WeaponTypes).map(type => ({
+        label: lang.property["Type" + type],
+        value: type 
+    }))];
+
+    const QualityFilters = [{ label: lang.filters.allQualities, value: "<all>" }, ...Object.keys(WeaponQuality).map(quality => ({ 
+        label: lang.property["Quality" + quality],
+        value: quality
+    }))];
+
+    const RarityFilters = [{ label: lang.filters.allRarities, value: "<all>" }, ...Object.keys(RARITY_PRIORITY).map(rarity => ({ 
+        label: lang.property["Rarity" + upperFirst(rarity.replace("-", ""))], 
+        value: rarity 
+    }))];
+
     return (
         <div className={fullClassName}>
             <div className="interactive-header">
@@ -310,15 +327,15 @@ const ItemPage = ({
                         <div className="overlay-filters">
                             <Dropdown 
                                 onChange={v => handleFilterChange(v, "weaponType")}
-                                options={[ "All Types", ...Object.keys(WeaponTypes) ]}
+                                options={TypeFilters}
                             />
                             <Dropdown 
                                 onChange={v => handleFilterChange(v, "quality")}
-                                options={[ "All Qualities", ...Object.values(WeaponQuality) ]}
+                                options={QualityFilters}
                             />
                             <Dropdown 
                                 onChange={v => handleFilterChange(v, "rarity")}
-                                options={[ "All Rarities", ...Object.keys(RARITY_PRIORITY).map(upperFirst) ]}
+                                options={RarityFilters}
                             />
                         </div>
 
@@ -370,7 +387,7 @@ const ItemPage = ({
                 <div className="control-slider">
                     <div 
                         title={lang.ItemPage.previousPage}
-                        className="arrow-slide ripple" 
+                        className={buildClassName("arrow-slide ripple", !hasPrevoiusPage && "disabled")} 
                         onClick={() => handlePageSlide(state.currentPage - 1)}
                     >
                         <i className="uil uil-angle-left" />
@@ -387,7 +404,7 @@ const ItemPage = ({
                     </div>
                     <div 
                         title={lang.ItemPage.nextPage}
-                        className="arrow-slide ripple" 
+                        className={buildClassName("arrow-slide ripple", !hasForwardPage && "disabled")} 
                         onClick={() => handlePageSlide(state.currentPage + 1)}
                     >
                         <i className="uil uil-angle-right" />

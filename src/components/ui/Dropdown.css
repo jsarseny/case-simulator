@@ -23,6 +23,7 @@
     align-items: center;
     overflow: hidden;
     white-space: nowrap;
+    animation: 200ms opacity-fade;
     text-overflow: ellipsis;
 }
 .Dropdown .preview .indicator {
@@ -48,6 +49,8 @@
     background-color: var(--color-background-secondary);
     overflow: hidden;
     box-shadow: 0 0 15px 0 var(--color-shadow);
+    max-height: 30rem;
+    overflow: auto;
 }
 
 .Dropdown .dropdown-list .list-item {
@@ -55,7 +58,11 @@
     float: left;
     padding: .35rem .75rem;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 .Dropdown .dropdown-list .list-item.active {
     background-color: rgba(var(--rgb-accent-color), .25);
 }

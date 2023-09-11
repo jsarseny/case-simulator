@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, {  useRef, useState} from "react";
+
 import useClickAway from "../../hooks/useClickAway";
 import buildClassName from "../../utils/buildClassName";
 
@@ -22,7 +23,7 @@ const Dropdown = ({
         setActiveId(id);
         switchOpen();
         
-        if (onChange) onChange(options[id]);
+        if (onChange) onChange(options[id].value);
     }
 
     useClickAway(dropdownRef, () => {
@@ -38,22 +39,28 @@ const Dropdown = ({
     return (
         <div className={fullClassName} ref={dropdownRef}>
             <span className="preview" onMouseDown={switchOpen}>
-                <span className="current-text">{options[activeId]}</span>
+                <span className="current-text">{options[activeId].label || options[activeId].value}</span>
                 <span className="indicator">
                     <i className="uil uil-angle-down" />
                 </span>
             </span>
 
-            <div className="dropdown-list">
-                {options.map((option, i) => (
-                    <div 
-                        key={i}
-                        className={buildClassName("list-item", activeId === i && "active")}
-                        onMouseDown={() => handleClick(i)}
-                    >
-                        {option}
-                    </div>
-                ))}
+            <div className="dropdown-list custom-scroll">
+                {options.map((option, i) => {
+                    var label = option.label || option.value;
+
+                    return (
+                        <div 
+                            key={i}
+                            className={buildClassName("list-item", activeId === i && "active")}
+                            title={label}
+                            aria-label={label}
+                            onMouseDown={() => handleClick(i)}
+                        >
+                            {label}
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );

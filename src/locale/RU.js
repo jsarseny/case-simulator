@@ -12,7 +12,8 @@ export default {
         use: "Использовать",
         ok: "ОК",
         murkup: "Наценка",
-        options: "Опции"
+        options: "Опции",
+        next: "Далее"
     },
 
     property: {
@@ -25,7 +26,16 @@ export default {
         percentOfInventory: "{d} от цены вашего инвентаря",
         couldContain: "Ваш инвентарь может содержать {d} таких",
 
-        RarityGold: "Золотое",
+        TypeMachineguns: "Пулемёты",
+        TypeShotguns: "Дробовики",
+        TypeSniperRifles: "Снайперские Винтовки",
+        TypeRifles: "Винтовки",
+        TypeSMGs: "ПП",
+        TypePistols: "Пистолеты",
+        TypeGloves: "Перчатки",
+        TypeKnifes: "Ножи",
+
+        RarityGold: "Очень Редкое",
         RarityCovert: "Тайное",
         RarityClassified: "Засекреченное",
         RarityRestricted: "Запрещённое",
@@ -45,6 +55,12 @@ export default {
         OriginUpgraded: "Апгрейд",
         OriginTradedUp: "Контракт",
         OriginUnknown: "Неизвестно"
+    },
+
+    filters: {
+        allTypes: "Все Типы",
+        allQualities: "Все Качества",
+        allRarities: "Все Редкости"
     },
 
     tabs: {
@@ -74,7 +90,10 @@ export default {
         totalStorages: "Хранилищ",
         selectForShowcase: "Выставить на Витрину",
         findInShop: "Найти в Магазине",
-        removeFromShowcase: "Убрать с Витрины"
+        removeFromShowcase: "Убрать с Витрины",
+        available: "Имеется",
+        selectAll: "Выбрать все",
+        selectAllHint: "Выбрать все {s} ({d})"
     },
 
     casino: {
@@ -91,6 +110,18 @@ export default {
         possibleRange: "Возможный Выигрыш",
         sign: "Подписать",
         new: "Новый Контракт"
+    },
+
+    craft: {
+        rarity: "Редкость",
+        extra: "Дополнительно",
+        defaultSubtitle: "Стандартные Предметы",
+        stattrackSubtitle: "Предметы с Технологией StatTrak™",
+
+        craftPrice: "Сумма Крафта",
+        craftRange: "Возможный Выигрыш",
+        signCraft: "Подписать",
+        newCraft: "Новый Крафт"
     },
 
     upgrader: {
@@ -135,6 +166,12 @@ export default {
             invalidName: "Неверное имя хранилища!",
             nameTaken: "Это имя уже занято!",
             validName: "Это имя можно использовать"
+        },
+
+        settings: {
+            language: "Язык",
+            currency: "Валюта",
+            volume: "Громкость"
         }
     },
 

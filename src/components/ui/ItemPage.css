@@ -103,7 +103,7 @@
 }
 
 .ItemPage .interactive-header .filters .overlay-filters .Dropdown {
-    width: calc(100% / 3.4);
+    width: calc(100% / 3.15);
 }
 
 .ItemPage.filters-open .interactive-header .filters .overlay-filters {
@@ -186,6 +186,11 @@
 }
 .ItemPage .control .arrow-slide:hover {
     background-color: var(--color-hover);
+}
+
+.ItemPage .control .arrow-slide.disabled {
+    pointer-events: none;
+    opacity: 0.3;
 }
 
 .ItemPage .control .arrow-slide i {

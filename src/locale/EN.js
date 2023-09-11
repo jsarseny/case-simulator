@@ -12,7 +12,8 @@ export default {
         use: "Use",
         ok: "OK",
         murkup: "Murkup",
-        options: "Options"
+        options: "Options",
+        next: "Next"
     },
 
     property: {
@@ -25,13 +26,22 @@ export default {
         percentOfInventory: "{d} of your inventory price",
         couldContain: "Your inventory could contain {d} of these",
 
-        RarityGold: "Gold",
+        TypeMachineguns: "Machineguns",
+        TypeShotguns: "Shotguns",
+        TypeSniperRifles: "Sniper Rifles",
+        TypeRifles: "Rifles",
+        TypeSMGs: "SMGs",
+        TypePistols: "Pistols",
+        TypeGloves: "Gloves",
+        TypeKnifes: "Knifes",
+
+        RarityGold: "Extraordinary",
         RarityCovert: "Covert",
         RarityClassified: "Classified",
         RarityRestricted: "Restricted",
         RarityMilspec: "Mil-spec",
         RarityIndustrial: "Industrial",
-        RarityBase: "Base",
+        RarityBase: "Consumer",
 
         QualityFN: "Factory New",
         QualityMW: "Minimal Wear",
@@ -45,6 +55,12 @@ export default {
         OriginUpgraded: "Upgraded",
         OriginTradedUp: "Traded Up",
         OriginUnknown: "Unknown"
+    },
+
+    filters: {
+        allTypes: "All Types",
+        allQualities: "All Qualities",
+        allRarities: "All Rarities"
     },
 
     tabs: {
@@ -74,7 +90,10 @@ export default {
         totalStorages: "Total Storages",
         selectForShowcase: "Select for Showcase",
         findInShop: "Find in Shop",
-        removeFromShowcase: "Remove From Showcase"
+        removeFromShowcase: "Remove From Showcase",
+        available: "Available",
+        selectAll: "Select All",
+        selectAllHint: "Select all {s} ({d})"
     },
 
     casino: {
@@ -91,6 +110,18 @@ export default {
         possibleRange: "Possible Win Range",
         sign: "Sign Contract",
         new: "New Contract"
+    },
+    
+    craft: {
+        rarity: "Rarity",
+        extra: "Extra",
+        defaultSubtitle: "Standard Items",
+        stattrackSubtitle: "Items with StatTrak™ Technology",
+
+        craftPrice: "Craft Price",
+        craftRange: "Outcome Range",
+        signCraft: "Sign Craft",
+        newCraft: "New Craft"
     },
 
     upgrader: {
@@ -135,6 +166,12 @@ export default {
             invalidName: "Invalid storage name!",
             nameTaken: "This name is already taken!",
             validName: "This name can be used"
+        },
+
+        settings: {
+            language: "Language",
+            currency: "Currency",
+            volume: "Master Volume"
         }
     },
 

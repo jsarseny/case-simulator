@@ -188,6 +188,11 @@
     padding: 0 .5rem;
 }
 
+.item-info-modal .item-detailed-info .detailed-line > span.custom-scroll {
+    max-height: 12rem;
+    overflow: auto;
+}
+
 .item-info-modal .item-detailed-info .detailed-line .RarityShade,
 .item-info-modal .item-detailed-info .detailed-line .QualityShade {
     color: rgba(var(--background-shade, (255, 255, 255)), 1);
@@ -220,6 +225,12 @@
 .item-info-modal .item-detailed-info .detailed-line .price {
     font-weight: 550;
     color: gold;
+}
+
+.item-info-modal .same-available {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0 .5rem !important;
 }
 
 .item-multiple-options .item-detailed-info.storage-selector {

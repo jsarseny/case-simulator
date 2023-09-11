@@ -55,7 +55,7 @@ const Upgrader = () => {
     const multiplier = [ 1.5, 2, 5, 10, 20 ];
 
     const handleChangePriority = value => {
-        if (/^<All/ig.test(value)) value = null;
+        if (value == "<all>") value = null;
 
         setTypePriority(value);
     }
@@ -249,6 +249,14 @@ const Upgrader = () => {
         var selectedType = Object.keys(WeaponTypes).indexOf(typePriority) + 1;
         if (selectedType < 1) selectedType = 0;
 
+        const PriorityList = [ { 
+            label: "<" + lang.filters.allTypes + ">", 
+            value: "<all>" 
+        }, ...Object.keys(WeaponTypes).map(type => ({
+            label: lang.property["Type" + type],
+            value: type
+        })) ];
+
         return <>
             <div className="upgrade-settings">
                 <div className="setting">
@@ -268,7 +276,7 @@ const Upgrader = () => {
                         <Dropdown 
                             active={selectedType}
                             onChange={handleChangePriority}
-                            options={[ "<All Types>", ...Object.keys(WeaponTypes) ]}
+                            options={PriorityList}
                         />
                     </div>
                 </div>

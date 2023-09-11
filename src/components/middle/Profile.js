@@ -4,7 +4,6 @@ import React, {
     useContext
 } from "react";
 
-import useFlag from "../../hooks/useFlag";
 import Context from "../../utils/context";
 import Currency from "../../utils/currency";
 import buildClassName from "../../utils/buildClassName";
@@ -42,6 +41,12 @@ import ItemPage, { upperFirst } from "../ui/ItemPage";
 import "./Profile.css";
 
 const STORAGE_FIXED_PRICE = 1000;
+
+export const getSortedStorages = storages => {
+    return storages.sort((a, b) => {
+        return a.skinName < b.skinName ? -1 : 1;
+    });
+}
 
 const Profile = () => {
     const { GlobalState, setGlobalState, DeepLink } = useContext(Context);
@@ -120,14 +125,18 @@ const Profile = () => {
         },
 
         canBuy() {
+            var name = storageBuyState.name.trim();
+
             const { balance, storages } = GlobalState.profile;
-            var isValidName = Boolean(storageBuyState.name.trim().length);
+            var isValidName = Boolean(name.length);
             var isUniqueName = true;
 
             storages.forEach(storage => {
                 if (!isUniqueName) return;
-                if (storage.skinName === storageBuyState.name.trim()) isUniqueName = false;
+                if (storage.skinName === name) isUniqueName = false;
             });
+
+            if (/^<|>$/ig.test(name)) isValidName = false;
 
             return { 
                 can: balance >= STORAGE_FIXED_PRICE && isValidName && isUniqueName,
@@ -168,8 +177,6 @@ const Profile = () => {
             }
         }));
     }
-
-    const handleOpenSellModal = items => setItemsForSell(prev => [...items]);
     
     const handleSellItems = () => {
         itemsForSell.forEach(item => {
@@ -302,7 +309,9 @@ const Profile = () => {
                 .map(i => i.collectionId)
                 .filter(i => i !== undefined)
                 .flat()
-        )]
+        )];
+
+        const isSameItems = new Set(items.map(i => i.id)).size === 1 && new Set(items.map(i => i.quality)).size === 1
 
         let percentOfInventory = (ItemsPrice / price * 100).toFixed(2);
         if (percentOfInventory < 0.01) percentOfInventory = "<0.01";
@@ -310,18 +319,19 @@ const Profile = () => {
         var uniqueStorages = [...new Set(items.map(i => i.storageId))];
         var StorageActive = 0;
 
-        const StorageOptions = ["<None>", ...storages.map(s => s.skinName)];
+        const sortedStorages = getSortedStorages(storages);
+        const StorageOptions = [{ value: "<None>" }, ...sortedStorages.map(s => ({ label: s.skinName, value: s.skinName }))];
 
         if (uniqueStorages.length < 2 && uniqueStorages[0] !== undefined) {
-            storages.forEach(storage => {
-                if (storage.uid === uniqueStorages[0]) StorageActive = StorageOptions.indexOf(storage.skinName);
+            sortedStorages.forEach(storage => {
+                if (storage.uid === uniqueStorages[0]) StorageActive = StorageOptions.findIndex(value => value.label === storage.skinName);
             });
         }
 
-        if (uniqueStorages.length > 1) StorageOptions.unshift("<Different>");
+        if (uniqueStorages.length > 1) StorageOptions.unshift({ value: "<Different>" });
 
         const handleStorageSelect = storageName => {
-            if (storageName == "<Different>") {
+            if (storageName === "<Different>") {
                 items.forEach(item => {
                     ManageStorage.replaceToStorageById(item.storageId, item);
                 });
@@ -336,26 +346,27 @@ const Profile = () => {
             <span>
                 {uniqueCollections.map((col, i, arr) => {
                     const forward = arr[i + 1];
-                    const isLimit = i > 5;
                     const model = getCollectionById(col);
-
-                    if (i > 6) return;
-
-                    if (isLimit) return <font key={i}>
-                        <br />
-                        <span>{arr.length - i + 1} more collections...</span>
-                    </font>
-
+    
                     return <font key={i} className="collection-name">
                         <span className="link" onClick={() => handleFocusCollection(model.id)} title={`Open ${model.fullName}`}>{model.fullName}</span>
-                        {forward && <>,<br /></>}
+                        {forward !== undefined && <>,<br /></>}
                     </font>
                 })}
             </span>
         ) : <span>{lang.property.exclusive}</span>;
 
+        const title = isSameItems 
+            ? <>
+                <b 
+                    className={`RarityShade ${items[0].rarity}`}
+                    style={{ color: "rgba(var(--background-shade, 1))" }}
+                > {buildClassName(items[0].weaponName, "|", items[0].skinName)}</b> ({items.length})
+            </>
+            : buildClassName(lang.common.options, "/", items.length, numeral(items.length, lang.Plural.items));
+
         return <Modal
-            title={buildClassName(lang.common.options, "|", items.length, numeral(items.length, lang.Plural.items))}
+            title={title}
             onCancel={() => setSelectedItems([])}
             className="item-info-modal item-multiple-options"
             actions={[{
@@ -392,7 +403,7 @@ const Profile = () => {
                 </div>
                 <div className="detailed-line">
                     <span>{lang.property.collection}:</span>
-                    <span>
+                    <span className="custom-scroll">
                         {availableCollections}
                     </span>
                 </div>
@@ -470,7 +481,7 @@ const Profile = () => {
     }
 
     const renderItemInfoModal = () => {
-        const { storages } = GlobalState.profile;
+        const { storages, inventory } = GlobalState.profile;
         const { rarity, quality, collectionId, storageId } = selectedItem;
 
         let percentOfInventory = (selectedItem.price / price * 100).toFixed(2);
@@ -480,10 +491,11 @@ const Profile = () => {
         const isStatTrack = quality.includes("ST");
         const isSouvenir = quality.includes("SV");
 
-        const StorageOptions = ["<None>", ...storages.map(s => s.skinName)];
+        var sortedStorages = getSortedStorages(storages);
+        const StorageOptions = [{ label: "<None>", value: "<None>" }, ...sortedStorages.map(s => ({ label: s.skinName, value: s.skinName }))];
         var StorageActive = 0;
-        storages.forEach(storage => {
-            if (storage.uid === storageId) StorageActive = StorageOptions.indexOf(storage.skinName);
+        sortedStorages.forEach(storage => {
+            if (storage.uid === storageId) StorageActive = StorageOptions.findIndex(value => value.label === storage.skinName);
         });
 
         const handleFocusCollection = cid => {
@@ -500,6 +512,11 @@ const Profile = () => {
             }, 300);
         }
 
+        const handleSelectSame = () => {
+            setSelectedItem(null);
+            setSelectedItems(renderInventory(sameItemsAvailable).inventory);
+        }
+
         const Quality = <span className={`QualityShade ${pureQuality}`}>
             {isStatTrack && <font className="QualityShade stattrack">StatTrack™ </font>}
             {isSouvenir && <font className="QualityShade souvenir">{lang.property.souvenir} </font>}
@@ -507,7 +524,7 @@ const Profile = () => {
         </span>
 
         const availableCollections = collectionId !== undefined ? (
-            <span>
+            <span className="custom-scroll">
                 {(Array.isArray(collectionId) ? collectionId : [collectionId]).map((col, i, arr) => {
                     const forward = arr[i + 1]; 
                     const model = getCollectionById(col);
@@ -519,6 +536,11 @@ const Profile = () => {
                 })}
             </span>
         ) : <span>{lang.property.exclusive}</span>;
+
+        const sameItemsAvailable = inventory.filter(item => item.id === selectedItem.id && item.quality === quality);
+        const sameItemsHint = lang.profile.selectAllHint
+            .replace("{d}", sameItemsAvailable.length)
+            .replace("{s}", buildClassName(selectedItem.weaponName, "|", selectedItem.skinName));
 
         const isItemAlreadyOnShowcase = isItemOnShowcase(GlobalState, selectedItem);
 
@@ -541,7 +563,7 @@ const Profile = () => {
             onClick: () => handleFocusInShop(selectedItem.collectionId, selectedItem.id)
         }, {
             children: lang.common.cancel
-        }]
+        }];
 
         return <Modal
             title={`${selectedItem.weaponName} | ${selectedItem.skinName}`}
@@ -559,6 +581,21 @@ const Profile = () => {
             />
 
             <div className="item-detailed-info storage-selector">
+                <div className="detailed-line">
+                    <span>{lang.profile.available}:</span>
+                    <span className="same-available">
+                        {sameItemsAvailable.length}
+                        {sameItemsAvailable.length > 1 && (
+                            <span 
+                                className="link" 
+                                onClick={handleSelectSame} 
+                                title={sameItemsHint}
+                            >
+                                <b>{lang.profile.selectAll}</b>
+                            </span>
+                        )}
+                    </span>
+                </div>
                 <div className="detailed-line">
                     <span>{lang.common.storage}:</span>
                     <span>

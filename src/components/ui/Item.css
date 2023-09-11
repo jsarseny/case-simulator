@@ -184,6 +184,12 @@
 .Item.base, .RarityShade.base { --background-shade: var(--color-base); }
 .Item.service, .RarityShade.service { --background-shade: 0,0,0; }
 
+font.RarityShade.colored,
+font.QualityShade.colored,
+font.PatternShade.colored {
+    color: rgba(var(--background-shade), 1);
+}
+
 .items-list {
     --columns-count: 4;
     --items-margin: 0.25rem; 

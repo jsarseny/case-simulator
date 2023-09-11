@@ -390,7 +390,7 @@ const Cases = () => {
                     </div>
                     <div className="item-info">
                         <span>{lang.cases.bestDrop}</span>
-                        <span>{lang.common.from}: <a onClick={() => handleCaseChoose(bestDrop.from)}>«{bestDrop.from.fullName}»</a></span>
+                        <span>{lang.common.from}: <span className="link" onClick={() => handleCaseChoose(bestDrop.from)}>«{bestDrop.from.fullName}»</span></span>
                     </div>
                 </div>
             )}
@@ -400,12 +400,12 @@ const Cases = () => {
                     <span 
                         children={lang.cases.cases}
                         onMouseDown={() => setCollectionFilter("case")}
-                        className={buildClassName(collectionFilter == "case" && "active")}
+                        className={buildClassName(collectionFilter === "case" && "active")}
                     />
                     <span 
                         children={lang.cases.special}
                         onMouseDown={() => setCollectionFilter("collection")}
-                        className={buildClassName(collectionFilter == "collection" && "active")}
+                        className={buildClassName(collectionFilter === "collection" && "active")}
                     />
                 </div>
 

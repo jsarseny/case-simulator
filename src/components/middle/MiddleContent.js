@@ -11,7 +11,7 @@ import "./MiddleContent.css";
 
 const MiddleContent = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
-
+    
     const Tabs = [
         <Cases />,
         <Profile />,

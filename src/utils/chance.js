@@ -20,7 +20,7 @@ export const randomElementExtended = (array, exclude) => {
 export const WeaponTypes = {
     Machineguns: [ "negev", "m249" ],
     Shotguns: [ "sawed-off", "mag-7", "nova", "xm1014" ],
-    'Sniper Rifles': [
+    SniperRifles: [
         "awp", "ssg 08", "scar-20", "g2sg1" 
     ],
     Rifles: [
@@ -235,49 +235,66 @@ export const mathCollection = collectionId => {
     }
 }
 
-export const mathContract = (items, isStatTrack) => {
-    const chances = {};
+export const getOutcomesChances = items => {
+    const outcomes = [];
+    const commonItems = new Map();
 
-    var lastMax = 0;
+    var total = 0;
 
-    items
-    .sort((a, b) => a.collectionId < b.collectionId ? -1 : 1)
-    .forEach(item => {
-        var cids = Array.isArray(item.collectionId) ? item.collectionId : [item.collectionId];
+    items.forEach(item => {
+        var collectionIds = Array.isArray(item.collectionId) ? item.collectionId : [item.collectionId];
 
-        cids.forEach(collectionId => {
-            chances[collectionId] = chances[collectionId] || {
-                min: lastMax,
-                max: lastMax
-            };
-
-            lastMax += 10;
-            chances[collectionId].max += 10;
+        collectionIds.forEach(collectionId => {
+            var collectionItems = getCollectionItems(collectionId).filter(out => {
+                return out.rarity === getRarity(RARITY_PRIORITY[items[0].rarity] + 1);
+            });
+    
+            collectionItems.forEach(_item => {
+                var current = commonItems.get(_item.id) || 0;
+    
+                return commonItems.set(_item.id, current + 1);
+            });
         });
-        
     });
 
-    var random = randomInt(0, 101);
-    var resultCollection = null;
+    commonItems.forEach(count => total += count);
     
-    Object.keys(chances).forEach(key => {
-        if (resultCollection) return;
+    for (let [ id, count ] of commonItems) {
+        outcomes.push({ 
+            id, 
+            chance: Number.parseFloat((count / total * 100).toFixed(2))
+        });
+    }
 
-        const source = chances[key];
-        if (random > source.min && random <= source.max) resultCollection = key;
+    return outcomes;
+}
+
+export const mathContract = (items, isStatTrack) => {
+    const chances = shuffle(getOutcomesChances(items));
+
+    let lastIndex = 0;
+    const outcomes = chances.map(({ id, chance }) => {
+        let min = lastIndex;
+        let max = lastIndex + chance;
+
+        lastIndex += chance;
+
+        return { id, min, max }
     });
 
-    const collectionItems = getCollectionItems(resultCollection);
-    const resultRarity = getRarity(
-        RARITY_PRIORITY[items[0].rarity] + 1
-    );
+    var resultItemModel = null;
+    const randomNumber = randomFloat(0, lastIndex);
 
-    const relevantItems = collectionItems.filter(item => item.rarity === resultRarity);
-    const resultItemModel = randomElement(relevantItems);
-    
+    outcomes.forEach(outcome => {
+        if (resultItemModel) return;
+
+        if (randomNumber >= outcome.min && randomNumber < outcome.max) {
+            resultItemModel = Weapons.find(weapon => weapon.id === outcome.id);
+        }
+    });
+
     const availableQualities = Object.keys(resultItemModel.prices).filter(q => {
-        if (q.includes("ST") && !isStatTrack) return false;
-        if (!q.includes("ST") && isStatTrack) return false;
+        if ((q.includes("ST") && !isStatTrack) || (!q.includes("ST") && isStatTrack)) return false;
 
         return true;
     });
@@ -312,7 +329,7 @@ export const getPriceRangeItems = (
         Object.keys(item_.prices).forEach(quality => {
             var price = item_.prices[quality];
 
-            if (item_.id == item.id && quality == item.quality) return;
+            if (item_.id === item.id && quality === item.quality) return;
 
             if (price >= range.min && price <= range.max) {
                 let minimal = {}

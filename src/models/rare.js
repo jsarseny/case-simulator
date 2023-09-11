@@ -8784,7 +8784,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Desert Shamagh",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8jyMrnDn2hu4MpkhO3S4YP6nFyLpAE9PT6mS9rMJV56DgSBuAbr3-7nh5K0tZ7MmHVjuiMjtH7VzEe1hR4abbBs1KacGw-eU60dGqaBBXrO8Mck5vvN90I",
         "prices": {
             "FN": 751.42,
@@ -8799,7 +8799,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Bloodhound Gloves",
         "skinName": "Bronzed",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibipJAhk2_zdfzl969C5goWYqPX4PLTVnmRE5sFOh-zV9ID5gVeLpxo7Oy3tIdeVe1A9ZV-E8wPrwrrsgJO-7snKnSZl63JwtHfcmUCy005NPOZrjOveFwtFxVxX6g",
         "prices": {
             "FN": 889.19,
@@ -8814,7 +8814,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hydra Gloves",
         "skinName": "Mangrove",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibK8LxVh7PTEfitH_-O0mI-Ek__7JrXVqWNI7Ndwte7T8In7t1ixqgc0NiucedPWKmlsIwmTuT7imLm3wYjotZvJmCQy7HQr7XePmBPm1RoaOLZt0PKZHF-eAfRKGfWCByXQssoiVmz0TgaZmGto",
         "prices": {
             "FN": 371.2,
@@ -8829,7 +8829,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hydra Gloves",
         "skinName": "Rattler",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibK8LxVh7PTEfitH_-O0mI-Ek__7JrXVqWNI7NdwtfrP9Ifwm1-9pSw-ITiwZ-nJK1FmJUbZ_1Lrxu7s1JC46J3OwSFhvHJ07X_amka00x0dZuBtgKGXSA_LAKEcAuDcUesAZQEd",
         "prices": {
             "FN": 403.95,
@@ -8844,7 +8844,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Broken Fang Gloves",
         "skinName": "Needle Point",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibi3JAxl3fXJfzp969C5goWYqPjkNqnQgmJe5pQhte_N-p70hGu4ohQ0JwavdcTCJxg2ZlvYr1XtxL25gZ7t7ZzPynQy6XIqtyvUlx2_1Rweb-c50PWXHQqfGeUXS4D0SPQ1",
         "prices": {
             "FN": 411.89,
@@ -8859,7 +8859,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Buckshot",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDL3ehG5C_PpzmObW-7P5gVO8v11lY2n1doDAIA88ZwvQ8lW4yObuhJDqvs7MynYwsyYhtH2Ll0Pk0k0fcKUx0kFa_qHn",
         "prices": {
             "FN": 431.74,
@@ -8874,7 +8874,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Duct Tape",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8j4NrrFnm5D8fp1n-rV4Y3ljWu4ohQ0J3ehJY6cdQNtNVrYqwTrxujrgMLu6snBz3Jjsygq4XzYlxOxhU1NP7Rqm7XAHjDxuAXz",
         "prices": {
             "FN": 438.69,
@@ -8889,7 +8889,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Racing Green",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ9_8i_gIODkvPLNKnUk2Vu79d0k9bN_Iv9nBrs-0s6MDjwLYWWJFM_ZwrS-gTswb28h5Du6JrBnyAx6SQl7HfVy0Tjn1gSOQgzXZdb",
         "prices": {
             "FN": 442.66,
@@ -8904,7 +8904,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hydra Gloves",
         "skinName": "Emerald",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibK8LxVh7PTEfitH_-O0mI-Ek__7JrXVqWNI7NdwtevN9I_-t1OmrhYyDDWqc97RbAc4MwqC8lnrx7y6jJHv7ZTLn3dhuCdz4HaJnEOwhx1KbrM81qTIQVyAR_sewefeIdg",
         "prices": {
             "FN": 475.41,
@@ -8919,7 +8919,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Arboreal",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8j4NrrFnm5D8fp3i-vT_I_Kj0axrh0DMDiue-nJK1FmJUbSqFS_wb-9gsDv6snMwXFk7CIh7CnemB3lgRtOb-M81vbMGgqYUqYaAuDcUdyv0e2k",
         "prices": {
             "FN": 485.33,
@@ -8934,7 +8934,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Convoy",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ94dW6nZSKhe7LP7LWnn8fsMFw3OqQrNT321ayqUs9ZGmlIoXHIFI3aAnQ-ALrybi8hZ_vtczAzGwj5HfPlx0SVg",
         "prices": {
             "FN": 583.86,
@@ -8949,7 +8949,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Constrictor",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8j4NrrFnm5D8fpihOjK8J_-gVqLpAE9PT6mS9rMJV56DgSBuAbr37rth8S-v8_LnXpl6SRz4X7UzEC1hxgeauRng6ScHAqXAvMfHKGFDiLO8MckvMDT7VQ",
         "prices": {
             "FN": 594.51,
@@ -8964,7 +8964,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Broken Fang Gloves",
         "skinName": "Unhinged",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibi3JAxl3fXJfzp969C5goWYqPjkNqnQgmJe5pQhtfrP9Ifwm1-9pSw-Pzigf-nJK1FmJTeMqxPplPDpg5W7vczNmnpiuSYis3jbmkS3gUtPbeFrjPfLHQnMB6AfHvLQVHTZrtktHz00OhE8",
         "prices": {
             "FN": 647.11,
@@ -8979,7 +8979,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Forest DDPAT",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDL_VhmpF18Jjj-zPyo_0hVuLpxo7Oy3tcI_BcVJvZl_Q-lC_xrzth5Tq6JrIyiRk7CNwtivYmBXighlIPeNs0eveFwsiIuvQ6g",
         "prices": {
             "FN": 701.02,
@@ -8994,7 +8994,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hydra Gloves",
         "skinName": "Case Hardened",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibK8LxVh7PTEfitH_-O0mI-Ek__7JrXVqWNI7NdwterA5onKgFWmrxYyNj2ceN_CKkIgZ1nRqAS6yL3s1JTqv5rJzHUyvScm5SzVzkGwhUsfZuRn0_OWQQ6dU7sJQveq-sbpag",
         "prices": {
             "FN": 713.61,
@@ -9009,7 +9009,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Transport",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDKLUmmde__pyi-TOyoD8j1yg5UQ5N2v1JdTAcAZoZVrR_1K_yObtgJDq7czOz3Mx6CBw7X3dzRfi1xFSLrs4IbZNKyg",
         "prices": {
             "FN": 747.35,
@@ -9024,7 +9024,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Badlands",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8jyMrnDn2hu59dwhO7Eyo_0hVuLpxo7Oy3tco6RdwVtZ1iG_VXvyerp18K_753MynNj7nUms3_dm0bjiB0db7Q-h-veFwtkj0BHFw",
         "prices": {
             "FN": 759.26,
@@ -9039,7 +9039,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "3rd Commando Company",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDLjem2ZQ5sF-teLS_rP5gVO8vywwMiukcZiVIVBqMlvRrAK-x73m1J-0tc-cyCRk7ycl5n3dykDigkxKbu0-hvWZVxzAUN37mJa3",
         "prices": {
             "FN": 778.12,
@@ -9054,7 +9054,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Spruce DDPAT",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8j3MrbeqWxD7dxOhuDG_Zi72ADh_kQ-Yjj7cICdIFVtNQzW-gO_yevthJW4up3AyHFhsicn4yuIywv330-QcVv1Ug",
         "prices": {
             "FN": 821.03,
@@ -9069,7 +9069,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Leather",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8j4NrrFnm5D8fp9g-7J4cL03VLl-hBoYDvwcIDDdg87aQyD8lm-kOq5jJ-0usvJznBr6HN0sXyOgVXp1sWipDG9",
         "prices": {
             "FN": 912.07,
@@ -9084,7 +9084,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Overtake",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ9_8i_gIODkvPLMbfQlWBu59dwhO7EyoD8j1yg5UU_N2j3d4OUIA9oY1vZrFS5krjthZC8v8zIyiNr7Clw4iqLzRG11ExSLrs4O1U5jwo",
         "prices": {
             "FN": 947.84,
@@ -9099,7 +9099,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Diamondback",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ9_9K3n4WYnP76DKLUmmde__p9g-7J4cKl2QOy-RBrNTihJtXAIVVrM1zU_lXtweu8jZbq7Z_KwSRnvCIk4SrdgVXp1nhnc4KK",
         "prices": {
             "FN": 950.82,
@@ -9114,7 +9114,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Arid",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eO7nYyCg_bmKoTdn2xZ_Isl27_AoNukjFG2-kpkY2r2cYCccVVvZlyEr1C5w7-7h5Tt6JzBwXJqpGB8su67HUiO",
         "prices": {
             "FN": 3265.02,
@@ -9129,7 +9129,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Bloodhound Gloves",
         "skinName": "Guerrilla",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibipJAhk2_zdfzl969C5goWYqPX4PLTVnmRE5sFOjfzE5578hFi1lB81NDG3OoXEJFNvNAuE_1XvwubvhJXvvsifnXA17CMi7XmMzkGx0x1OP7Y61_GACQLJ73mnFtE",
         "prices": {
             "FN": 1046.15,
@@ -9144,7 +9144,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Lunar Weave",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ97tC3l4u0m_7zO6-fx2oCsMAk07-Z9tmh0VDg8hZramigcoOQIFU6N1DZ-FK8lO_m0JS66oOJlyXrKxYjaQ",
         "prices": {
             "FN": 1053,
@@ -9159,7 +9159,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Field Agent",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDL3Tn1Rd4cJ5ntbN9J7yjRrlrkBtZ2zwJYaVc1M4N1_YqFftwry5hJC77ZvOwSBn63F0tneJm0awn1gSOeTQ2mnL",
         "prices": {
             "FN": 5203.96,
@@ -9174,7 +9174,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Bloodhound Gloves",
         "skinName": "Snakebite",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibipJAhk2_zdfzl969C5goWYqPX4PLTVnmRE5sFOmefA_onmg126lBEuMiqwS9rMJV56f1-F_la2lbi808O075XAmiRn7CQk4H6IyhCzhkoeb7dv0KGeH1ybUaxXXP7VcR0sUUo",
         "prices": {
             "FN": 1105.51,
@@ -9189,7 +9189,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Bronze Morph",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eOmm4mYmPnLNanekVRD7cFOjfvE8ILKhF2zowdyYmv7LYXHewQ8NwrYrFPqku-7hMPp78vJyCA1vCIq43vflxKz1BFPafsv26I8rW4rtQ",
         "prices": {
             "FN": 1113.59,
@@ -9204,7 +9204,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Broken Fang Gloves",
         "skinName": "Yellow-banded",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibi3JAxl3fXJfzp969C5goWYqPjkNqnQgmJe5pQhtfnO_J_6hmuyuRw7DDuvddXOHU9rPQSPvT7imLm3wfng7d-enGxhsihxtC3alhXm1x4db-xm1_2bT1qZD_QfFaOCAXbW5ZslGn6oHk_jhSEOkRme7HFB",
         "prices": {
             "FN": 1189.02,
@@ -9219,7 +9219,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Bloodhound Gloves",
         "skinName": "Charred",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibipJAhk2_zdfzl969C5goWYqPX4PLTVnmRE5sFOiOXA9ofKm124vRYuDDWqc97RbAU4MFmG-QO_yb3tgZa4tJqYnHQy6HEl5nrZnRywhBwfaeVp1KbPTlyAR_seqlMyB4c",
         "prices": {
             "FN": 1271.39,
@@ -9234,7 +9234,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Eclipse",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDLnQhWJS18d9i-rKyoD8j1yg5Uo9a236dtWUdgM6YVzS_1ntyefphJK4tZTBySZrsyNwtHaIyUO1hk1SLrs4pKtdn7w",
         "prices": {
             "FN": 1284.3,
@@ -9249,7 +9249,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Broken Fang Gloves",
         "skinName": "Jade",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAR0hwIQFTibi3JAxl3fXJfzp969C5goWYqPjkNqnQgmJe5pQhteTE4Y35gVeLrAE5NjeceN_CKkJRPQmSrQSgye6-jZa8752bz3piuSgmt3_fnRLjhRlOa7Y7h_TNTQmaU_NJGKaLVW2Q7s47NBNOxQ",
         "prices": {
             "FN": 1374.61,
@@ -9264,7 +9264,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Turtle",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDLnQhWJS18Jjj-zPyoPniVqzriwwOj6rYJiWJwM2Yl3T81a6lOft18S5usvLyHox6Ckht3uLzhKw0xhKbew6gfyWVxzAUMnPdx_-",
         "prices": {
             "FN": 1415.31,
@@ -9279,7 +9279,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Rezan the Red",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ9_tmslY60m_7zO6_ummpD78A_3L2TrN-h0Afl-0tpNmH0JYPEdVM2YV_S_FC6l-nu05_q752fy3Jm7z5iuyjF5BKzRg",
         "prices": {
             "FN": 1446.07,
@@ -9294,7 +9294,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Polygon",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDK_Dn2xD4cFOiOXU8LP5gVO8v11pNmGlJ4OWIwQ8Yw7U_1W-x7-9hcS6vMjJnXRr7iYk7HbYnEO31BpMcKUx0pVNRm42",
         "prices": {
             "FN": 1452.03,
@@ -9309,7 +9309,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Giraffe",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8j4NrrFnm5D8fp3i-vT_I_Kj12mqhU6NgavfdHNNmliMBqHr0--lLi6g56-6M-fyHoy63Rw4i2IzECyiB9JP7Y5gPWdSgjIA6dOGqXTGDOO5y2RKGat",
         "prices": {
             "FN": 1488.75,
@@ -9324,7 +9324,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Boom!",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDLbemGRu6sp-h9bN_Iv9nBqxrRVqZ2uhcNeSIVNtMFnRrlS5ye29gZ-5uJnLnyZl63UjtnzenBbjn1gSOb9Bn8c4",
         "prices": {
             "FN": 1496.69,
@@ -9339,7 +9339,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Queen Jaguar",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ95t2xgYGZqO7xP7fegVRd4cJ5ntbN9J7yjRqy_ENqZWD2ctWUIVU2aF_W-Fa5xujmg8K-uM6dyydhuHYn5XrVnUTmn1gSOYiGVtO2",
         "prices": {
             "FN": 1588.99,
@@ -9354,7 +9354,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Overprint",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8j4NrrFnm5D8fp3i-vT_I_Kj1G7phYoITCgS9TJN1NRPQGHohWgkO3qhsLo6ZTKyXQ3s3J35CqMyUG_hRtPb7dv16OfS1yfA6cbGqmAUG2Q7s4Ma_K2Rg",
         "prices": {
             "FN": 1591.97,
@@ -9369,7 +9369,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Mogul",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDKzYmH9U-s10ktbN_Iv9nBrmqUY4ZjygJNSQcQ42Mw2FrFm5xbzmhpTttMvAmnJmuSMk5S6ImEHkn1gSOcr9FLpo",
         "prices": {
             "FN": 1600.9,
@@ -9384,7 +9384,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Slaughter",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8jmNr_uhWdQ_cJ5nuzTyoD8j1yg5UpkNWmhItDDclVsYw6B-VS4k-vo08O4vsnKyHVmvilwsC7UnRywiUpSLrs4fUssIRw",
         "prices": {
             "FN": 1952,
@@ -9399,7 +9399,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Imperial Plaid",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ9_NC3nYS0h-LmI7fUqWdY781lxLmSpNn33wKwqhU6MWHwLdOVcVc3NF3U-QXtwbrr1JXt7sjOyHRquCI8pSGK0RswUoI",
         "prices": {
             "FN": 2092.19,
@@ -9414,7 +9414,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Lt. Commander",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDKnYlWBC6dJOiejM-rP5gVO8vywwMiukcZidcVU2NQnUrAK5yLroh5XqupTKmiNm6Slz4HrclxGwghpNOuNu06eaVxzAULicmv7r",
         "prices": {
             "FN": 2180.52,
@@ -9429,7 +9429,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "King Snake",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ9_9K3n4WYnP76DKzZn39U18l4jeHVu4qjiQHgqEQ9YDqlLYfAIVRrYQnX-1Psk-zuh5Du6sjOziRrvCgg4CrD30vgkfBFTtQ",
         "prices": {
             "FN": 21421.6,
@@ -9444,7 +9444,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Big Game",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eO-gY6fkuXLP7LWnn9u5MRjjeyPo9z02FXm-kdvMD-nco7HIVI_NF7R81nrkrjvgcTp6J6anHJruCAg4WGdwUKPP_nhrg",
         "prices": {
             "FN": 2564,
@@ -9459,7 +9459,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Crimson Web",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDKzUlHhu-sB1teXI8oThxlLt8xdtazv3ctOSI1I5NF2ErwK4yL_phMC-75XLz3Fi6yQmsHuOmhepwUYb3__8r8U",
         "prices": {
             "FN": 2662.88,
@@ -9474,7 +9474,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Foundation",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDLTDl2VW7fpmguDV8LP5gVO8v11rNjyhJITBegJsYliF-VC8l-3t0ZO67cmdySYwvCIk5irYyRW1hktOcKUx0vHv-479",
         "prices": {
             "FN": 2768.08,
@@ -9489,7 +9489,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "CAUTION!",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8j4NrrFnm5D8fpyi_zV_IP7t1i9rBsoDDWiZtHAbABvZF6D_QDtkOnnjMLvu53MzHFj7yEl53_bmBfi1B1FO7M7hPTNT12AR_se_AIUcFg",
         "prices": {
             "FN": 2828.63,
@@ -9504,7 +9504,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "POW!",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDLjZmWhe18d-heT--YXygED6-EQ9MT30dtOUcA84NwnR_Vm_xLjo15K97ZqdyXRg7yQnt3zZnEbm0wYMMLLVPbLTdA",
         "prices": {
             "FN": 2910.01,
@@ -9519,7 +9519,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Smoke Out",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDKjcmWBU18l4jeHVyoD0mlOx5UBva2ihLISUcg8-ZF6Cq1m8wr3v05a178_PyXNmuCQh7SvYyhfliBlSLrs4OJQvYKw",
         "prices": {
             "FN": 2943.76,
@@ -9534,7 +9534,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Crimson Weave",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ9_tmyq4yCkP_gfeqCwT8EvcN13L2Zo4-g21KxrUJpMmzxJ9CddFM8aFrY_VW9lbvmgsOi_MOeabvul1k",
         "prices": {
             "FN": 2977.5,
@@ -9549,7 +9549,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Finish Line",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDLjZk2ha7ddOjOXA8rP3hEGxlBQuNjytS9rMJV56DgSBuAbr37rv1JC56snLnScw7HIgt3qJm0O_1UlIOrM80fGaSVuZBqRMHvSLUCHO8MckmTbq2rc",
         "prices": {
             "FN": 3015.22,
@@ -9564,7 +9564,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Scarlet Shamagh",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eO-m5WFk-TgPLTFnlRD7cFOhuDG_ZjKhFWmrBZyYjzzI4OWIFc3ZlqFrgK8w-vog8Tvv5SdzHA3sikit3mJyRGygBlIP_sv26KQteZvVg",
         "prices": {
             "FN": 3249.45,
@@ -9579,7 +9579,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Cobalt Skulls",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DfVlxgLQFFibKkJQN3wfLYYgJK7dKyg5KKh8j4NrrFnm5D8fp3i-vT_I_KilihriwvOCyveMX6Ll9pORzO_1Drw-a81pK478jOySQ3vnV24n7UnBex0BhKOOE81_XLH1-WB60bGb7CWCRHpAEwPA",
         "prices": {
             "FN": 3682.18,
@@ -9594,7 +9594,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Omega",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eO0mIGInMjjNrnTn2VW19x0huXO4rP5gVO8v11pN26hJYaUJ1Q5aV_VqVW_kri5gJ7pvMuYySFjsnEm7CnanBW00x1McKUx0jX7Ty6x",
         "prices": {
             "FN": 4081.04,
@@ -9609,7 +9609,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Black Tie",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ9_8i_gIODkvPLMbfQlWBu_814nuz--YXygECLpxIuNDztIIbAe1c2ZVvR_1LvxrzugZO4vMvMyidi6SMm5n3fzke-0Bwdbu09gOveFwu9luAEbA",
         "prices": {
             "FN": 5055,
@@ -9624,7 +9624,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Nocts",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eO8lYeeluXLP7LWnn9u5MRjjeyPp92kjVC1-0I6YGH6J47Gc1c4NFDV-wDvxevqgJbvtZmdyyQw63Ir5mGdwUILovLG4A",
         "prices": {
             "FN": 5089.54,
@@ -9639,7 +9639,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Fade",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDL3Qkm5u5Mx2gv2PrN-l0AS3-ENsZzimJ4DEIwM8YQzY_Qfqwb2615a4uJvKy3trviUhtmGdwUI6U-OVuA",
         "prices": {
             "FN": 5100,
@@ -9654,7 +9654,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Blood Pressure",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDLjQhGle5sN4iOzTyp7wjGu4ohQ0JwavdcTCJxg9aAmCrFS8w-3qhsLv7pjPmiQ3vnV04S3UmhS1gkxJb-VphfXMHwmfGeUXS9Kiq6d_",
         "prices": {
             "FN": 5109.39,
@@ -9669,7 +9669,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Emerald Web",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDL7ck3lQ5MFOnezDyoD8j1yg5UM9MGyldoDAd1BvN1jR8le-k7_rh8K8757KznpgvCl253_byxPjgR5SLrs4VQDGB6c",
         "prices": {
             "FN": 6451.25,
@@ -9684,7 +9684,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Spearmint",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDLbYmH9u_Nd4i-fG-YnKhF2zowdyNzvzJoXDJFc_Z1HX_lHolb2708PovZzLmyY37yMk5nnayRK0g0tNbPsv26LzvhLreA",
         "prices": {
             "FN": 19973.2,
@@ -9699,7 +9699,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Marble Fade",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDLbQhGld7fp3i-3EyoD8j1yglB89IT6mOoWSJ1Q_ZVvT_ATrlbi6g8O_uJuazXRiuSR25HeIzh2w1E0db7c7haOACQLJVTTvRq8",
         "prices": {
             "FN": 6927.65,
@@ -9714,7 +9714,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Amphibious",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eOmm4mYmPnLNanekVRT5NB0tf7J_Jjwt1i9rBsofTqgIIKde1VsMAvV8we2w7q715e075SYynFi6ykqtymJmxWxgx8ZO-dxxavJKCSM1pg",
         "prices": {
             "FN": 8376,
@@ -9729,7 +9729,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Tiger Strike",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDK_YkW5D18pji-fG8LP5gVO8vywwMiukcZiSIw85Ml7Q-1m7ybq8gJC0tMybmHQ1uXUjtHjblkO2hhxPOuRr16aWVxzAUF7Ew8VE",
         "prices": {
             "FN": 8656,
@@ -9744,7 +9744,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Snow Leopard",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ95t2xgYGZqOD8Oq_UqWdY781lteXA54vwxgbn-RJsYzvzLdCWegI-aFzZrgW_wufv1sXqupnIyHcwvCQn4niPzBKpwUYbceNDf8I",
         "prices": {
             "FN": 11287.7,
@@ -9759,7 +9759,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Pandora's Box",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eOmgZKbm_LLP7LWnn8fvZNwj7zA8duk2FHk_Uo6Y23zcI6TIVdvZA6BqVi7w7i7hpPo7sjNwWwj5HcYIjYaag",
         "prices": {
             "FN": 46872.9,
@@ -9774,7 +9774,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Superconductor",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eO6nYeDg8j2P67UqWdY781lxOjFotz3igK2_0Y-Nm2ncI_DJ1BsYFGErwC8ye_m08TtvprJm3VjuCI8pSGKv_XB_cI",
         "prices": {
             "FN": 11596.4,
@@ -9789,7 +9789,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Slingshot",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eOlmImFkOT8PK_ummJW4NFOhujT8om72wWw-EE-amCgJISRdQJqYgvT8wXol-7mjJ_ouZ6bnSFiuCQr4Hfbywv330-uIHwuiA",
         "prices": {
             "FN": 16062.6,
@@ -9804,7 +9804,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Hedge Maze",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eOxhoWOmcj4OrzZgiUCvZN3jL-TrNmhiQCwqEBoMD3yctOXJwU3NF_QrAPswr_sgZC0vJvK1zI97Rp_ZvQv",
         "prices": {
             "FN": 18614,
@@ -9819,7 +9819,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Vice",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1JmMR1osbaqPQJz7ODYfi9W9eO0mJWOqOf9PbDummJW4NE_2u3Aooj2i1KwrkNoYW_7dYKXeg9vNVyC_AK-wb_thse9vpmYz3Bn7z5iuyh6Nk1_Sw",
         "prices": {
             "FN": 29929,
@@ -9834,7 +9834,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Cool Mint",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DeXEl7NwdOtbagFABs3OXNYgJP48i5hoOSlPvxDK_Dn2pf78l0tevN4InKhF2zowdyYz-nJY-Veg9sMArY_1G8xbzmgZO06JrBz3c2uCEnsXiJnxSw10xEavsv26IlQaG-2Q",
         "prices": {
             "FN": 3270.78,
@@ -9849,7 +9849,7 @@ const RareItems = [
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Crimson Kimono",
-        "rarity": "covert",
+        "rarity": "gold",
         "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDLDYm2Rf5_p1g-jM-oLxm2umrhcDPzCkfMKLewY8NVDZ_le8x7ztjJbqusvJmCdgsiYlsH3cmR2zhB1NZ-JogvGXQULeWfLIJRig1Q",
         "prices": {
             "FN": 12217.6,

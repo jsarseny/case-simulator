@@ -1,5 +1,5 @@
 import React from "react"
-import {randomElement} from "./chance.js";
+
 const Currency = {
     models: {
         USD: {
@@ -13,17 +13,17 @@ const Currency = {
             format: "{symbol}{value}"
         },
         RUB: {
-            multiplier: 75,
+            multiplier: 94.50,
             symbol: "₽",
             format: "{value}{symbol}"
         },
         GBP: {
-            multiplier: 0.84,
+            multiplier: 0.79,
             symbol: "£",
             format: "{symbol}{value}"
         },
         CNY: {
-            multiplier: 6.92,
+            multiplier: 7.29,
             symbol: "¥",
             format: "{value}{symbol}"
         }

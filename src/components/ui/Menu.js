@@ -21,7 +21,8 @@ const Menu = () => {
 
     const lang = useLang(GlobalState);
 
-    const [ isSettingsOpen, openSettings, closeSettings ] = useFlag(false)
+    const [ isSettingsOpen, openSettings, closeSettings ] = useFlag(false);
+    const [ masterVolume, setMasterVolume ] = useState(GlobalState.settings.masterVolume * 100);
 
     const [ isOpen, setIsOpen ] = useState(false);
 
@@ -35,9 +36,34 @@ const Menu = () => {
     const handleMenuClick = () => setIsOpen(prev => !prev);
     const handleBackdropClick = () => isOpen && setIsOpen(false);
 
-    const handleChangeCurrency = currency => {
-        currency = currency.slice(2).trim();
+    const handleVolumeChange = e => {
+        var { value } = e.currentTarget;
 
+        if (!value) value = 0;
+        if (!/^[0-9]{1,}$/ig.test(value)) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            return false;
+        }
+
+        value = Number(value);
+
+        if (value < 0) value = 0;
+        if (value > 100) value = 100;
+
+        setMasterVolume(value);
+
+        setGlobalState(prev => ({
+            ...prev,
+            settings: {
+                ...prev.settings,
+                masterVolume: value / 100
+            }
+        }));
+    }
+
+    const handleChangeCurrency = currency => {
         if (!(currency in Currency.models)) return;
 
         setGlobalState(prev => ({
@@ -110,17 +136,48 @@ const Menu = () => {
             canInstantClose={true}
             actions={[]}
         >
-            <Dropdown 
-                active={activeLang}
-                onChange={handleChangeLang}
-                options={Object.keys(langs).map(key => langs[key].localeName)}
-            />
-
-            <Dropdown 
-                active={activeCurrency}
-                onChange={handleChangeCurrency}
-                options={Object.keys(currencies).map(key => `${currencies[key].symbol} ${key}`)}
-            />
+            <div className="settings-row">
+                <div className="settings-column">
+                    {lang.modals.settings.language}:
+                </div>
+                <div className="settings-column">
+                    <Dropdown 
+                        active={activeLang}
+                        onChange={handleChangeLang}
+                        options={Object.keys(langs).map(key => ({ label: langs[key].localeName, value: langs[key].localeName }))}
+                    />
+                </div>  
+            </div>
+            <div className="settings-row">
+                <div className="settings-column">
+                    {lang.modals.settings.currency}:
+                </div>
+                <div className="settings-column">
+                    <Dropdown 
+                        active={activeCurrency}
+                        onChange={handleChangeCurrency}
+                        options={Object.keys(currencies).map(key => ({ 
+                            label: `${currencies[key].symbol} ${key}`,
+                            value: key
+                        }))}
+                    />
+                </div>  
+            </div>
+            <div className="settings-row">
+                <div className="settings-column">
+                    {lang.modals.settings.volume}:
+                </div>
+                <div className="settings-column">
+                    <input 
+                        value={masterVolume}
+                        onChange={handleVolumeChange}
+                        type="number" 
+                        min="0" 
+                        max="100" 
+                        step="1" 
+                    /> %
+                </div>  
+            </div>
         </Modal>
     }
 

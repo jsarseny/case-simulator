@@ -1,86 +1,268 @@
-.Contracts {
+.Craft {
     width: 100%;
     height: 100%;
     float: left;
 }
 
-.rarity-select {
+.Craft .craft-stage {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    float: left;
+}
+
+.Craft .target-selection .radio-selection-row {
+    margin-top: 4rem;
+    width: 100%;
+    float: left;
+}
+
+.Craft .target-selection .radio-group-column {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 3.5rem 0.5rem 3.5rem 3.75rem;
+}
+
+.Craft .target-selection .radio-group-column:last-child {
+    padding: 3.5rem 3.75rem 3.5rem 0.5rem;
+}
+
+.Craft .target-selection .radio-group-column .RadioGroup {
+    border-radius: 1rem;
+    background-color: var(--color-background);
+    height: auto;
+    padding: 1rem 0 1.5rem 2rem;
+}
+
+.Craft .target-selection .radio-group-column .RadioGroup span.RarityShade {
+    display: block;
+    width: 75%;
+    height: 0.15rem;
+    border-radius: 1rem;
+    margin-top: .375rem;
+    float: left;
+    transition: width 200ms;
+    background-color: rgba(var(--background-shade), 1);
+}
+
+.Craft .target-selection .radio-group-column .RadioGroup span.craft-traget-rarity-name {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+
+.Craft .target-selection .radio-group-column .RadioGroup span.craft-traget-rarity-name span:last-child {
+    color: var(--color-secondary);
+    font-size: 0.9em;
+}
+
+.Craft .target-selection .target-actions {
+    width: 100%;
+    height: 2.35rem;
     float: left;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+}
+
+.Craft .items-selection .tab-title span {
+    text-transform: none;
+}
+
+.Craft .craft-stage font.QualityShade,
+.Craft .craft-stage font.RarityShade {
+    color: rgba(var(--background-shade), 1);
+}
+
+.Craft .craft-spinner-container {
+    width: 100%;
+    height: 70%;
+    float: left;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.rarity-select > span {
+.Craft .craft-spinner {
+    height: 85%;
+    aspect-ratio: 1/1;
+    float: left;
+    border-radius: 50%;
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    box-shadow: inset 0px 0px 30px 5px var(--color-background-secondary);
+}
+
+.Craft .craft-spinner .craft-spinner-inside {
+    height: calc(100% - 5rem);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: height 400ms, box-shadow 1s;
+    position: relative;
+}
+
+.Craft .craft-spinner .spinner-interactive-item {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms, opacity 1600ms, filter 2s;
+    pointer-events: none;
+    box-shadow: 0px 0px 6px 0px var(--color-background-secondary);
+    z-index: 1;
+}
+
+.Craft .craft-spinner .interactive-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.Craft .craft-spinner .spinner-interactive-item img {
+    width: 120%;
+    filter: brightness(1.15) drop-shadow(0 0 5px var(--color-shadow));
+    transition: all 250ms;
+}
+
+.Craft .craft-spinner .item-video-background {
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.Craft .craft-spinner .item-video-background .color-bg {
+    transition: all 250ms;
+}
+
+.Craft .craft-spinner .craft-spinner-inside .craft-result-area {
+    position: absolute;
+    margin: 20%;
+    width: 60%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--color-background-secondary);
+    z-index: 5;
+    transition: box-shadow 250ms;
+    box-shadow: inset 0 0 80px 10px rgba(var(--background-shade), 0.7);
+}
+
+.Craft .result-item {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: final-item-spawn .4s cubic-bezier(0.33, 1, 0.68, 1.5);
+}
+
+.Craft .result-item img {
+    width: 80%;
+}
+
+.Craft .result-item .weapon-name {
+    font-size: 0.875rem;
+}
+
+.Craft .result-item .skin-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.Craft .craft-result-actions {
     width: 100%;
     float: left;
     display: flex;
-    justify-content: center;
-    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 15%;
+}
+
+.Craft .craft-result-actions .craft-subtitle {
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: .5rem 0;
-}
-.rarity-select > span.buttons {
-    margin-top: 1.5rem;
-}
-
-.select-items {
-    width: 100%;
-    float: left;
-}
-
-.select-items > .title {
-    width: 100%;
-    float: left;
-    padding: .85rem 1.5rem;
+    align-items: center;
     font-size: 1.25rem;
 }
 
-.select-items .items-list {
-    --columns-count: 5;
+.Craft .craft-result-actions .Button {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
 
+.Craft .craft-result-actions .Button.symbol {
+    padding: 0.35rem 1rem;
+}
+
+.Craft .craft-spinner.spinning .craft-spinner-inside {
+    height: 100%;
+    box-shadow: 0 0 100px 0px rgba(var(--background-shade), 0.4);
+}
+
+.Craft canvas {
+    overflow: hidden;
+}
+
+.Modal.craft-help-modal .outcomes {
     width: 100%;
-    height: 18rem;
-    background-color: var(--color-background);
+    max-height: 20rem;
 }
 
-.select-items .items-list .items-row {
-    height: 50%;
-}
-.select-items .items-list .items-row:first-child {
-    margin-top: 0;
-}
-
-.trade-up-buttons {
+.Modal.craft-help-modal .outcomes .item-row {
     width: 100%;
     float: left;
-    padding: 1rem 0;
+    height: 4rem;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.25rem 0.25rem 0.25rem 0;
+}
+
+.Modal.craft-help-modal .outcomes .item-row:last-child {
+    border-color: transparent;
+}
+
+.Modal.craft-help-modal .outcomes .item-row .item-column {
+    height: 100%;
+    float: left;
     display: flex;
-    justify-content: space-evenly;
-}
-.trade-up-buttons .Button {
-    padding: 0.5rem 3.5rem;
-    font-size: 1.3rem;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-@media screen and (max-width: 800px) {
-    .rarity-select {
-        padding: 1rem 5px;
-    }
+.Modal.craft-help-modal .outcomes .item-row .item-column.image {
+    width: 5.5rem;
+}
 
-    .rarity-select .Selection span {
-        padding: 8px 12px;
-    }
+.Modal.craft-help-modal .outcomes .item-row .item-column.chance {
+    width: 3.5rem;
+    justify-content: flex-end;
+}
 
-    .select-items .items-list {
-        height: 11rem;
-    }
+.Modal.craft-help-modal .outcomes .item-row .item-column.name {
+    width: calc(100% - 9rem);
+    overflow: hidden;
+    padding-right: .5rem;
+}
 
-    .trade-up-buttons .Button {
-        margin-right: 1rem;
-        padding: 0.3rem 2rem;
-        font-size: 1.5rem;
-    }
+.Modal.craft-help-modal .outcomes .item-row .item-column img {
+    height: 100%;
 }

@@ -150,6 +150,8 @@ const Shop = () => {
             >
                 <Item 
                     ripple={false}
+                    shouldPrice={false}
+                    shouldQuality={false}
                     onClick={() => void 0}
                     item={state.selected}
                 />

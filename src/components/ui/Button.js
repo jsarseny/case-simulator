@@ -10,6 +10,7 @@ const Button = ({
     color,
     className,
     disabled,
+    title,
     ripple,
     onClick,
     negative = false
@@ -30,7 +31,7 @@ const Button = ({
     );
 
     return (
-        <div className={fullClassName} onClick={handleClick}>
+        <div className={fullClassName} onClick={handleClick} title={title} >
             {children}
             {ripple && !disabled && <Ripple />}
         </div>

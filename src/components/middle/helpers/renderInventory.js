@@ -95,3 +95,17 @@ export const getItemsPrice = items => {
 
     return price;
 }
+
+export const getPriceRange = items => {
+    var min = Infinity;
+    var max = 0;
+
+    items.forEach(item => {
+        Object.values(item.prices).forEach(price => {
+            if (price < min) min = price;
+            if (price > max) max = price;
+        });
+    });
+
+    return { min, max }
+}
