@@ -13,7 +13,8 @@ export default {
         ok: "ОК",
         murkup: "Наценка",
         options: "Опции",
-        next: "Далее"
+        next: "Далее",
+        start: "Старт"
     },
 
     property: {
@@ -101,7 +102,8 @@ export default {
         craft: "Крафт",
         contract: "Контракт",
         upgrader: "Апгрейд",
-        shop: "Магазин"
+        shop: "Магазин",
+        crash: "Crash"
     },
 
     contract: {
@@ -135,6 +137,21 @@ export default {
     shop: {
         hint: "Выберите Коллекцию",
         hint2: "Выберите Предмет"
+    },
+
+    crash: {
+        bet: "Ставка",
+        totalAmount: "Сумма",
+        autoStopAt: "Остановить на",
+        cashOut: "Вывести",
+        multiplier: "Множитель",
+        timePassed: "Время",
+        profit: "Выигрыш",
+        autoStop: "Auto Stop",
+        latest: "Последнее",
+
+        betError: "Минимальная ставка - {d}$",
+        autoStopError: "Минимальный Auto Stop - x{d}",
     },
 
     roulette: {
@@ -172,6 +189,12 @@ export default {
             language: "Язык",
             currency: "Валюта",
             volume: "Громкость"
+        },
+        
+        profilePicture: {
+            title: "Фото Профиля",
+            upload: "Загрузить Новое",
+            delete: "Удалить Изображение"
         }
     },
 

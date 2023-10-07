@@ -6,41 +6,75 @@
     flex-direction: column;
     overflow: hidden;
     align-items: center;
-    padding-top: .5rem;
 }
 
 .profile-widget {
-    width: 96%;
-    height: 5.8rem;
-    background-color: var(--color-background);
-    border-radius: .75rem;
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    background-position: 50% 50%;
+    background-size: 100% auto;
+}
+
+.profile-background-image img {
+    width: 100%;
+    user-select: none;
+    margin-top: -20%;
 }
 
 .user-info {
+    padding: 0 2% 4rem 2%;
+    position: absolute;
+    z-index: 5;
     width: 100%;
     height: 100%;
+    background-image: linear-gradient(25deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.84));
 }
 
 .user-info .user-main {
     width: 40%;
     float: left;
     height: 100%;
-    padding: 1rem 0 1rem 1.5rem;
+    padding-left: 1.5rem;
 }
 
 .user-info .user-image {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4rem;
+    height: 4rem;
     float: left;
+    border-radius: 50%;
+    margin: 0.8rem 0;
+    background-color: var(--color-background-secondary);
     text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 150ms;
 }
+
+.user-info .user-image:hover {
+    border-color: var(--color-accent);
+}
+
 .user-info .user-image i {
-    font-size: 3rem;
+    font-size: 3.7rem;
 }
+
 .user-info .user-meta {
-    width: calc(100% - 3.5rem);
-    height: 100%;
-    padding-left: 1rem;
+    width: calc(100% - 4rem);
+    height: 4.75rem;
+    padding: 1.25rem 0 0 1rem;
     float: left;
 }
 .user-info .user-meta span {
@@ -59,9 +93,7 @@
     margin-bottom: .25rem;
 }
 .user-info .user-meta span.balance {
-    color: gold;
-    display: flex;
-    align-items: center;
+    padding-top: .375rem;
 }
 .user-info .extra-info {
     width: 60%;
@@ -99,9 +131,15 @@
 }
 
 .profile-content {
-    width: 96%;
-    height: calc(100% - 5.8rem);
-    padding-top: .35rem;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 6rem);
+    z-index: 5;
+    top: 6rem;
+    background-color: var(--color-background-secondary);
+    padding: 0.35rem 2% 0 2%;
+    border-radius: 2rem 2rem 0 0;
+    box-shadow: 0 0 50px 0px rgba(var(--rgb-accent-color), .15);
     float: left;
     display: flex;
     flex-direction: column;
@@ -159,8 +197,8 @@
     float: left;
     padding: 1rem 0;
     margin-top: 1rem;
-    border-bottom: 1px dashed rgba(255,255,255, 0.2);
-    border-top: 1px dashed rgba(255,255,255, 0.2);
+    border-bottom: 1px solid rgba(255,255,255, 0.1);
+    border-top: 1px solid rgba(255,255,255, 0.1);
 }
 
 .item-info-modal .item-detailed-info.storage-selector {
@@ -249,6 +287,44 @@
 
 .storage-buy-modal .subtitle .warning.error {
     color: red;
+}
+
+.profile-picture-modal .subtitle {
+    border-bottom: 1px solid rgba(255,255,255, 0.1);
+}
+
+.profile-picture-modal .profile-picture-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.profile-picture-modal .profile-picture-preview {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+img.profile-image {
+    width: 100%;
+    min-height: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+    object-position: 50% 0;
+    object-fit: cover;
+}
+
+.profile-picture-modal .profile-picture-preview.no-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #fff;
+    background-color: var(--color-background-modal);
+    font-size: 1.15rem;
 }
 
 @media screen and (max-width: 800px) {

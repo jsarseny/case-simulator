@@ -114,24 +114,26 @@ const Shop = () => {
 
         const item = state.selected;
 
-        const buttons = Object.keys(item.prices).map(quality => {
-            let price = convertPrice(item.prices[quality]) * state.count;
+        const buttons = Object.keys(item.prices).map(key => {
+            let price = convertPrice(item.prices[key]) * state.count;
+            let quality = WeaponQualityExtended[key]
 
             let children = <>
-                {WeaponQualityExtended[quality]}
+                {quality}
                 {Currency.renderPrice(GlobalState, price)}
             </>
 
             let className = buildClassName(
                 "item-quality-buy",
-                quality.includes("ST") && "stattrack"
+                key.includes("ST") && "stattrack"
             )
 
             return {
                 children,
                 className,
+                title: `Buy ${quality} for $${price}`,
                 isClosing: false,
-                onClick: () => handleBuy(quality),
+                onClick: () => handleBuy(key),
                 disabled: GlobalState.profile.balance < price
             }
         });

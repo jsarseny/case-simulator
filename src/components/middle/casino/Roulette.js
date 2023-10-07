@@ -53,19 +53,17 @@ const MINIMUM_BET = 1;      // $
 const ROLL_TRANSITION = `margin ${ROLL_TIME}ms cubic-bezier(0.19, 0.02, 0, 0.98)`;
 const FINAL_TRANSITION = `margin ${FINAL_TIME}ms cubic-bezier(0.19, 0.02, 0, 0.98)`;
 
-const callPopupNotify = (text, color = "#fff") => {
-    let popup = document.querySelector(".Roulette .controls .popup-notify");
-
-    if (popup) {
-        popup.innerHTML = text;
-        popup.style.color = color;
-        popup.style.transition = "opacity 4s";
-        popup.style.opacity = 0;
+export const callPopupNotify = (element, text, color = "#fff") => {
+    if (element) {
+        element.innerHTML = text;
+        element.style.color = color;
+        element.style.transition = "opacity 4s";
+        element.style.opacity = 0;
 
         setTimeout(() => {
-            popup.innerHTML = null;
-            popup.style.transition = null;
-            popup.style.opacity = 1;
+            element.innerHTML = null;
+            element.style.transition = null;
+            element.style.opacity = 1;
         }, 4000);
     }
 }
@@ -149,7 +147,7 @@ const Roulette = () => {
         let betAmountUsd = parseFloat(state.betAmount / currencyModel.multiplier);
         let win = betAmountUsd * AVAILABLE_BETS[color];
         
-        callPopupNotify(`+ ${Currency.renderPrice(GlobalState, win, true)}`, "rgb(12, 217, 157)");
+        callPopupNotify(document.querySelector(".Roulette .controls .popup-notify"), `+ ${Currency.renderPrice(GlobalState, win, true)}`, "rgb(12, 217, 157)");
 
         withdrawBalance(setGlobalState, -1 * win);
         revokeState();
@@ -158,7 +156,7 @@ const Roulette = () => {
     const handleLoss = () => {
         let betAmountUsd = parseFloat(state.betAmount / currencyModel.multiplier);
 
-        callPopupNotify(`- ${Currency.renderPrice(GlobalState, betAmountUsd, true)}`, "red");
+        callPopupNotify(document.querySelector(".Roulette .controls .popup-notify"), `- ${Currency.renderPrice(GlobalState, betAmountUsd, true)}`, "red");
         revokeState();
     }
 

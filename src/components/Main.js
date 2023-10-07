@@ -26,7 +26,10 @@ const ReleaseNotesModal = ({ globalState, globalDispatch }) => {
         actions={[{ children: "Great!" }]}
     >
         <ul>
+            <li><b>New Mode - CRASH!</b></li>
             <li><b>Completely new CRAFTS!</b></li>
+            <li>Now you can set a Profile Picture!</li>
+            <li>New Profile design!</li>
             <li>Craft chances are now extremely realistic</li>            
             <li>Gloves now Extraordinary</li>            
             <li>Really a lot of various layout improvements ;)</li>
@@ -79,7 +82,7 @@ const DeepLink = {
         eventHandlers.forEach(cb => {
             if (UrlParams) return cb(UrlParams);
             
-            return cb();
+            return cb({});
         });
     }
 }
@@ -95,8 +98,6 @@ const Main = () => {
     useLayoutEffect(() => {
         localStorage.setItem("cs-csgo-store", JSON.stringify(GlobalState));
     }, [ GlobalState ]);
-
-    const tabs = [ "Cases", "Profile", "Casino" ];
 
     const createModal = modal => {
         setModals(prev => {
@@ -126,10 +127,6 @@ const Main = () => {
             }}
         >
             <div className="Main">
-                <div className="Header">
-                    <span>{tabs[GlobalState.activeTab]}</span>
-                </div>
-
                 <MiddleContent />
                 <Menu />
             </div>

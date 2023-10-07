@@ -1,13 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
+import useFlag from "../../hooks/useFlag";
 import Context from "../../utils/context";
 import Currency from "../../utils/currency";
 
 import "./Statistics.css";
 
 const Statistics = () => {
-    const { GlobalState } = useContext(Context);
+    const { GlobalState, DeepLink } = useContext(Context);
     const stats = GlobalState.statistics;
+
+    const [ isOptimized, enableOptimization, disableOptimization ] = useFlag(false);
+
+    useEffect(() => {
+        DeepLink.addEventListener("cs:/global/optimizationRequest", context => {
+            var { target, enable } = context;
+
+            if (target !== "statistics") return;
+
+            enable = Boolean(Number(enable));
+            enable ? enableOptimization() : disableOptimization();
+        });
+    }, []);
 
     const CommonStats = {
         "Total Money Obtained": Currency.renderPrice(GlobalState, stats.TotalMoneyObtained),
@@ -33,6 +47,8 @@ const Statistics = () => {
 
         return column
     }
+
+    if (isOptimized) return;
 
     return (
         <div className="Statistics">

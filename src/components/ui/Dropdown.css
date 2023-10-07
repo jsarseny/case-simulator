@@ -46,7 +46,8 @@
     top: calc(100% + .15rem);
     border-radius: 0 0 .75rem .75rem;
     border: 1px solid var(--color-secondary);
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-background-modal);
+    backdrop-filter: blur(10px);
     overflow: hidden;
     box-shadow: 0 0 15px 0 var(--color-shadow);
     max-height: 30rem;

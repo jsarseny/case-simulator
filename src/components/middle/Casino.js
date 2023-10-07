@@ -15,6 +15,7 @@ import {
 } from "../../utils/chance";
 
 import Shop from "./casino/Shop";
+import Crash from "./casino/Crash";
 import Craft from "./casino/Craft";
 import Ripple from "../ui/Ripple";
 import Upgrader from "./casino/Upgrader";
@@ -34,6 +35,7 @@ const Casino = () => {
         contract: <Contracts />,
         craft: <Craft />,
         upgrader: <Upgrader />,
+        crash: <Crash />,
         shop: <Shop />
     }
 
@@ -55,17 +57,17 @@ const Casino = () => {
             return WeaponTypes[type].includes(item.weaponName.toLowerCase())
         });
 
-        return getItemImageUrl(randomElement(items))
+        return getItemImageUrl(randomElement(items));
     }
+
+    const RifleImage = getRandomImageByType("Rifles");
+    const SniperRifleImage = getRandomImageByType("SniperRifles");
 
     const renderContent = () => {
         if (!activePage) return <>
             <div className="casino-widgets">
                 <div className="tab-title"><span>Skins</span></div>
-                <div className="casino-page-widget native-contracts ripple" onClick={() => setActivePage("craft")}>
-                    <div className="icon">
-                        <i className="uil uil-briefcase-alt" />
-                    </div>
+                <div className="casino-page-widget ripple" onClick={() => setActivePage("craft")}>
                     <div className="title">
                         {lang.casino.craft}
                     </div>
@@ -73,12 +75,9 @@ const Casino = () => {
                     <Ripple />
                 </div>
 
-                <div className="casino-page-widget contracts ripple" onClick={() => setActivePage("contract")}>
-                    <img src={getRandomImageByType("Rifles")} alt="" />
+                <div className="casino-page-widget rifles-background ripple" onClick={() => setActivePage("contract")}>
+                    <img src={RifleImage} alt="" />
 
-                    <div className="icon">
-                        <i className="uil uil-briefcase" />
-                    </div>
                     <div className="title">
                         {lang.casino.contract}
                     </div>
@@ -86,10 +85,7 @@ const Casino = () => {
                     <Ripple />
                 </div>
         
-                <div className="casino-page-widget upgrader ripple" onClick={() => setActivePage("upgrader")}>
-                    <div className="icon">
-                        <i className="uil uil-angle-double-up" />
-                    </div>
+                <div className="casino-page-widget ripple" onClick={() => setActivePage("upgrader")}>
                     <div className="title">
                         {lang.casino.upgrader}
                     </div>
@@ -98,22 +94,23 @@ const Casino = () => {
                 </div>
 
                 <div className="tab-title"><span>Money</span></div>
-                <div className="casino-page-widget rulette ripple" onClick={() => setActivePage("roulette")}>
-                    <div className="icon">
-                        <i className="uil uil-money-bill-stack" />
-                    </div>
+                <div className="casino-page-widget ripple" onClick={() => setActivePage("roulette")}>
                     <div className="title">
                         {lang.casino.roulette}
                     </div>
 
                     <Ripple />
                 </div>
-                <div className="casino-page-widget shop ripple" onClick={() => setActivePage("shop")}>
-                    <img src={getRandomImageByType("SniperRifles")} alt="" />
+                <div className="casino-page-widget ripple" onClick={() => setActivePage("crash")}>
+                    <img src={SniperRifleImage} alt="" />
 
-                    <div className="icon">
-                        <i className="uil uil-store-alt" />
+                    <div className="title">
+                        {lang.casino.crash}
                     </div>
+
+                    <Ripple />
+                </div>
+                <div className="casino-page-widget ripple" onClick={() => setActivePage("shop")}>
                     <div className="title">
                         {lang.casino.shop}
                     </div>

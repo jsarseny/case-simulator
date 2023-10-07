@@ -16,6 +16,8 @@ import buildClassName from "../../utils/buildClassName";
 
 import "./Menu.css";
 
+const tabs = [ "cases", "profile", "casino", "statistics" ];
+
 const Menu = () => {
     const { GlobalState, setGlobalState, DeepLink } = useContext(Context);
 
@@ -26,7 +28,18 @@ const Menu = () => {
 
     const [ isOpen, setIsOpen ] = useState(false);
 
+    const distributeOptimization = id => {
+        tabs.forEach((tab, i) => {
+            let enable = Number(id !== i);
+
+            //if (tab === "profile") console.log(tab, i, enable)
+            DeepLink.emitEvent(`cs:/global/optimizationRequest?target=${tab}&enable=${enable}`);
+        });
+    }
+
     const handleClick = id => {
+        distributeOptimization(id);
+
         setGlobalState(prev => ({
             ...prev,
             activeTab: id

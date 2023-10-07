@@ -13,7 +13,8 @@ export default {
         ok: "OK",
         murkup: "Murkup",
         options: "Options",
-        next: "Next"
+        next: "Next",
+        start: "Start"
     },
 
     property: {
@@ -101,7 +102,8 @@ export default {
         craft: "Craft",
         contract: "Contract",
         upgrader: "Upgrader",
-        shop: "Shop"
+        shop: "Shop",
+        crash: "Crash"
     },
 
     contract: {
@@ -135,6 +137,21 @@ export default {
     shop: {
         hint: "Select Collection",
         hint2: "Select the item you want to buy"
+    },
+
+    crash: {
+        bet: "Bet",
+        totalAmount: "Total Amount",
+        autoStopAt: "Auto Stop At",
+        cashOut: "Cash Out",
+        multiplier: "Multiplier",
+        timePassed: "Time Passed",
+        profit: "Profit",
+        autoStop: "Auto Stop",
+        latest: "Latest",
+
+        betError: "Minimal Bet is {d}$",
+        autoStopError: "Minimal Auto Stop is x{d}"
     },
 
     roulette: {
@@ -172,6 +189,12 @@ export default {
             language: "Language",
             currency: "Currency",
             volume: "Master Volume"
+        },
+
+        profilePicture: {
+            title: "Profile Picture",
+            upload: "Upload New",
+            delete: "Delete Picture"
         }
     },
 

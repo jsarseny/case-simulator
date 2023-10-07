@@ -80,7 +80,7 @@ export const ShowcaseItem = ({ item, alt }) => {
     )
 
     return (
-        <div className={fullClassName}>
+        <div className={fullClassName} data-path={`${item.collectionId}_${item.id}`}>
             {backgroundVideo}
             <img src={getItemImageUrl(item)} draggable={false} decoding="async" />
             <div className="info">
@@ -202,8 +202,8 @@ const Item = ({
         item.type,
         ripple && "ripple",
         selected && "selected",
-        shouldPrice && "with-price",
         item.rarity && item.rarity,
+        shouldPrice && "with-price",
         shouldRenderRecent && "recently-received",
     );
 

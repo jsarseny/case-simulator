@@ -71,7 +71,8 @@ const Modal = ({
                     {actions.map((action, i) => (
                         <Button 
                             color="secondary" 
-                            key={i} 
+                            key={i}
+                            title={action.title}
                             ripple 
                             {...{
                                 ...action,

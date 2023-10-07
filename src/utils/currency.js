@@ -49,9 +49,9 @@ const Currency = {
 
         if (floor > 0.99) {
             price = Math.round(price).toLocaleString("ru-RU");
-        } else if (floor >= 0.01) {
+        } else if (floor >= 1e-6) {
             price = Math.floor(price).toLocaleString("ru-RU") + floor.toFixed(2).replace(/^0\./ig, ",");
-        } else price = price.toLocaleString("ru-RU");
+        } else price = Number(price.toFixed(2)).toLocaleString("ru-RU");
 
         const formatted = this.formatPrice(currency, price);
 

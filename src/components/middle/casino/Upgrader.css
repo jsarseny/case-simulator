@@ -13,7 +13,8 @@
 }
 
 .Upgrader .item-selection,
-.FreeContract .item-selection {
+.FreeContract .item-selection,
+.Crash .item-selection {
     width: 100%;
     height: 100%;
     float: left;
@@ -21,7 +22,8 @@
     flex-direction: column;
 }
 .Upgrader .item-selection .ItemPage,
-.FreeContract .item-selection .ItemPage {
+.FreeContract .item-selection .ItemPage,
+.Crash .item-selection .ItemPage {
     flex: 2;
 }
 
@@ -39,7 +41,7 @@
     margin: 0;
 }
 
-.items-preview .upgrader-item .VoidItem {
+.VoidItem {
     width: 100%;
     height: 100%;
     float: left;

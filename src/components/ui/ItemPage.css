@@ -6,6 +6,8 @@
     --item-width: calc(100% / var(--columns-count) - 2 * var(--items-margin));
     --item-height: calc(100% / var(--row-count) - 2 * var(--items-margin));
 
+    --page-border-color: rgba(255, 255, 255, 0.03);
+
     width: 98%;
     height: 100%;
     float: left;
@@ -22,6 +24,7 @@
     float: left;
     background-color: var(--color-background);
     height: 3rem;
+    border-bottom: 1px solid var(--page-border-color);
     padding: .5rem 1rem;
     display: flex;
     align-items: center;
@@ -159,6 +162,7 @@
     width: 100%;
     float: left;
     background-color: var(--color-background);
+    border-top: 1px solid var(--page-border-color);
     height: 3.2rem;
 }
 
@@ -238,30 +242,36 @@
     transition: all .2s cubic-bezier(0.19, 0.02, 0, 0.98);
 }
 
-.ItemPage .selection-helper .counter i.uil {
+.ItemPage .selection-helper .counter i.uil,
+.ItemPage .selection-helper .counter span {
     transition: all .2s;
     opacity: 0.15;
     pointer-events: none;
 }
 
-.ItemPage .selection-helper.open .counter i.uil {
+.ItemPage .selection-helper.open .counter i.uil,
+.ItemPage .selection-helper.open .counter span {
     opacity: 1;
     pointer-events: all;
 }
 
 .ItemPage .selection-helper .counter {
     height: 100%;
-    padding: 0 1rem 0 1rem;
+    width: 45%;
+    justify-content: center;
     display: flex;
     float: left;
     align-items: center;
-    border-right: 1px solid rgba(255, 255, 255, 0.35);
-    border-left: 1px solid rgba(255, 255, 255, 0.35);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-right: 1px solid var(--page-border-color);
+    border-left: 1px solid var(--page-border-color);
     font-size: 1.15rem;
 }
 .ItemPage .selection-helper .counter i {
-    margin-right: .5rem;
-    font-size: 1.625rem;
+    margin-right: .25rem;
+    font-size: 1.525rem;
     cursor: pointer;
 }
 
@@ -274,26 +284,8 @@
     justify-content: center;
 }
 
-.ItemPage .selection-helper .apply-button {
-    background-color: var(--color-accent);
-    height: 100%;
-    width: 5.5rem;
-    display: flex;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all .25s;
-    overflow: hidden;
-    border-right: none;
-    float: left;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-}
-
-.ItemPage .selection-helper .apply-button.disabled {
-    pointer-events: none;
-    width: 0;
-    opacity: 1;
+.ItemPage .selection-helper .actions .Button {
+    max-width: calc(100% - 2rem);
 }
 
 @media screen and (max-width: 800px) {

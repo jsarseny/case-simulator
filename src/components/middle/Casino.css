@@ -89,15 +89,14 @@
     height: auto;
 }
 
-.casino-page-widget.contracts .icon,
-.casino-page-widget.shop .icon  {
+.casino-page-widget.right-icon .icon {
     top: 0;
     right: .5rem;
     left: unset;
     border-radius: 0 0 1.5rem 1.5rem;
 }
 
-.casino-page-widget.contracts img {
+.casino-page-widget.rifles-background img {
     width: 70%;
     height: auto;
     transform: translateX(7rem) translateY(1rem) rotate(-15deg);

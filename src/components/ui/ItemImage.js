@@ -8,7 +8,11 @@ const ItemImage = ({ item }) => {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        containerRef.current.innerHTML = null;
+        let path = (item.collectionId || 0) + "_" + item.id;
+        let { current } = containerRef;
+
+        current.innerHTML = null;
+        current.dataset.path = path;
 
         const image = new Image();
 
@@ -16,7 +20,7 @@ const ItemImage = ({ item }) => {
         image.alt = item.skinName;
         
         image.onload = function() {
-            if (!containerRef.current) return;
+            if (!containerRef.current || current.dataset.path !== path) return;
  
             containerRef.current.innerHTML = null;
 

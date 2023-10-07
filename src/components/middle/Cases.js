@@ -5,6 +5,7 @@ import React, {
     useCallback, 
 } from "react"; 
 
+import useFlag from "../../hooks/useFlag";
 import useLang from "../../hooks/useLang";
 import Context from "../../utils/context";
 import Currency from "../../utils/currency";
@@ -99,6 +100,7 @@ const Cases = () => {
 
     const lang = useLang(GlobalState);
 
+    const [ isOptimized, enableOptimization, disableOptimization ] = useFlag(false);
     const [ state, setState ] = useState({
         currentItem: null,
         droppedItem: null,
@@ -109,6 +111,17 @@ const Cases = () => {
             items: []
         }
     });
+
+    useEffect(() => {
+        DeepLink.addEventListener("cs:/global/optimizationRequest", context => {
+            var { target, enable } = context;
+
+            if (target !== "cases") return;
+
+            enable = Boolean(Number(enable));
+            enable ? enableOptimization() : disableOptimization();
+        });
+    }, []);
 
     const getExtendedItem = minimal => {
         return renderInventory([ minimal ]).inventory[0];
@@ -377,7 +390,7 @@ const Cases = () => {
 
     const renderList = () => {
         const bestDrop = getBestDrop();
-        
+
         if (!state.currentItem) return <>
             {bestDrop && (
                 <div className="best-drop">

@@ -4,6 +4,12 @@ import React, {
     useContext
 } from "react";
 
+import { 
+    update,
+    del, get, set
+} from "idb-keyval";
+
+import useFlag from "../../hooks/useFlag";
 import Context from "../../utils/context";
 import Currency from "../../utils/currency";
 import buildClassName from "../../utils/buildClassName";
@@ -33,6 +39,7 @@ import {
 } from "./helpers/showcase";
 
 import Modal from "../ui/Modal";
+import Ripple from "../ui/Ripple";
 import Button from "../ui/Button";
 import Dropdown from "../ui/Dropdown";
 import Item, { ShowcaseItem } from "../ui/Item";
@@ -41,6 +48,7 @@ import ItemPage, { upperFirst } from "../ui/ItemPage";
 import "./Profile.css";
 
 const STORAGE_FIXED_PRICE = 1000;
+const PROFILE_PICTURE_KEY = "profile-picture";
 
 export const getSortedStorages = storages => {
     return storages.sort((a, b) => {
@@ -56,14 +64,27 @@ const Profile = () => {
     const [ price, setPrice ] = useState(0);
     const [ inventory, setInventory ] = useState([]);
 
+    const [ isImageModal, openImageModal, closeImageModal ] = useFlag(false);
+    const [ isOptimized, enableOptimization, disableOptimization ] = useFlag(false);
+
+
     const [ profileTab, setProfileTab ] = useState(0);
-    const [ selectedItem, setSelectedItem ] = useState(null);
-    const [ selectedItems, setSelectedItems ] = useState([]);
     const [ itemsForSell, setItemsForSell ] = useState([]);
-    const [ storageBuyState, setStorageBuyState ] = useState({
-        open: false,
-        name: ""
-    });
+    const [ selectedItems, setSelectedItems ] = useState([]);
+    const [ selectedItem, setSelectedItem ] = useState(null);
+    const [ profileImage, setProfileImage ] = useState(null);
+    const [ storageBuyState, setStorageBuyState ] = useState({ open: false, name: "" });
+
+    useEffect(() => {
+        DeepLink.addEventListener("cs:/global/optimizationRequest", context => {
+            var { target, enable } = context;
+
+            if (target !== "profile") return;
+
+            enable = Boolean(Number(enable));
+            enable ? enableOptimization() : disableOptimization();
+        });
+    }, []);
 
     const ManageStorage = {
         open: () => setStorageBuyState(prev => ({ ...prev, open: true })),
@@ -184,6 +205,18 @@ const Profile = () => {
         });
     }
 
+    const updateProfileImage = async () => {
+        const revoke = () => "string" === typeof profileImage && URL.revokeObjectURL(profileImage);
+        const blob = await get(PROFILE_PICTURE_KEY);
+
+        revoke();
+
+        if (!blob || !(blob instanceof Blob)) return setProfileImage(null);
+
+        const url = URL.createObjectURL(blob);
+        setProfileImage(url);
+    }
+
     useEffect(() => {
         let minimal = GlobalState.profile.inventory;
 
@@ -193,15 +226,32 @@ const Profile = () => {
         setInventory(rendered.inventory);
     }, [GlobalState.profile.inventory]);
 
+    useEffect(() => {
+        updateProfileImage();
+    }, []);
+
+    const renderProfileImage = () => {
+        return (
+            <div className="user-image ripple" title="Change Profile Picture" onClick={openImageModal}>
+                {!profileImage && <i className="uil uil-user" />}
+                {profileImage && <img className="profile-image" src={profileImage} draggable="false" async />}
+                <Ripple />
+            </div>
+        );
+    }
+
     const renderInfo = () => {
         const { profile } = GlobalState;
 
-        return (
+        return <>
+            <div 
+                className="profile-background-image"
+                style={{ backgroundImage: `url(${profileImage})` }}
+            />
+
             <div className="user-info">
                 <div className="user-main">
-                    <div className="user-image">
-                        <i className="uil uil-user" />
-                    </div>
+                    {renderProfileImage()}
                     <div className="user-meta">
                         <span className="name">
                             <input 
@@ -229,7 +279,7 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-        );
+        </>
     }
 
     const renderRelevantTab = () => {
@@ -280,6 +330,7 @@ const Profile = () => {
             <ItemPage 
                 items={inventory}
                 ripple={false}
+                shouldRender={!isOptimized}
                 onClick={item => setSelectedItem(item)}
                 selectConfig={{
                     enable: true,
@@ -509,7 +560,7 @@ const Profile = () => {
 
             setTimeout(() => {
                 DeepLink.emitEvent(`cs:/casino/shop/focus?cid=${cid}&itemId=${itemId}`);
-            }, 300);
+            }, 200);
         }
 
         const handleSelectSame = () => {
@@ -642,6 +693,53 @@ const Profile = () => {
         </Modal>
     }
 
+    const renderProfileImageModal = () => {
+        const imageUrl = profileImage;
+
+        const handleChangeImage = e => {
+            const input = e.currentTarget;
+            const file = input.files && input.files[0];
+
+            if (!file || !/^image\//.test(file.type)) return;
+
+            update(PROFILE_PICTURE_KEY, () => new Blob([ file ], { type: file.type }));
+            updateProfileImage();
+        }
+
+        const handleDeletePicture = () => {
+            del(PROFILE_PICTURE_KEY);
+            updateProfileImage();
+        }
+
+        return (
+            <Modal 
+                className="profile-picture-modal"
+                onCancel={closeImageModal}
+                title={lang.modals.profilePicture.title}
+                actions={[
+                    { children: lang.modals.profilePicture.delete, negative: true, onClick: handleDeletePicture },
+                    { children: lang.common.cancel }
+                ]}
+            >
+                <div className="profile-picture-control">
+                    <div className={buildClassName("profile-picture-preview", !imageUrl && "no-photo")}>
+                        {!imageUrl && "Photo"}
+                        {imageUrl && <img className="profile-image" src={imageUrl} draggable="false" async />}
+                    </div>
+
+                    <label>
+                        <Button>
+                            {lang.modals.profilePicture.upload}
+                            <input type="file" className="hidden" accept="image/*" onChange={handleChangeImage} />
+                        </Button>
+                    </label>
+                    
+                </div>
+                
+            </Modal>
+        )
+    }
+
     return (
         <div className="Profile">
             <div className="profile-widget">
@@ -670,6 +768,7 @@ const Profile = () => {
             {selectedItem && renderItemInfoModal()}
             {!!itemsForSell.length && renderItemsSellModal()}
             {storageBuyState.open && renderStorageBuyModal()}
+            {isImageModal && renderProfileImageModal()}
             {!!selectedItems.length && renderMultipleSelectModal()}
         </div>
     );

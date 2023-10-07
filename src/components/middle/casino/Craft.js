@@ -126,7 +126,7 @@ const Craft = () => {
                                     <span>{raritiesCount.get(rarity) || 0}</span>
                                 </span>,
                                 subLabel: <span className={buildClassName("RarityShade", rarity)} style={{ 
-                                    width: Math.max(3, (raritiesCount.get(rarity) || 0) / inventory.length * 100) + "%"
+                                    width: Math.max(1, (raritiesCount.get(rarity) || 0) / inventory.length * 100) + "%"
                                 }}/>
                             }))}
                         />
@@ -483,19 +483,30 @@ const Craft = () => {
             actions={[{ children: lang.common.cancel }]}
         >
             <div className="outcomes custom-scroll">
-                {outcomes.map(({ item, chance }, i) => (
-                    <div className="item-row" key={i}>
-                        <div className="item-column image">
-                            <img src={getItemImageUrl(item)} draggable="false" alt="" />
+                {outcomes.map(({ item, chance }, i) => {
+                    let name = buildClassName(item.weaponName, "|", item.skinName);
+                    let price_min = Currency.renderPrice(GlobalState, Math.min(...Object.values(item.prices)));
+                    let price_max = Currency.renderPrice(GlobalState, Math.max(...Object.values(item.prices)));
+                    
+                    return (
+                        <div className="item-row" key={i} title={`${name} - ${chance}%`}>
+                            <div className="item-column image">
+                                <img src={getItemImageUrl(item)} draggable="false" alt="" />
+                            </div>
+                            <div className="item-column name">
+                                <span className="item-fullname">
+                                    <b><font className={`RarityShade ${item.rarity} colored`}>{name}</font></b>
+                                </span>
+                                <span className="item-price">
+                                    {price_min} - {price_max}
+                                </span>
+                            </div>
+                            <div className="item-column chance">
+                                {chance}%
+                            </div>
                         </div>
-                        <div className="item-column name">
-                            <b><font className={`RarityShade ${item.rarity} colored`}>{buildClassName(item.weaponName, "|", item.skinName)}</font></b>
-                        </div>
-                        <div className="item-column chance">
-                            {chance}%
-                        </div>
-                    </div>
-                ))}
+                    )
+                })}
             </div>
         </Modal>
     }

@@ -179,6 +179,11 @@ html, body {
     justify-content: space-evenly;
 }
 
+.tab-list.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .tab-list > span {
     display: block;
     float: left;
@@ -209,7 +214,7 @@ html, body {
 }
 .Modal.version-release-notes-modal .subtitle {
     padding-bottom: 1rem;
-    border-bottom: 1px dashed rgba(255,255,255,.5);
+    border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
 input[type="text"],
@@ -218,7 +223,7 @@ input[type="number"] {
     height: 100%;
     appearance: none;
     outline: 0;
-    border: 2px solid var(--color-secondary);
+    border: 1px solid var(--color-secondary);
     border-radius: 0;
     background-color: transparent;
     padding: .3rem .4rem;

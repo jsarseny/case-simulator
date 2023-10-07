@@ -27,13 +27,16 @@ import "./ItemPage.css";
 
 export const upperFirst = string => string[0].toUpperCase() + string.slice(1);
 
-const ITEMS_IN_PAGE = 4 * 4;
+const PAGE_ROWS = 4;
+const PAGE_COLUMNS = 4;
+const ITEMS_IN_PAGE = PAGE_ROWS * PAGE_COLUMNS;
 
 const ItemPage = ({
     items,
     className,
     ripple = false,
     onClick,
+    shouldRender = true,
     shouldStorages = true,
     defaultTitle = "All Inventory",
     selectConfig = {
@@ -48,7 +51,7 @@ const ItemPage = ({
         }],
     },
 }) => {
-    const { GlobalState, setGlobalState } = useContext(Context);
+    const { GlobalState } = useContext(Context);
 
     const lang = useLang(GlobalState);
 
@@ -141,7 +144,7 @@ const ItemPage = ({
 
     const handleFilterChange = (value, name) => {
         if (/^<all>$/ig.test(value)) value = null;
-        if (value && "rarity" == name) value = value.toLowerCase();
+        if (value && "rarity" === name) value = value.toLowerCase();
 
         setState(prev => ({
             ...prev,
@@ -208,14 +211,6 @@ const ItemPage = ({
         };
     }
 
-    const getCurrentLength = () => {
-        const { pages } = state;
-
-        if (!pages || !pages.length) return 0;
-
-        return (pages.length - 1) * ITEMS_IN_PAGE + pages[pages.length - 1].length;
-    }
-
     useEffect(() => {
         const { pages } = calculatePages();
 
@@ -252,8 +247,10 @@ const ItemPage = ({
                 <div className={className}>
                     <div className="counter">
                         <i className="uil uil-times" title="Reset" onClick={resetSelected} />
-                        {selectedIds.length}{selectConfig.max && `/${selectConfig.max}`}
-                        {" " + lang.common.selected}
+                        <span>
+                            {selectedIds.length}{selectConfig.max && `/${selectConfig.max}`}
+                            {" " + lang.common.selected}
+                        </span>
                     </div>
                     <div className="actions">
                         {selectConfig.actions.map((button, i) => {
@@ -286,8 +283,8 @@ const ItemPage = ({
     );
 
     const isSelectionMode = Boolean(selectedIds.length);
-    const clickHandler = isSelectionMode || (selectConfig.enable && selectConfig.listener != "contextmenu") ? handleSelectItem : onClick;
-    const onContextMenu = selectConfig.enable && selectConfig.listener == "contextmenu" ? handleSelectItem : undefined;
+    const clickHandler = isSelectionMode || (selectConfig.enable && selectConfig.listener !== "contextmenu") ? handleSelectItem : onClick;
+    const onContextMenu = selectConfig.enable && selectConfig.listener === "contextmenu" ? handleSelectItem : undefined;
 
     const hasPrevoiusPage = state.currentPage > 0;
     const hasForwardPage = Boolean(state.pages[state.currentPage + 1]);
@@ -306,6 +303,8 @@ const ItemPage = ({
         label: lang.property["Rarity" + upperFirst(rarity.replace("-", ""))], 
         value: rarity 
     }))];
+
+    if (!shouldRender) return;
 
     return (
         <div className={fullClassName}>
@@ -359,7 +358,7 @@ const ItemPage = ({
             
             <div className="current-page custom-scroll" onWheel={handleWheel}>
                 {state.pages.length && state.pages[state.currentPage] ? state.pages[state.currentPage].map((item, i) => {
-                    if (item.id == "service:storage") {
+                    if (item.id === "service:storage") {
                         return <Item 
                             key={i}
                             item={item}

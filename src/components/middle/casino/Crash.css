@@ -1,0 +1,190 @@
+.Crash {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.Crash .main-area {
+    width: calc(100% - 4rem);
+    height: 19rem;
+    padding: 1rem 0 0 0;
+    margin: 0 2rem;
+    transition: all .15s;
+    display: flex;
+}
+
+.Crash .canvas-controls.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.Crash .main-area canvas {
+    height: 100%;
+    background-color: var(--color-background);
+    aspect-ratio: 1.5/1;
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.Crash .main-area .canvas-controls {
+    height: 100%;
+    flex: 2;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Crash .main-area .canvas-controls .control-line {
+    width: 100%;
+    float: left;
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.Crash .main-area .canvas-controls .control-line:first-child {
+    border-top: none;
+}
+
+.Crash .main-area .canvas-controls .control-line span {
+    display: block;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.Crash .main-area .canvas-controls .control-line.button {
+    flex: 2;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+.Crash .main-area .canvas-controls .control-line.button .Button {
+    font-size: 1.75rem;
+}
+
+.Crash .latest-multipliers {
+    width: calc(100% - 4rem);
+    height: 2.75rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.Crash .latest-multipliers .latest {
+    float: left;
+    margin-right: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(var(--background-shade), .20);
+    font-weight: 550;
+    border-radius: .35rem;
+    transition: all 250ms;
+    color: rgb(var(--background-shade));
+    padding: .25rem .5rem;
+    animation: final-item-spawn 250ms;
+}
+
+.Crash .latest-multipliers .latest:hover {
+    background-color: rgba(var(--background-shade), .85);
+    color: #fff;
+    cursor: pointer;
+}
+
+.Crash .latest-multipliers .subtitle {
+    margin-right: .5rem;
+}
+
+.Crash .inputs-area {
+    width: 100%;
+    height: calc(100% - 20rem);
+    padding: 1.5rem 2rem 1rem 2rem;
+}
+
+.Crash .inputs-area .input-column {
+    width: 50%;
+    height: 60%;
+    float: left;
+    padding: .25rem 1.5rem;
+}
+
+.Crash .inputs-area .input-column.target-input {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.Crash .inputs-area .tab-list {
+    padding-right: 50%;
+}
+
+.Crash .inputs-area .input-line {
+    width: 100%;
+    float: left;
+    padding: .35rem;
+    font-size: 1.15rem;
+    height: 2.5rem;
+}
+
+.Crash .inputs-area .input-line span {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    float: left;
+}
+
+.Crash .inputs-area .auto-stop-at-input {
+    margin-left: .25rem;
+    max-width: 5rem;
+}
+
+.Crash .inputs-area .crash-bet {
+    margin-right: .35rem;
+    max-width: 6rem;
+}
+
+.Crash .inputs-area .crash-selected-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.Crash .inputs-area .crash-selected-item .VoidItem,
+.Crash .inputs-area .crash-selected-item .Item {
+    width: 55%;
+    aspect-ratio: 1/1;
+    height: unset;
+    margin: 0;
+}
+
+.Crash .crash-input-errors {
+    width: 100%;
+    float: left;
+    margin-top: 3rem;
+}
+
+.Crash .input-error {
+    width: 100%;
+    display: flex;
+    float: left;
+    justify-content: center;
+    margin-top: .35rem;
+    font-size: 1.0625rem;
+    animation: opacity-fade 100ms;
+    color: #e53935;
+}
+
+.Crash .crash-popup-notify {
+    width: 100%;
+    float: left;
+    font-size: 1.15rem;
+    margin-top: .5rem;
+    text-align: center;
+    height: 1.15rem;
+}

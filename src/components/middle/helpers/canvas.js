@@ -13,6 +13,8 @@ const initial = canvas => {
     }
 }
 
+export const initializeCanvas = initial;
+
 const canvasAnimations = {
     blackHole(canvas, color, duration, centralElement) {
         const { ctx, width, height } = initial(canvas);

@@ -291,7 +291,7 @@ const Upgrader = () => {
                     <div className="Spinner" ref={spinnerContainer}>
                         <i className="uil uil-angle-up spinner-indicator" ref={spinnerIndicator} />
 
-                        <span className="spinner-content" ref={spinnerContent}>
+                        <span className="spinner-content" ref={spinnerContent} title={"chance " + state.chance + "%"}>
                             <span className="spinner-chance-preview">
                                 {state.chance.toFixed(2)}
                             </span>
