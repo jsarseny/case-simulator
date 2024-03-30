@@ -60,6 +60,9 @@
     background-color: var(--color-background);
     border-radius: .75rem;
     overflow: hidden;
+    display: flex;
+    position: relative;
+    justify-content: center;
 }
 
 .current-list {
@@ -88,7 +91,7 @@
     background-color: transparent;
 }
 .current-list.collections-list .Item .ItemImage {
-    margin-top: -.9rem;
+    margin-top: -2.5rem;
     width: auto;
     height: 70%;
 }
@@ -143,7 +146,40 @@
     align-items: center;
 }
 
-.current-case-info,
+.current-case-actions {
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    animation: opacity-fade 250ms;
+}
+
+.current-case-actions .case-action {
+    padding: .25rem .5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    transition: all 250ms;
+}
+
+.current-case-actions .case-action:hover {
+    background-color: rgba(255, 255, 255, 0.0625);
+}
+
+.current-case-actions .case-action i {
+    margin-right: .5rem;
+}
+
+.current-case-actions .case-action.favorite.active i {
+    color: gold;
+}
+
+.current-case-main,
 .dropped-item {
     width: 100%;
     height: 100%;
@@ -155,7 +191,11 @@
     animation: ghost-spawn .55s cubic-bezier(0.19, 0.02, 0, 0.98);
 }
 
-.current-case-info .image {
+.current-case-main {
+    width: unset;
+}
+
+.current-case-main .image {
     cursor: pointer;
     width: 8rem;
     aspect-ratio: 1/1;
@@ -167,12 +207,12 @@
     position: relative;
 }
 
-.current-case-info .image img {
+.current-case-main .image img {
     width: 90%;
     -webkit-user-drag: none;
 }
 
-.current-case-info .image span.price {
+.current-case-main .image span.price {
     position: absolute;
     background-color: var(--color-background);
     padding: .25rem;
@@ -181,11 +221,11 @@
     font-size: .90rem;
 }
 
-.current-case-info .image span.price .price-chunk {
+.current-case-main .image span.price .price-chunk {
     color: #fff !important;
 }
 
-.current-case-info .actions,
+.current-case-main .actions,
 .dropped-item .item-info {
     flex: 2;
     height: 100%;
@@ -199,7 +239,7 @@ span.action-line .Selection > span {
     padding: .35rem 1rem;
 }
 
-.current-case-info .actions span.action-line,
+.current-case-main .actions span.action-line,
 .dropped-item .item-info span.action-line {
     width: 100%;
     float: left;
@@ -322,7 +362,7 @@ span.action-line .Selection > span {
     }
 
     .item-info,
-    .current-case-info .actions {
+    .current-case-main .actions {
         padding-right: 0 !important;
     }
 

@@ -1,6 +1,4 @@
-const RareItems = [
-    // Knifes
-    // Navaja
+[
     {
         "id": -1,
         "collectionId": [52, 55],
@@ -15,9 +13,10 @@ const RareItems = [
             "FNST": 115.1,
             "MWST": 78.22
         }
-    }, {
+    },
+    {
         "id": -2,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Boreal Forest",
@@ -34,9 +33,10 @@ const RareItems = [
             "FTST": 94.62,
             "WWST": 68.01
         }
-    }, {
+    },
+    {
         "id": -3,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Vanilla",
@@ -46,9 +46,10 @@ const RareItems = [
             "FN": 74,
             "FNST": 81.14
         }
-    }, {
+    },
+    {
         "id": -4,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Stained",
@@ -66,9 +67,10 @@ const RareItems = [
             "WWST": 79.13,
             "BSST": 105
         }
-    }, {
+    },
+    {
         "id": -5,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Damascus Steel",
@@ -86,9 +88,10 @@ const RareItems = [
             "WWST": 118.85,
             "BSST": 116.59
         }
-    }, {
+    },
+    {
         "id": -6,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Ultraviolet",
@@ -106,9 +109,10 @@ const RareItems = [
             "WWST": 112.04,
             "BSST": 99.03
         }
-    }, {
+    },
+    {
         "id": -7,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Blue Steel",
@@ -126,9 +130,10 @@ const RareItems = [
             "WWST": 69.22,
             "BSST": 107.67
         }
-    }, {
+    },
+    {
         "id": -8,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Forest DDPAT",
@@ -146,9 +151,10 @@ const RareItems = [
             "WWST": 97.98,
             "BSST": 97.76
         }
-    }, {
+    },
+    {
         "id": -9,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Tiger Tooth",
@@ -160,9 +166,10 @@ const RareItems = [
             "FNST": 124,
             "MWST": 190.84
         }
-    }, {
+    },
+    {
         "id": -10,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Slaughter",
@@ -176,9 +183,10 @@ const RareItems = [
             "MWST": 124.74,
             "FTST": 167.54
         }
-    }, {
+    },
+    {
         "id": -11,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Safari Mesh",
@@ -196,9 +204,10 @@ const RareItems = [
             "WWST": 98.2,
             "BSST": 93.22
         }
-    }, {
+    },
+    {
         "id": -12,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Marble Fade",
@@ -210,9 +219,10 @@ const RareItems = [
             "FNST": 155.31,
             "MWST": 286.57
         }
-    }, {
+    },
+    {
         "id": -13,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Fade",
@@ -224,9 +234,10 @@ const RareItems = [
             "FNST": 167.76,
             "MWST": 266.61
         }
-    }, {
+    },
+    {
         "id": -14,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Scorched",
@@ -243,9 +254,10 @@ const RareItems = [
             "FTST": 101.07,
             "WWST": 71.06
         }
-    }, {
+    },
+    {
         "id": -15,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Night Stripe",
@@ -263,9 +275,10 @@ const RareItems = [
             "WWST": 94.7,
             "BSST": 92.35
         }
-    }, {
+    },
+    {
         "id": -16,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Urban Masked",
@@ -283,9 +296,10 @@ const RareItems = [
             "WWST": 95.35,
             "BSST": 94.43
         }
-    }, {
+    },
+    {
         "id": -17,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Case Hardened",
@@ -303,9 +317,10 @@ const RareItems = [
             "WWST": 129,
             "BSST": 137.05
         }
-    }, {
+    },
+    {
         "id": -18,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Crimson Web",
@@ -323,9 +338,10 @@ const RareItems = [
             "WWST": 167.46,
             "BSST": 127.29
         }
-    }, {
+    },
+    {
         "id": -19,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Doppler Sapphire",
@@ -339,10 +355,9 @@ const RareItems = [
         }
     },
 
-    // Shadow Daggers
     {
         "id": -20,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Rust Coat",
@@ -354,7 +369,8 @@ const RareItems = [
             "FNST": 151.57,
             "MWST": 77.85
         }
-    }, {
+    },
+    {
         "id": -21,
         "collectionId": 39,
         "type": "weapon",
@@ -374,7 +390,8 @@ const RareItems = [
             "WWST": 111.83,
             "BSST": 88.66
         }
-    }, {
+    },
+    {
         "id": -22,
         "collectionId": 39,
         "type": "weapon",
@@ -394,9 +411,10 @@ const RareItems = [
             "WWST": 119.16,
             "BSST": 100.38
         }
-    }, {
+    },
+    {
         "id": -23,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Bright Water",
@@ -412,9 +430,10 @@ const RareItems = [
             "MWST": 102.2,
             "FTST": 88.04
         }
-    }, {
+    },
+    {
         "id": -24,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Damascus Steel",
@@ -432,9 +451,10 @@ const RareItems = [
             "WWST": 154.07,
             "BSST": 154.75
         }
-    }, {
+    },
+    {
         "id": -25,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Freehand",
@@ -451,7 +471,8 @@ const RareItems = [
             "FTST": 102.78,
             "WWST": 105.04
         }
-    }, {
+    },
+    {
         "id": -26,
         "collectionId": 39,
         "type": "weapon",
@@ -463,9 +484,10 @@ const RareItems = [
             "FN": 118.41,
             "FNST": 138.7
         }
-    }, {
+    },
+    {
         "id": -27,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Autotronic",
@@ -481,9 +503,10 @@ const RareItems = [
             "MWST": 118.49,
             "FTST": 107.89
         }
-    }, {
+    },
+    {
         "id": -28,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Black Laminate",
@@ -501,9 +524,10 @@ const RareItems = [
             "WWST": 83.01,
             "BSST": 77.91
         }
-    }, {
+    },
+    {
         "id": -29,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Tiger Tooth",
@@ -515,7 +539,8 @@ const RareItems = [
             "FNST": 161.25,
             "MWST": 239.36
         }
-    }, {
+    },
+    {
         "id": -30,
         "collectionId": 39,
         "type": "weapon",
@@ -535,7 +560,8 @@ const RareItems = [
             "WWST": 127.02,
             "BSST": 133.96
         }
-    }, {
+    },
+    {
         "id": -31,
         "collectionId": 39,
         "type": "weapon",
@@ -555,7 +581,8 @@ const RareItems = [
             "WWST": 105.78,
             "BSST": 104.25
         }
-    }, {
+    },
+    {
         "id": -32,
         "collectionId": 39,
         "type": "weapon",
@@ -571,9 +598,10 @@ const RareItems = [
             "MWST": 142.66,
             "FTST": 205.19
         }
-    }, {
+    },
+    {
         "id": -33,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Marble Fade",
@@ -585,7 +613,8 @@ const RareItems = [
             "FNST": 165.18,
             "MWST": 346.41
         }
-    }, {
+    },
+    {
         "id": -34,
         "collectionId": 39,
         "type": "weapon",
@@ -605,7 +634,8 @@ const RareItems = [
             "WWST": 122.56,
             "BSST": 117.86
         }
-    }, {
+    },
+    {
         "id": -35,
         "collectionId": 39,
         "type": "weapon",
@@ -625,9 +655,10 @@ const RareItems = [
             "WWST": 116.85,
             "BSST": 101.45
         }
-    }, {
+    },
+    {
         "id": -36,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Ultraviolet",
@@ -645,7 +676,8 @@ const RareItems = [
             "WWST": 113.01,
             "BSST": 102
         }
-    }, {
+    },
+    {
         "id": -37,
         "collectionId": 39,
         "type": "weapon",
@@ -665,7 +697,8 @@ const RareItems = [
             "WWST": 105.64,
             "BSST": 100.68
         }
-    }, {
+    },
+    {
         "id": -38,
         "collectionId": 39,
         "type": "weapon",
@@ -685,7 +718,8 @@ const RareItems = [
             "WWST": 117.3,
             "BSST": 148.28
         }
-    }, {
+    },
+    {
         "id": -39,
         "collectionId": 39,
         "type": "weapon",
@@ -699,7 +733,8 @@ const RareItems = [
             "FNST": 249.76,
             "MWST": 513.51
         }
-    }, {
+    },
+    {
         "id": -40,
         "collectionId": 39,
         "type": "weapon",
@@ -719,9 +754,10 @@ const RareItems = [
             "WWST": 160.75,
             "BSST": 112.38
         }
-    }, {
+    },
+    {
         "id": -41,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Lore",
@@ -739,7 +775,8 @@ const RareItems = [
             "WWST": 147.1,
             "BSST": 156.16
         }
-    }, {
+    },
+    {
         "id": -42,
         "collectionId": 39,
         "type": "weapon",
@@ -759,9 +796,10 @@ const RareItems = [
             "WWST": 193,
             "BSST": 161.53
         }
-    }, {
+    },
+    {
         "id": -43,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Gamma Doppler Emerald",
@@ -771,9 +809,10 @@ const RareItems = [
             "FN": 739.97,
             "FNST": 1065.95
         }
-    }, {
+    },
+    {
         "id": -44,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Doppler Sapphire",
@@ -787,10 +826,9 @@ const RareItems = [
         }
     },
 
-    // Gut Knife
     {
         "id": -45,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Rust Coat",
@@ -802,9 +840,10 @@ const RareItems = [
             "FNST": 177.85,
             "MWST": 90.59
         }
-    }, {
+    },
+    {
         "id": -46,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Boreal Forest",
@@ -819,9 +858,10 @@ const RareItems = [
             "WWST": 106.85,
             "BSST": 105.87
         }
-    }, {
+    },
+    {
         "id": -47,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Urban Masked",
@@ -839,9 +879,10 @@ const RareItems = [
             "WWST": 124.64,
             "BSST": 108.66
         }
-    }, {
+    },
+    {
         "id": -48,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Forest DDPAT",
@@ -859,9 +900,10 @@ const RareItems = [
             "WWST": 114.79,
             "BSST": 119.47
         }
-    }, {
+    },
+    {
         "id": -49,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Stained",
@@ -879,9 +921,10 @@ const RareItems = [
             "WWST": 102.46,
             "BSST": 121.54
         }
-    }, {
+    },
+    {
         "id": -50,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Blue Steel",
@@ -899,9 +942,10 @@ const RareItems = [
             "WWST": 110,
             "BSST": 123.34
         }
-    }, {
+    },
+    {
         "id": -51,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Vanilla",
@@ -911,9 +955,10 @@ const RareItems = [
             "FN": 102.66,
             "FNST": 117.5
         }
-    }, {
+    },
+    {
         "id": -52,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Bright Water",
@@ -931,9 +976,10 @@ const RareItems = [
             "WWST": 139.51,
             "BSST": 143.9
         }
-    }, {
+    },
+    {
         "id": -53,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Damascus Steel",
@@ -951,9 +997,10 @@ const RareItems = [
             "WWST": 141.33,
             "BSST": 148.12
         }
-    }, {
+    },
+    {
         "id": -54,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Freehand",
@@ -971,9 +1018,10 @@ const RareItems = [
             "WWST": 133.51,
             "BSST": 136.37
         }
-    }, {
+    },
+    {
         "id": -55,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Case Hardened",
@@ -991,9 +1039,10 @@ const RareItems = [
             "WWST": 170.15,
             "BSST": 157.94
         }
-    }, {
+    },
+    {
         "id": -56,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Black Laminate",
@@ -1011,9 +1060,10 @@ const RareItems = [
             "WWST": 101.72,
             "BSST": 113.57
         }
-    }, {
+    },
+    {
         "id": -57,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Tiger Tooth",
@@ -1025,9 +1075,10 @@ const RareItems = [
             "FNST": 143.59,
             "MWST": 221.92
         }
-    }, {
+    },
+    {
         "id": -58,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Slaughter",
@@ -1041,9 +1092,10 @@ const RareItems = [
             "MWST": 139.39,
             "FTST": 143.07
         }
-    }, {
+    },
+    {
         "id": -59,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Marble Fade",
@@ -1055,9 +1107,10 @@ const RareItems = [
             "FNST": 176.06,
             "MWST": 244.34
         }
-    }, {
+    },
+    {
         "id": -60,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Fade",
@@ -1069,9 +1122,10 @@ const RareItems = [
             "FNST": 195.16,
             "MWST": 311.19
         }
-    }, {
+    },
+    {
         "id": -61,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Safari Mesh",
@@ -1089,9 +1143,10 @@ const RareItems = [
             "WWST": 102.36,
             "BSST": 103.9
         }
-    }, {
+    },
+    {
         "id": -62,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Ultraviolet",
@@ -1109,9 +1164,10 @@ const RareItems = [
             "WWST": 129.94,
             "BSST": 91.71
         }
-    }, {
+    },
+    {
         "id": -63,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Scorched",
@@ -1129,9 +1185,10 @@ const RareItems = [
             "WWST": 118.92,
             "BSST": 118.64
         }
-    }, {
+    },
+    {
         "id": -64,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Autotronic",
@@ -1149,9 +1206,10 @@ const RareItems = [
             "WWST": 233.29,
             "BSST": 164
         }
-    }, {
+    },
+    {
         "id": -65,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Lore",
@@ -1169,9 +1227,10 @@ const RareItems = [
             "WWST": 219.6,
             "BSST": 113.12
         }
-    }, {
+    },
+    {
         "id": -66,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Night",
@@ -1189,9 +1248,10 @@ const RareItems = [
             "WWST": 175.66,
             "BSST": 115.02
         }
-    }, {
+    },
+    {
         "id": -67,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Crimson Web",
@@ -1209,9 +1269,10 @@ const RareItems = [
             "WWST": 150.16,
             "BSST": 140.95
         }
-    }, {
+    },
+    {
         "id": -68,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Doppler Sapphire",
@@ -1223,9 +1284,10 @@ const RareItems = [
             "FNST": 711.3,
             "MWST": 1849.05
         }
-    }, {
+    },
+    {
         "id": -69,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Gamma Doppler Emerald",
@@ -1239,10 +1301,9 @@ const RareItems = [
         }
     },
 
-    // Falchion Knife
     {
         "id": -70,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Rust Coat",
@@ -1254,7 +1315,8 @@ const RareItems = [
             "FNST": 141.66,
             "MWST": 102.4
         }
-    }, {
+    },
+    {
         "id": -71,
         "collectionId": 38,
         "type": "weapon",
@@ -1274,7 +1336,8 @@ const RareItems = [
             "WWST": 118.58,
             "BSST": 107.19
         }
-    }, {
+    },
+    {
         "id": -72,
         "collectionId": 38,
         "type": "weapon",
@@ -1286,9 +1349,10 @@ const RareItems = [
             "FN": 136.68,
             "FNST": 144.02
         }
-    }, {
+    },
+    {
         "id": -73,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Black Laminate",
@@ -1306,7 +1370,8 @@ const RareItems = [
             "WWST": 108.37,
             "BSST": 117.88
         }
-    }, {
+    },
+    {
         "id": -74,
         "collectionId": 38,
         "type": "weapon",
@@ -1326,7 +1391,8 @@ const RareItems = [
             "WWST": 146.98,
             "BSST": 94.68
         }
-    }, {
+    },
+    {
         "id": -75,
         "collectionId": 38,
         "type": "weapon",
@@ -1346,9 +1412,10 @@ const RareItems = [
             "WWST": 115.42,
             "BSST": 114.41
         }
-    }, {
+    },
+    {
         "id": -76,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Bright Water",
@@ -1365,7 +1432,8 @@ const RareItems = [
             "FTST": 116.77,
             "WWST": 94.91
         }
-    }, {
+    },
+    {
         "id": -77,
         "collectionId": 38,
         "type": "weapon",
@@ -1385,9 +1453,10 @@ const RareItems = [
             "WWST": 126.07,
             "BSST": 112.3
         }
-    }, {
+    },
+    {
         "id": -78,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Damascus Steel",
@@ -1405,9 +1474,10 @@ const RareItems = [
             "WWST": 166.7,
             "BSST": 151.48
         }
-    }, {
+    },
+    {
         "id": -79,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Freehand",
@@ -1425,7 +1495,8 @@ const RareItems = [
             "WWST": 136.35,
             "BSST": 108.07
         }
-    }, {
+    },
+    {
         "id": -80,
         "collectionId": 38,
         "type": "weapon",
@@ -1445,7 +1516,8 @@ const RareItems = [
             "WWST": 142.06,
             "BSST": 164.35
         }
-    }, {
+    },
+    {
         "id": -81,
         "collectionId": 38,
         "type": "weapon",
@@ -1465,7 +1537,8 @@ const RareItems = [
             "WWST": 140.9,
             "BSST": 115.1
         }
-    }, {
+    },
+    {
         "id": -82,
         "collectionId": 38,
         "type": "weapon",
@@ -1481,9 +1554,10 @@ const RareItems = [
             "MWST": 206.06,
             "FTST": 263.53
         }
-    }, {
+    },
+    {
         "id": -83,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Tiger Tooth",
@@ -1495,7 +1569,8 @@ const RareItems = [
             "FNST": 235.49,
             "MWST": 300.25
         }
-    }, {
+    },
+    {
         "id": -84,
         "collectionId": 38,
         "type": "weapon",
@@ -1515,9 +1590,10 @@ const RareItems = [
             "WWST": 150.95,
             "BSST": 116.19
         }
-    }, {
+    },
+    {
         "id": -85,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Marble Fade",
@@ -1529,7 +1605,8 @@ const RareItems = [
             "FNST": 264.64,
             "MWST": 405.74
         }
-    }, {
+    },
+    {
         "id": -86,
         "collectionId": 38,
         "type": "weapon",
@@ -1543,7 +1620,8 @@ const RareItems = [
             "FNST": 287.98,
             "MWST": 440.69
         }
-    }, {
+    },
+    {
         "id": -87,
         "collectionId": 38,
         "type": "weapon",
@@ -1563,9 +1641,10 @@ const RareItems = [
             "WWST": 203.5,
             "BSST": 177.28
         }
-    }, {
+    },
+    {
         "id": -88,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Lore",
@@ -1581,9 +1660,10 @@ const RareItems = [
             "MWST": 214.22,
             "FTST": 177.57
         }
-    }, {
+    },
+    {
         "id": -89,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Ultraviolet",
@@ -1601,9 +1681,10 @@ const RareItems = [
             "WWST": 140,
             "BSST": 104.4
         }
-    }, {
+    },
+    {
         "id": -90,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Autotronic",
@@ -1621,7 +1702,8 @@ const RareItems = [
             "WWST": 179.98,
             "BSST": 150.96
         }
-    }, {
+    },
+    {
         "id": -91,
         "collectionId": 38,
         "type": "weapon",
@@ -1641,7 +1723,8 @@ const RareItems = [
             "WWST": 147.01,
             "BSST": 128.04
         }
-    }, {
+    },
+    {
         "id": -92,
         "collectionId": 38,
         "type": "weapon",
@@ -1661,9 +1744,10 @@ const RareItems = [
             "WWST": 228.3,
             "BSST": 160.97
         }
-    }, {
+    },
+    {
         "id": -93,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Gamma Doppler Emerald",
@@ -1674,9 +1758,10 @@ const RareItems = [
             "MW": 1271,
             "FNST": 1702
         }
-    }, {
+    },
+    {
         "id": -94,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Doppler Sapphire",
@@ -1688,9 +1773,8 @@ const RareItems = [
             "FNST": 1197,
             "MWST": 1998.66
         }
-    }, 
+    },
 
-    // Bowie Knife
     {
         "id": -95,
         "collectionId": 41,
@@ -1710,7 +1794,8 @@ const RareItems = [
             "FTST": 150.08,
             "WWST": 140.39
         }
-    }, {
+    },
+    {
         "id": -96,
         "collectionId": 41,
         "type": "weapon",
@@ -1729,7 +1814,8 @@ const RareItems = [
             "FTST": 147.84,
             "WWST": 133.14
         }
-    }, {
+    },
+    {
         "id": -97,
         "collectionId": 41,
         "type": "weapon",
@@ -1749,9 +1835,10 @@ const RareItems = [
             "WWST": 134.9,
             "BSST": 126.42
         }
-    }, {
+    },
+    {
         "id": -98,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Rust Coat",
@@ -1763,7 +1850,8 @@ const RareItems = [
             "FNST": 141.93,
             "MWST": 102.77
         }
-    }, {
+    },
+    {
         "id": -99,
         "collectionId": 41,
         "type": "weapon",
@@ -1783,7 +1871,8 @@ const RareItems = [
             "WWST": 137.58,
             "BSST": 136.05
         }
-    }, {
+    },
+    {
         "id": -100,
         "collectionId": 41,
         "type": "weapon",
@@ -1795,9 +1884,10 @@ const RareItems = [
             "FN": 128.61,
             "FNST": 165.84
         }
-    }, {
+    },
+    {
         "id": -101,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Bright Water",
@@ -1815,9 +1905,10 @@ const RareItems = [
             "WWST": 148.76,
             "BSST": 139.99
         }
-    }, {
+    },
+    {
         "id": -102,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Freehand",
@@ -1835,9 +1926,10 @@ const RareItems = [
             "WWST": 174,
             "BSST": 147.68
         }
-    }, {
+    },
+    {
         "id": -103,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Damascus Steel",
@@ -1855,7 +1947,8 @@ const RareItems = [
             "WWST": 164.76,
             "BSST": 200.55
         }
-    }, {
+    },
+    {
         "id": -104,
         "collectionId": 41,
         "type": "weapon",
@@ -1875,9 +1968,10 @@ const RareItems = [
             "WWST": 170.22,
             "BSST": 158.67
         }
-    }, {
+    },
+    {
         "id": -105,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Tiger Tooth",
@@ -1889,7 +1983,8 @@ const RareItems = [
             "FNST": 260.27,
             "MWST": 436.84
         }
-    }, {
+    },
+    {
         "id": -106,
         "collectionId": 42,
         "type": "weapon",
@@ -1909,9 +2004,10 @@ const RareItems = [
             "WWST": 195.14,
             "BSST": 194.35
         }
-    }, {
+    },
+    {
         "id": -107,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Black Laminate",
@@ -1928,7 +2024,8 @@ const RareItems = [
             "FTST": 135.56,
             "WWST": 151.67
         }
-    }, {
+    },
+    {
         "id": -108,
         "collectionId": 41,
         "type": "weapon",
@@ -1944,9 +2041,10 @@ const RareItems = [
             "MWST": 335,
             "FTST": 379.02
         }
-    }, {
+    },
+    {
         "id": -109,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Marble Fade",
@@ -1958,7 +2056,8 @@ const RareItems = [
             "FNST": 296.4,
             "MWST": 584.34
         }
-    }, {
+    },
+    {
         "id": -110,
         "collectionId": 41,
         "type": "weapon",
@@ -1978,9 +2077,10 @@ const RareItems = [
             "WWST": 168.44,
             "BSST": 129.65
         }
-    }, {
+    },
+    {
         "id": -111,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Ultraviolet",
@@ -1998,9 +2098,10 @@ const RareItems = [
             "WWST": 162.9,
             "BSST": 123.56
         }
-    }, {
+    },
+    {
         "id": -112,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Autotronic",
@@ -2018,7 +2119,8 @@ const RareItems = [
             "WWST": 198,
             "BSST": 209
         }
-    }, {
+    },
+    {
         "id": -113,
         "collectionId": 41,
         "type": "weapon",
@@ -2038,7 +2140,8 @@ const RareItems = [
             "WWST": 297.1,
             "BSST": 267.61
         }
-    }, {
+    },
+    {
         "id": -114,
         "collectionId": 41,
         "type": "weapon",
@@ -2052,7 +2155,8 @@ const RareItems = [
             "FNST": 385.35,
             "MWST": 669.79
         }
-    }, {
+    },
+    {
         "id": -115,
         "collectionId": 41,
         "type": "weapon",
@@ -2072,9 +2176,10 @@ const RareItems = [
             "WWST": 200.72,
             "BSST": 189.63
         }
-    }, {
+    },
+    {
         "id": -116,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Lore",
@@ -2092,7 +2197,8 @@ const RareItems = [
             "WWST": 222.01,
             "BSST": 216.2
         }
-    }, {
+    },
+    {
         "id": -117,
         "collectionId": 41,
         "type": "weapon",
@@ -2112,9 +2218,10 @@ const RareItems = [
             "WWST": 344.79,
             "BSST": 224.74
         }
-    }, {
+    },
+    {
         "id": -118,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Gamma Doppler Emerald",
@@ -2125,9 +2232,10 @@ const RareItems = [
             "MW": 1775.81,
             "FNST": 2239.98
         }
-    }, {
+    },
+    {
         "id": -119,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Doppler Sapphire",
@@ -2141,10 +2249,9 @@ const RareItems = [
         }
     },
 
-    // Flip Knife
     {
         "id": -120,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Scorched",
@@ -2162,9 +2269,10 @@ const RareItems = [
             "WWST": 141.64,
             "BSST": 143.94
         }
-    }, {
+    },
+    {
         "id": -121,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Boreal Forest",
@@ -2182,9 +2290,10 @@ const RareItems = [
             "WWST": 158.4,
             "BSST": 147.47
         }
-    }, {
+    },
+    {
         "id": -122,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Rust Coat",
@@ -2196,9 +2305,10 @@ const RareItems = [
             "FNST": 244.15,
             "MWST": 137.72
         }
-    }, {
+    },
+    {
         "id": -123,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Urban Masked",
@@ -2216,9 +2326,10 @@ const RareItems = [
             "WWST": 158.14,
             "BSST": 146.73
         }
-    }, {
+    },
+    {
         "id": -124,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Stained",
@@ -2236,9 +2347,10 @@ const RareItems = [
             "WWST": 134,
             "BSST": 175.3
         }
-    }, {
+    },
+    {
         "id": -125,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Safari Mesh",
@@ -2256,9 +2368,10 @@ const RareItems = [
             "WWST": 146.66,
             "BSST": 139.04
         }
-    }, {
+    },
+    {
         "id": -126,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Freehand",
@@ -2276,9 +2389,10 @@ const RareItems = [
             "WWST": 237.42,
             "BSST": 225.48
         }
-    }, {
+    },
+    {
         "id": -127,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Night",
@@ -2296,9 +2410,10 @@ const RareItems = [
             "WWST": 192.62,
             "BSST": 179.54
         }
-    }, {
+    },
+    {
         "id": -128,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Bright Water",
@@ -2316,9 +2431,10 @@ const RareItems = [
             "WWST": 189.66,
             "BSST": 199.06
         }
-    }, {
+    },
+    {
         "id": -129,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Forest DDPAT",
@@ -2336,9 +2452,10 @@ const RareItems = [
             "WWST": 158.7,
             "BSST": 148.61
         }
-    }, {
+    },
+    {
         "id": -130,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Damascus Steel",
@@ -2356,9 +2473,10 @@ const RareItems = [
             "WWST": 169,
             "BSST": 230.43
         }
-    }, {
+    },
+    {
         "id": -131,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Black Laminate",
@@ -2376,9 +2494,10 @@ const RareItems = [
             "WWST": 159.99,
             "BSST": 171.28
         }
-    }, {
+    },
+    {
         "id": -132,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Blue Steel",
@@ -2393,9 +2512,10 @@ const RareItems = [
             "WWST": 150.12,
             "BSST": 213.5
         }
-    }, {
+    },
+    {
         "id": -133,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Vanilla",
@@ -2405,9 +2525,10 @@ const RareItems = [
             "FN": 249.56,
             "FNST": 227.56
         }
-    }, {
+    },
+    {
         "id": -134,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Tiger Tooth",
@@ -2419,9 +2540,10 @@ const RareItems = [
             "FNST": 333.77,
             "MWST": 446.68
         }
-    }, {
+    },
+    {
         "id": -135,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Slaughter",
@@ -2435,9 +2557,10 @@ const RareItems = [
             "MWST": 311.02,
             "FTST": 361.69
         }
-    }, {
+    },
+    {
         "id": -136,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Case Hardened",
@@ -2455,9 +2578,10 @@ const RareItems = [
             "WWST": 235.11,
             "BSST": 236.76
         }
-    }, {
+    },
+    {
         "id": -137,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Autotronic",
@@ -2475,9 +2599,10 @@ const RareItems = [
             "WWST": 305.75,
             "BSST": 232.81
         }
-    }, {
+    },
+    {
         "id": -138,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Marble Fade",
@@ -2489,9 +2614,10 @@ const RareItems = [
             "FNST": 391.08,
             "MWST": 607.24
         }
-    }, {
+    },
+    {
         "id": -139,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Ultraviolet",
@@ -2509,9 +2635,10 @@ const RareItems = [
             "WWST": 197.9,
             "BSST": 164.22
         }
-    }, {
+    },
+    {
         "id": -140,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Lore",
@@ -2529,9 +2656,10 @@ const RareItems = [
             "WWST": 345.07,
             "BSST": 275
         }
-    }, {
+    },
+    {
         "id": -141,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Fade",
@@ -2543,9 +2671,10 @@ const RareItems = [
             "FNST": 586.95,
             "MWST": 627.26
         }
-    }, {
+    },
+    {
         "id": -142,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Crimson Web",
@@ -2563,9 +2692,10 @@ const RareItems = [
             "WWST": 330.66,
             "BSST": 233.64
         }
-    }, {
+    },
+    {
         "id": -143,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Gamma Doppler Emerald",
@@ -2577,9 +2707,10 @@ const RareItems = [
             "FNST": 3383.43,
             "MWST": 6067.43
         }
-    }, {
+    },
+    {
         "id": -144,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Doppler Sapphire",
@@ -2593,10 +2724,9 @@ const RareItems = [
         }
     },
 
-    // Huntsman
     {
         "id": -145,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Rust Coat",
@@ -2608,9 +2738,10 @@ const RareItems = [
             "WWST": 181.76,
             "BSST": 114.23
         }
-    }, {
+    },
+    {
         "id": -146,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Safari Mesh",
@@ -2628,9 +2759,10 @@ const RareItems = [
             "WWST": 143.82,
             "BSST": 150.09
         }
-    }, {
+    },
+    {
         "id": -147,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Forest DDPAT",
@@ -2648,9 +2780,10 @@ const RareItems = [
             "WWST": 151.16,
             "BSST": 143.52
         }
-    }, {
+    },
+    {
         "id": -148,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Urban Masked",
@@ -2668,9 +2801,10 @@ const RareItems = [
             "WWST": 154.34,
             "BSST": 148.32
         }
-    }, {
+    },
+    {
         "id": -149,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Damascus Steel",
@@ -2688,9 +2822,10 @@ const RareItems = [
             "WWST": 199.65,
             "BSST": 177.38
         }
-    }, {
+    },
+    {
         "id": -150,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Bright Water",
@@ -2708,9 +2843,10 @@ const RareItems = [
             "WWST": 122.21,
             "BSST": 119.8
         }
-    }, {
+    },
+    {
         "id": -151,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Freehand",
@@ -2728,9 +2864,10 @@ const RareItems = [
             "WWST": 131.16,
             "BSST": 132.92
         }
-    }, {
+    },
+    {
         "id": -152,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Vanilla",
@@ -2740,9 +2877,10 @@ const RareItems = [
             "FN": 194.54,
             "FNST": 211.63
         }
-    }, {
+    },
+    {
         "id": -153,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Case Hardened",
@@ -2760,9 +2898,10 @@ const RareItems = [
             "WWST": 251.33,
             "BSST": 294.19
         }
-    }, {
+    },
+    {
         "id": -154,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Stained",
@@ -2780,9 +2919,10 @@ const RareItems = [
             "WWST": 156.83,
             "BSST": 178.64
         }
-    }, {
+    },
+    {
         "id": -155,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Tiger Tooth",
@@ -2794,9 +2934,10 @@ const RareItems = [
             "FNST": 289.19,
             "MWST": 369.1
         }
-    }, {
+    },
+    {
         "id": -156,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Scorched",
@@ -2814,9 +2955,10 @@ const RareItems = [
             "WWST": 153.86,
             "BSST": 136.09
         }
-    }, {
+    },
+    {
         "id": -157,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Blue Steel",
@@ -2834,9 +2976,10 @@ const RareItems = [
             "WWST": 184.35,
             "BSST": 220.91
         }
-    }, {
+    },
+    {
         "id": -158,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Marble Fade",
@@ -2848,9 +2991,10 @@ const RareItems = [
             "FNST": 337.47,
             "MWST": 470.64
         }
-    }, {
+    },
+    {
         "id": -159,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Slaughter",
@@ -2864,9 +3008,10 @@ const RareItems = [
             "MWST": 362.71,
             "FTST": 350.31
         }
-    }, {
+    },
+    {
         "id": -160,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Boreal Forest",
@@ -2884,9 +3029,10 @@ const RareItems = [
             "WWST": 138.94,
             "BSST": 144.89
         }
-    }, {
+    },
+    {
         "id": -161,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Autotronic",
@@ -2902,9 +3048,10 @@ const RareItems = [
             "MWST": 286.08,
             "FTST": 175.26
         }
-    }, {
+    },
+    {
         "id": -162,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Ultraviolet",
@@ -2922,9 +3069,10 @@ const RareItems = [
             "WWST": 134,
             "BSST": 101.14
         }
-    }, {
+    },
+    {
         "id": -163,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Lore",
@@ -2940,9 +3088,10 @@ const RareItems = [
             "MWST": 355.19,
             "FTST": 238.07
         }
-    }, {
+    },
+    {
         "id": -164,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Fade",
@@ -2954,9 +3103,10 @@ const RareItems = [
             "FNST": 354.49,
             "MWST": 551.82
         }
-    }, {
+    },
+    {
         "id": -165,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Night",
@@ -2974,9 +3124,10 @@ const RareItems = [
             "WWST": 193.06,
             "BSST": 168.32
         }
-    }, {
+    },
+    {
         "id": -166,
-        "collectionId": [32,62],
+        "collectionId": [32, 62],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Crimson Web",
@@ -2994,9 +3145,10 @@ const RareItems = [
             "WWST": 348.28,
             "BSST": 270.51
         }
-    }, {
+    },
+    {
         "id": -167,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Doppler Sapphire",
@@ -3008,9 +3160,10 @@ const RareItems = [
             "FNST": 1820.25,
             "MWST": 3950.5
         }
-    }, {
+    },
+    {
         "id": -168,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Gamma Doppler Emerald",
@@ -3023,10 +3176,9 @@ const RareItems = [
         }
     },
 
-    // Survival Knife
     {
         "id": -169,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Scorched",
@@ -3043,9 +3195,10 @@ const RareItems = [
             "FTST": 121.91,
             "WWST": 137.11
         }
-    }, {
+    },
+    {
         "id": -170,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Safari Mesh",
@@ -3062,9 +3215,10 @@ const RareItems = [
             "FTST": 147.16,
             "WWST": 110.21
         }
-    }, {
+    },
+    {
         "id": -171,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Stained",
@@ -3082,9 +3236,10 @@ const RareItems = [
             "WWST": 124.32,
             "BSST": 135
         }
-    }, {
+    },
+    {
         "id": -172,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Vanilla",
@@ -3094,9 +3249,10 @@ const RareItems = [
             "FN": 206.12,
             "FNST": 199.19
         }
-    }, {
+    },
+    {
         "id": -173,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Blue Steel",
@@ -3114,9 +3270,10 @@ const RareItems = [
             "WWST": 115.52,
             "BSST": 179.81
         }
-    }, {
+    },
+    {
         "id": -174,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Boreal Forest",
@@ -3133,9 +3290,10 @@ const RareItems = [
             "FTST": 157.86,
             "WWST": 126.76
         }
-    }, {
+    },
+    {
         "id": -175,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Slaughter",
@@ -3149,9 +3307,10 @@ const RareItems = [
             "MWST": 242.56,
             "FTST": 384.49
         }
-    }, {
+    },
+    {
         "id": -176,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Forest DDPAT",
@@ -3169,9 +3328,10 @@ const RareItems = [
             "WWST": 134.49,
             "BSST": 126
         }
-    }, {
+    },
+    {
         "id": -177,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Crimson Web",
@@ -3189,9 +3349,10 @@ const RareItems = [
             "WWST": 415.07,
             "BSST": 276.26
         }
-    }, {
+    },
+    {
         "id": -178,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Case Hardened",
@@ -3209,9 +3370,10 @@ const RareItems = [
             "WWST": 225.3,
             "BSST": 202.67
         }
-    }, {
+    },
+    {
         "id": -179,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Urban Masked",
@@ -3228,9 +3390,10 @@ const RareItems = [
             "FTST": 125,
             "WWST": 131.96
         }
-    }, {
+    },
+    {
         "id": -180,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Night Stripe",
@@ -3247,9 +3410,10 @@ const RareItems = [
             "FTST": 202.23,
             "WWST": 160.02
         }
-    }, {
+    },
+    {
         "id": -181,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Survival Knife",
         "skinName": "Fade",
@@ -3263,10 +3427,9 @@ const RareItems = [
         }
     },
 
-    // Nomad Knife
     {
         "id": -182,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Forest DDPAT",
@@ -3282,9 +3445,10 @@ const RareItems = [
             "FTST": 145.12,
             "WWST": 127.95
         }
-    }, {
+    },
+    {
         "id": -183,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Scorched",
@@ -3301,9 +3465,10 @@ const RareItems = [
             "FTST": 138.15,
             "WWST": 127.95
         }
-    }, {
+    },
+    {
         "id": -184,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Safari Mesh",
@@ -3320,9 +3485,10 @@ const RareItems = [
             "FTST": 128.96,
             "WWST": 131.19
         }
-    }, {
+    },
+    {
         "id": -185,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Boreal Forest",
@@ -3339,9 +3505,10 @@ const RareItems = [
             "FTST": 157.14,
             "WWST": 132.99
         }
-    }, {
+    },
+    {
         "id": -186,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Urban Masked",
@@ -3359,9 +3526,10 @@ const RareItems = [
             "WWST": 145.08,
             "BSST": 158.8
         }
-    }, {
+    },
+    {
         "id": -187,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Night Stripe",
@@ -3378,9 +3546,10 @@ const RareItems = [
             "FTST": 170.48,
             "WWST": 145.08
         }
-    }, {
+    },
+    {
         "id": -188,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Blue Steel",
@@ -3397,9 +3566,10 @@ const RareItems = [
             "FTST": 234.75,
             "WWST": 240.79
         }
-    }, {
+    },
+    {
         "id": -189,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Stained",
@@ -3417,7 +3587,8 @@ const RareItems = [
             "WWST": 209.56,
             "BSST": 195.46
         }
-    }, {
+    },
+    {
         "id": -190,
         "collectionId": [54, 56],
         "type": "weapon",
@@ -3429,9 +3600,10 @@ const RareItems = [
             "FN": 444.46,
             "FNST": 414.46
         }
-    }, {
+    },
+    {
         "id": -191,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Slaughter",
@@ -3445,9 +3617,10 @@ const RareItems = [
             "MWST": 434.23,
             "FTST": 433.23
         }
-    }, {
+    },
+    {
         "id": -192,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Case Hardened",
@@ -3465,9 +3638,10 @@ const RareItems = [
             "WWST": 307.29,
             "BSST": 235.76
         }
-    }, {
+    },
+    {
         "id": -193,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Fade",
@@ -3479,9 +3653,10 @@ const RareItems = [
             "FNST": 944.79,
             "MWST": 743.42
         }
-    }, {
+    },
+    {
         "id": -194,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Nomad Knife",
         "skinName": "Crimson Web",
@@ -3501,10 +3676,9 @@ const RareItems = [
         }
     },
 
-    // Paracord Knife
     {
         "id": -195,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Safari Mesh",
@@ -3520,9 +3694,10 @@ const RareItems = [
             "FTST": 116,
             "WWST": 138.84
         }
-    }, {
+    },
+    {
         "id": -196,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Forest DDPAT",
@@ -3540,9 +3715,10 @@ const RareItems = [
             "WWST": 168.95,
             "BSST": 121
         }
-    }, {
+    },
+    {
         "id": -197,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Urban Masked",
@@ -3560,9 +3736,10 @@ const RareItems = [
             "WWST": 147.58,
             "BSST": 107.87
         }
-    }, {
+    },
+    {
         "id": -198,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Vanilla",
@@ -3572,9 +3749,10 @@ const RareItems = [
             "FN": 209.81,
             "FNST": 213.27
         }
-    }, {
+    },
+    {
         "id": -199,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Scorched",
@@ -3592,9 +3770,10 @@ const RareItems = [
             "WWST": 157.21,
             "BSST": 116.87
         }
-    }, {
+    },
+    {
         "id": -200,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Stained",
@@ -3612,9 +3791,10 @@ const RareItems = [
             "WWST": 129.49,
             "BSST": 161
         }
-    }, {
+    },
+    {
         "id": -201,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Blue Steel",
@@ -3632,9 +3812,10 @@ const RareItems = [
             "WWST": 179,
             "BSST": 211.25
         }
-    }, {
+    },
+    {
         "id": -202,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Slaughter",
@@ -3648,9 +3829,10 @@ const RareItems = [
             "MWST": 298.63,
             "FTST": 445.46
         }
-    }, {
+    },
+    {
         "id": -203,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Night Stripe",
@@ -3667,9 +3849,10 @@ const RareItems = [
             "FTST": 231.23,
             "WWST": 199.37
         }
-    }, {
+    },
+    {
         "id": -204,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Boreal Forest",
@@ -3687,9 +3870,10 @@ const RareItems = [
             "WWST": 158.19,
             "BSST": 128
         }
-    }, {
+    },
+    {
         "id": -205,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Case Hardened",
@@ -3707,9 +3891,10 @@ const RareItems = [
             "WWST": 250.11,
             "BSST": 238.2
         }
-    }, {
+    },
+    {
         "id": -206,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Fade",
@@ -3721,9 +3906,10 @@ const RareItems = [
             "FNST": 487.76,
             "MWST": 1200.51
         }
-    }, {
+    },
+    {
         "id": -207,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Paracord Knife",
         "skinName": "Crimson Web",
@@ -3740,12 +3926,11 @@ const RareItems = [
             "FTST": 433.7,
             "WWST": 201.5
         }
-    }, 
-    
-    // Ursus Knife
+    },
+
     {
         "id": -208,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Rust Coat",
@@ -3757,9 +3942,10 @@ const RareItems = [
             "FNST": 164.47,
             "MWST": 125.53
         }
-    }, {
+    },
+    {
         "id": -209,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Scorched",
@@ -3777,9 +3963,10 @@ const RareItems = [
             "WWST": 132.36,
             "BSST": 130.29
         }
-    }, {
+    },
+    {
         "id": -210,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Urban Masked",
@@ -3797,9 +3984,10 @@ const RareItems = [
             "WWST": 155.12,
             "BSST": 115.81
         }
-    }, {
+    },
+    {
         "id": -211,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Night Stripe",
@@ -3817,9 +4005,10 @@ const RareItems = [
             "WWST": 149.53,
             "BSST": 143.64
         }
-    }, {
+    },
+    {
         "id": -212,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Safari Mesh",
@@ -3837,9 +4026,10 @@ const RareItems = [
             "WWST": 133.84,
             "BSST": 98.28
         }
-    }, {
+    },
+    {
         "id": -213,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Damascus Steel",
@@ -3857,7 +4047,8 @@ const RareItems = [
             "WWST": 171.8,
             "BSST": 158.44
         }
-    }, {
+    },
+    {
         "id": -214,
         "collectionId": [51, 50],
         "type": "weapon",
@@ -3877,9 +4068,10 @@ const RareItems = [
             "WWST": 147.1,
             "BSST": 134
         }
-    }, {
+    },
+    {
         "id": -215,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Boreal Forest",
@@ -3897,9 +4089,10 @@ const RareItems = [
             "WWST": 129,
             "BSST": 125.4
         }
-    }, {
+    },
+    {
         "id": -216,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Stained",
@@ -3917,9 +4110,10 @@ const RareItems = [
             "WWST": 126.33,
             "BSST": 148.1
         }
-    }, {
+    },
+    {
         "id": -217,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Vanilla",
@@ -3929,9 +4123,10 @@ const RareItems = [
             "FN": 249.52,
             "FNST": 243.22
         }
-    }, {
+    },
+    {
         "id": -218,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Forest DDPAT",
@@ -3949,9 +4144,10 @@ const RareItems = [
             "WWST": 154.69,
             "BSST": 110.83
         }
-    }, {
+    },
+    {
         "id": -219,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Case Hardened",
@@ -3969,9 +4165,10 @@ const RareItems = [
             "WWST": 167.42,
             "BSST": 190.18
         }
-    }, {
+    },
+    {
         "id": -220,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Tiger Tooth",
@@ -3983,9 +4180,10 @@ const RareItems = [
             "FNST": 341.23,
             "MWST": 451.44
         }
-    }, {
+    },
+    {
         "id": -221,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Slaughter",
@@ -3999,9 +4197,10 @@ const RareItems = [
             "MWST": 356.35,
             "FTST": 331.29
         }
-    }, {
+    },
+    {
         "id": -222,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Marble Fade",
@@ -4013,9 +4212,10 @@ const RareItems = [
             "FNST": 429.5,
             "MWST": 580.08
         }
-    }, {
+    },
+    {
         "id": -223,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Crimson Web",
@@ -4033,9 +4233,10 @@ const RareItems = [
             "WWST": 357.66,
             "BSST": 280.7
         }
-    }, {
+    },
+    {
         "id": -224,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Fade",
@@ -4047,9 +4248,10 @@ const RareItems = [
             "FNST": 544.54,
             "MWST": 690.38
         }
-    }, {
+    },
+    {
         "id": -225,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Ultraviolet",
@@ -4066,9 +4268,10 @@ const RareItems = [
             "FTST": 218.09,
             "WWST": 147.1
         }
-    }, {
+    },
+    {
         "id": -226,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Doppler Sapphire",
@@ -4082,10 +4285,9 @@ const RareItems = [
         }
     },
 
-    // Stiletto Knife
     {
         "id": -227,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Safari Mesh",
@@ -4103,9 +4305,10 @@ const RareItems = [
             "WWST": 132.52,
             "BSST": 136.01
         }
-    }, {
+    },
+    {
         "id": -228,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Forest DDPAT",
@@ -4123,9 +4326,10 @@ const RareItems = [
             "WWST": 145.52,
             "BSST": 136.01
         }
-    }, {
+    },
+    {
         "id": -229,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Scorched",
@@ -4143,9 +4347,10 @@ const RareItems = [
             "WWST": 144.8,
             "BSST": 135.77
         }
-    }, {
+    },
+    {
         "id": -230,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Rust Coat",
@@ -4157,9 +4362,10 @@ const RareItems = [
             "FNST": 195.82,
             "MWST": 175.37
         }
-    }, {
+    },
+    {
         "id": -231,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Boreal Forest",
@@ -4177,9 +4383,10 @@ const RareItems = [
             "WWST": 137.09,
             "BSST": 141.04
         }
-    }, {
+    },
+    {
         "id": -232,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Stained",
@@ -4197,9 +4404,10 @@ const RareItems = [
             "WWST": 185.38,
             "BSST": 177.32
         }
-    }, {
+    },
+    {
         "id": -233,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Blue Steel",
@@ -4217,9 +4425,10 @@ const RareItems = [
             "WWST": 198.48,
             "BSST": 196.46
         }
-    }, {
+    },
+    {
         "id": -234,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Urban Masked",
@@ -4237,9 +4446,10 @@ const RareItems = [
             "WWST": 153.14,
             "BSST": 141.05
         }
-    }, {
+    },
+    {
         "id": -235,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Night Stripe",
@@ -4257,9 +4467,10 @@ const RareItems = [
             "WWST": 159.69,
             "BSST": 161.2
         }
-    }, {
+    },
+    {
         "id": -236,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Damascus Steel",
@@ -4277,9 +4488,10 @@ const RareItems = [
             "WWST": 201.76,
             "BSST": 187.5
         }
-    }, {
+    },
+    {
         "id": -237,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Vanilla",
@@ -4289,9 +4501,10 @@ const RareItems = [
             "FN": 367.09,
             "FNST": 346.45
         }
-    }, {
+    },
+    {
         "id": -238,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Tiger Tooth",
@@ -4303,9 +4516,10 @@ const RareItems = [
             "FNST": 415.65,
             "MWST": 394.02
         }
-    }, {
+    },
+    {
         "id": -239,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Slaughter",
@@ -4319,9 +4533,10 @@ const RareItems = [
             "MWST": 359.92,
             "FTST": 359.68
         }
-    }, {
+    },
+    {
         "id": -240,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Crimson Web",
@@ -4338,9 +4553,10 @@ const RareItems = [
             "FTST": 275.05,
             "WWST": 226.98
         }
-    }, {
+    },
+    {
         "id": -241,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Case Hardened",
@@ -4358,9 +4574,10 @@ const RareItems = [
             "WWST": 268,
             "BSST": 301.24
         }
-    }, {
+    },
+    {
         "id": -242,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Marble Fade",
@@ -4372,9 +4589,10 @@ const RareItems = [
             "FNST": 555.2,
             "MWST": 496.64
         }
-    }, {
+    },
+    {
         "id": -243,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Ultraviolet",
@@ -4392,9 +4610,10 @@ const RareItems = [
             "WWST": 175.31,
             "BSST": 125.74
         }
-    }, {
+    },
+    {
         "id": -244,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Fade",
@@ -4406,9 +4625,10 @@ const RareItems = [
             "FNST": 607.37,
             "MWST": 531.58
         }
-    }, {
+    },
+    {
         "id": -245,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Doppler Sapphire",
@@ -4422,10 +4642,9 @@ const RareItems = [
         }
     },
 
-    // Bayonet
     {
         "id": -246,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Safari Mesh",
@@ -4443,9 +4662,10 @@ const RareItems = [
             "WWST": 255.47,
             "BSST": 217.62
         }
-    }, {
+    },
+    {
         "id": -247,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Forest DDPAT",
@@ -4463,9 +4683,10 @@ const RareItems = [
             "WWST": 242.05,
             "BSST": 213.73
         }
-    }, {
+    },
+    {
         "id": -248,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Rust Coat",
@@ -4477,9 +4698,10 @@ const RareItems = [
             "FNST": 365.37,
             "MWST": 271.14
         }
-    }, {
+    },
+    {
         "id": -249,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Ultraviolet",
@@ -4497,9 +4719,10 @@ const RareItems = [
             "WWST": 261.39,
             "BSST": 258.31
         }
-    }, {
+    },
+    {
         "id": -250,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Urban Masked",
@@ -4517,9 +4740,10 @@ const RareItems = [
             "WWST": 226.04,
             "BSST": 222.29
         }
-    }, {
+    },
+    {
         "id": -251,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Stained",
@@ -4537,9 +4761,10 @@ const RareItems = [
             "WWST": 282.93,
             "BSST": 274.03
         }
-    }, {
+    },
+    {
         "id": -252,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Damascus Steel",
@@ -4557,9 +4782,10 @@ const RareItems = [
             "WWST": 301.24,
             "BSST": 383.37
         }
-    }, {
+    },
+    {
         "id": -253,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Blue Steel",
@@ -4577,9 +4803,10 @@ const RareItems = [
             "WWST": 314.93,
             "BSST": 299.76
         }
-    }, {
+    },
+    {
         "id": -254,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Freehand",
@@ -4597,9 +4824,10 @@ const RareItems = [
             "WWST": 352.73,
             "BSST": 391.5
         }
-    }, {
+    },
+    {
         "id": -255,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Scorched",
@@ -4617,9 +4845,10 @@ const RareItems = [
             "WWST": 223,
             "BSST": 233.45
         }
-    }, {
+    },
+    {
         "id": -256,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Bright Water",
@@ -4637,9 +4866,10 @@ const RareItems = [
             "WWST": 297.21,
             "BSST": 296.9
         }
-    }, {
+    },
+    {
         "id": -257,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Black Laminate",
@@ -4657,9 +4887,10 @@ const RareItems = [
             "WWST": 296.69,
             "BSST": 342.06
         }
-    }, {
+    },
+    {
         "id": -258,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Boreal Forest",
@@ -4677,9 +4908,10 @@ const RareItems = [
             "WWST": 225.13,
             "BSST": 231
         }
-    }, {
+    },
+    {
         "id": -259,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Tiger Tooth",
@@ -4691,9 +4923,10 @@ const RareItems = [
             "FNST": 549.64,
             "MWST": 697.42
         }
-    }, {
+    },
+    {
         "id": -260,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Crimson Web",
@@ -4711,9 +4944,10 @@ const RareItems = [
             "WWST": 379.44,
             "BSST": 354.32
         }
-    }, {
+    },
+    {
         "id": -261,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Slaughter",
@@ -4727,9 +4961,10 @@ const RareItems = [
             "MWST": 562.08,
             "FTST": 482.96
         }
-    }, {
+    },
+    {
         "id": -262,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Case Hardened",
@@ -4747,9 +4982,10 @@ const RareItems = [
             "WWST": 375.8,
             "BSST": 392.24
         }
-    }, {
+    },
+    {
         "id": -263,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Vanilla",
@@ -4759,9 +4995,10 @@ const RareItems = [
             "FN": 662.96,
             "FNST": 611.09
         }
-    }, {
+    },
+    {
         "id": -264,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Marble Fade",
@@ -4773,9 +5010,10 @@ const RareItems = [
             "FNST": 572.97,
             "MWST": 1019.53
         }
-    }, {
+    },
+    {
         "id": -265,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Night",
@@ -4793,9 +5031,10 @@ const RareItems = [
             "WWST": 303.03,
             "BSST": 282.1
         }
-    }, {
+    },
+    {
         "id": -266,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Fade",
@@ -4807,9 +5046,10 @@ const RareItems = [
             "FNST": 800.88,
             "MWST": 1053.72
         }
-    }, {
+    },
+    {
         "id": -267,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Autotronic",
@@ -4825,9 +5065,10 @@ const RareItems = [
             "WWST": 500,
             "BSST": 490.65
         }
-    }, {
+    },
+    {
         "id": -268,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Lore",
@@ -4845,9 +5086,10 @@ const RareItems = [
             "WWST": 590.87,
             "BSST": 435.44
         }
-    }, {
+    },
+    {
         "id": -269,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Doppler Sapphire",
@@ -4859,9 +5101,10 @@ const RareItems = [
             "FNST": 6170,
             "MWST": 10626.1
         }
-    }, {
+    },
+    {
         "id": -270,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Gamma Doppler Emerald",
@@ -4875,7 +5118,6 @@ const RareItems = [
         }
     },
 
-    // Classic Knife
     {
         "id": -271,
         "collectionId": 53,
@@ -4896,7 +5138,8 @@ const RareItems = [
             "WWST": 177.85,
             "BSST": 142.12
         }
-    }, {
+    },
+    {
         "id": -272,
         "collectionId": 53,
         "type": "weapon",
@@ -4916,7 +5159,8 @@ const RareItems = [
             "WWST": 206.39,
             "BSST": 164.59
         }
-    }, {
+    },
+    {
         "id": -273,
         "collectionId": 53,
         "type": "weapon",
@@ -4935,7 +5179,8 @@ const RareItems = [
             "FTST": 181.35,
             "WWST": 150.12
         }
-    }, {
+    },
+    {
         "id": -274,
         "collectionId": 53,
         "type": "weapon",
@@ -4954,7 +5199,8 @@ const RareItems = [
             "FTST": 265.66,
             "WWST": 191.43
         }
-    }, {
+    },
+    {
         "id": -275,
         "collectionId": 53,
         "type": "weapon",
@@ -4974,7 +5220,8 @@ const RareItems = [
             "WWST": 146,
             "BSST": 140
         }
-    }, {
+    },
+    {
         "id": -276,
         "collectionId": 53,
         "type": "weapon",
@@ -4994,7 +5241,8 @@ const RareItems = [
             "WWST": 124.36,
             "BSST": 163.14
         }
-    }, {
+    },
+    {
         "id": -277,
         "collectionId": 53,
         "type": "weapon",
@@ -5014,7 +5262,8 @@ const RareItems = [
             "WWST": 151.21,
             "BSST": 208.17
         }
-    }, {
+    },
+    {
         "id": -278,
         "collectionId": 53,
         "type": "weapon",
@@ -5034,7 +5283,8 @@ const RareItems = [
             "WWST": 218.23,
             "BSST": 237.89
         }
-    }, {
+    },
+    {
         "id": -279,
         "collectionId": 53,
         "type": "weapon",
@@ -5053,7 +5303,8 @@ const RareItems = [
             "FTST": 143.07,
             "WWST": 134.88
         }
-    }, {
+    },
+    {
         "id": -280,
         "collectionId": 53,
         "type": "weapon",
@@ -5065,7 +5316,8 @@ const RareItems = [
             "FN": 335.23,
             "FNST": 351.71
         }
-    }, {
+    },
+    {
         "id": -281,
         "collectionId": 53,
         "type": "weapon",
@@ -5081,7 +5333,8 @@ const RareItems = [
             "MWST": 306.61,
             "FTST": 352.21
         }
-    }, {
+    },
+    {
         "id": -282,
         "collectionId": 53,
         "type": "weapon",
@@ -5100,7 +5353,8 @@ const RareItems = [
             "FTST": 1001.22,
             "WWST": 303.68
         }
-    }, {
+    },
+    {
         "id": -283,
         "collectionId": 53,
         "type": "weapon",
@@ -5116,10 +5370,9 @@ const RareItems = [
         }
     },
 
-    // Skeleton Knife
     {
         "id": -284,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Forest DDPAT",
@@ -5136,9 +5389,10 @@ const RareItems = [
             "FTST": 380.59,
             "WWST": 281
         }
-    }, {
+    },
+    {
         "id": -285,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Scorched",
@@ -5155,9 +5409,10 @@ const RareItems = [
             "WWST": 337.92,
             "BSST": 290.16
         }
-    }, {
+    },
+    {
         "id": -286,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Boreal Forest",
@@ -5173,9 +5428,10 @@ const RareItems = [
             "FTST": 400.84,
             "WWST": 294.19
         }
-    }, {
+    },
+    {
         "id": -287,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Safari Mesh",
@@ -5192,9 +5448,10 @@ const RareItems = [
             "FTST": 287,
             "WWST": 278.07
         }
-    }, {
+    },
+    {
         "id": -288,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Stained",
@@ -5212,9 +5469,10 @@ const RareItems = [
             "WWST": 414.87,
             "BSST": 395
         }
-    }, {
+    },
+    {
         "id": -289,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Night Stripe",
@@ -5231,9 +5489,10 @@ const RareItems = [
             "FTST": 398.97,
             "WWST": 390.91
         }
-    }, {
+    },
+    {
         "id": -290,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Vanilla",
@@ -5243,9 +5502,10 @@ const RareItems = [
             "FN": 880.8,
             "FNST": 992.03
         }
-    }, {
+    },
+    {
         "id": -291,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Blue Steel",
@@ -5263,9 +5523,10 @@ const RareItems = [
             "WWST": 481.59,
             "BSST": 484
         }
-    }, {
+    },
+    {
         "id": -292,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Urban Masked",
@@ -5282,9 +5543,10 @@ const RareItems = [
             "FTST": 334,
             "WWST": 302.71
         }
-    }, {
+    },
+    {
         "id": -293,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Slaughter",
@@ -5298,9 +5560,10 @@ const RareItems = [
             "MWST": 1042,
             "FTST": 1053
         }
-    }, {
+    },
+    {
         "id": -294,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Case Hardened",
@@ -5318,9 +5581,10 @@ const RareItems = [
             "WWST": 545.88,
             "BSST": 522.06
         }
-    }, {
+    },
+    {
         "id": -295,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Fade",
@@ -5332,9 +5596,10 @@ const RareItems = [
             "FNST": 2072.18,
             "MWST": 4302.88
         }
-    }, {
+    },
+    {
         "id": -296,
-        "collectionId": [54,56],
+        "collectionId": [54, 56],
         "type": "weapon",
         "weaponName": "★ Skeleton Knife",
         "skinName": "Crimson Web",
@@ -5354,10 +5619,9 @@ const RareItems = [
         }
     },
 
-    // Talon Knife
     {
         "id": -297,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Urban Masked",
@@ -5375,9 +5639,10 @@ const RareItems = [
             "WWST": 288.52,
             "BSST": 264.9
         }
-    }, {
+    },
+    {
         "id": -298,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Rust Coat",
@@ -5389,9 +5654,10 @@ const RareItems = [
             "FNST": 380.49,
             "MWST": 349.39
         }
-    }, {
+    },
+    {
         "id": -299,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Scorched",
@@ -5409,9 +5675,10 @@ const RareItems = [
             "WWST": 231,
             "BSST": 235.76
         }
-    }, {
+    },
+    {
         "id": -300,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Safari Mesh",
@@ -5428,9 +5695,10 @@ const RareItems = [
             "FTST": 257.75,
             "WWST": 253.76
         }
-    }, {
+    },
+    {
         "id": -301,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Stained",
@@ -5448,9 +5716,10 @@ const RareItems = [
             "WWST": 344.09,
             "BSST": 353.64
         }
-    }, {
+    },
+    {
         "id": -302,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Damascus Steel",
@@ -5468,9 +5737,10 @@ const RareItems = [
             "WWST": 401.13,
             "BSST": 397.54
         }
-    }, {
+    },
+    {
         "id": -303,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Vanilla",
@@ -5480,9 +5750,10 @@ const RareItems = [
             "FN": 507.65,
             "FNST": 506.58
         }
-    }, {
+    },
+    {
         "id": -304,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Forest DDPAT",
@@ -5500,9 +5771,10 @@ const RareItems = [
             "WWST": 243,
             "BSST": 232.73
         }
-    }, {
+    },
+    {
         "id": -305,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Boreal Forest",
@@ -5520,9 +5792,10 @@ const RareItems = [
             "WWST": 273.16,
             "BSST": 280.17
         }
-    }, {
+    },
+    {
         "id": -306,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Blue Steel",
@@ -5540,9 +5813,10 @@ const RareItems = [
             "WWST": 356.66,
             "BSST": 387.11
         }
-    }, {
+    },
+    {
         "id": -307,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Night Stripe",
@@ -5559,9 +5833,10 @@ const RareItems = [
             "FTST": 282.2,
             "WWST": 284.51
         }
-    }, {
+    },
+    {
         "id": -308,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Tiger Tooth",
@@ -5573,9 +5848,10 @@ const RareItems = [
             "FNST": 727.1,
             "MWST": 912.06
         }
-    }, {
+    },
+    {
         "id": -309,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Slaughter",
@@ -5589,9 +5865,10 @@ const RareItems = [
             "MWST": 594.11,
             "FTST": 617.59
         }
-    }, {
+    },
+    {
         "id": -310,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Case Hardened",
@@ -5609,9 +5886,10 @@ const RareItems = [
             "WWST": 502.32,
             "BSST": 494.31
         }
-    }, {
+    },
+    {
         "id": -311,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Marble Fade",
@@ -5623,9 +5901,10 @@ const RareItems = [
             "FNST": 997.33,
             "MWST": 999.45
         }
-    }, {
+    },
+    {
         "id": -312,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Ultraviolet",
@@ -5643,9 +5922,10 @@ const RareItems = [
             "WWST": 329.86,
             "BSST": 316.21
         }
-    }, {
+    },
+    {
         "id": -313,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Fade",
@@ -5657,9 +5937,10 @@ const RareItems = [
             "FNST": 1263,
             "MWST": 1339.19
         }
-    }, {
+    },
+    {
         "id": -314,
-        "collectionId": [51,50],
+        "collectionId": [51, 50],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Crimson Web",
@@ -5677,9 +5958,10 @@ const RareItems = [
             "WWST": 425.85,
             "BSST": 397.75
         }
-    }, {
+    },
+    {
         "id": -315,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Doppler Sapphire",
@@ -5691,12 +5973,11 @@ const RareItems = [
             "FNST": 6901,
             "MWST": 11042.7
         }
-    }, 
+    },
 
-    // Butterfly Knife
     {
         "id": -316,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Rust Coat",
@@ -5708,7 +5989,8 @@ const RareItems = [
             "FNST": 745.4,
             "MWST": 667.26
         }
-    }, {
+    },
+    {
         "id": -317,
         "collectionId": 33,
         "type": "weapon",
@@ -5728,7 +6010,8 @@ const RareItems = [
             "WWST": 533.98,
             "BSST": 539.01
         }
-    }, {
+    },
+    {
         "id": -318,
         "collectionId": 33,
         "type": "weapon",
@@ -5748,7 +6031,8 @@ const RareItems = [
             "WWST": 600.21,
             "BSST": 608.39
         }
-    }, {
+    },
+    {
         "id": -319,
         "collectionId": 33,
         "type": "weapon",
@@ -5768,7 +6052,8 @@ const RareItems = [
             "WWST": 532.97,
             "BSST": 510.23
         }
-    }, {
+    },
+    {
         "id": -320,
         "collectionId": 33,
         "type": "weapon",
@@ -5788,7 +6073,8 @@ const RareItems = [
             "WWST": 561.18,
             "BSST": 557.15
         }
-    }, {
+    },
+    {
         "id": -321,
         "collectionId": 33,
         "type": "weapon",
@@ -5808,7 +6094,8 @@ const RareItems = [
             "WWST": 543.04,
             "BSST": 512.27
         }
-    }, {
+    },
+    {
         "id": -322,
         "collectionId": 33,
         "type": "weapon",
@@ -5828,7 +6115,8 @@ const RareItems = [
             "WWST": 584.16,
             "BSST": 580.58
         }
-    }, {
+    },
+    {
         "id": -323,
         "collectionId": 33,
         "type": "weapon",
@@ -5848,7 +6136,8 @@ const RareItems = [
             "WWST": 943.38,
             "BSST": 906.02
         }
-    }, {
+    },
+    {
         "id": -324,
         "collectionId": 33,
         "type": "weapon",
@@ -5868,9 +6157,10 @@ const RareItems = [
             "WWST": 764.69,
             "BSST": 744.54
         }
-    }, {
+    },
+    {
         "id": -325,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Damascus Steel",
@@ -5888,9 +6178,10 @@ const RareItems = [
             "WWST": 796.53,
             "BSST": 829.25
         }
-    }, {
+    },
+    {
         "id": -326,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Freehand",
@@ -5908,9 +6199,10 @@ const RareItems = [
             "WWST": 762.68,
             "BSST": 737
         }
-    }, {
+    },
+    {
         "id": -327,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Bright Water",
@@ -5928,7 +6220,8 @@ const RareItems = [
             "WWST": 868.1,
             "BSST": 792.9
         }
-    }, {
+    },
+    {
         "id": -328,
         "collectionId": 33,
         "type": "weapon",
@@ -5944,9 +6237,10 @@ const RareItems = [
             "MWST": 1412,
             "FTST": 1190.97
         }
-    }, {
+    },
+    {
         "id": -329,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Tiger Tooth",
@@ -5958,9 +6252,10 @@ const RareItems = [
             "FNST": 1547.9,
             "MWST": 1482.03
         }
-    }, {
+    },
+    {
         "id": -330,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Black Laminate",
@@ -5978,7 +6273,8 @@ const RareItems = [
             "WWST": 1035.54,
             "BSST": 1011.78
         }
-    }, {
+    },
+    {
         "id": -331,
         "collectionId": 33,
         "type": "weapon",
@@ -5990,7 +6286,8 @@ const RareItems = [
             "FN": 1691.06,
             "FNST": 1504
         }
-    }, {
+    },
+    {
         "id": -332,
         "collectionId": 33,
         "type": "weapon",
@@ -6010,9 +6307,10 @@ const RareItems = [
             "WWST": 643.15,
             "BSST": 588.38
         }
-    }, {
+    },
+    {
         "id": -333,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Marble Fade",
@@ -6024,9 +6322,10 @@ const RareItems = [
             "FNST": 2007.69,
             "MWST": 1999.8
         }
-    }, {
+    },
+    {
         "id": -334,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Autotronic",
@@ -6043,7 +6342,8 @@ const RareItems = [
             "FTST": 1354.45,
             "WWST": 1204.83
         }
-    }, {
+    },
+    {
         "id": -335,
         "collectionId": 33,
         "type": "weapon",
@@ -6057,9 +6357,10 @@ const RareItems = [
             "FNST": 2761.93,
             "MWST": 2618.55
         }
-    }, {
+    },
+    {
         "id": -336,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Ultraviolet",
@@ -6077,9 +6378,10 @@ const RareItems = [
             "WWST": 728.42,
             "BSST": 597.14
         }
-    }, {
+    },
+    {
         "id": -337,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Lore",
@@ -6097,7 +6399,8 @@ const RareItems = [
             "WWST": 1686.96,
             "BSST": 1132.56
         }
-    }, {
+    },
+    {
         "id": -338,
         "collectionId": 33,
         "type": "weapon",
@@ -6117,9 +6420,10 @@ const RareItems = [
             "WWST": 915.14,
             "BSST": 771.21
         }
-    }, {
+    },
+    {
         "id": -339,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Gamma Doppler Emerald",
@@ -6131,9 +6435,10 @@ const RareItems = [
             "FNST": 20830,
             "MWST": 23506.8
         }
-    }, {
+    },
+    {
         "id": -340,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Doppler Sapphire",
@@ -6147,10 +6452,9 @@ const RareItems = [
         }
     },
 
-    // M9 Bayonet
     {
         "id": -341,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Scorched",
@@ -6167,9 +6471,10 @@ const RareItems = [
             "FTST": 303.73,
             "WWST": 376.81
         }
-    }, {
+    },
+    {
         "id": -342,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Safari Mesh",
@@ -6187,9 +6492,10 @@ const RareItems = [
             "WWST": 284.55,
             "BSST": 326.43
         }
-    }, {
+    },
+    {
         "id": -343,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Boreal Forest",
@@ -6207,9 +6513,10 @@ const RareItems = [
             "WWST": 315,
             "BSST": 333
         }
-    }, {
+    },
+    {
         "id": -344,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Forest DDPAT",
@@ -6227,9 +6534,10 @@ const RareItems = [
             "WWST": 346.79,
             "BSST": 306.28
         }
-    }, {
+    },
+    {
         "id": -345,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Rust Coat",
@@ -6241,9 +6549,10 @@ const RareItems = [
             "FNST": 409.64,
             "MWST": 356.29
         }
-    }, {
+    },
+    {
         "id": -346,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Stained",
@@ -6261,9 +6570,10 @@ const RareItems = [
             "WWST": 336.51,
             "BSST": 341.54
         }
-    }, {
+    },
+    {
         "id": -347,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Freehand",
@@ -6281,9 +6591,10 @@ const RareItems = [
             "WWST": 365.16,
             "BSST": 366.61
         }
-    }, {
+    },
+    {
         "id": -348,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Damascus Steel",
@@ -6301,9 +6612,10 @@ const RareItems = [
             "WWST": 439.69,
             "BSST": 435.64
         }
-    }, {
+    },
+    {
         "id": -349,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Urban Masked",
@@ -6321,9 +6633,10 @@ const RareItems = [
             "WWST": 303.17,
             "BSST": 342.55
         }
-    }, {
+    },
+    {
         "id": -350,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Blue Steel",
@@ -6341,9 +6654,10 @@ const RareItems = [
             "WWST": 432.22,
             "BSST": 482.86
         }
-    }, {
+    },
+    {
         "id": -351,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Bright Water",
@@ -6361,9 +6675,10 @@ const RareItems = [
             "WWST": 372.78,
             "BSST": 399.98
         }
-    }, {
+    },
+    {
         "id": -352,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Black Laminate",
@@ -6381,9 +6696,10 @@ const RareItems = [
             "WWST": 578.74,
             "BSST": 566.47
         }
-    }, {
+    },
+    {
         "id": -353,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Case Hardened",
@@ -6401,9 +6717,10 @@ const RareItems = [
             "WWST": 546.86,
             "BSST": 474.35
         }
-    }, {
+    },
+    {
         "id": -354,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Tiger Tooth",
@@ -6415,9 +6732,10 @@ const RareItems = [
             "FNST": 890.95,
             "MWST": 952.49
         }
-    }, {
+    },
+    {
         "id": -355,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Slaughter",
@@ -6431,9 +6749,10 @@ const RareItems = [
             "MWST": 741.84,
             "FTST": 637.77
         }
-    }, {
+    },
+    {
         "id": -356,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Vanilla",
@@ -6443,9 +6762,10 @@ const RareItems = [
             "FN": 994.41,
             "FNST": 806.75
         }
-    }, {
+    },
+    {
         "id": -357,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Night",
@@ -6463,9 +6783,10 @@ const RareItems = [
             "WWST": 348.85,
             "BSST": 381.84
         }
-    }, {
+    },
+    {
         "id": -358,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Marble Fade",
@@ -6477,9 +6798,10 @@ const RareItems = [
             "FNST": 1187.61,
             "MWST": 1324.36
         }
-    }, {
+    },
+    {
         "id": -359,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Ultraviolet",
@@ -6497,9 +6819,10 @@ const RareItems = [
             "WWST": 347.59,
             "BSST": 336.4
         }
-    }, {
+    },
+    {
         "id": -360,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Fade",
@@ -6511,9 +6834,10 @@ const RareItems = [
             "FNST": 1204,
             "MWST": 1261.06
         }
-    }, {
+    },
+    {
         "id": -361,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Autotronic",
@@ -6531,9 +6855,10 @@ const RareItems = [
             "WWST": 792.06,
             "BSST": 656.49
         }
-    }, {
+    },
+    {
         "id": -362,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Lore",
@@ -6551,9 +6876,10 @@ const RareItems = [
             "WWST": 788.2,
             "BSST": 603.49
         }
-    }, {
+    },
+    {
         "id": -363,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Crimson Web",
@@ -6571,9 +6897,10 @@ const RareItems = [
             "WWST": 524.98,
             "BSST": 551.16
         }
-    }, {
+    },
+    {
         "id": -364,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Gamma Doppler Emerald",
@@ -6585,9 +6912,10 @@ const RareItems = [
             "FNST": 12416.2,
             "MWST": 18690.8
         }
-    }, {
+    },
+    {
         "id": -365,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Doppler Sapphire",
@@ -6601,10 +6929,9 @@ const RareItems = [
         }
     },
 
-    // Karambit
     {
         "id": -366,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Safari Mesh",
@@ -6622,9 +6949,10 @@ const RareItems = [
             "WWST": 392.54,
             "BSST": 375.8
         }
-    }, {
+    },
+    {
         "id": -367,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Forest DDPAT",
@@ -6642,9 +6970,10 @@ const RareItems = [
             "WWST": 393.47,
             "BSST": 365.72
         }
-    }, {
+    },
+    {
         "id": -368,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Boreal Forest",
@@ -6659,9 +6988,10 @@ const RareItems = [
             "FNST": 406.25,
             "MWST": 435.69
         }
-    }, {
+    },
+    {
         "id": -369,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Urban Masked",
@@ -6679,9 +7009,10 @@ const RareItems = [
             "WWST": 418.04,
             "BSST": 406
         }
-    }, {
+    },
+    {
         "id": -370,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Rust Coat",
@@ -6693,9 +7024,10 @@ const RareItems = [
             "FNST": 553.81,
             "MWST": 473.14
         }
-    }, {
+    },
+    {
         "id": -371,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Night",
@@ -6713,9 +7045,10 @@ const RareItems = [
             "WWST": 538.44,
             "BSST": 482.59
         }
-    }, {
+    },
+    {
         "id": -372,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Stained",
@@ -6733,9 +7066,10 @@ const RareItems = [
             "WWST": 508.92,
             "BSST": 473.53
         }
-    }, {
+    },
+    {
         "id": -373,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Bright Water",
@@ -6753,9 +7087,10 @@ const RareItems = [
             "WWST": 501.94,
             "BSST": 518.77
         }
-    }, {
+    },
+    {
         "id": -374,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Freehand",
@@ -6773,9 +7108,10 @@ const RareItems = [
             "WWST": 521.61,
             "BSST": 543.28
         }
-    }, {
+    },
+    {
         "id": -375,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Scorched",
@@ -6793,9 +7129,10 @@ const RareItems = [
             "WWST": 364.7,
             "BSST": 422.14
         }
-    }, {
+    },
+    {
         "id": -376,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Blue Steel",
@@ -6813,9 +7150,10 @@ const RareItems = [
             "WWST": 554.13,
             "BSST": 567.22
         }
-    }, {
+    },
+    {
         "id": -377,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Damascus Steel",
@@ -6833,9 +7171,10 @@ const RareItems = [
             "WWST": 631.53,
             "BSST": 567.69
         }
-    }, {
+    },
+    {
         "id": -378,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Black Laminate",
@@ -6853,9 +7192,10 @@ const RareItems = [
             "WWST": 663.08,
             "BSST": 702.23
         }
-    }, {
+    },
+    {
         "id": -379,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Vanilla",
@@ -6865,9 +7205,10 @@ const RareItems = [
             "FN": 1099.96,
             "FNST": 871.38
         }
-    }, {
+    },
+    {
         "id": -380,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Tiger Tooth",
@@ -6879,9 +7220,10 @@ const RareItems = [
             "FNST": 1137.67,
             "MWST": 1126
         }
-    }, {
+    },
+    {
         "id": -381,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Slaughter",
@@ -6895,9 +7237,10 @@ const RareItems = [
             "MWST": 901.32,
             "FTST": 768.33
         }
-    }, {
+    },
+    {
         "id": -382,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Autotronic",
@@ -6915,9 +7258,10 @@ const RareItems = [
             "WWST": 894.66,
             "BSST": 768.33
         }
-    }, {
+    },
+    {
         "id": -383,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Crimson Web",
@@ -6935,9 +7279,10 @@ const RareItems = [
             "WWST": 788.87,
             "BSST": 641.57
         }
-    }, {
+    },
+    {
         "id": -384,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Case Hardened",
@@ -6955,9 +7300,10 @@ const RareItems = [
             "WWST": 731.96,
             "BSST": 644.29
         }
-    }, {
+    },
+    {
         "id": -385,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Marble Fade",
@@ -6969,9 +7315,10 @@ const RareItems = [
             "FNST": 1234.81,
             "MWST": 1787.25
         }
-    }, {
+    },
+    {
         "id": -386,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Ultraviolet",
@@ -6989,9 +7336,10 @@ const RareItems = [
             "WWST": 549.35,
             "BSST": 508.34
         }
-    }, {
+    },
+    {
         "id": -387,
-        "collectionId": [24,26,30,25,29,34,40,27,31,35,28],
+        "collectionId": [24, 26, 30, 25, 29, 34, 40, 27, 31, 35, 28],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Fade",
@@ -7003,9 +7351,10 @@ const RareItems = [
             "FNST": 1876.24,
             "MWST": 2062.9
         }
-    }, {
+    },
+    {
         "id": -388,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Lore",
@@ -7023,9 +7372,10 @@ const RareItems = [
             "WWST": 829.67,
             "BSST": 642.13
         }
-    }, {
+    },
+    {
         "id": -389,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Gamma Doppler Emerald",
@@ -7037,9 +7387,10 @@ const RareItems = [
             "FNST": 10980,
             "MWST": 13378.8
         }
-    }, {
+    },
+    {
         "id": -390,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Doppler Sapphire",
@@ -7055,7 +7406,7 @@ const RareItems = [
 
     {
         "id": -463,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Gamma Doppler Ph. 1",
@@ -7067,9 +7418,10 @@ const RareItems = [
             "FNST": 214.6,
             "MWST": 272.3
         }
-    }, {
+    },
+    {
         "id": -464,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Doppler Ph. 3",
@@ -7081,9 +7433,10 @@ const RareItems = [
             "FNST": 238,
             "MWST": 745.4
         }
-    }, {
+    },
+    {
         "id": -465,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Gamma Doppler Ph. 3",
@@ -7095,9 +7448,10 @@ const RareItems = [
             "FNST": 213,
             "MWST": 278
         }
-    }, {
+    },
+    {
         "id": -466,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Gamma Doppler Ph. 2",
@@ -7108,9 +7462,10 @@ const RareItems = [
             "MW": 217.62,
             "FNST": 222.32
         }
-    }, {
+    },
+    {
         "id": -467,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Shadow Daggers",
         "skinName": "Doppler Ph. 2",
@@ -7122,7 +7477,8 @@ const RareItems = [
             "FNST": 244.16,
             "MWST": 556.61
         }
-    }, {
+    },
+    {
         "id": -468,
         "collectionId": 0,
         "type": "weapon",
@@ -7136,7 +7492,8 @@ const RareItems = [
             "FNST": 238.2,
             "MWST": 572.8
         }
-    }, {
+    },
+    {
         "id": -469,
         "collectionId": 0,
         "type": "weapon",
@@ -7150,7 +7507,8 @@ const RareItems = [
             "FNST": 267,
             "MWST": 724.55
         }
-    }, {
+    },
+    {
         "id": -470,
         "collectionId": 0,
         "type": "weapon",
@@ -7164,7 +7522,8 @@ const RareItems = [
             "FNST": 291.8,
             "MWST": 417.3
         }
-    }, {
+    },
+    {
         "id": -471,
         "collectionId": 0,
         "type": "weapon",
@@ -7178,7 +7537,8 @@ const RareItems = [
             "FNST": 920.27,
             "MWST": 2516.49
         }
-    }, {
+    },
+    {
         "id": -472,
         "collectionId": 0,
         "type": "weapon",
@@ -7192,9 +7552,10 @@ const RareItems = [
             "FNST": 586.57,
             "MWST": 1534.15
         }
-    }, {
+    },
+    {
         "id": -473,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Doppler Ph. 1",
@@ -7206,9 +7567,10 @@ const RareItems = [
             "FNST": 186.59,
             "MWST": 375.18
         }
-    }, {
+    },
+    {
         "id": -474,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Doppler Ph. 3",
@@ -7220,9 +7582,10 @@ const RareItems = [
             "FNST": 185.6,
             "MWST": 362.25
         }
-    }, {
+    },
+    {
         "id": -475,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Doppler Ph. 4",
@@ -7234,9 +7597,10 @@ const RareItems = [
             "FNST": 192,
             "MWST": 715.18
         }
-    }, {
+    },
+    {
         "id": -476,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Doppler Ph. 2",
@@ -7248,9 +7612,10 @@ const RareItems = [
             "FNST": 235.13,
             "MWST": 747.38
         }
-    }, {
+    },
+    {
         "id": -477,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Doppler Ruby",
@@ -7262,9 +7627,10 @@ const RareItems = [
             "FNST": 519.08,
             "MWST": 2068.26
         }
-    }, {
+    },
+    {
         "id": -478,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Navaja Knife",
         "skinName": "Doppler Black Pearl",
@@ -7275,9 +7641,10 @@ const RareItems = [
             "MW": 647.98,
             "FNST": 443.75
         }
-    }, {
+    },
+    {
         "id": -479,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Doppler Ph. 3",
@@ -7289,9 +7656,10 @@ const RareItems = [
             "FNST": 173.29,
             "MWST": 378.23
         }
-    }, {
+    },
+    {
         "id": -480,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Doppler Ph. 1",
@@ -7303,9 +7671,10 @@ const RareItems = [
             "FNST": 171.7,
             "MWST": 492.56
         }
-    }, {
+    },
+    {
         "id": -481,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Doppler Ph. 2",
@@ -7317,9 +7686,10 @@ const RareItems = [
             "FNST": 179,
             "MWST": 468.65
         }
-    }, {
+    },
+    {
         "id": -482,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Doppler Ph. 4",
@@ -7331,9 +7701,10 @@ const RareItems = [
             "FNST": 177,
             "MWST": 379.77
         }
-    }, {
+    },
+    {
         "id": -483,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Gamma Doppler Ph. 3",
@@ -7345,9 +7716,10 @@ const RareItems = [
             "FNST": 217.62,
             "MWST": 388.88
         }
-    }, {
+    },
+    {
         "id": -484,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Gamma Doppler Ph. 1",
@@ -7359,9 +7731,10 @@ const RareItems = [
             "FNST": 214.6,
             "MWST": 648.09
         }
-    }, {
+    },
+    {
         "id": -485,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Gamma Doppler Ph. 4",
@@ -7373,9 +7746,10 @@ const RareItems = [
             "FNST": 215,
             "MWST": 603.49
         }
-    }, {
+    },
+    {
         "id": -486,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Gamma Doppler Ph. 2",
@@ -7387,9 +7761,10 @@ const RareItems = [
             "FNST": 235,
             "MWST": 425.83
         }
-    }, {
+    },
+    {
         "id": -487,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Doppler Black Pearl",
@@ -7401,9 +7776,10 @@ const RareItems = [
             "FNST": 581.24,
             "MWST": 2145.33
         }
-    }, {
+    },
+    {
         "id": -488,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Gut Knife",
         "skinName": "Doppler Ruby",
@@ -7415,9 +7791,10 @@ const RareItems = [
             "FNST": 587,
             "MWST": 1606.8
         }
-    }, {
+    },
+    {
         "id": -489,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Doppler Ph. 1",
@@ -7429,9 +7806,10 @@ const RareItems = [
             "FNST": 376.81,
             "MWST": 747.02
         }
-    }, {
+    },
+    {
         "id": -490,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Doppler Ph. 3",
@@ -7443,9 +7821,10 @@ const RareItems = [
             "FNST": 358.03,
             "MWST": 568.2
         }
-    }, {
+    },
+    {
         "id": -491,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Gamma Doppler Ph. 1",
@@ -7457,9 +7836,10 @@ const RareItems = [
             "FNST": 345.57,
             "MWST": 390.98
         }
-    }, {
+    },
+    {
         "id": -492,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Doppler Ph. 2",
@@ -7471,9 +7851,10 @@ const RareItems = [
             "FNST": 405.37,
             "MWST": 636.04
         }
-    }, {
+    },
+    {
         "id": -493,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Doppler Ph. 4",
@@ -7485,9 +7866,10 @@ const RareItems = [
             "FNST": 399.26,
             "MWST": 1026.81
         }
-    }, {
+    },
+    {
         "id": -494,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Gamma Doppler Ph. 3",
@@ -7499,9 +7881,10 @@ const RareItems = [
             "FNST": 353.05,
             "MWST": 397.8
         }
-    }, {
+    },
+    {
         "id": -495,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Gamma Doppler Ph. 2",
@@ -7512,9 +7895,10 @@ const RareItems = [
             "MW": 361.69,
             "FNST": 377.81
         }
-    }, {
+    },
+    {
         "id": -496,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Gamma Doppler Ph. 4",
@@ -7525,9 +7909,10 @@ const RareItems = [
             "MW": 382.11,
             "FNST": 427.8
         }
-    }, {
+    },
+    {
         "id": -497,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Doppler Black Pearl",
@@ -7539,9 +7924,10 @@ const RareItems = [
             "FNST": 1055.99,
             "MWST": 5493.26
         }
-    }, {
+    },
+    {
         "id": -498,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Falchion Knife",
         "skinName": "Doppler Ruby",
@@ -7553,9 +7939,10 @@ const RareItems = [
             "FNST": 1029,
             "MWST": 2098.27
         }
-    }, {
+    },
+    {
         "id": -499,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Gamma Doppler Ph. 1",
@@ -7566,9 +7953,10 @@ const RareItems = [
             "MW": 393,
             "FNST": 410.32
         }
-    }, {
+    },
+    {
         "id": -500,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Doppler Ph. 2",
@@ -7580,9 +7968,10 @@ const RareItems = [
             "FNST": 416.17,
             "MWST": 596.61
         }
-    }, {
+    },
+    {
         "id": -501,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Doppler Ph. 3",
@@ -7594,9 +7983,10 @@ const RareItems = [
             "FNST": 382.41,
             "MWST": 668.21
         }
-    }, {
+    },
+    {
         "id": -502,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Gamma Doppler Ph. 3",
@@ -7608,9 +7998,10 @@ const RareItems = [
             "FNST": 405.2,
             "MWST": 446.14
         }
-    }, {
+    },
+    {
         "id": -503,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Gamma Doppler Ph. 2",
@@ -7622,9 +8013,10 @@ const RareItems = [
             "FNST": 415.09,
             "MWST": 485.61
         }
-    }, {
+    },
+    {
         "id": -504,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Doppler Ph. 4",
@@ -7636,9 +8028,10 @@ const RareItems = [
             "FNST": 407,
             "MWST": 1042.9
         }
-    }, {
+    },
+    {
         "id": -505,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Doppler Ph. 1",
@@ -7650,9 +8043,10 @@ const RareItems = [
             "FNST": 437.68,
             "MWST": 839.03
         }
-    }, {
+    },
+    {
         "id": -506,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Gamma Doppler Ph. 4",
@@ -7663,9 +8057,10 @@ const RareItems = [
             "MW": 443.3,
             "FNST": 506.77
         }
-    }, {
+    },
+    {
         "id": -507,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Doppler Black Pearl",
@@ -7677,9 +8072,10 @@ const RareItems = [
             "FNST": 1191,
             "MWST": 3673.84
         }
-    }, {
+    },
+    {
         "id": -508,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Bowie Knife",
         "skinName": "Doppler Ruby",
@@ -7691,9 +8087,10 @@ const RareItems = [
             "FNST": 1305,
             "MWST": 2115.16
         }
-    }, {
+    },
+    {
         "id": -509,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Doppler Ph. 3",
@@ -7705,9 +8102,10 @@ const RareItems = [
             "FNST": 368.97,
             "MWST": 518.55
         }
-    }, {
+    },
+    {
         "id": -510,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Doppler Ph. 1",
@@ -7719,9 +8117,10 @@ const RareItems = [
             "FNST": 368.85,
             "MWST": 517.12
         }
-    }, {
+    },
+    {
         "id": -511,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Doppler Ph. 4",
@@ -7733,9 +8132,10 @@ const RareItems = [
             "FNST": 425.61,
             "MWST": 793.37
         }
-    }, {
+    },
+    {
         "id": -512,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Doppler Ph. 2",
@@ -7747,9 +8147,10 @@ const RareItems = [
             "FNST": 429.3,
             "MWST": 599.38
         }
-    }, {
+    },
+    {
         "id": -513,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Gamma Doppler Ph. 3",
@@ -7761,9 +8162,10 @@ const RareItems = [
             "FNST": 535.14,
             "MWST": 1164.53
         }
-    }, {
+    },
+    {
         "id": -514,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Gamma Doppler Ph. 1",
@@ -7775,9 +8177,10 @@ const RareItems = [
             "FNST": 495.07,
             "MWST": 649.13
         }
-    }, {
+    },
+    {
         "id": -515,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Gamma Doppler Ph. 4",
@@ -7789,9 +8192,10 @@ const RareItems = [
             "FNST": 565.73,
             "MWST": 1386.03
         }
-    }, {
+    },
+    {
         "id": -516,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Flip Knife",
         "skinName": "Gamma Doppler Ph. 2",
@@ -7803,7 +8207,8 @@ const RareItems = [
             "FNST": 663.99,
             "MWST": 1072.67
         }
-    }, {
+    },
+    {
         "id": -517,
         "collectionId": 0,
         "type": "weapon",
@@ -7817,7 +8222,8 @@ const RareItems = [
             "FNST": 1713.2,
             "MWST": 4382.37
         }
-    }, {
+    },
+    {
         "id": -518,
         "collectionId": 0,
         "type": "weapon",
@@ -7831,9 +8237,10 @@ const RareItems = [
             "FNST": 2600.35,
             "MWST": 3593.49
         }
-    }, {
+    },
+    {
         "id": -519,
-        "collectionId": [45,46],
+        "collectionId": [45, 46],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Doppler Ph. 3",
@@ -7845,9 +8252,10 @@ const RareItems = [
             "FNST": 392.47,
             "MWST": 660.89
         }
-    }, {
+    },
+    {
         "id": -520,
-        "collectionId": [45,46],
+        "collectionId": [45, 46],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Doppler Ph. 1",
@@ -7859,9 +8267,10 @@ const RareItems = [
             "FNST": 389.9,
             "MWST": 1432.33
         }
-    }, {
+    },
+    {
         "id": -521,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Gamma Doppler Ph. 3",
@@ -7872,9 +8281,10 @@ const RareItems = [
             "FNST": 389.21,
             "MWST": 451.52
         }
-    }, {
+    },
+    {
         "id": -522,
-        "collectionId": [45,46],
+        "collectionId": [45, 46],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Doppler Ph. 2",
@@ -7886,9 +8296,10 @@ const RareItems = [
             "FNST": 454.31,
             "MWST": 1320.43
         }
-    }, {
+    },
+    {
         "id": -523,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Gamma Doppler Ph. 1",
@@ -7899,9 +8310,10 @@ const RareItems = [
             "MW": 363.49,
             "FNST": 364.72
         }
-    }, {
+    },
+    {
         "id": -524,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Doppler Ph. 4",
@@ -7913,9 +8325,10 @@ const RareItems = [
             "FNST": 456.42,
             "MWST": 1147.61
         }
-    }, {
+    },
+    {
         "id": -525,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Gamma Doppler Ph. 2",
@@ -7926,9 +8339,10 @@ const RareItems = [
             "MW": 384.87,
             "FNST": 440.28
         }
-    }, {
+    },
+    {
         "id": -526,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Gamma Doppler Ph. 4",
@@ -7939,9 +8353,10 @@ const RareItems = [
             "MW": 443,
             "FNST": 465.47
         }
-    }, {
+    },
+    {
         "id": -527,
-        "collectionId": [45,46],
+        "collectionId": [45, 46],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Doppler Black Pearl",
@@ -7953,9 +8368,10 @@ const RareItems = [
             "FNST": 1388.26,
             "MWST": 3996.81
         }
-    }, {
+    },
+    {
         "id": -528,
-        "collectionId": [45,46],
+        "collectionId": [45, 46],
         "type": "weapon",
         "weaponName": "★ Huntsman Knife",
         "skinName": "Doppler Ruby",
@@ -7967,9 +8383,10 @@ const RareItems = [
             "FNST": 1477.83,
             "MWST": 2785.26
         }
-    }, {
+    },
+    {
         "id": -529,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Doppler Ph. 1",
@@ -7981,9 +8398,10 @@ const RareItems = [
             "FNST": 434.23,
             "MWST": 714.68
         }
-    }, {
+    },
+    {
         "id": -530,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Doppler Ph. 3",
@@ -7995,9 +8413,10 @@ const RareItems = [
             "FNST": 418.47,
             "MWST": 686.55
         }
-    }, {
+    },
+    {
         "id": -531,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Doppler Ph. 2",
@@ -8009,9 +8428,10 @@ const RareItems = [
             "FNST": 479,
             "MWST": 921.25
         }
-    }, {
+    },
+    {
         "id": -532,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Doppler Ph. 4",
@@ -8023,9 +8443,10 @@ const RareItems = [
             "FNST": 513.83,
             "MWST": 968.1
         }
-    }, {
+    },
+    {
         "id": -533,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Doppler Black Pearl",
@@ -8036,9 +8457,10 @@ const RareItems = [
             "MW": 1679.12,
             "FNST": 2523.85
         }
-    }, {
+    },
+    {
         "id": -534,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Ursus Knife",
         "skinName": "Doppler Ruby",
@@ -8050,9 +8472,10 @@ const RareItems = [
             "FNST": 2298.63,
             "MWST": 6434.12
         }
-    }, {
+    },
+    {
         "id": -535,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Doppler Ph. 1",
@@ -8064,9 +8487,10 @@ const RareItems = [
             "FNST": 443.3,
             "MWST": 555.13
         }
-    }, {
+    },
+    {
         "id": -536,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Doppler Ph. 3",
@@ -8078,9 +8502,10 @@ const RareItems = [
             "FNST": 407.98,
             "MWST": 491
         }
-    }, {
+    },
+    {
         "id": -537,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Doppler Ph. 2",
@@ -8092,9 +8517,10 @@ const RareItems = [
             "FNST": 433,
             "MWST": 579.31
         }
-    }, {
+    },
+    {
         "id": -538,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Doppler Ph. 4",
@@ -8106,9 +8532,10 @@ const RareItems = [
             "FNST": 542.04,
             "MWST": 1157.7
         }
-    }, {
+    },
+    {
         "id": -539,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Doppler Black Pearl",
@@ -8119,9 +8546,10 @@ const RareItems = [
             "MW": 979.03,
             "FNST": 1332
         }
-    }, {
+    },
+    {
         "id": -540,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Stiletto Knife",
         "skinName": "Doppler Ruby",
@@ -8133,9 +8561,10 @@ const RareItems = [
             "FNST": 2474.24,
             "MWST": 2824.24
         }
-    }, {
+    },
+    {
         "id": -541,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Doppler Ph. 1",
@@ -8147,9 +8576,10 @@ const RareItems = [
             "FNST": 649.96,
             "MWST": 636.74
         }
-    }, {
+    },
+    {
         "id": -542,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Doppler Ph. 3",
@@ -8161,9 +8591,10 @@ const RareItems = [
             "FNST": 604.63,
             "MWST": 641.78
         }
-    }, {
+    },
+    {
         "id": -543,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Doppler Ph. 4",
@@ -8175,9 +8606,10 @@ const RareItems = [
             "FNST": 662,
             "MWST": 674.9
         }
-    }, {
+    },
+    {
         "id": -544,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Doppler Ph. 2",
@@ -8189,9 +8621,10 @@ const RareItems = [
             "FNST": 686,
             "MWST": 680.86
         }
-    }, {
+    },
+    {
         "id": -545,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Gamma Doppler Ph. 3",
@@ -8203,9 +8636,10 @@ const RareItems = [
             "FNST": 827.85,
             "MWST": 1060.29
         }
-    }, {
+    },
+    {
         "id": -546,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Gamma Doppler Ph. 1",
@@ -8217,9 +8651,10 @@ const RareItems = [
             "FNST": 804.02,
             "MWST": 973.4
         }
-    }, {
+    },
+    {
         "id": -547,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Gamma Doppler Ph. 4",
@@ -8231,9 +8666,10 @@ const RareItems = [
             "FNST": 939,
             "MWST": 1873.63
         }
-    }, {
+    },
+    {
         "id": -548,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Gamma Doppler Ph. 2",
@@ -8245,9 +8681,10 @@ const RareItems = [
             "FNST": 1190.86,
             "MWST": 1368.68
         }
-    }, {
+    },
+    {
         "id": -549,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Doppler Ruby",
@@ -8259,9 +8696,10 @@ const RareItems = [
             "FNST": 4693,
             "MWST": 7347.07
         }
-    }, {
+    },
+    {
         "id": -550,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Bayonet",
         "skinName": "Doppler Black Pearl",
@@ -8273,9 +8711,10 @@ const RareItems = [
             "FNST": 3924.75,
             "MWST": 7085.27
         }
-    }, {
+    },
+    {
         "id": -551,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Doppler Ph. 3",
@@ -8287,9 +8726,10 @@ const RareItems = [
             "FNST": 930.13,
             "MWST": 1004.31
         }
-    }, {
+    },
+    {
         "id": -552,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Doppler Ph. 1",
@@ -8301,9 +8741,10 @@ const RareItems = [
             "FNST": 958.13,
             "MWST": 899.63
         }
-    }, {
+    },
+    {
         "id": -553,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Doppler Ph. 2",
@@ -8315,9 +8756,10 @@ const RareItems = [
             "FNST": 1126.7,
             "MWST": 1059.81
         }
-    }, {
+    },
+    {
         "id": -554,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Doppler Ph. 4",
@@ -8329,9 +8771,10 @@ const RareItems = [
             "FNST": 1095.85,
             "MWST": 1241.02
         }
-    }, {
+    },
+    {
         "id": -555,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Doppler Black Pearl",
@@ -8343,9 +8786,10 @@ const RareItems = [
             "FNST": 4097.8,
             "MWST": 6597.47
         }
-    }, {
+    },
+    {
         "id": -556,
-        "collectionId": [52,55],
+        "collectionId": [52, 55],
         "type": "weapon",
         "weaponName": "★ Talon Knife",
         "skinName": "Doppler Ruby",
@@ -8357,9 +8801,10 @@ const RareItems = [
             "FNST": 4990.29,
             "MWST": 7055.55
         }
-    }, {
+    },
+    {
         "id": -557,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Doppler Ph. 3",
@@ -8371,9 +8816,10 @@ const RareItems = [
             "FNST": 1780.38,
             "MWST": 1961.05
         }
-    }, {
+    },
+    {
         "id": -558,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Doppler Ph. 1",
@@ -8385,9 +8831,10 @@ const RareItems = [
             "FNST": 1878,
             "MWST": 2318.27
         }
-    }, {
+    },
+    {
         "id": -559,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Doppler Ph. 2",
@@ -8399,9 +8846,10 @@ const RareItems = [
             "FNST": 2128,
             "MWST": 3022.52
         }
-    }, {
+    },
+    {
         "id": -560,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Gamma Doppler Ph. 1",
@@ -8412,9 +8860,10 @@ const RareItems = [
             "MW": 2095,
             "FNST": 2182.95
         }
-    }, {
+    },
+    {
         "id": -561,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Gamma Doppler Ph. 3",
@@ -8425,9 +8874,10 @@ const RareItems = [
             "MW": 2191,
             "FNST": 2251.98
         }
-    }, {
+    },
+    {
         "id": -562,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Doppler Ph. 4",
@@ -8439,9 +8889,10 @@ const RareItems = [
             "FNST": 2430,
             "MWST": 3295.51
         }
-    }, {
+    },
+    {
         "id": -563,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Gamma Doppler Ph. 2",
@@ -8453,9 +8904,10 @@ const RareItems = [
             "FNST": 2562,
             "MWST": 2700
         }
-    }, {
+    },
+    {
         "id": -564,
-        "collectionId": [59,60],
+        "collectionId": [59, 60],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Gamma Doppler Ph. 4",
@@ -8467,9 +8919,10 @@ const RareItems = [
             "FNST": 3130,
             "MWST": 3623.35
         }
-    }, {
+    },
+    {
         "id": -565,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Doppler Black Pearl",
@@ -8481,9 +8934,10 @@ const RareItems = [
             "FNST": 4962.5,
             "MWST": 9272.16
         }
-    }, {
+    },
+    {
         "id": -566,
-        "collectionId": [46,48],
+        "collectionId": [46, 48],
         "type": "weapon",
         "weaponName": "★ Butterfly Knife",
         "skinName": "Doppler Ruby",
@@ -8495,9 +8949,10 @@ const RareItems = [
             "FNST": 10561.2,
             "MWST": 13861.2
         }
-    }, {
+    },
+    {
         "id": -567,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Doppler Ph. 1",
@@ -8509,9 +8964,10 @@ const RareItems = [
             "FNST": 809.51,
             "MWST": 1068.92
         }
-    }, {
+    },
+    {
         "id": -568,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Doppler Ph. 3",
@@ -8523,9 +8979,10 @@ const RareItems = [
             "FNST": 794.8,
             "MWST": 941.01
         }
-    }, {
+    },
+    {
         "id": -569,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Doppler Ph. 2",
@@ -8537,9 +8994,10 @@ const RareItems = [
             "FNST": 942.26,
             "MWST": 917.83
         }
-    }, {
+    },
+    {
         "id": -570,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Doppler Ph. 4",
@@ -8551,9 +9009,10 @@ const RareItems = [
             "FNST": 941.11,
             "MWST": 943.65
         }
-    }, {
+    },
+    {
         "id": -571,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Gamma Doppler Ph. 1",
@@ -8565,9 +9024,10 @@ const RareItems = [
             "FNST": 1075.44,
             "MWST": 1073.06
         }
-    }, {
+    },
+    {
         "id": -572,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Gamma Doppler Ph. 3",
@@ -8579,9 +9039,10 @@ const RareItems = [
             "FNST": 1064.15,
             "MWST": 1331.16
         }
-    }, {
+    },
+    {
         "id": -573,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Gamma Doppler Ph. 4",
@@ -8593,9 +9054,10 @@ const RareItems = [
             "FNST": 1304.66,
             "MWST": 2598.11
         }
-    }, {
+    },
+    {
         "id": -574,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Gamma Doppler Ph. 2",
@@ -8607,9 +9069,10 @@ const RareItems = [
             "FNST": 1700,
             "MWST": 2008.5
         }
-    }, {
+    },
+    {
         "id": -575,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Doppler Black Pearl",
@@ -8621,9 +9084,10 @@ const RareItems = [
             "FNST": 4900,
             "MWST": 10564
         }
-    }, {
+    },
+    {
         "id": -576,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ M9 Bayonet",
         "skinName": "Doppler Ruby",
@@ -8635,9 +9099,10 @@ const RareItems = [
             "FNST": 9428.75,
             "MWST": 6721.36
         }
-    }, {
+    },
+    {
         "id": -577,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Doppler Ph. 1",
@@ -8649,9 +9114,10 @@ const RareItems = [
             "FNST": 1006,
             "MWST": 1091.64
         }
-    }, {
+    },
+    {
         "id": -578,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Doppler Ph. 3",
@@ -8663,9 +9129,10 @@ const RareItems = [
             "FNST": 1011.91,
             "MWST": 1057.19
         }
-    }, {
+    },
+    {
         "id": -579,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Doppler Ph. 4",
@@ -8677,9 +9144,10 @@ const RareItems = [
             "FNST": 1153.57,
             "MWST": 1317.51
         }
-    }, {
+    },
+    {
         "id": -580,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Gamma Doppler Ph. 1",
@@ -8691,9 +9159,10 @@ const RareItems = [
             "FNST": 1359.43,
             "MWST": 1516.82
         }
-    }, {
+    },
+    {
         "id": -581,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Doppler Ph. 2",
@@ -8705,9 +9174,10 @@ const RareItems = [
             "FNST": 1419.84,
             "MWST": 1406.45
         }
-    }, {
+    },
+    {
         "id": -582,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Gamma Doppler Ph. 3",
@@ -8719,9 +9189,10 @@ const RareItems = [
             "FNST": 1401.76,
             "MWST": 1818.37
         }
-    }, {
+    },
+    {
         "id": -583,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Gamma Doppler Ph. 4",
@@ -8733,9 +9204,10 @@ const RareItems = [
             "FNST": 1510.17,
             "MWST": 3118.92
         }
-    }, {
+    },
+    {
         "id": -584,
-        "collectionId": [43,44],
+        "collectionId": [43, 44],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Gamma Doppler Ph. 2",
@@ -8747,9 +9219,10 @@ const RareItems = [
             "FNST": 2211.98,
             "MWST": 3505.52
         }
-    }, {
+    },
+    {
         "id": -585,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Doppler Black Pearl",
@@ -8761,9 +9234,10 @@ const RareItems = [
             "FNST": 5161,
             "MWST": 8060.91
         }
-    }, {
+    },
+    {
         "id": -586,
-        "collectionId": [36,37,42],
+        "collectionId": [36, 37, 42],
         "type": "weapon",
         "weaponName": "★ Karambit",
         "skinName": "Doppler Ruby",
@@ -8777,10 +9251,232 @@ const RareItems = [
         }
     },
 
-    // Gloves
+    {
+        "id": -587,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Safari Mesh",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR9_8yJmYWYn8jgMrXummJW4NE_j-2Xpdyl3Qbl_kc_YGGlIYOWcwI8aVnV_ATslOvmjJ677sicmHJqsz5iuyg6yWV5Bw/512fx384f",
+        "prices": {
+            "MW": 400,
+            "FT": 345,
+            "WW": 333.43,
+            "BS": 347,
+            "FNST": 331.06,
+            "FTST": 362,
+            "WWST": 658.63
+        }
+    },
+    {
+        "id": -588,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Boreal Forest",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR95MWJko-ZkuTgDLnehG5Q5Pp9g-7J4cKn3lXhr0JlYD-nJI6VdQRtNVCGrlm2kuzrgsS8uc7Jn3cw6CUl43vYgVXp1kdkJU_m/512fx384f",
+        "prices": {
+            "MW": 549,
+            "FT": 364,
+            "WW": 380,
+            "BS": 374,
+            "FTST": 368
+        }
+    },
+    {
+        "id": -589,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Forest DDPAT",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR95MWJkISbluPLP7LWnn8f6ZMgibvH84r02ACxrRVtZDugJtLBIABoYw3V_li-wOu7gZC178_LmGwj5Hft8MUHXQ/512fx384f",
+        "prices": {
+            "FN": 805,
+            "MW": 466,
+            "FT": 397,
+            "WW": 368,
+            "BS": 407,
+            "MWST": 478,
+            "FTST": 362
+        }
+    },
+    {
+        "id": -590,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Scorched",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR9_8yJkIGbh_vxDLfYkWNFpsEm3bmQoYj2ilfs8hVtNT31doDHJlM2aFHV_Fe5xu7q08S7vpXKwXR9-n51QqUUfjU/360fx360f",
+        "prices": {
+            "FN": 530,
+            "MW": 441.89,
+            "FT": 339.92,
+            "WW": 328.97,
+            "BS": 334.21,
+            "MWST": 544,
+            "FTST": 390
+        }
+    },
+    {
+        "id": -591,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Urban Masked",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR9_8yJgIGbksjhIbnQmFRd4cJ5nqeR9o-h2FLm8xFlYDj3JISWdVVsaFDXr1Hole-9jcS8tJ7Ay3BiviN3-z-DyFR1CfhQ/512fx384f",
+        "prices": {
+            "MW": 460.53,
+            "FT": 345.92,
+            "WW": 338.43,
+            "BS": 345.89,
+            "FTST": 477,
+            "WWST": 332,
+            "BSST": 345
+        }
+    },
+    {
+        "id": -592,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Night Stripe",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR9_8yJmomMn-PnJ6nYhm5u5Mx2gv2P99ms0Fa2qRBva273Io7AdQE8ZV-B81W9x7jsgZ-6vJnKwSBqsigl4GGdwULjCYL13Q/512fx384f",
+        "prices": {
+            "MW": 519.44,
+            "FT": 434,
+            "WW": 404,
+            "BS": 377,
+            "MWST": 546,
+            "FTST": 413,
+            "BSST": 338
+        }
+    },
+    {
+        "id": -593,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Stained",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR97c2Jko-ZlPLwDLfYkWNFpsYkiL2Yp9ui3QXi_xdqZzyldoWTJwM7Y1rRqAToyObp0cS-75WfzyN9-n517V07HaI/512fx384f",
+        "prices": {
+            "FN": 650,
+            "MW": 544.84,
+            "FT": 506.63,
+            "WW": 436.32,
+            "BS": 439.95,
+            "FTST": 590.76,
+            "WWST": 550,
+            "BSST": 530
+        }
+    },
+    {
+        "id": -594,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Blue Steel",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR97c2JloyekvPLP7LWnn8f6pwhjLGVpd-k2wznqENrNzygdtLEJgU6ZgqB-Vi8yebpjZHtupqbmGwj5HcUzqoZvQ/512fx384f",
+        "prices": {
+            "FN": 780,
+            "MW": 702.84,
+            "FT": 660.01,
+            "WW": 607.28,
+            "BS": 627.73
+        }
+    },
+    {
+        "id": -595,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Crimson Web",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR95MWJg4WJhMj4OrzZgiVX7Jcg2LyR99X2jAyw_ENuZGDwcdWddgA5MwqGq1Lsw-vsh5Xo7Z7P1zI97SGihRju/512fx384f",
+        "prices": {
+            "MW": 1267.22,
+            "FT": 808.74,
+            "FNST": 499.98
+        }
+    },
+    {
+        "id": -596,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Case Hardened",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR97c2Jm4mHkvPLP7LWnn8fuZ13ibqTrdv3jA21rkVkNjilcdSUIQE8Y1GB-Fi9xOa-gJC66Z7Mn2wj5HclR6e16Q/512fx384f",
+        "prices": {
+            "MW": 812.78,
+            "FT": 747.21,
+            "WW": 603.08
+        }
+    },
+    {
+        "id": -596,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Case Hardened",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR97c2Jm4mHkvPLP7LWnn8fuZ13ibqTrdv3jA21rkVkNjilcdSUIQE8Y1GB-Fi9xOa-gJC66Z7Mn2wj5HclR6e16Q/512fx384f",
+        "prices": {
+            "FN": 900,
+            "MW": 812.78,
+            "FT": 747.21,
+            "WW": 603.08
+        }
+    },
+    {
+        "id": -597,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Slaughter",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR97dGJjoWJhfbLP7LWnn8fvZIgjrGYpo-m3wbmqBU6NmmmLYaTIQFqMAzR8gfrx-rs1JK77pWdmmwj5HfC17GeYA/512fx384f",
+        "prices": {
+            "FN": 1097.49,
+            "MW": 971.79,
+            "FT": 878.59
+        }
+    },
+    {
+        "id": -598,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Vanilla",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQh5hlcX0nvUOGsx8DdQBJjIAVHubSaIAlp1fb3eihJ_tX4ktCPwfTwZbqDkG9Q7J1yjuvFoNim2wCx_BI4az37dtKSelA5YF3UrE_-n7m6gqgBBA/512fx384f",
+        "prices": {
+            "FN": 1113.43
+        }
+    },
+    {
+        "id": -599,
+        "collectionId": 75,
+        "type": "weapon",
+        "weaponName": "★ Kukri Knife",
+        "skinName": "Fade",
+        "rarity": "gold",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2ObDYzR97d2JkoGPksj4OrzZgiUE6ZwmjOqXpYnz2Vew-RY5NWv1IdCXe1Q7NFqB_Fe5kue8hZK8vc_J1zI97Wo4QJnu/512fx384f",
+        "prices": {
+            "FN": 1867.26
+        }
+    },
+
     {
         "id": -391,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Desert Shamagh",
@@ -8793,9 +9489,10 @@ const RareItems = [
             "WW": 82.91,
             "BS": 76.36
         }
-    }, {
+    },
+    {
         "id": -392,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Bloodhound Gloves",
         "skinName": "Bronzed",
@@ -8808,7 +9505,8 @@ const RareItems = [
             "WW": 74.41,
             "BS": 73.26
         }
-    }, {
+    },
+    {
         "id": -393,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -8823,7 +9521,8 @@ const RareItems = [
             "WW": 55.08,
             "BS": 52.31
         }
-    }, {
+    },
+    {
         "id": -394,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -8838,9 +9537,10 @@ const RareItems = [
             "WW": 63.28,
             "BS": 55.92
         }
-    }, {
+    },
+    {
         "id": -395,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Broken Fang Gloves",
         "skinName": "Needle Point",
@@ -8853,7 +9553,8 @@ const RareItems = [
             "WW": 64.34,
             "BS": 61.79
         }
-    }, {
+    },
+    {
         "id": -396,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -8868,7 +9569,8 @@ const RareItems = [
             "WW": 78.48,
             "BS": 69.23
         }
-    }, {
+    },
+    {
         "id": -397,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -8883,7 +9585,8 @@ const RareItems = [
             "WW": 71.04,
             "BS": 70.39
         }
-    }, {
+    },
+    {
         "id": -398,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -8898,7 +9601,8 @@ const RareItems = [
             "WW": 51.09,
             "BS": 48.14
         }
-    }, {
+    },
+    {
         "id": -399,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -8913,7 +9617,8 @@ const RareItems = [
             "WW": 72.82,
             "BS": 62.68
         }
-    }, {
+    },
+    {
         "id": -400,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -8928,9 +9633,10 @@ const RareItems = [
             "WW": 95,
             "BS": 75.01
         }
-    }, {
+    },
+    {
         "id": -401,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Convoy",
@@ -8943,9 +9649,10 @@ const RareItems = [
             "WW": 73.44,
             "BS": 69.9
         }
-    }, {
+    },
+    {
         "id": -402,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Constrictor",
@@ -8958,9 +9665,10 @@ const RareItems = [
             "WW": 78.09,
             "BS": 73.86
         }
-    }, {
+    },
+    {
         "id": -403,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Broken Fang Gloves",
         "skinName": "Unhinged",
@@ -8973,9 +9681,10 @@ const RareItems = [
             "WW": 77.34,
             "BS": 62.53
         }
-    }, {
+    },
+    {
         "id": -404,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Forest DDPAT",
@@ -8988,7 +9697,8 @@ const RareItems = [
             "WW": 93.03,
             "BS": 81.67
         }
-    }, {
+    },
+    {
         "id": -405,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9003,7 +9713,8 @@ const RareItems = [
             "WW": 86.58,
             "BS": 69.55
         }
-    }, {
+    },
+    {
         "id": -406,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9018,9 +9729,10 @@ const RareItems = [
             "WW": 90.36,
             "BS": 72.4
         }
-    }, {
+    },
+    {
         "id": -407,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Badlands",
@@ -9033,9 +9745,10 @@ const RareItems = [
             "WW": 116.45,
             "BS": 99.25
         }
-    }, {
+    },
+    {
         "id": -408,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "3rd Commando Company",
@@ -9048,9 +9761,10 @@ const RareItems = [
             "WW": 85.11,
             "BS": 64.89
         }
-    }, {
+    },
+    {
         "id": -409,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Spruce DDPAT",
@@ -9063,9 +9777,10 @@ const RareItems = [
             "WW": 109.1,
             "BS": 94.42
         }
-    }, {
+    },
+    {
         "id": -410,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Leather",
@@ -9078,7 +9793,8 @@ const RareItems = [
             "WW": 139.99,
             "BS": 130.55
         }
-    }, {
+    },
+    {
         "id": -411,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9093,9 +9809,10 @@ const RareItems = [
             "WW": 102.52,
             "BS": 75.87
         }
-    }, {
+    },
+    {
         "id": -412,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Diamondback",
@@ -9108,9 +9825,10 @@ const RareItems = [
             "WW": 111.54,
             "BS": 79.14
         }
-    }, {
+    },
+    {
         "id": -413,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Arid",
@@ -9123,9 +9841,10 @@ const RareItems = [
             "WW": 408.46,
             "BS": 287.13
         }
-    }, {
+    },
+    {
         "id": -414,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Bloodhound Gloves",
         "skinName": "Guerrilla",
@@ -9138,9 +9857,10 @@ const RareItems = [
             "WW": 69.21,
             "BS": 73.85
         }
-    }, {
+    },
+    {
         "id": -415,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Lunar Weave",
@@ -9153,9 +9873,10 @@ const RareItems = [
             "WW": 131.09,
             "BS": 88.51
         }
-    }, {
+    },
+    {
         "id": -416,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Field Agent",
@@ -9168,9 +9889,10 @@ const RareItems = [
             "WW": 324.61,
             "BS": 186.3
         }
-    }, {
+    },
+    {
         "id": -417,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Bloodhound Gloves",
         "skinName": "Snakebite",
@@ -9183,7 +9905,8 @@ const RareItems = [
             "WW": 79.78,
             "BS": 71.07
         }
-    }, {
+    },
+    {
         "id": -418,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9198,9 +9921,10 @@ const RareItems = [
             "WW": 176.51,
             "BS": 144.95
         }
-    }, {
+    },
+    {
         "id": -419,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Broken Fang Gloves",
         "skinName": "Yellow-banded",
@@ -9213,9 +9937,10 @@ const RareItems = [
             "WW": 96.28,
             "BS": 71.25
         }
-    }, {
+    },
+    {
         "id": -420,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Bloodhound Gloves",
         "skinName": "Charred",
@@ -9228,9 +9953,10 @@ const RareItems = [
             "WW": 99.88,
             "BS": 88.61
         }
-    }, {
+    },
+    {
         "id": -421,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Eclipse",
@@ -9243,9 +9969,10 @@ const RareItems = [
             "WW": 152.88,
             "BS": 95.12
         }
-    }, {
+    },
+    {
         "id": -422,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Broken Fang Gloves",
         "skinName": "Jade",
@@ -9258,7 +9985,8 @@ const RareItems = [
             "WW": 120.36,
             "BS": 106.38
         }
-    }, {
+    },
+    {
         "id": -423,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9273,9 +10001,10 @@ const RareItems = [
             "WW": 188.69,
             "BS": 128.8
         }
-    }, {
+    },
+    {
         "id": -424,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Rezan the Red",
@@ -9288,7 +10017,8 @@ const RareItems = [
             "WW": 93.77,
             "BS": 76.09
         }
-    }, {
+    },
+    {
         "id": -425,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9303,9 +10033,10 @@ const RareItems = [
             "WW": 207.43,
             "BS": 157.32
         }
-    }, {
+    },
+    {
         "id": -426,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Giraffe",
@@ -9318,9 +10049,10 @@ const RareItems = [
             "WW": 114.24,
             "BS": 89.86
         }
-    }, {
+    },
+    {
         "id": -427,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Boom!",
@@ -9333,9 +10065,10 @@ const RareItems = [
             "WW": 151.23,
             "BS": 85.57
         }
-    }, {
+    },
+    {
         "id": -428,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Queen Jaguar",
@@ -9348,7 +10081,8 @@ const RareItems = [
             "WW": 93.65,
             "BS": 82.02
         }
-    }, {
+    },
+    {
         "id": -429,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9363,7 +10097,8 @@ const RareItems = [
             "WW": 276.86,
             "BS": 175.67
         }
-    }, {
+    },
+    {
         "id": -430,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9378,9 +10113,10 @@ const RareItems = [
             "WW": 224.1,
             "BS": 170.66
         }
-    }, {
+    },
+    {
         "id": -431,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "Slaughter",
@@ -9393,7 +10129,8 @@ const RareItems = [
             "WW": 224.66,
             "BS": 177.01
         }
-    }, {
+    },
+    {
         "id": -432,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9408,9 +10145,10 @@ const RareItems = [
             "WW": 302.3,
             "BS": 224.02
         }
-    }, {
+    },
+    {
         "id": -433,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Lt. Commander",
@@ -9423,7 +10161,8 @@ const RareItems = [
             "WW": 242.8,
             "BS": 162.43
         }
-    }, {
+    },
+    {
         "id": -434,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9438,9 +10177,10 @@ const RareItems = [
             "WW": 444.67,
             "BS": 280.59
         }
-    }, {
+    },
+    {
         "id": -435,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Big Game",
@@ -9453,7 +10193,8 @@ const RareItems = [
             "WW": 321.1,
             "BS": 243.33
         }
-    }, {
+    },
+    {
         "id": -436,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9468,9 +10209,10 @@ const RareItems = [
             "WW": 262.85,
             "BS": 154.98
         }
-    }, {
+    },
+    {
         "id": -437,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Foundation",
@@ -9483,9 +10225,10 @@ const RareItems = [
             "WW": 247.75,
             "BS": 157.14
         }
-    }, {
+    },
+    {
         "id": -438,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Hand Wraps",
         "skinName": "CAUTION!",
@@ -9498,7 +10241,8 @@ const RareItems = [
             "WW": 286.56,
             "BS": 206.4
         }
-    }, {
+    },
+    {
         "id": -439,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9513,9 +10257,10 @@ const RareItems = [
             "WW": 330.5,
             "BS": 176.01
         }
-    }, {
+    },
+    {
         "id": -440,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Smoke Out",
@@ -9528,9 +10273,10 @@ const RareItems = [
             "WW": 199.95,
             "BS": 106.26
         }
-    }, {
+    },
+    {
         "id": -441,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Crimson Weave",
@@ -9543,9 +10289,10 @@ const RareItems = [
             "WW": 353.71,
             "BS": 181.56
         }
-    }, {
+    },
+    {
         "id": -442,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Finish Line",
@@ -9558,9 +10305,10 @@ const RareItems = [
             "WW": 196.01,
             "BS": 115.05
         }
-    }, {
+    },
+    {
         "id": -443,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Scarlet Shamagh",
@@ -9573,7 +10321,8 @@ const RareItems = [
             "WW": 319.07,
             "BS": 218.32
         }
-    }, {
+    },
+    {
         "id": -444,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9588,7 +10337,8 @@ const RareItems = [
             "WW": 455.3,
             "BS": 354.77
         }
-    }, {
+    },
+    {
         "id": -445,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9603,9 +10353,10 @@ const RareItems = [
             "WW": 570.27,
             "BS": 390.88
         }
-    }, {
+    },
+    {
         "id": -446,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Black Tie",
@@ -9618,9 +10369,10 @@ const RareItems = [
             "WW": 209.34,
             "BS": 125.43
         }
-    }, {
+    },
+    {
         "id": -447,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Nocts",
@@ -9633,7 +10385,8 @@ const RareItems = [
             "WW": 282.53,
             "BS": 222.94
         }
-    }, {
+    },
+    {
         "id": -448,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9648,9 +10401,10 @@ const RareItems = [
             "WW": 291.15,
             "BS": 162.06
         }
-    }, {
+    },
+    {
         "id": -449,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Blood Pressure",
@@ -9663,9 +10417,10 @@ const RareItems = [
             "WW": 187.33,
             "BS": 95.2
         }
-    }, {
+    },
+    {
         "id": -450,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Emerald Web",
@@ -9678,9 +10433,10 @@ const RareItems = [
             "WW": 454.28,
             "BS": 290.17
         }
-    }, {
+    },
+    {
         "id": -451,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Spearmint",
@@ -9693,9 +10449,10 @@ const RareItems = [
             "WW": 1134,
             "BS": 308
         }
-    }, {
+    },
+    {
         "id": -452,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Marble Fade",
@@ -9708,7 +10465,8 @@ const RareItems = [
             "WW": 281.01,
             "BS": 162.25
         }
-    }, {
+    },
+    {
         "id": -453,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9723,9 +10481,10 @@ const RareItems = [
             "WW": 753.67,
             "BS": 523.54
         }
-    }, {
+    },
+    {
         "id": -454,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Tiger Strike",
@@ -9738,9 +10497,10 @@ const RareItems = [
             "WW": 493.73,
             "BS": 219.09
         }
-    }, {
+    },
+    {
         "id": -455,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Driver Gloves",
         "skinName": "Snow Leopard",
@@ -9753,9 +10513,10 @@ const RareItems = [
             "WW": 652.62,
             "BS": 516.95
         }
-    }, {
+    },
+    {
         "id": -456,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Pandora's Box",
@@ -9768,9 +10529,10 @@ const RareItems = [
             "WW": 2872,
             "BS": 1026.73
         }
-    }, {
+    },
+    {
         "id": -457,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Superconductor",
@@ -9783,9 +10545,10 @@ const RareItems = [
             "WW": 1363,
             "BS": 674.84
         }
-    }, {
+    },
+    {
         "id": -458,
-        "collectionId": [57,58,61],
+        "collectionId": [57, 58, 61],
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Slingshot",
@@ -9798,9 +10561,10 @@ const RareItems = [
             "WW": 586.32,
             "BS": 320.58
         }
-    }, {
+    },
+    {
         "id": -459,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Sport Gloves",
         "skinName": "Hedge Maze",
@@ -9813,7 +10577,8 @@ const RareItems = [
             "WW": 1337,
             "BS": 543.18
         }
-    }, {
+    },
+    {
         "id": -460,
         "collectionId": [49, 73],
         "type": "weapon",
@@ -9828,9 +10593,10 @@ const RareItems = [
             "WW": 1351.42,
             "BS": 904.87
         }
-    }, {
+    },
+    {
         "id": -461,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Moto Gloves",
         "skinName": "Cool Mint",
@@ -9843,9 +10609,10 @@ const RareItems = [
             "WW": 268,
             "BS": 142.13
         }
-    }, {
+    },
+    {
         "id": -462,
-        "collectionId": [45,47],
+        "collectionId": [45, 47],
         "type": "weapon",
         "weaponName": "★ Specialist Gloves",
         "skinName": "Crimson Kimono",
@@ -9858,7 +10625,5 @@ const RareItems = [
             "WW": 1179,
             "BS": 618.24
         }
-    },
-];
-
-export default RareItems;
+    }
+]

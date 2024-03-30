@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import Context from "../../utils/context";
+import Context from "../../utils/context.js";
 
-import Cases from "./Cases";
-import Casino from "./Casino";
-import Profile from "./Profile";
-import MiddleTab from "../ui/MiddleTab";
-import Statistics from "./Statistics";
+import Cases from "./Cases.js";
+import Casino from "./Casino.js";
+import Profile from "./Profile.js";
+import MiddleTab from "../ui/MiddleTab.js";
+import Statistics from "./Statistics.js";
 
 import "./MiddleContent.css";
 

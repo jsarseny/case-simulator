@@ -13,11 +13,12 @@
 }
 
 .Loader svg {
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
     fill: var(--color-accent);
 }
 
 .Loader span {
     font-weight: 500;
+    letter-spacing: .15rem;
 }

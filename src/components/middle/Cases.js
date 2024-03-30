@@ -1,42 +1,47 @@
 import React, { 
+    Fragment,
     useState,  
     useEffect,
     useContext,
     useCallback, 
 } from "react"; 
 
-import useFlag from "../../hooks/useFlag";
-import useLang from "../../hooks/useLang";
-import Context from "../../utils/context";
-import Currency from "../../utils/currency";
+import useFlag from "../../hooks/useFlag.js";
+import useLang from "../../hooks/useLang.js";
+import Context from "../../utils/context.js";
+import Currency from "../../utils/currency.js";
 import AudioManager from "../../utils/audio.js";
-import buildClassName from "../../utils/buildClassName";
-import renderInventory from "./helpers/renderInventory";
-import Collections, { getCollectionById } from "../../models/collections";
+import buildClassName from "../../utils/buildClassName.js";
+import renderInventory from "./helpers/renderInventory.js";
+import Models, { getCollectionById } from "../../models/index.js";
 
-import { upperFirst } from "../ui/ItemPage";
+import { upperFirst } from "../ui/ItemPage.js";
 
 import { 
     randomFloat,
+    CASE_CHANCES,
     mathContainer, 
     selectRareItem, 
     mathCollection,
-    RARITY_PRIORITY
-} from "../../utils/chance";
+    RARITY_PRIORITY,
+    COLLECTION_CHANCES
+} from "../../utils/chance.js";
 
 import { 
     sellItem, 
     insertItem, 
     statistics, 
-} from "./helpers/transactions";
+} from "./helpers/transactions.js";
 
 import { 
     getItemImageUrl, 
     getCollectionItems
-} from "../../models/weapons";
+} from "../../models/index.js";
 
-import Button from "../ui/Button";
-import Item, { ItemList } from "../ui/Item";
+import Modal from "../ui/Modal.js";
+import Ripple from "../ui/Ripple.js";
+import Button from "../ui/Button.js";
+import Item, { ItemList } from "../ui/Item.js";
 
 import "./Cases.css";
 
@@ -96,11 +101,15 @@ const CaseItem = ({ className, item }) => {
 
 const Cases = () => {
     const { GlobalState, setGlobalState, DeepLink } = useContext(Context);
-    const [ collectionFilter, setCollectionFilter ] = useState("case");
 
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
 
+    const [ selectedItem, setSelectedItem ] = useState(null);
+    const [ collectionFilter, setCollectionFilter ] = useState(GlobalState.favoritesId.length > 0 ? "favorites" : "case");
+
+    const [ isItemModal, openItemModal, closeItemModal ] = useFlag(false);
     const [ isOptimized, enableOptimization, disableOptimization ] = useFlag(false);
+
     const [ state, setState ] = useState({
         currentItem: null,
         droppedItem: null,
@@ -136,7 +145,7 @@ const Cases = () => {
         const from = getCollectionById(bestDrop.from);
 
         return { item, from }
-    }, [GlobalState]);
+    }, [GlobalState.bestDrop]);
 
     const compareWithBest = useCallback((item, collectionId) => {
         const { bestDrop } = GlobalState;
@@ -153,11 +162,33 @@ const Cases = () => {
         }));
     }, [GlobalState, setGlobalState]);
 
+    const handleItemSelect = item => {
+        if (item.rarity == "gold") return;
+
+        setSelectedItem(item);
+        openItemModal();
+    }
+
+    const toggleFavoriteCase = item => {
+        setGlobalState(prev => {
+            if (prev.favoritesId.includes(item.id)) {
+                var index = prev.favoritesId.indexOf(item.id);
+                prev.favoritesId.splice(index, 1);
+            } else {
+                prev.favoritesId.push(item.id);
+            }
+    
+            return {
+                ...prev,
+                favoritesId: [...prev.favoritesId]
+            };
+        });
+    }
+
     const handleCaseChoose = item => {
         if (item && item !== state.currentItem) {
-            AudioManager.playAudio(GlobalState, "./assets/mp3/case-drop.mp3", 0.05);
+            AudioManager.playAudio(GlobalState, "./assets/mp3/case-drop.mp3", 0.15);
         }
-       
 
         setState(prev => ({
             ...prev,
@@ -236,15 +267,13 @@ const Cases = () => {
 
             frames += 1;
             let isUsed = false;
+
             items.forEach((item, i) => {
                 if (isUsed) return;
 
                 var itemBox = item.getBoundingClientRect();
 
-                if (
-                    itemBox.x <= caretBox.x 
-                    && !usedIds.includes(i)
-                ) {
+                if (itemBox.x <= caretBox.x && !usedIds.includes(i)) {
                     usedIds.push(i);
                     isUsed = true;
 
@@ -261,6 +290,12 @@ const Cases = () => {
 
         return { stopAudio }
     }
+
+    useEffect(() => {
+        if (GlobalState.favoritesId.length < 1 && collectionFilter == "favorites") {
+            setCollectionFilter("case");
+        }
+    }, [GlobalState.favoritesId]);
 
     useEffect(() => {
         DeepLink.addEventListener("cs:/cases/focus", context => {
@@ -280,7 +315,6 @@ const Cases = () => {
     }, [state.currentItem]);
 
     useEffect(() => {
-
         const currentOpen = state.currentOpen;
 
         if (!currentOpen.open) return;
@@ -323,10 +357,69 @@ const Cases = () => {
         }, ROLL_TIME + 150);
     }, [state.currentOpen]);
 
+    const renderItemModal = () => {
+        const item = selectedItem;
+
+        const priceMin = Math.min(...Object.values(item.prices));
+        const priceMax = Math.max(...Object.values(item.prices));
+
+        const collection = getCollectionById(item.collectionId);
+        const collectionItems = getCollectionItems(collection.id);
+
+        const chanceBase = (collection.type === "case" ? CASE_CHANCES : COLLECTION_CHANCES)[item.rarity];
+        const chanceReal = chanceBase / collectionItems.filter(_item => _item.rarity == item.rarity).length;
+
+        const handleFocusInShop = (cid, itemId) => {
+            DeepLink.emitEvent(`cs:/casino/focusTab?tabId=shop`);
+
+            setTimeout(() => {
+                DeepLink.emitEvent(`cs:/casino/shop/focus?cid=${cid}&itemId=${itemId}`);
+            }, 200);
+        }
+
+        return <Modal
+            title={`${item.weaponName} | ${item.skinName}`}
+            className={buildClassName("item-info-modal", "RarityShade", item.rarity)}
+            onCancel={() => closeItemModal()}
+            actions={[{
+                children: lang.profile.findInShop,
+                disabled: Array.isArray(item.collectionId) || item.rarity == "gold",
+                onClick: () => handleFocusInShop(item.collectionId, item.id)
+            }, {
+                children: lang.common.cancel
+            }]}
+        >
+            <Item 
+                ripple={false}
+                shouldQuality={false}
+                shouldRecent={false}
+                shouldPrice={false}
+                shouldInfo={false}
+                item={item}
+            />
+
+            <div className="item-detailed-info">
+                <div className="detailed-line">
+                    <span>{lang.common.price}:</span>
+                    <span>
+                        {Currency.renderPrice(GlobalState, priceMin)} - {Currency.renderPrice(GlobalState, priceMax)}
+                    </span>
+                </div>
+                <div className="detailed-line">
+                    <span>Drop chance:</span>
+                    <span>
+                        {parseFloat(chanceReal.toFixed(5))}%
+                    </span>
+                </div>
+            </div>
+        </Modal>
+    }
+
     const renderPreview = () => {
         if (!state.currentItem) return <span className="choose-case">Choose the case you want to open</span>
 
         const item = state.currentItem;
+        const isFavorite = GlobalState.favoritesId.includes(item.id);
 
         if (state.droppedItem) {
             let { droppedItem } = state;
@@ -340,7 +433,7 @@ const Cases = () => {
                     <div className="item-info">
                         <span className="action-line">{skinName} ({droppedItem.quality})</span>
                         <span className="action-line">
-                            <Button onClick={() => handleConfirmItem(droppedItem)}>OK</Button>
+                            <Button onClick={() => handleConfirmItem(droppedItem)}>{lang.common.ok}</Button>
                             <Button onClick={() => handleItemSell(droppedItem)} negative>{lang.common.sell}</Button>
                         </span>
                     </div>
@@ -365,8 +458,16 @@ const Cases = () => {
             );
         }
 
-        return (
-            <div className="current-case-info">
+        return <Fragment>
+            <div className="current-case-actions">
+                <div className={buildClassName("case-action ripple favorite", isFavorite && "active")} onClick={() => toggleFavoriteCase(item)}>
+                    <i className="uil uil-star" />
+                    {isFavorite ? "In Favorites" : "Add to Favorites"}
+                    <Ripple />
+                </div>
+            </div>
+
+            <div className="current-case-main">
                 <div 
                     className="image" 
                     title="Click to change case"
@@ -385,51 +486,65 @@ const Cases = () => {
                     </span>
                 </div>
             </div>
-        );
+        </Fragment>
     }
 
     const renderList = () => {
-        const bestDrop = getBestDrop();
+        if (!state.currentItem) {
+            if (isOptimized) return;
 
-        if (!state.currentItem) return <>
-            {bestDrop && (
-                <div className="best-drop">
-                    <div className="item-container">
-                        <Item 
-                            item={bestDrop.item}
-                            ripple={false}
-                            onClick={() => handleCaseChoose(bestDrop.from)}
+            let bestDrop = getBestDrop();
+            let items;
+
+            if (collectionFilter == "favorites"){
+                items = Models.Collections.filter(item => GlobalState.favoritesId.includes(item.id));
+            } else items = Models.Collections.filter(item => item.type === collectionFilter);
+
+            return <Fragment>
+                {bestDrop && (
+                    <div className="best-drop">
+                        <div className="item-container">
+                            <Item 
+                                item={bestDrop.item}
+                                ripple={false}
+                                onClick={() => handleCaseChoose(bestDrop.from)}
+                            />
+                        </div>
+                        <div className="item-info">
+                            <span>{lang.cases.bestDrop}</span>
+                            <span>{lang.common.from}: <span className="link" onClick={() => handleCaseChoose(bestDrop.from)}>«{bestDrop.from.fullName}»</span></span>
+                        </div>
+                    </div>
+                )}
+
+                <div className="current-list collections-list">
+                    <div className="tab-list">
+                        {GlobalState.favoritesId.length > 0 && <span 
+                            children="Favorites"
+                            onMouseDown={() => setCollectionFilter("favorites")}
+                            className={buildClassName(collectionFilter === "favorites" && "active")}
+                        />}
+                        <span 
+                            children={lang.cases.cases}
+                            onMouseDown={() => setCollectionFilter("case")}
+                            className={buildClassName(collectionFilter === "case" && "active")}
+                        />
+                        <span 
+                            children={lang.cases.special}
+                            onMouseDown={() => setCollectionFilter("collection")}
+                            className={buildClassName(collectionFilter === "collection" && "active")}
                         />
                     </div>
-                    <div className="item-info">
-                        <span>{lang.cases.bestDrop}</span>
-                        <span>{lang.common.from}: <span className="link" onClick={() => handleCaseChoose(bestDrop.from)}>«{bestDrop.from.fullName}»</span></span>
-                    </div>
-                </div>
-            )}
 
-            <div className="current-list collections-list">
-                <div className="tab-list">
-                    <span 
-                        children={lang.cases.cases}
-                        onMouseDown={() => setCollectionFilter("case")}
-                        className={buildClassName(collectionFilter === "case" && "active")}
-                    />
-                    <span 
-                        children={lang.cases.special}
-                        onMouseDown={() => setCollectionFilter("collection")}
-                        className={buildClassName(collectionFilter === "collection" && "active")}
+                    <ItemList
+                        items={items}
+                        className="custom-scroll"
+                        shouldPrice={false}
+                        onClick={handleCaseChoose}
                     />
                 </div>
-
-                <ItemList
-                    items={Collections.filter(item => item.type === collectionFilter)}
-                    className="custom-scroll"
-                    shouldPrice={false}
-                    onClick={handleCaseChoose}
-                />
-            </div>
-        </>;
+            </Fragment>
+        }
 
         const current = state.currentItem;
         const items = sortItems(getCollectionItems(current.id).reverse());
@@ -437,10 +552,11 @@ const Cases = () => {
         return (
             <div className="current-list case-contains custom-scroll">
                 <ItemList 
+                    ripple
                     items={items}
                     shouldPrice={false}
                     shouldQuality={false}
-                    ripple={false}
+                    onClick={handleItemSelect}
                 />
             </div>
         );
@@ -456,6 +572,8 @@ const Cases = () => {
                 )}
 
                 {renderList()}
+
+                {isItemModal && renderItemModal()}
             </div>
         </div>
     );

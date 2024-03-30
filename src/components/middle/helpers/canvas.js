@@ -1,4 +1,4 @@
-import { randomElement, randomFloat, randomInt } from "../../../utils/chance";
+import { randomElement, randomFloat, randomInt } from "../../../utils/chance.js";
 
 const initial = canvas => {
     const ctx = canvas.getContext("2d");

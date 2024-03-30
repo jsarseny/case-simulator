@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import buildClassName from "../../utils/buildClassName";
+import buildClassName from "../../utils/buildClassName.js";
 
 import "./Radio.css";
 

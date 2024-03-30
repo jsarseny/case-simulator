@@ -1,14 +1,18 @@
 import React, { 
     useState, 
+    useEffect,
     useLayoutEffect
 } from "react";
 
-import Context from "../utils/context";
-import StoredMainContext from "../utils/store";
+import useFlag from "../hooks/useFlag.js";
+import Context from "../utils/context.js";
+import StoredMainContext from "../utils/store.js";
+import { downloadModelResources } from "../models/index.js";
 
-import Menu from "./ui/Menu";
-import Modal from "./ui/Modal";
-import MiddleContent from "./middle/MiddleContent";
+import Menu from "./ui/Menu.js";
+import Modal from "./ui/Modal.js";
+import Loader from "./ui/Loader.js";
+import MiddleContent from "./middle/MiddleContent.js";
 
 const ReleaseNotesModal = ({ globalState, globalDispatch }) => {
     const handleClose = () => {
@@ -26,13 +30,13 @@ const ReleaseNotesModal = ({ globalState, globalDispatch }) => {
         actions={[{ children: "Great!" }]}
     >
         <ul>
-            <li><b>New Mode - CRASH!</b></li>
-            <li><b>Completely new CRAFTS!</b></li>
-            <li>Now you can set a Profile Picture!</li>
-            <li>New Profile design!</li>
-            <li>Craft chances are now extremely realistic</li>            
-            <li>Gloves now Extraordinary</li>            
-            <li>Really a lot of various layout improvements ;)</li>
+            <li>Kilowatt case is available now!</li>
+            <li>Adding cases to favorites</li>
+            <li>New color interface design</li>
+            <li>You can now check out the drop chance of an item on the case page</li>
+            <li>Crash bug fixes</li>            
+            <li>Optimization improvements</li>
+            <li>Lot of various layout improvements</li>
         </ul>
 
         <b>GL HF!</b>
@@ -94,10 +98,21 @@ const Main = () => {
     ] = useState(StoredMainContext);
 
     const [ modals, setModals ] = useState([]);
+    const [ isLoading, openLoader, closeLoader ] = useFlag(true);
 
     useLayoutEffect(() => {
         localStorage.setItem("cs-csgo-store", JSON.stringify(GlobalState));
     }, [ GlobalState ]);
+
+    useEffect(() => {
+        const fetchResources = async () => {
+            const resources = await downloadModelResources();
+
+            closeLoader();
+        }
+
+        fetchResources();
+    }, []);
 
     const createModal = modal => {
         setModals(prev => {
@@ -115,6 +130,10 @@ const Main = () => {
 
             return prev;
         });
+    }
+
+    if (isLoading) {
+        return <Loader subtitle="Install Resources" />
     }
 
     return (

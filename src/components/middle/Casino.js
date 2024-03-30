@@ -1,32 +1,43 @@
 import React, { 
     useState, 
     useEffect, 
-    useContext
+    useContext,
+    useMemo
 } from "react";
 
-import Context from "../../utils/context";
-import useLang from "../../hooks/useLang";
-import Weapons, { getItemImageUrl } from "../../models/weapons";
+import Context from "../../utils/context.js";
+import useLang from "../../hooks/useLang.js";
+import Models, { getItemImageUrl } from "../../models/index.js";
 
 import {
     WeaponTypes, 
     randomElement, 
     RARITY_PRIORITY,
-} from "../../utils/chance";
+} from "../../utils/chance.js";
 
-import Shop from "./casino/Shop";
-import Crash from "./casino/Crash";
-import Craft from "./casino/Craft";
-import Ripple from "../ui/Ripple";
-import Upgrader from "./casino/Upgrader";
-import Roulette from "./casino/Roulette";
-import Contracts from "./casino/Contracts";
+import Shop from "./casino/Shop.js";
+import Crash from "./casino/Crash.js";
+import Craft from "./casino/Craft.js";
+import Ripple from "../ui/Ripple.js";
+import Upgrader from "./casino/Upgrader.js";
+import Roulette from "./casino/Roulette.js";
+import Contracts from "./casino/Contracts.js";
 
 import "./Casino.css";
 
+const getRandomImageByType = type => {
+    var items = Models.Weapons.filter(item => {
+        return RARITY_PRIORITY[item.rarity] > 3 && RARITY_PRIORITY[item.rarity] < 6;
+    }).filter(item => {
+        return WeaponTypes[type].includes(item.weaponName.toLowerCase())
+    });
+
+    return getItemImageUrl(randomElement(items));
+}
+
 const Casino = () => {
-    const { GlobalState, DeepLink } = useContext(Context);
-    const lang = useLang(GlobalState);
+    const { GlobalState, setGlobalState, DeepLink } = useContext(Context);
+    const lang = useLang(GlobalState, setGlobalState);
 
     const [ activePage, setActivePage ] = useState(null);
 
@@ -47,21 +58,9 @@ const Casino = () => {
             DeepLink.emitEvent("cs:/global/focusTab?id=2");
         });
     }, [DeepLink]);
-
-    const availableItems = Weapons.filter(item => {
-        return RARITY_PRIORITY[item.rarity] > 3 && RARITY_PRIORITY[item.rarity] < 6;
-    });
-
-    const getRandomImageByType = type => {
-        var items = availableItems.filter(item => {
-            return WeaponTypes[type].includes(item.weaponName.toLowerCase())
-        });
-
-        return getItemImageUrl(randomElement(items));
-    }
-
-    const RifleImage = getRandomImageByType("Rifles");
-    const SniperRifleImage = getRandomImageByType("SniperRifles");
+    
+    const RifleImage = useMemo(() => getRandomImageByType("Rifles"), []);
+    const SniperRifleImage = useMemo(() => getRandomImageByType("SniperRifles"), []);
 
     const renderContent = () => {
         if (!activePage) return <>

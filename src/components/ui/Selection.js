@@ -1,5 +1,5 @@
 import React from "react";
-import buildClassName from "../../utils/buildClassName";
+import buildClassName from "../../utils/buildClassName.js";
 
 import "./Selection.css";
 

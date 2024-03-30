@@ -4,15 +4,15 @@ import React, {
     useContext
 } from "react";
 
-import useFlag from "../../hooks/useFlag"
-import Currency from "../../utils/currency";
-import useLang, { LangModels } from "../../hooks/useLang";
+import useFlag from "../../hooks/useFlag.js"
+import Currency from "../../utils/currency.js";
+import useLang, { LangModels } from "../../hooks/useLang.js";
 
-import Modal from "./Modal";
-import Ripple from "./Ripple";
-import Dropdown from "./Dropdown";
-import Context from "../../utils/context";
-import buildClassName from "../../utils/buildClassName";
+import Modal from "./Modal.js";
+import Ripple from "./Ripple.js";
+import Dropdown from "./Dropdown.js";
+import Context from "../../utils/context.js";
+import buildClassName from "../../utils/buildClassName.js";
 
 import "./Menu.css";
 
@@ -21,7 +21,7 @@ const tabs = [ "cases", "profile", "casino", "statistics" ];
 const Menu = () => {
     const { GlobalState, setGlobalState, DeepLink } = useContext(Context);
 
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
 
     const [ isSettingsOpen, openSettings, closeSettings ] = useFlag(false);
     const [ masterVolume, setMasterVolume ] = useState(GlobalState.settings.masterVolume * 100);
@@ -32,7 +32,6 @@ const Menu = () => {
         tabs.forEach((tab, i) => {
             let enable = Number(id !== i);
 
-            //if (tab === "profile") console.log(tab, i, enable)
             DeepLink.emitEvent(`cs:/global/optimizationRequest?target=${tab}&enable=${enable}`);
         });
     }
@@ -190,6 +189,10 @@ const Menu = () => {
                         step="1" 
                     /> %
                 </div>  
+            </div>
+            <div className="settings-footer">
+                <div className="footer-row">cs-csgo dist v{GlobalState.version}</div>
+                <div className="footer-row">Open source on&nbsp;<a className="link" href="https://github.com/jsarseny/case-simulator" target="_blank">GitHub</a></div>
             </div>
         </Modal>
     }

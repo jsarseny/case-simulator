@@ -12,13 +12,13 @@ import buildClassName from "../../../utils/buildClassName.js";
 import renderInventory from "../helpers/renderInventory.js";
 import canvasAnimations from "../helpers/canvas.js";
 
-import { getItemImageUrl } from "../../../models/weapons.js";
+import { getItemImageUrl } from "../../../models/index.js";
 
 import { 
     deleteItem, 
     insertItem, 
     statistics 
-} from "../helpers/transactions";
+} from "../helpers/transactions.js";
 
 import { 
     shuffle,
@@ -89,7 +89,7 @@ const contractRetractionAnimation = (elements, spinner) => {
 const Contracts = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
 
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
     const containerRef = useRef(null);
 
     const [ state, setState ] = useState({

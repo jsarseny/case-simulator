@@ -1,0 +1,12 @@
+.Highlight {
+    display: inline;
+}
+
+.Highlight .highlight {
+    display: inline;
+    background-color: rgba(var(--rgb-accent-color), .65);
+    padding: 0 .1rem;
+    border-radius: .25rem;
+    color: #fff;
+    font-weight: 500;
+}

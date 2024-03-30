@@ -164,6 +164,8 @@ export default {
         previousPage: "Previous Page",
         nextPage: "Next Page",
         openFilters: "Open Filters",
+        nothingFound: "There is nothing here yet!",
+        resetFilters: "Reset filters"
     },
 
     modals: {

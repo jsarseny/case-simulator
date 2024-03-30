@@ -4,7 +4,7 @@ import React, {
     useCallback
 } from "react";
 
-import { debounce } from "../../utils/schedulers";
+import { debounce } from "../../utils/schedulers.js";
 
 import "./Ripple.css";
 

@@ -107,7 +107,7 @@ const getInitialExtended = () => ({
 const Roulette = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
     
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
     const currencyModel = Currency.models[GlobalState.settings.currency];
 
     const [ state, setState ] = useState(getInitialExtended());

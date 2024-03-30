@@ -1,5 +1,4 @@
-import RareItems from "../models/rare";
-import Weapons, { getCollectionItems } from "../models/weapons";
+import Models, { getCollectionItems } from "../models/index.js";
 
 // sort helpers
 export const shuffle = array => array.sort(() => Math.random() - 0.5);
@@ -48,7 +47,7 @@ export const WeaponTypes = {
         "paracord knife", "nomad knife", "survival knife",
         "huntsman knife", "flip knife", "bowie knife",
         "falchion knife", "gut knife", "navaja knife",
-        "shadow daggers"
+        "shadow daggers", "kukri knife"
     ],
 }
 
@@ -101,7 +100,7 @@ export const getRarity = number => {
     return quality;
 }
 
-const CASE_CHANCES = {
+export const CASE_CHANCES = {
     "gold": 0.25575,
     "covert": 0.63939,
     "classified": 3.19693,
@@ -111,7 +110,7 @@ const CASE_CHANCES = {
 
 const STATTRACK_CHANCE = 4;
 
-const COLLECTION_CHANCES = {
+export const COLLECTION_CHANCES = {
     "covert": 0.42,
     "classified": 1.35,
     "restricted": 2.14,
@@ -136,7 +135,7 @@ export const getLimitContainerRarities = containerId => {
 }
 
 export const selectRareItem = collectionId => {
-    const available = RareItems.filter(rare => {
+    const available = Models.Extraordinary.filter(rare => {
         if (Array.isArray(rare.collectionId)) {
             return rare.collectionId.includes(
                 Number(collectionId)
@@ -169,13 +168,13 @@ export const mathContainer = containerId => {
     const containerRarities = getLimitContainerRarities(containerId);
 
     var droppedRarity = null;
+    var resultQuality = null;
 
     Object.keys(chances).forEach(rarity => {
-        if (
-            droppedRarity
-            || !containerRarities.includes(rarity)
-        ) return;
-
+        if (droppedRarity || !containerRarities.includes(rarity)) {
+            return;
+        }
+        
         let percent = chances[rarity];
         if (chance(percent)) droppedRarity = rarity;
     });
@@ -191,10 +190,11 @@ export const mathContainer = containerId => {
     const StatTrack = qualityList.filter(quality => /ST$/ig.test(quality));
     const Basic = qualityList.filter(quality => !/ST$/ig.test(quality));
 
-    var resultQuality = null;
     if (!!StatTrack.length && chance(STATTRACK_CHANCE)) {
         resultQuality = randomElement(StatTrack);
-    } else resultQuality = randomElement(Basic);
+    } else {
+        resultQuality = randomElement(Basic);
+    }
 
     return {
         ...resultItemModel,
@@ -289,7 +289,7 @@ export const mathContract = (items, isStatTrack) => {
         if (resultItemModel) return;
 
         if (randomNumber >= outcome.min && randomNumber < outcome.max) {
-            resultItemModel = Weapons.find(weapon => weapon.id === outcome.id);
+            resultItemModel = Models.Weapons.find(weapon => weapon.id === outcome.id);
         }
     });
 
@@ -319,21 +319,20 @@ export const getPriceRangeItems = (
         max: item.price * (multiplier + deviation.max)
     }
 
-    const all = Weapons.concat(RareItems);
-
     const result = [];
+    const all = Models.Weapons.concat(Models.Extraordinary);
 
-    all.forEach(item_ => {
-        if (!item_.prices) return;
+    all.forEach(current => {
+        if (!current.prices) return;
 
-        Object.keys(item_.prices).forEach(quality => {
-            var price = item_.prices[quality];
+        Object.keys(current.prices).forEach(quality => {
+            var price = current.prices[quality];
 
-            if (item_.id === item.id && quality === item.quality) return;
+            if (current.id === item.id && quality === item.quality) return;
 
             if (price >= range.min && price <= range.max) {
                 let minimal = {}
-                Object.assign(minimal, item_);
+                Object.assign(minimal, current);
 
                 delete minimal.prices;
 

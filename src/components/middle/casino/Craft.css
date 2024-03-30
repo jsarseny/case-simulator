@@ -236,7 +236,6 @@
     border-bottom: 1px solid rgba(255,255,255, 0.05);
     padding: 0.25rem 0.25rem 0.25rem 0;
 }
-
 .Modal.craft-help-modal .outcomes .item-row:last-child {
     border-color: transparent;
 }

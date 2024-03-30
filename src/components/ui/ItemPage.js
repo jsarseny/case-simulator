@@ -4,24 +4,25 @@ import React, {
     useContext 
 } from "react";
 
-import useLang from "../../hooks/useLang";
-import useFlag from "../../hooks/useFlag";
-import Context from "../../utils/context";
-import buildClassName from "../../utils/buildClassName";
+import useLang from "../../hooks/useLang.js";
+import useFlag from "../../hooks/useFlag.js";
+import Context from "../../utils/context.js";
+import buildClassName from "../../utils/buildClassName.js";
 
-import { getSortedStorages } from "../middle/Profile";
-import { StorageVirtualModel } from "../../models/weapons";
-import { filterInventory, searchInventory } from "../middle/helpers/renderInventory";
+import { getSortedStorages } from "../middle/Profile.js";
+import { StorageVirtualModel } from "../../models/index.js";
+import { filterInventory, searchInventory } from "../middle/helpers/renderInventory.js";
 
 import { 
     WeaponTypes, 
     WeaponQuality, 
     RARITY_PRIORITY
-} from "../../utils/chance";
+} from "../../utils/chance.js";
 
-import Item from "./Item";
-import Ripple from "./Ripple";
-import Dropdown from "./Dropdown";
+import Item from "./Item.js";
+import Button from "./Button.js";
+import Ripple from "./Ripple.js";
+import Dropdown from "./Dropdown.js";
 
 import "./ItemPage.css";
 
@@ -30,6 +31,12 @@ export const upperFirst = string => string[0].toUpperCase() + string.slice(1);
 const PAGE_ROWS = 4;
 const PAGE_COLUMNS = 4;
 const ITEMS_IN_PAGE = PAGE_ROWS * PAGE_COLUMNS;
+const INITIAL_FILTERS = {
+    query: "",
+    quality: null,
+    rarity: null,
+    weaponType: null
+}
 
 const ItemPage = ({
     items,
@@ -51,9 +58,9 @@ const ItemPage = ({
         }],
     },
 }) => {
-    const { GlobalState } = useContext(Context);
+    const { GlobalState, setGlobalState } = useContext(Context);
 
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
 
     const [ currentStorage, setCurrentStorage ] = useState(null);
     const [ isFiltersOpen, openFilters, closeFilters ] = useFlag(false);
@@ -62,12 +69,7 @@ const ItemPage = ({
         pages: [],
         currentPage: 0,
         storagePrice: 0,
-        filters: {
-            query: "",
-            quality: null,
-            rarity: null,
-            weaponType: null
-        }
+        filters: INITIAL_FILTERS
     });
 
     const [ selectedIds, setSelectedIds ] = useState([]);
@@ -141,6 +143,11 @@ const ItemPage = ({
             currentPage: value,
         }));
     }
+
+    const resetFilters = () => setState(prev => ({
+        ...prev,
+        filters: INITIAL_FILTERS
+    }));
 
     const handleFilterChange = (value, name) => {
         if (/^<all>$/ig.test(value)) value = null;
@@ -306,6 +313,18 @@ const ItemPage = ({
 
     if (!shouldRender) return;
 
+    const EmptyPage = () => {
+        return (
+            <div className="empty-page">
+                {lang.ItemPage.nothingFound}
+
+                <Button onClick={resetFilters} color="secondary" ripple>
+                    {lang.ItemPage.resetFilters}
+                </Button>
+            </div>
+        );
+    }
+
     return (
         <div className={fullClassName}>
             <div className="interactive-header">
@@ -364,6 +383,7 @@ const ItemPage = ({
                             item={item}
                             ripple={false}
                             onClick={handleStorageSelect}
+                            highlight={state.filters.query}
                         />
                     }
 
@@ -374,12 +394,13 @@ const ItemPage = ({
                             onClick={clickHandler}
                             onContextMenu={onContextMenu}
                             ripple={ripple}
+                            highlight={state.filters.query}
                             selected={selectedIds.includes(item.uid)}
                             shouldPrice
                             shouldQuality
                         />
                     );
-                }) : <div className="empty-page">There is nothing here yet!</div>}
+                }) : <EmptyPage />}
             </div>
 
             <div className="control">

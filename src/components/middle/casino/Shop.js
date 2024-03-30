@@ -1,15 +1,22 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { 
+    useState, 
+    useEffect, 
+    useContext 
+} from "react";
 
 import useLang from "../../../hooks/useLang.js";
 import Context from "../../../utils/context.js";
 import Currency from "../../../utils/currency.js";
 import buildClassName from "../../../utils/buildClassName.js";
-import Collections, { getCollectionById } from "../../../models/collections.js";
+
+import Models, { 
+    getCollectionById, 
+    getCollectionItems 
+} from "../../../models/index.js";
 
 import { buyItem } from "../helpers/transactions.js";
 import { sortItems } from "../Cases.js";
 import { getItemModelById } from "../helpers/renderInventory.js";
-import { getCollectionItems } from "../../../models/weapons.js";
 import { WeaponQualityExtended } from "../../../utils/chance.js";
 
 import Modal from "../../ui/Modal.js";
@@ -26,7 +33,7 @@ const convertPrice = price => Number.parseFloat((price * BUY_MARKUP).toFixed(2))
 const Shop = () => {
     const { GlobalState, setGlobalState, DeepLink } = useContext(Context);
 
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
 
     const [ state, setState ] = useState({
         count: 1,
@@ -153,6 +160,7 @@ const Shop = () => {
                 <Item 
                     ripple={false}
                     shouldPrice={false}
+                    shouldInfo={false}
                     shouldQuality={false}
                     onClick={() => void 0}
                     item={state.selected}
@@ -185,7 +193,7 @@ const Shop = () => {
 
                     <div className="current-list collections-list">
                         <ItemList
-                            items={Collections}
+                            items={Models.Collections}
                             className="custom-scroll"
                             shouldPrice={false}
                             onClick={handleCollectionSelect}

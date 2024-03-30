@@ -1,7 +1,7 @@
 import React, {  useRef, useState} from "react";
 
-import useClickAway from "../../hooks/useClickAway";
-import buildClassName from "../../utils/buildClassName";
+import useClickAway from "../../hooks/useClickAway.js";
+import buildClassName from "../../utils/buildClassName.js";
 
 import "./Dropdown.css";
 

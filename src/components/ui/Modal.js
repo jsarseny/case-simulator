@@ -1,13 +1,13 @@
 import ReactDOM from "react-dom";
 import React, { useEffect, useRef } from "react";
 
-import useClickAway from "../../hooks/useClickAway";
-import buildClassName from "../../utils/buildClassName";
-import keyboardListeners from "../../utils/keyboardListeners";
+import useClickAway from "../../hooks/useClickAway.js";
+import buildClassName from "../../utils/buildClassName.js";
+import keyboardListeners from "../../utils/keyboardListeners.js";
 
-import { debounce } from "../../utils/schedulers";
+import { debounce } from "../../utils/schedulers.js";
 
-import Button from "./Button";
+import Button from "./Button.js";
 
 import "./Modal.css";
 
@@ -67,7 +67,7 @@ const Modal = ({
                     <span>{title}</span>
                 </div>
                 <div className="subtitle">{children}</div>
-                <div className="actions">
+                {actions.length > 0 && <div className="actions">
                     {actions.map((action, i) => (
                         <Button 
                             color="secondary" 
@@ -80,7 +80,7 @@ const Modal = ({
                             }} 
                         />
                     ))}
-                </div>
+                </div>}
             </div>
         </div>
     ), portals);

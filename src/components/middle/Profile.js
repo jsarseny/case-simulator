@@ -9,41 +9,40 @@ import {
     del, get, set
 } from "idb-keyval";
 
-import useFlag from "../../hooks/useFlag";
-import Context from "../../utils/context";
-import Currency from "../../utils/currency";
-import buildClassName from "../../utils/buildClassName";
-import renderInventory, { getItemsPrice } from "./helpers/renderInventory";
+import useFlag from "../../hooks/useFlag.js";
+import Context from "../../utils/context.js";
+import Currency from "../../utils/currency.js";
+import buildClassName from "../../utils/buildClassName.js";
+import renderInventory, { getItemsPrice } from "./helpers/renderInventory.js";
 
-import { getItemOrigin } from "../../utils/chance";
-import { getCollectionById } from "../../models/collections";
-import { StorageVirtualModel } from "../../models/weapons";
+import { getItemOrigin } from "../../utils/chance.js";
+import { getCollectionById, StorageVirtualModel } from "../../models/index.js";
 
 import useLang, { 
     numeral,
     interactiveLangRender
-} from "../../hooks/useLang";
+} from "../../hooks/useLang.js";
 
 import { 
     sellItem, 
     generateUid, 
     withdrawBalance 
-} from "./helpers/transactions";
+} from "./helpers/transactions.js";
 
 import { 
     isItemOnShowcase,
     selectToShowcase, 
     removeFromShowcase,
     deleteFromShowcase, 
-    canSelectToShowCase
-} from "./helpers/showcase";
+    selectShowcaseType
+} from "./helpers/showcase.js";
 
-import Modal from "../ui/Modal";
-import Ripple from "../ui/Ripple";
-import Button from "../ui/Button";
-import Dropdown from "../ui/Dropdown";
-import Item, { ShowcaseItem } from "../ui/Item";
-import ItemPage, { upperFirst } from "../ui/ItemPage";
+import Modal from "../ui/Modal.js";
+import Ripple from "../ui/Ripple.js";
+import Button from "../ui/Button.js";
+import Dropdown from "../ui/Dropdown.js";
+import Item, { ShowcaseItem } from "../ui/Item.js";
+import ItemPage, { upperFirst } from "../ui/ItemPage.js";
 
 import "./Profile.css";
 
@@ -59,14 +58,13 @@ export const getSortedStorages = storages => {
 const Profile = () => {
     const { GlobalState, setGlobalState, DeepLink } = useContext(Context);
 
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
 
     const [ price, setPrice ] = useState(0);
     const [ inventory, setInventory ] = useState([]);
 
     const [ isImageModal, openImageModal, closeImageModal ] = useFlag(false);
     const [ isOptimized, enableOptimization, disableOptimization ] = useFlag(false);
-
 
     const [ profileTab, setProfileTab ] = useState(0);
     const [ itemsForSell, setItemsForSell ] = useState([]);
@@ -545,6 +543,7 @@ const Profile = () => {
         var sortedStorages = getSortedStorages(storages);
         const StorageOptions = [{ label: "<None>", value: "<None>" }, ...sortedStorages.map(s => ({ label: s.skinName, value: s.skinName }))];
         var StorageActive = 0;
+
         sortedStorages.forEach(storage => {
             if (storage.uid === storageId) StorageActive = StorageOptions.findIndex(value => value.label === storage.skinName);
         });
@@ -562,7 +561,7 @@ const Profile = () => {
                 DeepLink.emitEvent(`cs:/casino/shop/focus?cid=${cid}&itemId=${itemId}`);
             }, 200);
         }
-
+        
         const handleSelectSame = () => {
             setSelectedItem(null);
             setSelectedItems(renderInventory(sameItemsAvailable).inventory);
@@ -601,7 +600,7 @@ const Profile = () => {
             onClick: () => sellItem(setGlobalState, selectedItem)
         }, {
             children: lang.profile.selectForShowcase,
-            disabled: !canSelectToShowCase(selectedItem) || isItemAlreadyOnShowcase,
+            disabled: !selectShowcaseType(selectedItem) || isItemAlreadyOnShowcase,
             onClick: () => selectToShowcase(setGlobalState, selectedItem)
         }, {
             children: lang.profile.removeFromShowcase,
@@ -626,27 +625,26 @@ const Profile = () => {
                 ripple={false}
                 shouldQuality={false}
                 shouldRecent={false}
+                shouldInfo={false}
                 shouldPrice={false}
                 onClick={() => void 0}
                 item={selectedItem}
             />
 
             <div className="item-detailed-info storage-selector">
-                <div className="detailed-line">
+                {sameItemsAvailable.length > 1 && <div className="detailed-line">
                     <span>{lang.profile.available}:</span>
                     <span className="same-available">
                         {sameItemsAvailable.length}
-                        {sameItemsAvailable.length > 1 && (
-                            <span 
-                                className="link" 
-                                onClick={handleSelectSame} 
-                                title={sameItemsHint}
-                            >
-                                <b>{lang.profile.selectAll}</b>
-                            </span>
-                        )}
+                        <span 
+                            className="link" 
+                            onClick={handleSelectSame} 
+                            title={sameItemsHint}
+                        >
+                            <b>{lang.profile.selectAll}</b>
+                        </span>
                     </span>
-                </div>
+                </div>}
                 <div className="detailed-line">
                     <span>{lang.common.storage}:</span>
                     <span>

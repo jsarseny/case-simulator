@@ -163,7 +163,9 @@ export default {
     ItemPage: {
         previousPage: "Предыдущая страница",
         nextPage: "Следующая страница",
-        openFilters: "Открыть Фильтры"
+        openFilters: "Открыть Фильтры",
+        nothingFound: "Тут пока ничего!",
+        resetFilters: "Сбросить фильтры"
     },
 
     modals: {

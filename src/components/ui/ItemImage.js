@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-import { getItemImageUrl } from "../../models/weapons";
+import { getItemImageUrl } from "../../models/index.js";
 
 import "./ItemImage.css";
 

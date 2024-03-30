@@ -5,14 +5,14 @@ import React, {
     useContext 
 } from "react";
 
-import useFlag from "../../../hooks/useFlag";
-import useLang from "../../../hooks/useLang";
-import Context from "../../../utils/context";
-import Currency from "../../../utils/currency";
-import AudioManager from "../../../utils/audio";
-import buildClassName from "../../../utils/buildClassName";
-import canvasAnimations from "../helpers/canvas";
-import renderInventory, { getItemsPrice, getPriceRange } from "../helpers/renderInventory";
+import useFlag from "../../../hooks/useFlag.js";
+import useLang from "../../../hooks/useLang.js";
+import Context from "../../../utils/context.js";
+import Currency from "../../../utils/currency.js";
+import AudioManager from "../../../utils/audio.js";
+import buildClassName from "../../../utils/buildClassName.js";
+import canvasAnimations from "../helpers/canvas.js";
+import renderInventory, { getItemsPrice, getPriceRange } from "../helpers/renderInventory.js";
 
 import { 
     randomInt, 
@@ -21,20 +21,20 @@ import {
     RARITY_PRIORITY,
     getOutcomesChances,
     getLimitContainerRarities,
-} from "../../../utils/chance";
+} from "../../../utils/chance.js";
 
 import {
     deleteItem, 
     insertItem, 
     statistics 
-} from "../helpers/transactions";
+} from "../helpers/transactions.js";
 
-import Weapons, { getItemImageUrl } from "../../../models/weapons";
+import Models, { getItemImageUrl } from "../../../models/index.js";
 
-import Modal from "../../ui/Modal";
-import Button from "../../ui/Button";
-import { RadioGroup } from "../../ui/Radio";
-import ItemPage, { upperFirst } from "../../ui/ItemPage";
+import Modal from "../../ui/Modal.js";
+import Button from "../../ui/Button.js";
+import { RadioGroup } from "../../ui/Radio.js";
+import ItemPage, { upperFirst } from "../../ui/ItemPage.js";
 
 import "./Craft.css";
 
@@ -48,7 +48,7 @@ const DEFAULT_STATE = {
 }
 
 const renderOutcomes = (outcomes, isStatTrack) => {
-    var items = outcomes.map(outcome =>  Weapons.find(weapon => weapon.id === outcome.id))
+    var items = outcomes.map(outcome => Models.Weapons.find(weapon => weapon.id === outcome.id))
     
     items = items.map(item => {
         Object.keys(item.prices).forEach(key => {
@@ -67,7 +67,7 @@ const renderOutcomes = (outcomes, isStatTrack) => {
 const Craft = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
 
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
 
     const [ isHelpModalOpen, openHelpModal, closeHelpModal ] = useFlag(false);
 
@@ -467,12 +467,12 @@ const Craft = () => {
 
     const renderHelpModal = () => {
         const outcomes = getOutcomesChances(state.items).map(({ id, chance }) => {
-            let item = Weapons.find(weapon => weapon.id === id);
+            let item = Models.Weapons.find(weapon => weapon.id === id);
             item.price = Math.max(...Object.values(item.prices));
 
             return {
                 chance,
-                item: Weapons.find(weapon => weapon.id === id)
+                item: Models.Weapons.find(weapon => weapon.id === id)
             }
         }).sort((a, b) => a.item.price > b.item.price ? -1 : 1);
 

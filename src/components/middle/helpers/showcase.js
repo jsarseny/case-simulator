@@ -1,6 +1,6 @@
-import { WeaponTypes } from "../../../utils/chance"
+import { WeaponTypes } from "../../../utils/chance.js";
 
-export const canSelectToShowCase = item => {
+export const selectShowcaseType = item => {
     var result = false;
 
     const helper = (types, name) => types.forEach(type => {
@@ -28,7 +28,7 @@ export const isItemOnShowcase = (globalState, item) => {
 }
 
 export const selectToShowcase = (stateDispatch, item) => {
-    const type = canSelectToShowCase(item);
+    const type = selectShowcaseType(item);
 
     if (!type) return;
 
@@ -48,7 +48,7 @@ export const selectToShowcase = (stateDispatch, item) => {
 }
 
 export const removeFromShowcase = (stateDispatch, item) => {
-    const type = canSelectToShowCase(item);
+    const type = selectShowcaseType(item);
 
     if (!type) return;
 

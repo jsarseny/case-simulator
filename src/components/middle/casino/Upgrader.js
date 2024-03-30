@@ -2,15 +2,15 @@ import React, {
     useRef,
     useState, 
     useEffect, 
-    useContext
+    useContext,
 } from "react";
 
-import useLang from "../../../hooks/useLang";
-import Context from "../../../utils/context";
-import renderInventory, { filterInventory } from "../helpers/renderInventory";
+import useLang from "../../../hooks/useLang.js";
+import Context from "../../../utils/context.js";
+import renderInventory, { filterInventory } from "../helpers/renderInventory.js";
 
-import { getItemImageUrl } from "../../../models/weapons";
-import { deleteItem, insertItem, statistics } from "../helpers/transactions";
+import { getItemImageUrl } from "../../../models/index.js";
+import { deleteItem, insertItem, statistics } from "../helpers/transactions.js";
 
 import { 
     randomInt, 
@@ -18,13 +18,13 @@ import {
     WeaponTypes, 
     randomElement, 
     getPriceRangeItems, 
-} from "../../../utils/chance";
+} from "../../../utils/chance.js";
 
-import Item from "../../ui/Item";
-import Button from "../../ui/Button";
-import ItemPage from "../../ui/ItemPage";
-import Dropdown from "../../ui/Dropdown";
-import Selection from "../../ui/Selection";
+import Item from "../../ui/Item.js";
+import Button from "../../ui/Button.js";
+import ItemPage from "../../ui/ItemPage.js";
+import Dropdown from "../../ui/Dropdown.js";
+import Selection from "../../ui/Selection.js";
 
 import "./Upgrader.css";
 
@@ -33,7 +33,7 @@ const SPIN_TIME = 7000;
 const Upgrader = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
 
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
 
     const spinnerContent = useRef(null);
     const spinnerContainer = useRef(null);
@@ -155,7 +155,7 @@ const Upgrader = () => {
         window.setTimeout(() => {
             const isWinning = float <= state.chance;
 
-            content.innerHTML = isWinning ? `<img src=${getItemImageUrl(state.relevantItem)} />` : `<span class="loss">Loss</span>`;
+            content.innerHTML = isWinning ? `<img src=${getItemImageUrl(state.relevantItem)} draggable="false" />` : `<span class="loss">Loss</span>`;
 
             if (isWinning) {
                 insertItem(setGlobalState, state.relevantItem, 3);

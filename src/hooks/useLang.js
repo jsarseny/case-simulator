@@ -1,7 +1,7 @@
 import React from "react";
 
-import EN from "../locale/EN";
-import RU from "../locale/RU";
+import EN from "../locale/EN.js";
+import RU from "../locale/RU.js";
 
 export const LangModels = {
     EN: {
@@ -16,10 +16,19 @@ export const LangModels = {
     }
 }
 
-const useLang = GlobalState => {
+const useLang = (GlobalState, setGlobalState) => {
     var code = GlobalState.settings.lang;
 
-    if (!(code in LangModels)) code = "EN";
+    if (!(code in LangModels)) {
+        code = "EN";
+        setGlobalState(prev => ({
+            ...prev,
+            settings: {
+                ...prev.settings,
+                lang: "EN"
+            }
+        }));
+    };
 
     const model = LangModels[code];
 

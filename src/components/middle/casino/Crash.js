@@ -3,24 +3,25 @@ import React, {
     useMemo, 
     useState, 
     useEffect, 
-    useContext
+    useContext,
+    useCallback
 } from "react";
 
-import useLang from "../../../hooks/useLang";
-import useFlag from "../../../hooks/useFlag";
-import Context from "../../../utils/context";
-import Currency from "../../../utils/currency";
-import buildClassName from "../../../utils/buildClassName";
-import renderInventory from "../helpers/renderInventory";
+import useLang from "../../../hooks/useLang.js";
+import useFlag from "../../../hooks/useFlag.js";
+import Context from "../../../utils/context.js";
+import Currency from "../../../utils/currency.js";
+import buildClassName from "../../../utils/buildClassName.js";
+import renderInventory from "../helpers/renderInventory.js";
 
-import { randomFloat } from "../../../utils/chance";
-import { callPopupNotify } from "./Roulette";
-import { initializeCanvas } from "../helpers/canvas";
-import { deleteItem, withdrawBalance } from "../helpers/transactions";
+import { randomFloat } from "../../../utils/chance.js";
+import { callPopupNotify } from "./Roulette.js";
+import { initializeCanvas } from "../helpers/canvas.js";
+import { deleteItem, withdrawBalance } from "../helpers/transactions.js";
 
-import Item from "../../ui/Item";
-import Button from "../../ui/Button";
-import ItemPage from "../../ui/ItemPage";
+import Item from "../../ui/Item.js";
+import Button from "../../ui/Button.js";
+import ItemPage from "../../ui/ItemPage.js";
 
 import "./Crash.css";
 
@@ -70,7 +71,7 @@ const MINIMAL_AUTO_STOP = 1.05;
 const Crash = () => {
     const { GlobalState, setGlobalState } = useContext(Context);
 
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
 
     const [ isSkinSelection, openSkinSelection, closeSkinSelection ] = useFlag(false);
 
@@ -192,25 +193,29 @@ const Crash = () => {
     const HandlerGetProfit = () => {
         if (Handler.isStopped) return;
 
-        let multiplier = interactiveState.multiplier;
-        let received = Number((state.amount * multiplier).toFixed(2));
+        setInteractiveState(prev => {
+            var multiplier = prev.multiplier;
+            var received = Number((state.amount * multiplier).toFixed(2));
 
-        Handler.ctx.closePath();
+            Handler.ctx.closePath();
 
-        withdrawBalance(setGlobalState, -received);
+            withdrawBalance(setGlobalState, -received);
 
-        handleAddLatestMultiplier(Handler.finalMultiplier.toFixed(2), {
-            received,
-            stoppedAt: multiplier
+            handleAddLatestMultiplier(Handler.finalMultiplier.toFixed(2), {
+                received,
+                stoppedAt: multiplier
+            });
+
+            callPopupNotify(
+                document.querySelector(".Crash .crash-popup-notify"),
+                `+ ${Currency.renderPrice(GlobalState, received, true)}`, "rgb(12, 217, 157)"
+            );
+
+            return prev;
         });
 
-        callPopupNotify(
-            document.querySelector(".Crash .crash-popup-notify"),
-            `+ ${Currency.renderPrice(GlobalState, received, true)}`, "rgb(12, 217, 157)"
-        );
-
         HandlerStop();
-    }
+    };
 
     const HandlerGetDefeat = () => {
         if (Handler.isStopped) return;

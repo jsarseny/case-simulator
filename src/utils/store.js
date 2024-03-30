@@ -1,9 +1,10 @@
-const STORE_VERSION = "1.1.35";
+const STORE_VERSION = "1.1.40";
 
 export const INITIAL_STATE = {
     version: STORE_VERSION,
     activeTab: 0,
     readNotes: false,
+    favoritesId: [],
     bestDrop: {
         id: null, 
         quality: null, 

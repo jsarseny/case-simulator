@@ -53,7 +53,6 @@ const handleKeyDown = e => {
 }
   
 const releaseKeyboardListener = options => {
-    console.log(options);
     options.forEach((handlerName) => {
         const handler = options[handlerName];
         const currentEventHandlers = handlers[handlerName];

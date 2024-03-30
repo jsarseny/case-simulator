@@ -227,7 +227,7 @@
 }
 
 .item-info-modal .item-detailed-info .detailed-line > span.custom-scroll {
-    max-height: 12rem;
+    max-height: 8rem;
     overflow: auto;
 }
 

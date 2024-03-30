@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     transition: all .25s;
+    backdrop-filter: blur(4px);
 }
 
 .Modal.removed {
@@ -87,6 +88,7 @@
         opacity: 0;
     }
 }
+
 @keyframes modalFadeIn {
     0% {
         margin-top: -2rem;

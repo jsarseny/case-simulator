@@ -1,11 +1,15 @@
-import RareItems from "../../../models/rare";
-import Weapons from "../../../models/weapons";
-import { RARITY_PRIORITY, WeaponTypes } from "../../../utils/chance"; 
+import Models from "../../../models/index.js";
+import { RARITY_PRIORITY, WeaponTypes } from "../../../utils/chance.js"; 
 
 export const getItemModelById = id => {
-    const storage = id >= 0 ? Weapons : RareItems;
+    var model;
+    const storage = id >= 0 ? Models.Weapons : Models.Extraordinary;
 
-    var model = storage.find(w => w.id === id);
+    if (Math.abs(id) > Math.floor(storage.length / 2)) {
+        model = storage.findLast(w => w.id === id);
+    } else {
+        model = storage.find(w => w.id === id);
+    }
 
     return model;
 }

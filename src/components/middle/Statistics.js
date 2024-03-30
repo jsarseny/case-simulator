@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from "react";
 
-import useFlag from "../../hooks/useFlag";
-import Context from "../../utils/context";
-import Currency from "../../utils/currency";
+import useFlag from "../../hooks/useFlag.js";
+import Context from "../../utils/context.js";
+import Currency from "../../utils/currency.js";
 
 import "./Statistics.css";
 
@@ -53,7 +53,7 @@ const Statistics = () => {
     return (
         <div className="Statistics">
             <div className="statistics-title">
-                <div className="tab-title mini"><span>{GlobalState.profile.username} Player statistics:</span></div>
+                <div className="tab-title mini"><span>{GlobalState.profile.username || "Player"}'s statistics:</span></div>
             </div>
             <div className="statistics-body">
                 <div className="statistics-table">

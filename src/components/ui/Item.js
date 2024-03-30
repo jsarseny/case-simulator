@@ -1,20 +1,21 @@
 import React, { useContext } from "react";
 
-import useLang from "../../hooks/useLang";
-import Context from "../../utils/context";
-import Currency from "../../utils/currency";
-import buildClassName from "../../utils/buildClassName";
+import useLang from "../../hooks/useLang.js";
+import Context from "../../utils/context.js";
+import Currency from "../../utils/currency.js";
+import buildClassName from "../../utils/buildClassName.js";
 
-import { WeaponQuality } from "../../utils/chance";
-import { getItemImageUrl } from "../../models/weapons";
+import { WeaponQuality } from "../../utils/chance.js";
+import { getItemImageUrl } from "../../models/index.js";
 
-import Ripple from "./Ripple";
-import ItemImage from "./ItemImage";
+import Ripple from "./Ripple.js";
+import Highlight from "./Highlight.js";
+import ItemImage from "./ItemImage.js";
 
 import "./Item.css";
 
 const isRecentlyReceived = uid => {
-    const map = window.recentlyReceivedItems;
+    const map = self.recentlyReceivedItems;
 
     if (!map) return false;
 
@@ -77,7 +78,7 @@ export const ShowcaseItem = ({ item, alt }) => {
         "ShowcaseItem",
         "RarityShade", 
         item.rarity && item.rarity
-    )
+    );
 
     return (
         <div className={fullClassName} data-path={`${item.collectionId}_${item.id}`}>
@@ -104,6 +105,7 @@ export const ShowcaseItem = ({ item, alt }) => {
 
 export const ItemList = ({ 
     items, 
+    title,
     className,
     columns = 4,
     shouldPrice = true,
@@ -133,6 +135,7 @@ export const ItemList = ({
                         <Item 
                             key={itemIndex}
                             item={item}
+                            title={title}
                             shouldPrice={shouldPrice}
                             shouldQuality={shouldQuality}
                             ripple={ripple}
@@ -147,18 +150,21 @@ export const ItemList = ({
 
 const Item = ({ 
     item,
+    title,
     className,
     selected = false,
     shouldRecent = true,
     shouldPrice = true,
     shouldQuality = true,
+    shouldInfo = true,
     ripple = true,
+    highlight,
     onClick,
     onContextMenu
 }) => {
-    const { GlobalState } = useContext(Context);
+    const { GlobalState, setGlobalState } = useContext(Context);
 
-    const lang = useLang(GlobalState);
+    const lang = useLang(GlobalState, setGlobalState);
 
     const handleClick = () => {
         if (onClick) onClick(item);
@@ -190,10 +196,10 @@ const Item = ({
         <span className="weapon-name">
             {isStatTrack && <font className="QualityShade stattrack">StatTrack™ </font>} 
             {isSouvenir && <font className="QualityShade souvenir">{lang.property.souvenir} </font>} 
-            {item.weaponName}
+            <Highlight text={item.weaponName} highlight={highlight} />
         </span>
         <br/>
-        {highlightRarePattern(item.skinName)}
+        <Highlight text={item.skinName} highlight={highlight} />
     </> : item.shortName;
 
     const fullClassName = buildClassName(
@@ -212,14 +218,14 @@ const Item = ({
             className={fullClassName} 
             onClick={handleClick} 
             onContextMenu={handleContextMenu}
-            title={item.type === "weapon" ? fullWeaponName : undefined}
+            title={item.type === "weapon" ? title || fullWeaponName : undefined}
         >
             {shouldRenderRecent && <span className="recent-mark">NEW</span>}
             {selected && <span className="selected-mark"><i className="uil uil-check-circle" /></span>}
 
             <ItemImage item={item} />
 
-            <div className="info">
+            {shouldInfo && <div className="info">
                 <div className="meta">
                     {shouldRenderQuality && (
                         <div className="quality">
@@ -232,7 +238,7 @@ const Item = ({
                 </div>
                 
                 <div className="name">{name}</div>
-            </div>
+            </div>}
 
             {ripple && <Ripple />}
         </div>
